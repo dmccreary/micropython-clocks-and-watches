@@ -1,23 +1,21 @@
-# https://www.waveshare.com/w/upload/9/9d/RP2040-LCD-1.28.zip
-# modified by Dan McCreary
 from machine import Pin,I2C,SPI,PWM,ADC
 import framebuf
 import time
 
-# these are the connections between the Pico and the I2C
+
+
 I2C_SDA = 6
 I2C_SDL = 7
-# SPI Display
+
 DC = 8
 CS = 9
 SCK = 10
 MOSI = 11
 RST = 12
-# No idea what this is
-BL = 25
-# Battery Voltage
-Vbat_Pin = 29
 
+BL = 25
+
+Vbat_Pin = 29
 
 class LCD_1inch28(framebuf.FrameBuffer):
     def __init__(self):
@@ -38,6 +36,7 @@ class LCD_1inch28(framebuf.FrameBuffer):
         self.red   =   0x07E0
         self.green =   0x001f
         self.blue  =   0xf800
+        self.black =   0x0000
         self.white =   0xffff
         
         self.fill(self.white)
