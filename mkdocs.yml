@@ -20,7 +20,6 @@ theme:
   include_sidebar: true
 plugins:
   - search
-  # - mermaid2 - takes too long to build - use a screen image for now
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -33,5 +32,4 @@ extra:
   analytics:
     provider: google
     # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
-    property: G-DS16K4YVRR
-
+    property: G-EKTEBLZ2KP
