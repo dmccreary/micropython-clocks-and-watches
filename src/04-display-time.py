@@ -1,5 +1,6 @@
 from utime import localtime, sleep
 from LCD_1inch28 import LCD_1inch28
+from array import array
 
 LCD = LCD_1inch28()  
 
@@ -38,11 +39,23 @@ def format_date(now):
     hour_number = now[3]
     return "{} {} {}, {}".format(day_name, month_name, now[2], now[0])
 
+CENTER = 120
+# draw readability variables
+ON = 1 # white
+OFF = 0 # black
+NO_FILL = 0 # just the border is drawn
+FILL = 1 # all pixels within the polygon are drawn
 while(True):
     now = localtime()
+    sec = now[5]
     # print(now)
     LCD.fill(LCD.black)    
     LCD.text(format_time(now), 77, 50, LCD.white)
     LCD.text(format_date(now), 40, 80, LCD.white)
+    
+    my_array = array('h', [CENTER,CENTER, sec,sec, CENTER+20,CENTER+20])
+    # at poing (0,0) draw a polygon with on bits and filled
+    LCD.poly(0,0, my_array, ON, FILL)
+    
     LCD.show()
     sleep(1)
