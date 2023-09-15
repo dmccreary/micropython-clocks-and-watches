@@ -17,7 +17,7 @@
     
     
       
-        <title>Drawing Watch Faces - MicroPython Clocks and Watch</title>
+        <title>Drawing Performance - MicroPython Clocks and Watch</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drawing-watch-faces" class="md-skip">
+        <a href="#drawing-performance" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Drawing Watch Faces
+              Drawing Performance
             
           </span>
         </div>
@@ -370,6 +370,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-timer-code" class="md-nav__link">
+    Sample Timer Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -380,14 +402,56 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/dmccreary/micropython-watch/blob/master/docs/lessons/03-drawing-face.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/dmccreary/micropython-watch/blob/master/docs/lessons/05-draw-performance.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="drawing-watch-faces">Drawing Watch Faces</h1>
-<p>We use the MicroPython poly() function to draw polygons on the screen.</p>
+<h1 id="drawing-performance">Drawing Performance</h1>
+<p>One of the challenges we face when updating the watch display is that
+refreshing an entire screen using a relatively slow SPI interface
+means that we need to be thoughtful about updating the displays.</p>
+<p>By default, many screen drivers update every pixel of the screen when
+the user does a <code>show()</code> operation.  For small monochrome screens this is
+not usually a problem.  But for larger color screens the draw times
+can lead to slow updates.</p>
+<p>Let's do a little math to see when drawing performance becomes a problem.  Remember that the human eye can's really see screen updates that occur faster than about 30 frames per second.  That is why most film movies were filled at 25 frames per second.</p>
+<p>To calculate the full-screen draw time we need to calculate the total number of bits we need to send and then calculate the time it takes to send these bits.  We can then check our math by looking at timestamps just before we draw and after we finish
+the drawing.</p>
+<p>Let's start out with our favorite clock screen: the 128X64 monochrome OLED screen.</p>
+<ol>
+<li>Width = 128</li>
+<li>Height = 64</li>
+<li>Bits per Pixel = 1</li>
+</ol>
+<p>Total bits = 128 * 64 * 1 = 8,192 bits = 1024 bytes</p>
+<p>Now we need to also know the transfer speed of our display interface.  Although there are both I2C and SPI versions of these displays, we usually prefer the SPI that should
+transfer data at about </p>
+<p><a href="https://www.youtube.com/watch?v=fGfb2NvDlG4">Pi Pico SPI LCD using a frame buffer to get 30fps animation - ILI9341 and ST7789 MicroPython drivers</a></p>
+<h2 id="sample-timer-code">Sample Timer Code</h2>
+<p>We can calculate the time to draw the full screen by recording the number of clock
+ticks in microseconds before and after we do a screen update.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">ticks_us</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">ticks_us</span><span class="p">()</span>
+<span class="n">screen_update</span><span class="p">()</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">ticks_us</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Execution time in microseconds:&#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>On the OLED screen, we get a result that is around 10 milliseconds which is 100 screen
+updates per second.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.reddit.com/r/raspberrypipico/comments/zx32ak/very_slow_refresh_rate_for_st7735/">Notes on the very slow refresh rate for ST7735
+</a></li>
+</ol>
 
               
             </article>
