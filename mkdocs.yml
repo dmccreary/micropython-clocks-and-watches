@@ -1,4 +1,4 @@
-site_name: MicroPython Watch
+site_name: MicroPython Clocks and Watch
 site_description: 'Resources for teaching drawing on a watch face. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
@@ -6,6 +6,8 @@ repo_url: 'https://github.com/dmccreary/micropython-watch'
 
 nav:
   - Home: index.md
+  - Setup:
+    - Parts: setup/parts.md
   - Lessons:
     - Get Local Time: lessons/01-get-local-time.md
     - Display Text: lessons/02-display-text.md

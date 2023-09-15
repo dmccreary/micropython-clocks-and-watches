@@ -52,5 +52,5 @@ tft.fill(gc9a01.BLACK)
 
 for i in range(0, len(ColorList)):
     print(ColorNames[i])
-    tft.fill_rect(20, i*15, width, 15, ColorList[i])
+    tft.fill_rect(0, i*15, width, 15, ColorList[i])
     sleep(2)
