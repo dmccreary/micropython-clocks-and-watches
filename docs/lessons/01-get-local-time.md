@@ -103,3 +103,4 @@ Time: 7:46 pm
 ## References
 
 * [MicroPython Time Documents](https://docs.micropython.org/en/latest/library/time.html#:~:text=The%20current%20calendar%20time%20may,RTC().)
+* [Bhavesh Kakwani's blog Sync time in MicroPython using NTP](https://bhave.sh/micropython-ntp/) - although the blog uses an ESP32, the concepts are the same on other processors such as the Raspberry Pi Pico.
