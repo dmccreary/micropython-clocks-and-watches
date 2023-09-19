@@ -21,7 +21,6 @@ theme:
   palette:
     primary: '#642580'
     accent: '#41BAC1'
-  custom_dir: 'theme'
   include_sidebar: true
 plugins:
   - search
@@ -32,7 +31,6 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight:
       linenums: true
-
 extra:
   analytics:
     provider: google
