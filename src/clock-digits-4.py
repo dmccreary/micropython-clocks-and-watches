@@ -87,7 +87,7 @@ def update_screen(digit_val):
     lm = 10 # left margin for all 4-digits
     dw = 24 # digit width (2*dr + spacing between digits
     cm = 8 # colon left margin
-    width = 4
+    width = 3
     
     # draw the hour digits
     hour = localtime()[3]
