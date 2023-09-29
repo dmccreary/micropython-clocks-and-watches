@@ -1,0 +1,25 @@
+from LCD_1inch28 import LCD_1inch28
+from utime import sleep
+
+LCD = LCD_1inch28()  
+# LCD.set_bl_pwm(65535)
+
+LCD.fill(LCD.black)
+LCD.show()
+sleep(1)
+LCD.fill(LCD.white)
+LCD.show()
+sleep(1)
+LCD.fill(LCD.red)
+LCD.show()
+sleep(1)
+LCD.fill(LCD.green)
+LCD.show()
+sleep(1)
+LCD.fill(LCD.blue)
+LCD.show()
+sleep(1)
+LCD.fill(LCD.black)
+LCD.text("Done", 50, 100, LCD.white)
+LCD.show()
+print('done')
