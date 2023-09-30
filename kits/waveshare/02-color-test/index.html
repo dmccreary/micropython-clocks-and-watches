@@ -641,6 +641,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#converting-rgb888-to-brg556" class="md-nav__link">
+    Converting RGB888 to BRG556
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -661,6 +668,26 @@
   
   <span class="md-ellipsis">
     Drawing Hands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-5x8-font/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Font Lab
   </span>
   
 
@@ -733,6 +760,13 @@
         <li class="md-nav__item">
   <a href="#custom-color-lists" class="md-nav__link">
     Custom Color Lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#converting-rgb888-to-brg556" class="md-nav__link">
+    Converting RGB888 to BRG556
   </a>
   
 </li>
@@ -927,6 +961,11 @@ this display, we order the bits, blue, red and green.</p>
 </code></pre></div></td></tr></table></div>
 <p>Note that we are using the fill function to draw on all the pixels on the screen.
 We could have used the ellipse funtion to draw into the frame buffer, but the fill function is a bit easier.</p>
+<h2 id="converting-rgb888-to-brg556">Converting RGB888 to BRG556</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">convert_color_RGB888_RGB565</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">B</span><span class="p">):</span> <span class="c1"># Convert RGB888 to RGB565</span>
+    <span class="k">return</span> <span class="p">(((</span><span class="n">G</span><span class="o">&amp;</span><span class="mb">0b00011100</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span><span class="p">((</span><span class="n">B</span><span class="o">&amp;</span><span class="mb">0b11111000</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">R</span><span class="o">&amp;</span><span class="mb">0b11111000</span><span class="p">)</span><span class="o">+</span><span class="p">((</span><span class="n">G</span><span class="o">&amp;</span><span class="mb">0b11100000</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 
   
