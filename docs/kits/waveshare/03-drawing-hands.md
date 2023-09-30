@@ -224,6 +224,7 @@ while True:
     # if we are at 60 we start over
     if counter > 59:
         counter = 0```
+```
 
 ## Drawing X and Y Axis
 

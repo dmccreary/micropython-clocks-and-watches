@@ -46,6 +46,8 @@ See the documentation here: [MicroPython Framebuffer Functions](https://docs.mic
 
 ## References
 
+[wiki](https://www.waveshare.com/wiki/RP2040-LCD-1.28)
+
 [Instructable by Tony Goodhew](https://www.instructables.com/Digital-Watch-Display-MicroPython/) - note that this 
 version does not leverage the built-in drawing libraries that were made available in version 19 of the MicroPython
 release. See [The MicroPython FrameBuf Library](https://docs.micropython.org/en/latest/library/framebuf.html)

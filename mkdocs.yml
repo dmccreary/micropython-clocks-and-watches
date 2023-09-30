@@ -6,6 +6,7 @@ repo_url: 'https://github.com/dmccreary/micropython-watch'
 
 nav:
   - Home: index.md
+  - About: about.md
   - Setup:
     - Parts: setup/parts.md
   - Lessons:
