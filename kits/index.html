@@ -13,25 +13,25 @@
       
       
       
-        <link rel="prev" href="../lilygo/">
+        <link rel="prev" href="../lessons/02-display-text/">
       
       
-        <link rel="next" href="01-hello-world/">
+        <link rel="next" href="lilygo/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>Introduction - MicroPython Clocks and Watch</title>
+        <title>Introduction to Watch Kits - MicroPython Clocks and Watch</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -84,11 +84,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#waveshare-rp2040" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -101,9 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href=".." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="../../img/coderdojo-logo.jpg" alt="logo">
+  <img src="../img/coderdojo-logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -120,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Introduction to Watch Kits
             
           </span>
         </div>
@@ -206,9 +201,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href=".." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="../../img/coderdojo-logo.jpg" alt="logo">
+  <img src="../img/coderdojo-logo.jpg" alt="logo">
 
     </a>
     MicroPython Clocks and Watch
@@ -234,7 +229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -287,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/parts/" class="md-nav__link">
+      <a href="../setup/parts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -348,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/01-get-local-time/" class="md-nav__link">
+      <a href="../lessons/01-get-local-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -368,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/02-display-text/" class="md-nav__link">
+      <a href="../lessons/02-display-text/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -429,9 +424,16 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -440,6 +442,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -485,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lilygo/" class="md-nav__link">
+      <a href="lilygo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,19 +514,17 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
@@ -536,7 +537,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Waveshare
@@ -547,29 +548,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="waveshare/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,67 +559,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#micropython-version" class="md-nav__link">
-    MicroPython Version
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lessons" class="md-nav__link">
-    Lessons
-  </a>
-  
-    <nav class="md-nav" aria-label="Lessons">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-hello-world" class="md-nav__link">
-    #1 Hello World
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-specifications" class="md-nav__link">
-    Detailed Specifications
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -650,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01-hello-world/" class="md-nav__link">
+      <a href="waveshare/01-hello-world/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02-color-test/" class="md-nav__link">
+      <a href="waveshare/02-color-test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -690,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03-drawing-hands/" class="md-nav__link">
+      <a href="waveshare/03-drawing-hands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
+      <a href="../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,57 +675,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#micropython-version" class="md-nav__link">
-    MicroPython Version
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lessons" class="md-nav__link">
-    Lessons
-  </a>
-  
-    <nav class="md-nav" aria-label="Lessons">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-hello-world" class="md-nav__link">
-    #1 Hello World
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-specifications" class="md-nav__link">
-    Detailed Specifications
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -823,70 +692,9 @@
   
 
 
-<h1 id="waveshare-rp2040">Waveshare RP2040</h1>
-<p>The Waveshare RP2040 1.28" IPS LCD Board is a wonderful developent board with a build in RP2040 processor
-that currently sells for about $18.  The board has a USB-C connector, a place for a LiPo battery connection
-and built in Accelerometer &amp; Gyroscope.  It is a great value and a wonderful way to start to learn
-Python for smart watches!</p>
-<p><a href="https://www.waveshare.com/rp2040-lcd-1.28.htm">Link to Waveshare site</a></p>
-<h2 id="micropython-version">MicroPython Version</h2>
-<p>To use these lessions you much use MicroPython runtime v1.19.1-854-g35524a6fd released on 2023-02-07 or later.
-This version supports all the native framebuf drawing libraries (ellipse and polygon)</p>
-<p>See the documentation here: <a href="https://docs.micropython.org/en/latest/library/framebuf.html">MicroPython Framebuffer Functions</a></p>
-<h2 id="lessons">Lessons</h2>
-<h3 id="1-hello-world">#1 Hello World</h3>
-<p><a href="01-hello-world/">Hello world! Lesson</a></p>
-<h2 id="detailed-specifications">Detailed Specifications</h2>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>USB Type-C connector</td>
-<td>USB 1.1 with device and host support</td>
-</tr>
-<tr>
-<td>ETA6096</td>
-<td>high efficiency Lithium battery recharge manager</td>
-</tr>
-<tr>
-<td>Battery Header</td>
-<td>MX1.25 header, for 3.7V Lithium battery, allows recharging the battery and powering the board at the same time</td>
-</tr>
-<tr>
-<td>QMI8658C</td>
-<td>IMU, includes a 3-axis gyroscope and a 3-axis accelerometer</td>
-</tr>
-<tr>
-<td>1.27mm pitch headers</td>
-<td>Adapting all GPIO and Debug pins</td>
-</tr>
-<tr>
-<td>W25Q16JVUXIQ</td>
-<td>2MB NOR-Flash</td>
-</tr>
-<tr>
-<td>RP2040</td>
-<td>Dual-core processor, up to 133MHz operating frequency</td>
-</tr>
-<tr>
-<td>RESET Button</td>
-<td>Reset the processor</td>
-</tr>
-<tr>
-<td>BOOT Button</td>
-<td>press it when resetting to enter download mode</td>
-</tr>
-</tbody>
-</table>
-<h2 id="references">References</h2>
-<p><a href="https://www.instructables.com/Digital-Watch-Display-MicroPython/">Instructable by Tony Goodhew</a> - note that this 
-version does not leverage the built-in drawing libraries that were made available in version 19 of the MicroPython
-release. See <a href="https://docs.micropython.org/en/latest/library/framebuf.html">The MicroPython FrameBuf Library</a></p>
+  <h1>Introduction to Watch Kits</h1>
+
+
 
 
   
@@ -926,10 +734,10 @@ release. See <a href="https://docs.micropython.org/en/latest/library/framebuf.ht
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>
