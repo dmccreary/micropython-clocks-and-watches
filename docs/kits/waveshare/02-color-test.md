@@ -111,3 +111,11 @@ for i in range(0, len(ColorList)):
 
 Note that we are using the fill function to draw on all the pixels on the screen.
 We could have used the ellipse funtion to draw into the frame buffer, but the fill function is a bit easier.
+
+## Converting RGB888 to BRG556
+
+```py
+def convert_color_RGB888_RGB565(R,G,B): # Convert RGB888 to RGB565
+    return (((G&0b00011100)<<3) +((B&0b11111000)>>3)<<8) + (R&0b11111000)+((G&0b11100000)>>5)
+
+```

@@ -6,7 +6,12 @@ and built in Accelerometer & Gyroscope.  It is a great value and a wonderful way
 Python for smart watches!
 
 
-[Link to Waveshare site](https://www.waveshare.com/rp2040-lcd-1.28.htm)
+1. Waveshare SKU: 22668
+2. Waveshare Part Number: RP2040-LCD-1.28
+1. [Link to Waveshare site](https://www.waveshare.com/rp2040-lcd-1.28.htm)
+
+Note that this watch does not have a real-time clock and has no ability to connect to time syhronization using WiFi.
+However, it is an ideal development tool for learning to program watch displays and integrate sensors.
 
 ## MicroPython Version
 
@@ -19,9 +24,13 @@ See the documentation here: [MicroPython Framebuffer Functions](https://docs.mic
 
 ### #1 Hello World
 
-[Hello world! Lesson](./01-hello-world.md)
+1. [Hello world! Lesson](./01-hello-world.md)
+2. [Color Lab](./02-color-test.md)
+3. [Drawing Analog Hands](./)
 
-## Detailed Specifications
+## Detailed Components
+
+![](./RP2040-LCD-1.28-details-intro.jpg)
 
 |Component|Description|
 |-------|-----------|
@@ -40,3 +49,5 @@ See the documentation here: [MicroPython Framebuffer Functions](https://docs.mic
 [Instructable by Tony Goodhew](https://www.instructables.com/Digital-Watch-Display-MicroPython/) - note that this 
 version does not leverage the built-in drawing libraries that were made available in version 19 of the MicroPython
 release. See [The MicroPython FrameBuf Library](https://docs.micropython.org/en/latest/library/framebuf.html)
+
+[Github Gist by Alasdair Allan](https://gist.github.com/aallan/ea16d05f7967d8ab899dfff12833a70f)
