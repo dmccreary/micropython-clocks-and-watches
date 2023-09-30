@@ -14,6 +14,10 @@ nav:
     - Display Text: lessons/02-display-text.md
   - Kits:
     - Introduction to Watch Kits: kits/index.md
+    - Pico with OLED:
+      - Introduction
+    - GC9A01:
+      - Introduction: kits/gc9a01/index.md
     - LILYGO:
       - Introduction: kits/lilygo/index.md
     - Waveshare:

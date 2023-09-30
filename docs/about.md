@@ -33,6 +33,22 @@ also about 1/5th of what were were paying for the Arduino Uno.  Finally
 we had an easy-to-use Python environment that didn't require long compilation.
 The kids LOVED this new system.
 
+## The Thonny IDE
+
+The Raspberry Pi Foundation also promoted (and funded) a simple Integrated Development Envionrment (IDE) called [Thonny](https://thonny.org/).  Thonny allows us to simply plug the board into a USB and it will "almost" automatilly
+download the right Raspberry Pi firmware to get students started quickly. We highly recommend Thonny in
+all our coding clubs.
+
+## Syncronizing Clocks with the Pico W using WiFi
+
+Our clocks were wonderful to watch but the time had to be set manually when they were not hooked up to
+a USB port of a computer running Thonny.  This all changed with the Raspberry Pi Foundation
+released the [Raspberry Pi Pico](https://www.raspberrypi.com/news/raspberry-pi-pico-w-your-6-iot-platform/) in the summer of 2022.
+
+The $6 Pico W board finally started to catch up with the incumbent [ESP-32](https://en.wikipedia.org/wiki/ESP32) series
+of microcontrollers that had supported WiFi.  The ESP-32 was the sucessor to the groundbreaking [ESP8266](https://en.wikipedia.org/wiki/ESP8266) that was introduce way back in Auguest of 2014.  We have several advanced students that use these
+processors, but they do require you to use much more advanced toolchains.
+
 ## Progess in Better Displays
 
 Unfortunatly, the under 1-inch OLED displays that were low-cost were often too small to read
@@ -40,11 +56,11 @@ from more than a few feet away.  We started to purchase the 2.24" OLEDs and we s
 to have lots of great feedback by these large, bright high-contrast displays.  As a rule,
 we now only include displays that are 2-inches or higher.
 
-The SmartWatch industry pushed manufactures to build lower-cost color displays that
-were over two inches and also included color.  The key limitation with these
+In the past 10-years the Smart Watch industry pushed manufactures to build lower-cost displays that
+were over two inches and also included 16-bit color.  The key limitation with most of these
 displays is that they only run on slow SPI interfaces.  When the drivers
-required that every pixel on the screen is updated to make even a small change
-we get slower drawing times.
+required that every pixel on the screen is updated, to make even a small single pixel change
+we need to deal with slower drawing times and flicker.
 
 Now companies like Lilygo have figured out how to increase the speed of the slower SPI
 interfaces to provide great flicker-free draw times.  Draw times on the
