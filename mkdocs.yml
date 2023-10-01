@@ -19,10 +19,11 @@ nav:
       - Introduction: kits/pico-oled/index.md
     - GC9A01:
       - Introduction: kits/gc9a01/index.md
+      - Hello World: kits/gc9a01/01-hello-world.md
       - Display Time: kits/gc9a01/02-display-time.md
       - Display Hand: kits/gc9a01//03-display-hand.md
       - Cycle Fonts: kits/gc9a01/04-cycle-fonts.md
-      - Draw Ticks: kits/gc9a01/06-draw-ticks.md
+      - Draw Ticks: kits/gc9a01/05-draw-ticks.md
       - Draw 12 Digits: kits/gc9a01/07-draw-12-digits.md
       - Draw Filled Triangle: kits/gc9a01/08-draw-filled-triangle.md
     - LILYGO SY7789:
