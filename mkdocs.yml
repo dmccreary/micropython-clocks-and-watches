@@ -16,7 +16,7 @@ nav:
   - Kits:
     - Introduction to Watch Kits: kits/index.md
     - Pico with OLED:
-      - Introduction:
+      - Introduction: kits/pico-oled/index.md
     - GC9A01:
       - Introduction: kits/gc9a01/index.md
       - Display Time: kits/gc9a01/02-display-time.md
