@@ -16,7 +16,7 @@
         <link rel="prev" href="../../setup/parts/">
       
       
-        <link rel="next" href="../02-display-text/">
+        <link rel="next" href="../05-buttons/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -511,11 +511,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-display-text/" class="md-nav__link">
+      <a href="../05-buttons/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Display Text
+    Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-draw-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Performance
   </span>
   
 
@@ -626,11 +646,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Introduction" class="md-nav__link">
+      <a href="../../kits/pico-oled/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Introduction
   </span>
   
 
@@ -702,6 +722,146 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kits/gc9a01/01-hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kits/gc9a01/02-display-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kits/gc9a01/03-display-hand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Hand
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kits/gc9a01/04-cycle-fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cycle Fonts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kits/gc9a01/05-draw-ticks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Ticks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kits/gc9a01/07-draw-12-digits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw 12 Digits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kits/gc9a01/08-draw-filled-triangle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Filled Triangle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -730,7 +890,7 @@
             
   
   <span class="md-ellipsis">
-    LILYGO
+    LILYGO SY7789
   </span>
   
 
@@ -740,7 +900,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
-            LILYGO
+            LILYGO SY7789
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -837,6 +997,26 @@
   
   <span class="md-ellipsis">
     Hello World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kits/waveshare/02-display-text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Text
   </span>
   
 
@@ -1085,7 +1265,14 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(2023, 2, 28, 18, 54, 7, 1, 59)
 </code></pre></div></td></tr></table></div>
 <h2 id="format-of-the-localtime">Format of the Localtime</h2>
-<p>The format is a "8-tuple" in the format (year, month, mday, hour, minute, second, weekday, yearday)</p>
+<p>The format is a "8-tuple" of integers in the format (year, month, mday, hour, minute, second, weekday, yearday)</p>
+<p>Most of the values are pretty intuitive to figure out.  There are a few notes.</p>
+<ol>
+<li>Hour is the hour in 24-hour format.  If we want to display the
+hour in 12-hour format we will need to do some formatting.</li>
+<li>Weekday is a numeric code that runs from 0 for Monday to 6 for Sunday.</li>
+<li>Yearday is the day of the year.  January 1st is the fist day of the year so it is a 1.</li>
+</ol>
 <h2 id="printing-formatted-dates">Printing Formatted Dates</h2>
 <h3 id="sample-code_1">Sample Code</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>

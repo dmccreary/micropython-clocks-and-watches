@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../pico-oled/">
       
       
-        <link rel="next" href="../lilygo/">
+        <link rel="next" href="01-hello-world/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -387,11 +387,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/02-display-text/" class="md-nav__link">
+      <a href="../../lessons/05-buttons/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Display Text
+    Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lessons/06-draw-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Performance
   </span>
   
 
@@ -504,11 +524,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Introduction" class="md-nav__link">
+      <a href="../pico-oled/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Introduction
   </span>
   
 
@@ -614,6 +634,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rotation" class="md-nav__link">
+    Rotation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -624,6 +651,146 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-display-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03-display-hand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Hand
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04-cycle-fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cycle Fonts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05-draw-ticks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Ticks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07-draw-12-digits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw 12 Digits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08-draw-filled-triangle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Filled Triangle
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -657,7 +824,7 @@
             
   
   <span class="md-ellipsis">
-    LILYGO
+    LILYGO SY7789
   </span>
   
 
@@ -667,7 +834,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
-            LILYGO
+            LILYGO SY7789
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -764,6 +931,26 @@
   
   <span class="md-ellipsis">
     Hello World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../waveshare/02-display-text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Text
   </span>
   
 
@@ -894,6 +1081,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rotation" class="md-nav__link">
+    Rotation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -985,6 +1179,20 @@ will draw directly to the display.</p>
 <span class="c1"># blue</span>
 <span class="n">tft</span><span class="o">.</span><span class="n">fill_rect</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
+<h2 id="rotation">Rotation</h2>
+<p>The driver supports 8 different types of rotations:</p>
+<ul>
+<li>0 - PORTRAIT</li>
+<li>1 - LANDSCAPE</li>
+<li>2 - INVERTED PORTRAIT</li>
+<li>3 - INVERTED LANDSCAPE</li>
+<li>4 - PORTRAIT MIRRORED</li>
+<li>5 - LANDSCAPE MIRRORED</li>
+<li>6 - INVERTED PORTRAIT MIRRORED</li>
+<li>7 - INVERTED LANDSCAPE MIRRORED</li>
+</ul>
+<p>In our labs we have the connector at the bottom so we use the Portrait rotation of 0
+which is the default rotation.</p>
 <h2 id="references">References</h2>
 <ol>
 <li><a href="https://github.com/russhughes/gc9a01_mpy">Russ Hughes</a> - Russ provides firmware images that you can use

@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../01-hello-world/">
+        <link rel="prev" href="../05-draw-ticks/">
       
       
-        <link rel="next" href="../03-display-hand/">
+        <link rel="next" href="../08-draw-filled-triangle/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Display Time - MicroPython Clocks and Watch</title>
+        <title>Draw 12 Digits - MicroPython Clocks and Watch</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#display-time-and-date" class="md-skip">
+        <a href="#draw-clock-dial-digits" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Display Time
+              Draw 12 Digits
             
           </span>
         </div>
@@ -626,18 +626,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02-display-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +637,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -716,9 +706,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../07-draw-12-digits/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Draw 12 Digits
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -727,6 +737,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#full-program" class="md-nav__link">
+    Full Program
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-code-for-16x16-clock-face-digits" class="md-nav__link">
+    Full Code for 16x16 Clock Face Digits
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1030,6 +1074,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#full-program" class="md-nav__link">
+    Full Program
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-code-for-16x16-clock-face-digits" class="md-nav__link">
+    Full Code for 16x16 Clock Face Digits
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1046,29 +1112,160 @@
   
 
 
-<h1 id="display-time-and-date">Display Time and Date</h1>
-<p>Here is a program that will display the time and date
-including the day-of-the-week and the name of the month.</p>
-<p>We use the ``localtime()``` function to get the current time
-in an array of integers that looks like this:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">273</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>The fields are:</p>
+<h1 id="draw-clock-dial-digits">Draw Clock Dial Digits</h1>
+<p>This program builds on the previous progam that draws the ticks.
+It also draws a ditit at the end of each tick.</p>
+<p><img alt="" src="../../../img/dial-digits.png" /></p>
+<p>We use the same math we used to draw a single hand.  However, in
+this example we just need to iterate through a range of 0 to 12.</p>
+<p>We have to remember to load our 16x32 fonts.  Although this is a bit
+large for most watch faces, they are easy to read.</p>
+<p>Here is the line we added:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">vga1_bold_16x32</span> <span class="k">as</span> <span class="nn">font</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Note that there are other sizes we can use.  A list of the other fonts is here:</p>
+<p><a href="https://github.com/russhughes/gc9a01_mpy/tree/main/fonts/bitmap">GitHub Site for Russ Hughes for GC9a01 bitmap fonts</a></p>
+<p>These fonts include the following sizes:</p>
 <ol>
-<li>Year</li>
-<li>Month</li>
-<li>Day of Month</li>
-<li>Hour in 24-hour format</li>
-<li>Minutes</li>
-<li>Seconds</li>
-<li>Day of Week (Monday = 0, Sunday = 6)</li>
-<li>Day of the Year</li>
+<li>8x8</li>
+<li>8x16</li>
+<li>16x16</li>
+<li>16x32</li>
 </ol>
-<p>We could convert each of these numbers to strings and display them.
-However, most people like to do a bit of formatting such as
-displaing a 12-hour am/pm format and returning the name
-of the month and day of the week.  Here is the complete
-progam with the formatting.</p>
+<p>Here is the appropriate line for the normal 16x16:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">vga1_16x16</span> <span class="k">as</span> <span class="nn">font</span>
+</code></pre></div></td></tr></table></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">num_str</span> <span class="o">=</span> <span class="s2">&quot;12&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">num_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">tft</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">num_str</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">x3</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">y3</span><span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+Note because the fonts are 16 wide and 32 high we move 8 to the left and 16 up.</p>
+<h2 id="full-program">Full Program</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">SPI</span>
+<span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span><span class="p">,</span> <span class="n">localtime</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">gc9a01</span>
+<span class="kn">import</span> <span class="nn">vga1_bold_16x32</span> <span class="k">as</span> <span class="nn">font</span>
+
+
+<span class="c1"># this uses the standard Dupont ribbon cable spanning rows 4-9 on our breadboard</span>
+<span class="n">SCK_PIN</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># row 4</span>
+<span class="n">SDA_PIN</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">DC_PIN</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">CS_PIN</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="c1"># GND is row 8</span>
+<span class="n">RST_PIN</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="c1"># define the SPI intrface</span>
+<span class="n">spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">60000000</span><span class="p">,</span> <span class="n">sck</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">SCK_PIN</span><span class="p">),</span> <span class="n">mosi</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">SDA_PIN</span><span class="p">))</span>
+<span class="n">tft</span> <span class="o">=</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">GC9A01</span><span class="p">(</span><span class="n">spi</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">RST_PIN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span>
+    <span class="n">cs</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">CS_PIN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span> <span class="n">dc</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">DC_PIN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+<span class="n">tft</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+<span class="n">CENTER</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">TICK_START</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">TICK_END</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">NUM_POS</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># our counter will range from 0 to 59</span>
+<span class="c1"># A full circle is 2*Pi radians</span>
+<span class="n">TWO_PI</span> <span class="o">=</span> <span class="mf">3.145175</span><span class="o">*</span><span class="mi">2</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">WHITE</span> <span class="o">=</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="n">BLACK</span> <span class="o">=</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">BLUE</span> <span class="o">=</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="n">tft</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">BLACK</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">):</span>
+    <span class="n">radians</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span><span class="n">TWO_PI</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">TICK_START</span><span class="p">)</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">TICK_START</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">TICK_END</span><span class="p">)</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">TICK_END</span><span class="p">)</span>
+    <span class="n">x3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">NUM_POS</span><span class="p">)</span>
+    <span class="n">y3</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">NUM_POS</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">radians</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>  
+    <span class="n">tft</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">CENTER</span><span class="o">+</span><span class="n">x1</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">y1</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">x2</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">y2</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">num_str</span> <span class="o">=</span> <span class="s2">&quot;12&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">num_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">tft</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">num_str</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">x3</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">y3</span><span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>If you use the 16x16 font the offset in the last line are:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">num_str</span> <span class="o">=</span> <span class="s2">&quot;12&quot;</span>
+        <span class="n">xOffest</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">num_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">xOffest</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">tft</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">num_str</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">x3</span><span class="o">-</span><span class="n">xOffest</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">y3</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>The exception is for the "12" at the top of the dial.  The "12"
+needed to be exactly centered above the top tick mark.</p>
+<p><img alt="" src="../../../img/clock-face-digits-16x16.png" /></p>
+<h2 id="full-code-for-16x16-clock-face-digits">Full Code for 16x16 Clock Face Digits</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1120,35 +1317,12 @@ progam with the formatting.</p>
 <span class="normal">49</span>
 <span class="normal">50</span>
 <span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 02-display-time.py</span>
-<span class="c1"># </span>
-<span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">SPI</span>
+<span class="normal">52</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">SPI</span>
 <span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span><span class="p">,</span> <span class="n">localtime</span>
+<span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">gc9a01</span>
-<span class="kn">import</span> <span class="nn">vga1_bold_16x32</span> <span class="k">as</span> <span class="nn">font</span>
+<span class="kn">import</span> <span class="nn">vga1_16x16</span> <span class="k">as</span> <span class="nn">font</span>
+
 
 <span class="c1"># this uses the standard Dupont ribbon cable spanning rows 4-9 on our breadboard</span>
 <span class="n">SCK_PIN</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># row 4</span>
@@ -1163,61 +1337,38 @@ progam with the formatting.</p>
 <span class="n">tft</span> <span class="o">=</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">GC9A01</span><span class="p">(</span><span class="n">spi</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">RST_PIN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span>
     <span class="n">cs</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">CS_PIN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span> <span class="n">dc</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">DC_PIN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
-
 <span class="n">tft</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">tft</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># fill the screen with black</span>
 
-<span class="n">days</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Monday&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Wednesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Thursday&#39;</span><span class="p">,</span> <span class="s1">&#39;Friday&#39;</span><span class="p">,</span> <span class="s1">&#39;Saturday&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;Sunday&#39;</span><span class="p">)</span>
-<span class="c1"># I limit the month names to 5 characters max</span>
-<span class="n">months</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Jan&#39;</span><span class="p">,</span> <span class="s1">&#39;Feb&#39;</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">,</span> <span class="s1">&#39;April&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;June&#39;</span><span class="p">,</span> <span class="s1">&#39;July&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;Aug&#39;</span><span class="p">,</span> <span class="s1">&#39;Sept&#39;</span><span class="p">,</span> <span class="s1">&#39;Oct&#39;</span><span class="p">,</span> <span class="s1">&#39;Nov&#39;</span><span class="p">,</span> <span class="s1">&#39;Dec&#39;</span><span class="p">)</span>
-<span class="n">label</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;mday&#39;</span><span class="p">,</span> <span class="s1">&#39;hour&#39;</span><span class="p">,</span> <span class="s1">&#39;minute&#39;</span><span class="p">,</span> <span class="s1">&#39;second&#39;</span><span class="p">,</span> <span class="s1">&#39;weekday&#39;</span><span class="p">,</span> <span class="s1">&#39;yearday&#39;</span><span class="p">)</span>
+<span class="n">CENTER</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">TICK_START</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">TICK_END</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">NUM_POS</span> <span class="o">=</span> <span class="mi">111</span>
 
-<span class="k">def</span> <span class="nf">format_time</span><span class="p">(</span><span class="n">now</span><span class="p">):</span>
-    <span class="n">hour_number</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">hour_number</span> <span class="o">&lt;</span> <span class="mi">13</span><span class="p">:</span>
-        <span class="n">hour_12</span> <span class="o">=</span> <span class="n">hour_number</span>
-        <span class="n">am_pm</span> <span class="o">=</span> <span class="s1">&#39;am&#39;</span>
+<span class="c1"># our counter will range from 0 to 59</span>
+<span class="c1"># A full circle is 2*Pi radians</span>
+<span class="n">TWO_PI</span> <span class="o">=</span> <span class="mf">3.145175</span><span class="o">*</span><span class="mi">2</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">WHITE</span> <span class="o">=</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="n">BLACK</span> <span class="o">=</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">BLUE</span> <span class="o">=</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="n">tft</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">BLACK</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">):</span>
+    <span class="n">radians</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span><span class="n">TWO_PI</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">TICK_START</span><span class="p">)</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">TICK_START</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">TICK_END</span><span class="p">)</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">TICK_END</span><span class="p">)</span>
+    <span class="n">x3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">NUM_POS</span><span class="p">)</span>
+    <span class="n">y3</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">)</span><span class="o">*</span><span class="n">NUM_POS</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">radians</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>  
+    <span class="n">tft</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">CENTER</span><span class="o">+</span><span class="n">x1</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">y1</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">x2</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">y2</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">num_str</span> <span class="o">=</span> <span class="s2">&quot;12&quot;</span>
+        <span class="n">xOffest</span> <span class="o">=</span> <span class="mi">16</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">hour_12</span> <span class="o">=</span> <span class="n">hour_number</span> <span class="o">-</span> <span class="mi">12</span>
-        <span class="n">am_pm</span> <span class="o">=</span> <span class="s1">&#39;pm&#39;</span>
-    <span class="n">minutes_num</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">minutes_num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="n">min_leading_zero</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">min_leading_zero</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">seconds_num</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">seconds_num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="n">sec_leading_zero</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">sec_leading_zero</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">:</span><span class="si">{}{}</span><span class="s2">:</span><span class="si">{}{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hour_12</span><span class="p">,</span> <span class="n">min_leading_zero</span><span class="p">,</span> <span class="n">minutes_num</span><span class="p">,</span> <span class="n">sec_leading_zero</span><span class="p">,</span> <span class="n">seconds_num</span><span class="p">,</span> <span class="n">am_pm</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">day_of_week</span><span class="p">(</span><span class="n">now</span><span class="p">):</span>
-    <span class="n">weekday_number</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
-    <span class="n">day_name</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="n">weekday_number</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">day_name</span>
-
-<span class="k">def</span> <span class="nf">format_date</span><span class="p">(</span><span class="n">now</span><span class="p">):</span>
-    <span class="n">month_number</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">month_name</span> <span class="o">=</span> <span class="n">months</span><span class="p">[</span><span class="n">month_number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="n">weekday_number</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
-    <span class="n">day_name</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="n">weekday_number</span><span class="p">]</span>
-    <span class="n">hour_number</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">month_name</span><span class="p">,</span> <span class="n">now</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">now</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="n">tft</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># erase the screen to black</span>
-<span class="n">white</span> <span class="o">=</span> <span class="n">gc9a01</span><span class="o">.</span><span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
-<span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
-    <span class="c1"># get the time from the local real-time clock</span>
-    <span class="n">now</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>    
-    <span class="n">tft</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">format_time</span><span class="p">(</span><span class="n">now</span><span class="p">),</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">white</span><span class="p">)</span>
-    <span class="n">tft</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">day_of_week</span><span class="p">(</span><span class="n">now</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="n">white</span><span class="p">)</span>
-    <span class="n">tft</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">format_date</span><span class="p">(</span><span class="n">now</span><span class="p">),</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="n">white</span><span class="p">)</span>
-    <span class="c1">#tft.show()</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">num_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">xOffest</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">tft</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">num_str</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">x3</span><span class="o">-</span><span class="n">xOffest</span><span class="p">,</span> <span class="n">CENTER</span><span class="o">+</span><span class="n">y3</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
 

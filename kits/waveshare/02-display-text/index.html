@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="../01-hello-world/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+        <link rel="next" href="../02-color-test/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>Drawing Performance - MicroPython Clocks and Watch</title>
+        <title>Display Text - MicroPython Clocks and Watch</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -46,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -81,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drawing-performance" class="md-skip">
+        <a href="#display-time-and-date-in-text" class="md-skip">
           Skip to content
         </a>
       
@@ -97,9 +101,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href="../../.." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="../../img/coderdojo-logo.jpg" alt="logo">
+  <img src="../../../img/coderdojo-logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Drawing Performance
+              Display Text
             
           </span>
         </div>
@@ -202,9 +206,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href="../../.." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="../../img/coderdojo-logo.jpg" alt="logo">
+  <img src="../../../img/coderdojo-logo.jpg" alt="logo">
 
     </a>
     MicroPython Clocks and Watch
@@ -230,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -249,7 +253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -302,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/parts/" class="md-nav__link">
+      <a href="../../../setup/parts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -363,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-get-local-time/" class="md-nav__link">
+      <a href="../../../lessons/01-get-local-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -383,11 +387,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-display-text/" class="md-nav__link">
+      <a href="../../../lessons/05-buttons/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Display Text
+    Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lessons/06-draw-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Performance
   </span>
   
 
@@ -408,17 +432,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -431,7 +457,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Kits
@@ -444,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kits/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,11 +524,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Introduction" class="md-nav__link">
+      <a href="../../pico-oled/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Introduction
   </span>
   
 
@@ -560,11 +586,151 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kits/gc9a01/" class="md-nav__link">
+      <a href="../../gc9a01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gc9a01/01-hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gc9a01/02-display-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gc9a01/03-display-hand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Hand
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gc9a01/04-cycle-fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cycle Fonts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gc9a01/05-draw-ticks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Ticks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gc9a01/07-draw-12-digits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw 12 Digits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gc9a01/08-draw-filled-triangle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Filled Triangle
   </span>
   
 
@@ -602,7 +768,7 @@
             
   
   <span class="md-ellipsis">
-    LILYGO
+    LILYGO SY7789
   </span>
   
 
@@ -612,7 +778,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
-            LILYGO
+            LILYGO SY7789
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -622,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kits/lilygo/" class="md-nav__link">
+      <a href="../../lilygo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,17 +814,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
         
           <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
             
@@ -671,7 +839,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_5">
             <span class="md-nav__icon md-icon"></span>
             Waveshare
@@ -684,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kits/waveshare/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kits/waveshare/01-hello-world/" class="md-nav__link">
+      <a href="../01-hello-world/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -722,9 +890,39 @@
                 
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Display Text
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
     <li class="md-nav__item">
-      <a href="../../kits/waveshare/02-color-test/" class="md-nav__link">
+      <a href="../02-color-test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kits/waveshare/03-drawing-hands/" class="md-nav__link">
+      <a href="../03-drawing-hands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kits/waveshare/04-5x8-font/" class="md-nav__link">
+      <a href="../04-5x8-font/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -799,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
+      <a href="../../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -832,28 +1030,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sample-timer-code" class="md-nav__link">
-    Sample Timer Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -870,49 +1046,102 @@
   
 
 
-<h1 id="drawing-performance">Drawing Performance</h1>
-<p>One of the challenges we face when updating the watch display is that
-refreshing an entire screen using a relatively slow SPI interface
-means that we need to be thoughtful about updating the displays.</p>
-<p>By default, many screen drivers update every pixel of the screen when
-the user does a <code>show()</code> operation.  For small monochrome screens this is
-not usually a problem.  But for larger color screens the draw times
-can lead to slow updates.</p>
-<p>Let's do a little math to see when drawing performance becomes a problem.  Remember that the human eye can's really see screen updates that occur faster than about 30 frames per second.  That is why most film movies were filled at 25 frames per second.</p>
-<p>To calculate the full-screen draw time we need to calculate the total number of bits we need to send and then calculate the time it takes to send these bits.  We can then check our math by looking at timestamps just before we draw and after we finish
-the drawing.</p>
-<p>Let's start out with our favorite clock screen: the 128X64 monochrome OLED screen.</p>
-<ol>
-<li>Width = 128</li>
-<li>Height = 64</li>
-<li>Bits per Pixel = 1</li>
-</ol>
-<p>Total bits = 128 * 64 * 1 = 8,192 bits = 1024 bytes</p>
-<p>Now we need to also know the transfer speed of our display interface.  Although there are both I2C and SPI versions of these displays, we usually prefer the SPI that should
-transfer data at about </p>
-<p><a href="https://www.youtube.com/watch?v=fGfb2NvDlG4">Pi Pico SPI LCD using a frame buffer to get 30fps animation - ILI9341 and ST7789 MicroPython drivers</a></p>
-<h2 id="sample-timer-code">Sample Timer Code</h2>
-<p>We can calculate the time to draw the full screen by recording the number of clock
-ticks in microseconds before and after we do a screen update.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">ticks_us</span>
+<h1 id="display-time-and-date-in-text">Display Time and Date in Text</h1>
+<p><img alt="" src="../img/display-text.jpg" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">localtime</span><span class="p">,</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="nn">LCD_1inch28</span> <span class="kn">import</span> <span class="n">LCD_1inch28</span>
 
-<span class="n">start</span> <span class="o">=</span> <span class="n">ticks_us</span><span class="p">()</span>
-<span class="n">screen_update</span><span class="p">()</span>
-<span class="n">end</span> <span class="o">=</span> <span class="n">ticks_us</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Execution time in microseconds:&#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+<span class="n">LCD</span> <span class="o">=</span> <span class="n">LCD_1inch28</span><span class="p">()</span>  
+
+<span class="n">days</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Monday&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Wednesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Thursday&#39;</span><span class="p">,</span> <span class="s1">&#39;Friday&#39;</span><span class="p">,</span> <span class="s1">&#39;Saturday&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Sunday&#39;</span><span class="p">)</span>
+<span class="n">months</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Jan&#39;</span><span class="p">,</span> <span class="s1">&#39;Feb&#39;</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">,</span> <span class="s1">&#39;April&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;June&#39;</span><span class="p">,</span> <span class="s1">&#39;July&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;Aug&#39;</span><span class="p">,</span> <span class="s1">&#39;Sept&#39;</span><span class="p">,</span> <span class="s1">&#39;Oct&#39;</span><span class="p">,</span> <span class="s1">&#39;Nov&#39;</span><span class="p">,</span> <span class="s1">&#39;Dec&#39;</span><span class="p">)</span>
+<span class="n">label</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;mday&#39;</span><span class="p">,</span> <span class="s1">&#39;hour&#39;</span><span class="p">,</span> <span class="s1">&#39;minute&#39;</span><span class="p">,</span> <span class="s1">&#39;second&#39;</span><span class="p">,</span> <span class="s1">&#39;weekday&#39;</span><span class="p">,</span> <span class="s1">&#39;yearday&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">format_time</span><span class="p">(</span><span class="n">now</span><span class="p">):</span>
+    <span class="n">hour_number</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">hour_number</span> <span class="o">&lt;</span> <span class="mi">13</span><span class="p">:</span>
+        <span class="n">hour_12</span> <span class="o">=</span> <span class="n">hour_number</span>
+        <span class="n">am_pm</span> <span class="o">=</span> <span class="s1">&#39;am&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">hour_12</span> <span class="o">=</span> <span class="n">hour_number</span> <span class="o">-</span> <span class="mi">12</span>
+        <span class="n">am_pm</span> <span class="o">=</span> <span class="s1">&#39;pm&#39;</span>
+    <span class="n">minutes_num</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">minutes_num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">min_leading_zero</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">min_leading_zero</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">seconds_num</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">seconds_num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">sec_leading_zero</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sec_leading_zero</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">:</span><span class="si">{}{}</span><span class="s2">:</span><span class="si">{}{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hour_12</span><span class="p">,</span> <span class="n">min_leading_zero</span><span class="p">,</span> <span class="n">minutes_num</span><span class="p">,</span> <span class="n">sec_leading_zero</span><span class="p">,</span> <span class="n">seconds_num</span><span class="p">,</span> <span class="n">am_pm</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">format_date</span><span class="p">(</span><span class="n">now</span><span class="p">):</span>
+    <span class="n">month_number</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">month_name</span> <span class="o">=</span> <span class="n">months</span><span class="p">[</span><span class="n">month_number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">weekday_number</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+    <span class="n">day_name</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="n">weekday_number</span><span class="p">]</span>
+    <span class="n">hour_number</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">day_name</span><span class="p">,</span> <span class="n">month_name</span><span class="p">,</span> <span class="n">now</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">now</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">()</span>
+    <span class="c1"># print(now)</span>
+    <span class="n">LCD</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">LCD</span><span class="o">.</span><span class="n">black</span><span class="p">)</span>    
+    <span class="n">LCD</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">format_time</span><span class="p">(</span><span class="n">now</span><span class="p">),</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">LCD</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
+    <span class="n">LCD</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">format_date</span><span class="p">(</span><span class="n">now</span><span class="p">),</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="n">LCD</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
+    <span class="n">LCD</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>On the OLED screen, we get a result that is around 10 milliseconds which is 100 screen
-updates per second.</p>
-<h2 id="references">References</h2>
-<ol>
-<li><a href="https://www.reddit.com/r/raspberrypipico/comments/zx32ak/very_slow_refresh_rate_for_st7735/">Notes on the very slow refresh rate for ST7735
-</a></li>
-</ol>
 
 
   
@@ -952,10 +1181,10 @@ updates per second.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>

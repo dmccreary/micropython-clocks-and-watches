@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../05-buttons/">
+      
+      
+        <link rel="next" href="../../kits/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Drawing Watch Faces - MicroPython Clocks and Watch</title>
+        <title>Draw Performance - MicroPython Clocks and Watch</title>
       
     
     
@@ -81,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drawing-watch-faces" class="md-skip">
+        <a href="#drawing-performance" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Drawing Watch Faces
+              Draw Performance
             
           </span>
         </div>
@@ -327,17 +331,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -350,7 +356,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Lessons
@@ -401,9 +407,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../06-draw-performance/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Draw Performance
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -412,6 +438,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-timer-code" class="md-nav__link">
+    Sample Timer Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1019,6 +1079,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#sample-timer-code" class="md-nav__link">
+    Sample Timer Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -1043,19 +1110,49 @@
   
 
 
-<h1 id="drawing-watch-faces">Drawing Watch Faces</h1>
-<p>An analog watch ususally has hands that
-are drawn from the center to the edge
-of the display.</p>
-<p>For simple lines, we can use the display.line() function.</p>
-<p>For thinker lines we can use the display.rect() function.</p>
-<p>Some watches have more complex hands that are composed of 
-multiple geometries such as triangles.</p>
-<p>For most modern display drivers we can use the MicroPython poly() function to draw polygons on the screen.
-These are part of the MicroPython framebuf function.</p>
-<p>Some older drivers don't yet support these functions, so we might have to craft our own functions.</p>
+<h1 id="drawing-performance">Drawing Performance</h1>
+<p>One of the challenges we face when updating the watch display is that
+refreshing an entire screen using a relatively slow SPI interface
+means that we need to be thoughtful about updating the displays.</p>
+<p>By default, many screen drivers update every pixel of the screen when
+the user does a <code>show()</code> operation.  For small monochrome screens this is
+not usually a problem.  But for larger color screens the draw times
+can lead to slow updates.</p>
+<p>Let's do a little math to see when drawing performance becomes a problem.  Remember that the human eye can's really see screen updates that occur faster than about 30 frames per second.  That is why most film movies were filled at 25 frames per second.</p>
+<p>To calculate the full-screen draw time we need to calculate the total number of bits we need to send and then calculate the time it takes to send these bits.  We can then check our math by looking at timestamps just before we draw and after we finish
+the drawing.</p>
+<p>Let's start out with our favorite clock screen: the 128X64 monochrome OLED screen.</p>
+<ol>
+<li>Width = 128</li>
+<li>Height = 64</li>
+<li>Bits per Pixel = 1</li>
+</ol>
+<p>Total bits = 128 * 64 * 1 = 8,192 bits = 1024 bytes</p>
+<p>Now we need to also know the transfer speed of our display interface.  Although there are both I2C and SPI versions of these displays, we usually prefer the SPI that should
+transfer data at about </p>
+<p><a href="https://www.youtube.com/watch?v=fGfb2NvDlG4">Pi Pico SPI LCD using a frame buffer to get 30fps animation - ILI9341 and ST7789 MicroPython drivers</a></p>
+<h2 id="sample-timer-code">Sample Timer Code</h2>
+<p>We can calculate the time to draw the full screen by recording the number of clock
+ticks in microseconds before and after we do a screen update.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">ticks_us</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">ticks_us</span><span class="p">()</span>
+<span class="n">screen_update</span><span class="p">()</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">ticks_us</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Execution time in microseconds:&#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>On the OLED screen, we get a result that is around 10 milliseconds which is 100 screen
+updates per second.</p>
 <h2 id="references">References</h2>
-<p><a href="https://www.instructables.com/Drawing-Filled-Circles-and-Triangles-With-MicroPyt/">Instructables on Filled Circles and Triangles by TonyGo2</a></p>
+<ol>
+<li><a href="https://www.reddit.com/r/raspberrypipico/comments/zx32ak/very_slow_refresh_rate_for_st7735/">Notes on the very slow refresh rate for ST7735
+</a></li>
+</ol>
 
 
   
