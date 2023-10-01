@@ -11,18 +11,26 @@ nav:
     - Parts: setup/parts.md
   - Lessons:
     - Get Local Time: lessons/01-get-local-time.md
-    - Display Text: lessons/02-display-text.md
+    - Buttons: lessons/05-buttons.md
+    - Draw Performance: lessons/06-draw-performance.md
   - Kits:
     - Introduction to Watch Kits: kits/index.md
     - Pico with OLED:
-      - Introduction
+      - Introduction:
     - GC9A01:
       - Introduction: kits/gc9a01/index.md
-    - LILYGO:
+      - Display Time: kits/gc9a01/02-display-time.md
+      - Display Hand: kits/gc9a01//03-display-hand.md
+      - Cycle Fonts: kits/gc9a01/04-cycle-fonts.md
+      - Draw Ticks: kits/gc9a01/06-draw-ticks.md
+      - Draw 12 Digits: kits/gc9a01/07-draw-12-digits.md
+      - Draw Filled Triangle: kits/gc9a01/08-draw-filled-triangle.md
+    - LILYGO SY7789:
       - Introduction: kits/lilygo/index.md
     - Waveshare:
       - Introduction: kits/waveshare/index.md
       - Hello World: kits/waveshare/01-hello-world.md
+      - Display Text: kits/waveshare/02-display-text.md
       - Color Lab: kits/waveshare/02-color-test.md
       - Drawing Hands: kits/waveshare/03-drawing-hands.md
       - Font Lab: kits/waveshare/04-5x8-font.md

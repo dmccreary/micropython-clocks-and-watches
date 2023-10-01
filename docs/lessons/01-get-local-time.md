@@ -25,7 +25,14 @@ print(time.localtime())
 
 ## Format of the Localtime
 
-The format is a "8-tuple" in the format (year, month, mday, hour, minute, second, weekday, yearday)
+The format is a "8-tuple" of integers in the format (year, month, mday, hour, minute, second, weekday, yearday)
+
+Most of the values are pretty intuitive to figure out.  There are a few notes.
+
+1. Hour is the hour in 24-hour format.  If we want to display the
+hour in 12-hour format we will need to do some formatting.
+1. Weekday is a numeric code that runs from 0 for Monday to 6 for Sunday.
+2. Yearday is the day of the year.  January 1st is the fist day of the year so it is a 1.
 
 ## Printing Formatted Dates
 

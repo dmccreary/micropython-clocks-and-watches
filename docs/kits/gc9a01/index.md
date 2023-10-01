@@ -45,6 +45,22 @@ tft.fill_rect(100, 75, 50, 60, gc9a01.color565(0,255,0))
 tft.fill_rect(150, 75, 50, 60, gc9a01.color565(0,0,255))
 ```
 
+## Rotation
+
+The driver supports 8 different types of rotations:
+
+- 0 - PORTRAIT
+- 1 - LANDSCAPE
+- 2 - INVERTED PORTRAIT
+- 3 - INVERTED LANDSCAPE
+- 4 - PORTRAIT MIRRORED
+- 5 - LANDSCAPE MIRRORED
+- 6 - INVERTED PORTRAIT MIRRORED
+- 7 - INVERTED LANDSCAPE MIRRORED
+
+In our labs we have the connector at the bottom so we use the Portrait rotation of 0
+which is the default rotation.
+
 ## References
 
 1. [Russ Hughes](https://github.com/russhughes/gc9a01_mpy) - Russ provides firmware images that you can use
