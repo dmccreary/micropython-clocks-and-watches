@@ -10,10 +10,16 @@ nav:
   - Setup:
     - Parts: setup/parts.md
   - Lessons:
+    - Introduction: lessons/index.md
+    - Displaying Text: lessons/02-display-text.md
+    - Drawing a Clock Face: lessons/03-drawing-face.md
+    - Larger Fonts: lessons/04-larger-fonts.md
     - Hardware Config Files: lessons/00-hardware-config.md
     - Get Local Time: lessons/01-get-local-time.md
+    - Drawing Digits: lessons/08-drawing-digits.md
     - Buttons: lessons/05-buttons.md
     - Draw Performance: lessons/06-draw-performance.md
+    - Drawing Digits: lessons/drawing-digits.md
   - Kits:
     - Introduction to Watch Kits: kits/index.md
     - Pico with OLED:
