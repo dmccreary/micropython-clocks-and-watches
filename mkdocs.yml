@@ -21,7 +21,7 @@ nav:
     - ILI9341:
       - Introduction: kits/ili9341/index.md
       - Rainbow Test: kits/ili9341/01-rainbow-test.md
-      -
+      - Hardware Config: kits/ili9341/02-config.md
     - GC9A01:
       - Introduction: kits/gc9a01/index.md
       - Hello World: kits/gc9a01/01-hello-world.md
