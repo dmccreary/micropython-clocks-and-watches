@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="../01-rainbow-test/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../gc9a01/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>MicroPython Clocks and Watch</title>
+        <title>Hardware Config - MicroPython Clocks and Watch</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -46,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -80,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#creating-a-hardware-configuration-file" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,9 +101,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href="../../.." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="/img/coderdojo-logo.jpg" alt="logo">
+  <img src="../../../img/coderdojo-logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Hardware Config
             
           </span>
         </div>
@@ -197,9 +206,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href="../../.." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="/img/coderdojo-logo.jpg" alt="logo">
+  <img src="../../../img/coderdojo-logo.jpg" alt="logo">
 
     </a>
     MicroPython Clocks and Watch
@@ -225,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -244,7 +253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -297,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/setup/parts/" class="md-nav__link">
+      <a href="../../../setup/parts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -358,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/lessons/00-hardware-config/" class="md-nav__link">
+      <a href="../../../lessons/00-hardware-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -378,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/lessons/01-get-local-time/" class="md-nav__link">
+      <a href="../../../lessons/01-get-local-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/lessons/05-buttons/" class="md-nav__link">
+      <a href="../../../lessons/05-buttons/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/lessons/06-draw-performance/" class="md-nav__link">
+      <a href="../../../lessons/06-draw-performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -443,17 +452,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -466,7 +477,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Kits
@@ -479,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/pico-oled/" class="md-nav__link">
+      <a href="../../pico-oled/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -559,17 +570,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
@@ -582,7 +595,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             ILI9341
@@ -595,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/ili9341/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -615,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/ili9341/01-rainbow-test/" class="md-nav__link">
+      <a href="../01-rainbow-test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -633,9 +646,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/kits/ili9341/02-config/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hardware Config
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -644,6 +677,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configuration-file" class="md-nav__link">
+    Hardware Configuration File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-use-of-hardwre-configuration-file" class="md-nav__link">
+    Sample Use of Hardwre Configuration File
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -697,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/" class="md-nav__link">
+      <a href="../../gc9a01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -717,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/01-hello-world/" class="md-nav__link">
+      <a href="../../gc9a01/01-hello-world/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/02-display-time/" class="md-nav__link">
+      <a href="../../gc9a01/02-display-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/03-display-hand/" class="md-nav__link">
+      <a href="../../gc9a01/03-display-hand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/04-cycle-fonts/" class="md-nav__link">
+      <a href="../../gc9a01/04-cycle-fonts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/05-draw-ticks/" class="md-nav__link">
+      <a href="../../gc9a01/05-draw-ticks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/07-draw-12-digits/" class="md-nav__link">
+      <a href="../../gc9a01/07-draw-12-digits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/08-draw-filled-triangle/" class="md-nav__link">
+      <a href="../../gc9a01/08-draw-filled-triangle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/lilygo/" class="md-nav__link">
+      <a href="../../lilygo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/" class="md-nav__link">
+      <a href="../../waveshare/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/01-hello-world/" class="md-nav__link">
+      <a href="../../waveshare/01-hello-world/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/02-display-text/" class="md-nav__link">
+      <a href="../../waveshare/02-display-text/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1021,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/02-color-test/" class="md-nav__link">
+      <a href="../../waveshare/02-color-test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1041,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/03-drawing-hands/" class="md-nav__link">
+      <a href="../../waveshare/03-drawing-hands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/04-5x8-font/" class="md-nav__link">
+      <a href="../../waveshare/04-5x8-font/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1096,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/contact/" class="md-nav__link">
+      <a href="../../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1126,6 +1193,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configuration-file" class="md-nav__link">
+    Hardware Configuration File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-use-of-hardwre-configuration-file" class="md-nav__link">
+    Sample Use of Hardwre Configuration File
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1137,8 +1228,142 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="creating-a-hardware-configuration-file">Creating a Hardware Configuration File</h1>
+<p>Rather than hard coding the pin numbers in every example, lets put all
+our hardware configuration data in a single file.  All the examples
+from here on can use that configuration data.</p>
+<h2 id="hardware-configuration-file">Hardware Configuration File</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Dan&#39;s Robot Labs configuration file for ILI9341 clock project</span>
+<span class="c1"># The colors on the SPI bus cable are:</span>
+<span class="c1"># 3.3v power - red</span>
+<span class="c1"># SCK - orange</span>
+<span class="c1"># MISO/Data - yellow</span>
+<span class="c1"># DC - green</span>
+<span class="c1"># RESET - blue</span>
+<span class="c1"># GND - black</span>
+<span class="c1"># CS - purple</span>
+<span class="n">SCK_PIN</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">MISO_PIN</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># labeled SDI(MOSI) on the back of the display</span>
+<span class="n">DC_PIN</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">RESET_PIN</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">CS_PIN</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">ROTATION</span> <span class="o">=</span> <span class="mi">90</span>
+
+<span class="n">WIDTH</span><span class="o">=</span><span class="mi">320</span>
+<span class="n">HEIGHT</span><span class="o">=</span><span class="mi">240</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="sample-use-of-hardwre-configuration-file">Sample Use of Hardwre Configuration File</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># print out &quot;Hello World!&quot; using the rotation=3 using 32-bit high font</span>
+<span class="c1"># the default is white text on a black background</span>
+<span class="kn">from</span> <span class="nn">ili9341</span> <span class="kn">import</span> <span class="n">Display</span><span class="p">,</span> <span class="n">color565</span>
+<span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">SPI</span>
+<span class="kn">import</span> <span class="nn">config</span>
+
+<span class="c1"># Use these PIN definitions.  SCK must be on 2 and data (SDL) on 3</span>
+<span class="n">SCK_PIN</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">SCK_PIN</span>
+<span class="n">MISO_PIN</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">MISO_PIN</span> <span class="c1"># labeled SDI(MOSI) on the back of the display</span>
+<span class="n">DC_PIN</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">DC_PIN</span>
+<span class="n">RESET_PIN</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">RESET_PIN</span>
+<span class="n">CS_PIN</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">CS_PIN</span>
+
+<span class="n">WIDTH</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">WIDTH</span>
+<span class="n">HEIGHT</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">HEIGHT</span>
+<span class="n">ROTATION</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">ROTATION</span>
+
+<span class="c1"># mosi=Pin(23)</span>
+<span class="c1"># miso=Pin(MISO_PIN)</span>
+<span class="n">spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">40000000</span><span class="p">,</span> <span class="n">sck</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">SCK_PIN</span><span class="p">),</span> <span class="n">mosi</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">MISO_PIN</span><span class="p">))</span>
+<span class="n">display</span> <span class="o">=</span> <span class="n">Display</span><span class="p">(</span><span class="n">spi</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">DC_PIN</span><span class="p">),</span> <span class="n">cs</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">CS_PIN</span><span class="p">),</span> <span class="n">rst</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">RESET_PIN</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="n">WIDTH</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="n">ROTATION</span><span class="p">)</span>
+
+<span class="n">RED</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ORANGE</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">YELLOW</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">GREEN</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">BLUE</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">PURPLE</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">WHITE</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">BLACK</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">display</span><span class="o">.</span><span class="n">fill_rectangle</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">fill_rectangle</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">ORANGE</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">fill_rectangle</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">YELLOW</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">fill_rectangle</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">fill_rectangle</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">fill_rectangle</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">PURPLE</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">fill_rectangle</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -1170,10 +1395,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>

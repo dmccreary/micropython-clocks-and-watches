@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="../pico-oled/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="01-rainbow-test/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>MicroPython Clocks and Watch</title>
+        <title>Introduction - MicroPython Clocks and Watch</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -46,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -80,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ili9341-display" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,9 +101,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href="../.." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="/img/coderdojo-logo.jpg" alt="logo">
+  <img src="../../img/coderdojo-logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Introduction
             
           </span>
         </div>
@@ -197,9 +206,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href="../.." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="/img/coderdojo-logo.jpg" alt="logo">
+  <img src="../../img/coderdojo-logo.jpg" alt="logo">
 
     </a>
     MicroPython Clocks and Watch
@@ -225,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -244,7 +253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -297,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/setup/parts/" class="md-nav__link">
+      <a href="../../setup/parts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -358,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/lessons/00-hardware-config/" class="md-nav__link">
+      <a href="../../lessons/00-hardware-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -378,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/lessons/01-get-local-time/" class="md-nav__link">
+      <a href="../../lessons/01-get-local-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/lessons/05-buttons/" class="md-nav__link">
+      <a href="../../lessons/05-buttons/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/lessons/06-draw-performance/" class="md-nav__link">
+      <a href="../../lessons/06-draw-performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -443,17 +452,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -466,7 +477,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Kits
@@ -479,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/pico-oled/" class="md-nav__link">
+      <a href="../pico-oled/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -559,17 +570,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
@@ -582,7 +595,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             ILI9341
@@ -593,9 +606,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/kits/ili9341/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -604,6 +637,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#driver" class="md-nav__link">
+    Driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    Characteristics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#souce-code" class="md-nav__link">
+    Souce Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -615,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/ili9341/01-rainbow-test/" class="md-nav__link">
+      <a href="01-rainbow-test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/ili9341/02-config/" class="md-nav__link">
+      <a href="02-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -697,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/" class="md-nav__link">
+      <a href="../gc9a01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -717,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/01-hello-world/" class="md-nav__link">
+      <a href="../gc9a01/01-hello-world/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/02-display-time/" class="md-nav__link">
+      <a href="../gc9a01/02-display-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/03-display-hand/" class="md-nav__link">
+      <a href="../gc9a01/03-display-hand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/04-cycle-fonts/" class="md-nav__link">
+      <a href="../gc9a01/04-cycle-fonts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/05-draw-ticks/" class="md-nav__link">
+      <a href="../gc9a01/05-draw-ticks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/07-draw-12-digits/" class="md-nav__link">
+      <a href="../gc9a01/07-draw-12-digits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/gc9a01/08-draw-filled-triangle/" class="md-nav__link">
+      <a href="../gc9a01/08-draw-filled-triangle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/lilygo/" class="md-nav__link">
+      <a href="../lilygo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/" class="md-nav__link">
+      <a href="../waveshare/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/01-hello-world/" class="md-nav__link">
+      <a href="../waveshare/01-hello-world/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/02-display-text/" class="md-nav__link">
+      <a href="../waveshare/02-display-text/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1021,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/02-color-test/" class="md-nav__link">
+      <a href="../waveshare/02-color-test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1041,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/03-drawing-hands/" class="md-nav__link">
+      <a href="../waveshare/03-drawing-hands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kits/waveshare/04-5x8-font/" class="md-nav__link">
+      <a href="../waveshare/04-5x8-font/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1096,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1126,6 +1200,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#driver" class="md-nav__link">
+    Driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    Characteristics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#souce-code" class="md-nav__link">
+    Souce Code
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1137,8 +1242,28 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="ili9341-display">ILI9341 Display</h1>
+<p><img alt="" src="../../img/ili9341-listing.png" /></p>
+<h2 id="driver">Driver</h2>
+<p><a href="https://github.com/rdagger/micropython-ili9341">dagger GitHub Repo</a></p>
+<h2 id="characteristics">Characteristics</h2>
+<p>Direct write
+No support for standard micropython framebuf</p>
+<h2 id="souce-code">Souce Code</h2>
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -1170,10 +1295,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>
