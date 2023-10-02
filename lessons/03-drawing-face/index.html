@@ -389,6 +389,46 @@
   
   
     <li class="md-nav__item">
+      <a href="../../00-hardware-config.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware Config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-drawing-coordinates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Coordinates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../02-display-text/" class="md-nav__link">
         
   
@@ -1342,7 +1382,11 @@
 <p>An analog watch ususally has hands that
 are drawn from the center to the edge
 of the display.</p>
-<p>For simple lines, we can use the display.line() function.</p>
+<p>The lines or marks that indicate the hours are often referred to as "hour indices" or "hour markers."</p>
+<p>The smaller lines that indicate the minutes are called "minute indices" or "minute markers."</p>
+<p>For simple lines, we can use the <code>line(x1,y1, x2,y2,color)</code> function which draws
+a sinle pixel line from the starting point at (x1,y1) to the end pint at (x2,y2) using the fifth
+color parameter.  For monochrome clocks the color 1 is whtie and 0 is black.</p>
 <p>For thinker lines we can use the display.rect() function.</p>
 <p>Some watches have more complex hands that are composed of 
 multiple geometries such as triangles.</p>
