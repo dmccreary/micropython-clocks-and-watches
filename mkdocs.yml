@@ -11,6 +11,8 @@ nav:
     - Parts: setup/parts.md
   - Lessons:
     - Introduction: lessons/index.md
+    - Hardware Config: 00-hardware-config.md
+    - Drawing Coordinates: lessons/01-drawing-coordinates.md
     - Displaying Text: lessons/02-display-text.md
     - Drawing a Clock Face: lessons/03-drawing-face.md
     - Larger Fonts: lessons/04-larger-fonts.md
