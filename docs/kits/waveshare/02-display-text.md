@@ -1,6 +1,6 @@
 # Display Time and Date in Text
 
-![](../img/display-text.jpg)
+![](../../img/display-text.jpg)
 
 ```py
 from utime import localtime, sleep

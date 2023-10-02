@@ -24,7 +24,7 @@ See the documentation here: [MicroPython Framebuffer Functions](https://docs.mic
 
 1. [Hello world! Lesson](./01-hello-world.md)
 2. [Color Lab](./02-color-test.md)
-3. [Drawing Analog Hands](./drawing-hands.md)
+3. [Drawing Analog Hands](./03-drawing-hands.md)
 4. [5x8 Fonts](./04-5x8-font.md)
 
 ## Detailed Components
