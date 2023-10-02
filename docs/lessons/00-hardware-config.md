@@ -1,5 +1,12 @@
 # Hardware Configuration Files
 
+All our current displays use the SPI interface.  The
+alternative microcontroller bus, I2C, is about 10x
+slower than SPI.  The SPI intrface
+interface typically uses 7 wires, which can get
+a little complex.  Just a single wire broker or two wires crossed can
+will cause the display to not work.
+
 We have dozens of sample programs for each kit.  And the exact
 connections on our kits vary.  Rather than hard-coding the
 hardware pin numbers in each example, we can move them
