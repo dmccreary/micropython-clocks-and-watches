@@ -576,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-drawing-digits.md" class="md-nav__link">
+      <a href="../07-drawing-digits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,6 +1379,18 @@
 
 
 <h1 id="larger-fonts">Larger Fonts</h1>
+<p>Many display libraries use the MicroPython framebuf standards that
+only provide for a single font.  This is sometimes fine for simple
+small displays, but it is sometimes insufficient for some projects
+where either a smaller or larger font is used.</p>
+<p>The ssd1306 driver is a good example of the default behaviour of text
+drawing.  Only a single font is suppied.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">display</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Some display drivers allow you to change the default font:</p>
+<p><a href="https://docs.micropython.org/en/latest/library/lcd160cr.html#lcd160cr.LCD160CR.set_font">LCD160 Set Font</a></p>
 <p><a href="https://github.com/peterhinch/micropython-font-to-py">Font to Py Command</a></p>
 <p><a href="https://github.com/peterhinch/micropython-nano-gui/tree/master/gui/fonts">Sample Font Files</a></p>
 <h2 id="references">References</h2>
