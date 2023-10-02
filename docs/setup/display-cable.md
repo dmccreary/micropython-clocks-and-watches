@@ -1,4 +1,4 @@
-# Display Cables
+# Building a 7-Wire SPI Display Cables
 
 Please view the content here:
 

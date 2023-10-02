@@ -9,6 +9,7 @@ nav:
   - About: about.md
   - Setup:
     - Parts: setup/parts.md
+    - 7-Wire SPI Cables: setup/display-cable.md
   - Lessons:
     - Introduction: lessons/index.md
     - Hardware Config: 00-hardware-config.md
