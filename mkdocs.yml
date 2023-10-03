@@ -37,6 +37,7 @@ nav:
       - Display Hand: kits/gc9a01//03-display-hand.md
       - Cycle Fonts: kits/gc9a01/04-cycle-fonts.md
       - Draw Ticks: kits/gc9a01/05-draw-ticks.md
+      - Watch Face: kits/gc9a01/09-watch-face.md
       - Draw 12 Digits: kits/gc9a01/07-draw-12-digits.md
       - Draw Filled Triangle: kits/gc9a01/08-draw-filled-triangle.md
     - LILYGO SY7789:
