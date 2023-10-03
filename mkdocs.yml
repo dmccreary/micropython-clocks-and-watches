@@ -26,6 +26,11 @@ nav:
     - Introduction to Watch Kits: kits/index.md
     - Pico with OLED:
       - Introduction: kits/pico-oled/index.md
+      - Hello World: kits/pico-oled/01-hello-world.md
+      - Hello Firmware: kits/pico-oled/01-hello-world-firmward.md
+      - Display Localtime: kits/pico-oled/03-display-localtime.md
+      - Display Localtime Updates: kits/pico-oled/04-display-localtime-updates.md
+      - Display Clock Hands:  kits/pico-oled/05-clock-hands.md
     - ILI9341:
       - Introduction: kits/ili9341/index.md
       - Rainbow Test: kits/ili9341/01-rainbow-test.md

@@ -11,3 +11,9 @@ The OLEDs are mounted on a piece of plastic with a half-size breaboard.
 ![](../../img/pico-on-breadboard.jpg)
 
 Each board has two buttons so you can adjust the time and alarm clock settings.
+
+## Individual Exercises
+
+## Hello World
+
+[Go to Hello world lab](./01-hello-world.md)
