@@ -27,6 +27,7 @@ nav:
     - Pico with OLED:
       - Introduction: kits/pico-oled/index.md
       - Hello World: kits/pico-oled/01-hello-world.md
+      - Hello Config: kits/pico-oled/02-hello-config.md
       - Hello Firmware: kits/pico-oled/01-hello-world-firmward.md
       - Display Time: kits/pico-oled/02-display-time.md
       - Display Localtime: kits/pico-oled/03-display-localtime.md
