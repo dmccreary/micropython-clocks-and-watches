@@ -68,6 +68,8 @@ theme:
     primary: '#642580'
     accent: '#41BAC1'
   include_sidebar: true
+  features:
+    - content.code.copy
 plugins:
   - search
 markdown_extensions:
