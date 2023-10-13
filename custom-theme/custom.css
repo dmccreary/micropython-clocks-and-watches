@@ -1,0 +1,14 @@
+/* Increase font size for navigation buttons */
+.md-footer-nav__link {
+    font-size: 2rem; /* Adjust this value as needed */
+}
+
+/* Position the "Next" button to the right side of the footer */
+.md-footer-nav__column--secondary {
+    margin-left: auto;
+}
+
+/* Add some padding to the navigation buttons for better spacing */
+.md-footer-nav__button {
+    padding: 10px 20px; /* Adjust these values as needed */
+}

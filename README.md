@@ -1,8 +1,13 @@
-# RP2040 MicroPython Watch
+# MicroPython Clocks and Watch
 
-Demo code for the Waveshare RP2040 watch display.
+Website for the MicroPython Clocks and Watches book.
 
-[Website](https://dmccreary.github.io/micropython-watch/)
+Link to Website:
+
+[https://dmccreary.github.io/micropython-clocks-and-watches](https://dmccreary.github.io/micropython-clocks-and-watches)
+
+## License
+
 
 [Waveshare RP2040-LCD-1.28](https://www.waveshare.com/wiki/RP2040-LCD-1.28)
 

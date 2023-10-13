@@ -1,0 +1,37 @@
+<footer class="md-footer">
+    <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+            
+            <!-- Previous button, only if a previous page exists -->
+            {% if page.previous_page %}
+            <div class="md-footer-nav__column">
+                <!-- {{ base_url }}{{ page.previous_page.url }} -->
+                <a href={{ page.previous_page.url }}" title="{{ page.previous_page.title }}" class="md-footer-nav__link md-icon">
+                    <div class="md-footer-nav__button md-icon">
+                        <i class="md-icon md-icon--keyboard-arrow-left"></i> Previous
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+
+            <!-- Next button, only if a next page exists -->
+            {% if page.next_page %}
+            <div class="md-footer-nav__column md-footer-nav__column--secondary">
+                <!-- {{ base_url }} {{ page.next_page.url }} -->
+                <a href="{{ page.next_page.url }}" title="{{ page.next_page.title }}" class="md-footer-nav__link md-icon">
+                    <div class="md-footer-nav__button md-icon">
+                        Next <i class="md-icon md-icon--keyboard-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+
+            <!-- Copyright notice -->
+            <div class="md-footer-copyright md-typeset">
+                <p>
+                    This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+                </p>
+            </div>
+        </nav>
+    </div>
+</footer>
