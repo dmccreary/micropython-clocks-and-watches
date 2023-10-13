@@ -11,3 +11,6 @@ very new round displays up to 5 inches.  These would be ideal for robot faces bu
 they cost up to $200 for the larger displays.
 6. [NTP Pool Project](https://www.ntppool.org/en/)
 7. [Pico Displays and Fonts](https://forums.pimoroni.com/t/pico-display-and-fonts/16194/18)
+8. [Analog Clock Face Generator](https://www.oliverboorman.biz/projects/tools/clocks.php) - a wonderful
+way to try out different designs.  This web app allows you to change the format of the markers, digits and hands.
+9. [Blocklayer Clock Face](https://www.blocklayer.com/clock-face)

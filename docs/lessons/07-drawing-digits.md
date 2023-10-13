@@ -105,26 +105,21 @@ segmentMapping = [
 ];
 
 def drawThickHorizLine(x1, x2, y, width):
-    oled.line(x1, y, x2, y, 1);
-    if width > 1:
-        oled.line(x1, y+1, x2, y+1, 1);
-    if width > 2:
-        oled.line(x1, y-1, x2, y-1, 1);
-    if width > 3:
-        oled.line(x1, y+2, x2, y+2, 1);
-    if width > 4:
-        oled.line(x1, y-2, x2, y-2, 1);
+# for portability with other MicroPython drawing libraries that use framebuf
+def line(x1,y1,x2,y2,color):
+    oled.draw_line(x1,y1,x2,y2,color)
 
-def drawThickVertLine(y1, y2, x, width):
-    oled.line(x, y1, x, y2, 1);
-    if width > 1:
-        oled.line(x+1, y1, x+1, y2, 1);
-    if width > 2:
-        oled.line(x-1, y1, x-1, y2, 1);
-    if width > 3:
-        oled.line(x+2, y1, x+2, y2, 1);
-    if width > 4:
-        oled.line(x-2, y1, x-2, y2, 1);
+def fill(color):
+    oled.fill_rectangle(0, 0, WIDTH, HEIGHT, color)
+
+def fill_rect(x,y,w,h,color):
+    oled.fill_rectangle(x, y, w, h, color)
+
+def drawThickHorizLine(x1, x2, y, width, color):
+    fill_rect(x1, y, x2-x1, width, color)
+
+def drawThickVertLine(y1, y2, x, width, color):
+    fill_rect(x, y1, width, y2-y1, color)
         
 # x and y are the center of the digit, size is the center to edge
 def drawDigit(digit, x, y, size, width):
