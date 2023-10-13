@@ -2,7 +2,7 @@ site_name: MicroPython Clocks and Watch
 site_description: 'Resources for teaching drawing on a watch face. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
-repo_url: 'https://github.com/dmccreary/micropython-watch'
+repo_url: 'https://github.com/dmccreary/micropython-clocks-and-watches'
 
 nav:
   - Home: index.md
