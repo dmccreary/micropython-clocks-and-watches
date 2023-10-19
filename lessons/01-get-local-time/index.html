@@ -343,6 +343,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -574,6 +576,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#extracting-specific-datetime-components" class="md-nav__link">
+    Extracting Specific Date/Time Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#format-of-the-localtime" class="md-nav__link">
     Format of the Localtime
   </a>
@@ -701,6 +710,26 @@
   
   <span class="md-ellipsis">
     Draw Performance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-machine-info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Info
   </span>
   
 
@@ -854,6 +883,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#extracting-specific-datetime-components" class="md-nav__link">
+    Extracting Specific Date/Time Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#format-of-the-localtime" class="md-nav__link">
     Format of the Localtime
   </a>
@@ -956,7 +992,34 @@
 </code></pre></div></td></tr></table></div>
 <h2 id="result">Result</h2>
 <p>Local time returns a read-only tuple:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(2023, 2, 28, 18, 54, 7, 1, 59)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">59</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="extracting-specific-datetime-components">Extracting Specific Date/Time Components</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">localtime</span>
+
+<span class="n">now</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;year:&#39;</span><span class="p">,</span>    <span class="n">now</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;month:&#39;</span><span class="p">,</span>   <span class="n">now</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;day:&#39;</span><span class="p">,</span>     <span class="n">now</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hour:&#39;</span><span class="p">,</span>    <span class="n">now</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;minute:&#39;</span><span class="p">,</span>  <span class="n">now</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sec:&#39;</span><span class="p">,</span>     <span class="n">now</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;weekday:&#39;</span><span class="p">,</span> <span class="n">now</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;day of year:&#39;</span><span class="p">,</span> <span class="n">now</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="format-of-the-localtime">Format of the Localtime</h2>
 <p>The format is a "8-tuple" of integers in the format (year, month, mday, hour, minute, second, weekday, yearday)</p>
@@ -1072,7 +1135,9 @@ Time: 19:20
 Time: 7:46 pm
 </code></pre></div></td></tr></table></div>
 <h2 id="modifying-the-thonny-parameters">Modifying the Thonny Parameters</h2>
+<p>By default Thonny syncs the host time at power up.</p>
 <p><img alt="" src="../../img/thonny-interpreter-clock-sync.png" /></p>
+<p>We can disable this.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>
@@ -1080,6 +1145,30 @@ Time: 7:46 pm
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(2021, 1, 1, 0, 0, 22, 4, 1)
 </code></pre></div></td></tr></table></div>
 This was printed 22 seconds after power up.</p>
+<p>The Pico "W" can sync with the <a href="https://mpython.readthedocs.io/en/master/library/micropython/ntptime.html">NTP</a> functions.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">mpython</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">ntptime</span>
+<span class="kn">import</span> <span class="nn">secrets</span>
+
+<span class="c1"># summary</span>
+<span class="n">mywifi</span><span class="o">=</span><span class="n">wifi</span><span class="p">()</span>
+<span class="n">mywifi</span><span class="o">.</span><span class="n">connectWiFi</span><span class="p">(</span><span class="n">secrets</span><span class="o">.</span><span class="n">wifi_ssid</span><span class="p">,</span> <span class="n">secrets</span><span class="o">.</span><span class="n">wifi_pass</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Local time before synchronization：</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()))</span>
+<span class="n">ntptime</span><span class="o">.</span><span class="n">settime</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Local time after synchronization：</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()))</span>
+</code></pre></div></td></tr></table></div>
+<p>Result:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Local time before synchronization：(2021, 1, 1, 0, 3, 31, 4, 1)
 Local time after synchronization：(2023, 10, 16, 20, 16, 59, 0, 289)

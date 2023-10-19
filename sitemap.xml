@@ -220,4 +220,9 @@
          <lastmod>2023-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/10-machine-info/</loc>
+         <lastmod>2023-10-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
