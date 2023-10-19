@@ -87,7 +87,7 @@ theme:
     - navigation.footer
 plugins:
   - search
-  - social
+#  - social
 markdown_extensions:
   - admonition
   - pymdownx.details
