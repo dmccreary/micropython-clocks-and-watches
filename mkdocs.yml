@@ -74,7 +74,8 @@ theme:
     next: fontawesome/solid/angle-right
   extra_css:
     - styles/custom.css
-  logo: img/coderdojo-logo.jpg
+  logo: img/clock-icon.jpg
+  favicon: img/clock-icon.jpg
   palette:
     primary: '#642580'
     accent: '#41BAC1'
