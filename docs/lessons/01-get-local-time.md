@@ -19,6 +19,8 @@ print(time.localtime())
 
 ## Result
 
+Local time returns a read-only tuple:
+
 ```
 (2023, 2, 28, 18, 54, 7, 1, 59)
 ```
@@ -105,6 +107,26 @@ print("Time: {}:{} {}".format(hour_12, now[4], am_pm))
 ```
 Date: Tuesday March 28, 2023
 Time: 7:46 pm
+```
+
+## Modifying the Thonny Parameters
+
+![](../img/thonny-interpreter-clock-sync.png)
+
+```py
+import time
+print(time.localtime())
+
+```
+
+```
+(2021, 1, 1, 0, 0, 22, 4, 1)
+```
+This was printed 22 seconds after power up.
+
+```
+Local time before synchronization：(2021, 1, 1, 0, 3, 31, 4, 1)
+Local time after synchronization：(2023, 10, 16, 20, 16, 59, 0, 289)
 ```
 
 ## References
