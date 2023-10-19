@@ -12,6 +12,8 @@
         <meta name="author" content="Dan McCreary">
       
       
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/01-get-local-time/">
+      
       
         <link rel="prev" href="../00-hardware-config/">
       
@@ -626,6 +628,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#modifying-the-thonny-parameters" class="md-nav__link">
+    Modifying the Thonny Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -899,6 +908,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#modifying-the-thonny-parameters" class="md-nav__link">
+    Modifying the Thonny Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -939,6 +955,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="result">Result</h2>
+<p>Local time returns a read-only tuple:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(2023, 2, 28, 18, 54, 7, 1, 59)
 </code></pre></div></td></tr></table></div>
 <h2 id="format-of-the-localtime">Format of the Localtime</h2>
@@ -1053,6 +1070,19 @@ Time: 19:20
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Date: Tuesday March 28, 2023
 Time: 7:46 pm
+</code></pre></div></td></tr></table></div>
+<h2 id="modifying-the-thonny-parameters">Modifying the Thonny Parameters</h2>
+<p><img alt="" src="../../img/thonny-interpreter-clock-sync.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(2021, 1, 1, 0, 0, 22, 4, 1)
+</code></pre></div></td></tr></table></div>
+This was printed 22 seconds after power up.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Local time before synchronization：(2021, 1, 1, 0, 3, 31, 4, 1)
+Local time after synchronization：(2023, 10, 16, 20, 16, 59, 0, 289)
 </code></pre></div></td></tr></table></div>
 <h2 id="references">References</h2>
 <ul>
