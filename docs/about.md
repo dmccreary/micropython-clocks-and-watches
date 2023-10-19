@@ -1,10 +1,27 @@
 # About the MicroPython Clocks and Watchs Site
 
+<!-- 
+Sample Prompt:
+Create a persuave motivational article about the values of a website dedicated
+to the creation of clocks and watches using MicroPython.
+Reference the following points:
+
+1. Kids love clocs and watches
+2. The lower cost of components
+3. The need to teach computational thinking
+4. The value of project-based learning
+5. The value of social construction
+6. The need for well-designed lesson plans
+7. The focus on user experience
+-->
+
 My STEM students often hold a special facination with timekeeping.
 I don't know exactly what it is that gets them so excited about
 these projects.  But the bottom line is they quickly become
 motiviated to learn Python to create their own timekeeping
-devices that are customized to their interests.
+devices that are customized to their interests.  Owning their
+own devices and showing off these
+projects to their friends is also a big plus.
 
 At the core of
  [Project Based Learning (PBL)](https://en.wikipedia.org/wiki/Project-based_learning)
@@ -14,7 +31,7 @@ At the core of
  to fix and modify the projects they end up learning
  faster than if I gave them a dozen lectures with PowerPoint.
 
- ## The Timeless Allure of Timekeeping: Sparking a Passion for Coding with MicroPython Clocks and Watches
+## The Timeless Allure of Timekeeping: Sparking a Passion for Coding with MicroPython Clocks and Watches
 
 In a world driven by digital innovation, the essence of time remains universally compelling. From the ancient sundials to the modern-day smartwatches, humans have always been fascinated by the pursuit of measuring time. This intrigue, particularly among the younger generation, is why a library of fun MicroPython Clocks and Watches serves as an exceptional entry point into the universe of coding and computational thinking.
 
@@ -32,9 +49,15 @@ A MicroPython Clock project, for instance, isn’t just a coding endeavor; it's 
 
 Computational thinking is a cornerstone of modern education. It’s not just about writing code, but a way of approaching problems logically, breaking them down into smaller tasks, and finding efficient solutions. By creating a timekeeping device, children undergo a practical exercise in computational thinking. They decide the features they want, debug issues, and constantly refine their work, all while having fun!
 
-## The Joy of Shared Creation
+## Social Construction: The Joy of Shared Creation
 
-Imagine a library where each clock or watch has its unique story, representing a young coder's journey. Sharing these creations allows children to learn from each other, celebrate their achievements, and draw inspiration. Such a collaborative environment fosters not just coding skills but also empathy, teamwork, and a sense of community.
+Imagine a part of every school library or a display case where clocks and watches are on display.   Each devices can tell its unique story, representing a young coder's journey. Sharing these creations allows children to learn from each other, celebrate their achievements, and draw inspiration. Such a collaborative environment fosters not just coding skills but also empathy, teamwork, and a sense of community.  Technically, we call group building projects [Social constructivism](https://en.wikipedia.org/wiki/Social_constructivism#Education).  And there is ample
+research to show that students that learn in groups have higer participation rates and can usually develop better outcomes.
+
+## Engineered for User Experience
+
+Geat STEM projects don't just fall off a shelf into our laps.  They need to be designed and tested carefully using the same agile processes that we use in software development.  [User Experience](https://en.wikipedia.org/wiki/User_experience) (UX) professionals need to help us observe our students using and learning from our lessons.
+
 
 ## In Conclusion
 
