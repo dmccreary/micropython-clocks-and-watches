@@ -2,6 +2,8 @@
 
 Welcome to the MicroPython Clocks and Watchs website.
 
+![Banner](./img/banner.png)
+
 ## Our Mission
 
 The mission of this website is to serve as a resource for teachers, mentors and
