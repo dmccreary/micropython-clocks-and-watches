@@ -23,6 +23,7 @@ nav:
     - Drawing Digits: lessons/07-drawing-digits.md
     - Buttons: lessons/05-buttons.md
     - Draw Performance: lessons/06-draw-performance.md
+    - Machine Info: lessons/10-machine-info.md
   - Kits:
     - Introduction to Watch Kits: kits/index.md
     - Pico with OLED:

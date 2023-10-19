@@ -21,8 +21,26 @@ print(time.localtime())
 
 Local time returns a read-only tuple:
 
-```
+```py
 (2023, 2, 28, 18, 54, 7, 1, 59)
+```
+
+## Extracting Specific Date/Time Components
+
+```py
+from time import localtime
+
+now = localtime()
+print(now)
+
+print('year:',    now[0])
+print('month:',   now[1])
+print('day:',     now[2])
+print('hour:',    now[3])
+print('minute:',  now[4])
+print('sec:',     now[5])
+print('weekday:', now[6])
+print('day of year:', now[7])
 ```
 
 ## Format of the Localtime
@@ -111,7 +129,11 @@ Time: 7:46 pm
 
 ## Modifying the Thonny Parameters
 
+By default Thonny syncs the host time at power up.
+
 ![](../img/thonny-interpreter-clock-sync.png)
+
+We can disable this.
 
 ```py
 import time
@@ -123,6 +145,24 @@ print(time.localtime())
 (2021, 1, 1, 0, 0, 22, 4, 1)
 ```
 This was printed 22 seconds after power up.
+
+The Pico "W" can sync with the [NTP](https://mpython.readthedocs.io/en/master/library/micropython/ntptime.html) functions.
+
+```py
+from mpython import *
+import ntptime
+import secrets
+
+# summary
+mywifi=wifi()
+mywifi.connectWiFi(secrets.wifi_ssid, secrets.wifi_pass)
+
+print("Local time before synchronization：%s" %str(time.localtime()))
+ntptime.settime()
+print("Local time after synchronization：%s" %str(time.localtime()))
+```
+
+Result:
 
 ```
 Local time before synchronization：(2021, 1, 1, 0, 3, 31, 4, 1)
