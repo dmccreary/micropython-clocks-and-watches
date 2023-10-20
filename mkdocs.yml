@@ -27,8 +27,8 @@ nav:
   - Kits:
     - Introduction to Watch Kits: kits/index.md
     - LED Strip: kits/led-strips/index.md
-    - Binary Clock: kits/led-strips/01-binary-clock.md
-    - 7 Segment Clock: kits/led-strips/02-seven-segment-clock.md
+      - Binary Clock: kits/led-strips/01-binary-clock.md
+      - 7 Segment Clock: kits/led-strips/02-seven-segment-clock.md
     - Pico with OLED:
       - Introduction: kits/pico-oled/index.md
       - Hello World: kits/pico-oled/01-hello-world.md
