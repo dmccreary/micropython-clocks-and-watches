@@ -74,8 +74,8 @@ theme:
     next: fontawesome/solid/angle-right
   extra_css:
     - styles/custom.css
-  logo: img/clock-icon.jpg
-  favicon: img/clock-icon.jpg
+  logo: img/clock-icon.png
+  favicon: img/clock-icon.png
   palette:
     primary: '#642580'
     accent: '#41BAC1'
