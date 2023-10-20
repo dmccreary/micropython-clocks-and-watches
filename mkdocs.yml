@@ -26,7 +26,8 @@ nav:
     - Machine Info: lessons/10-machine-info.md
   - Kits:
     - Introduction to Watch Kits: kits/index.md
-    - LED Strip: kits/led-strips/index.md
+    - LED Strip Kits: 
+      - Introduction: kits/led-strips/index.md
       - Binary Clock: kits/led-strips/01-binary-clock.md
       - 7 Segment Clock: kits/led-strips/02-seven-segment-clock.md
     - Pico with OLED:
