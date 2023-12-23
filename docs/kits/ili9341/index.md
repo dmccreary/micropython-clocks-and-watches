@@ -1,5 +1,7 @@
 # ILI9341 Display
 
+![](../../img/tft-clock-face.jpg)
+
 ![](../../img/ili9341-listing.png)
 
 ## Driver
