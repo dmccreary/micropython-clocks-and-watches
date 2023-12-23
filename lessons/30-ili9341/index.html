@@ -479,6 +479,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    Configuration file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-drawing" class="md-nav__link">
+    Simple Drawing
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -496,7 +518,56 @@
 
 
 <h1 id="ili9341-drawing">ILI9341 Drawing</h1>
+<p>The ILI9341 chip is a 262144-color single-chip SOC driver for a TFT liquid crystal display with a resolution of 240x320 dots (RGB).</p>
 <p><a href="">Source Code</a></p>
+<h2 id="configuration-file">Configuration file</h2>
+<p>These examples will all use the following config file:</p>
+<p>config.py
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">SCK_PIN</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">MISO_PIN</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># labeled SDI(MOSI) on the back of the display</span>
+<span class="n">DC_PIN</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">RESET_PIN</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">CS_PIN</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">ROTATION</span> <span class="o">=</span> <span class="mi">90</span>
+
+<span class="n">WIDTH</span><span class="o">=</span><span class="mi">320</span>
+<span class="n">HEIGHT</span><span class="o">=</span><span class="mi">240</span>
+</code></pre></div></td></tr></table></div></p>
+<p>We also put the color names in a colors.py file
+that calculates the colors using a name.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">ili9341</span> <span class="kn">import</span> <span class="n">color565</span>
+
+<span class="n">WHITE</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">BLACK</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">RED</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ORANGE</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">YELLOW</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">GREEN</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">BLUE</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">CYAN</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">PURPLE</span> <span class="o">=</span> <span class="n">color565</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="simple-drawing">Simple Drawing</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>
+</code></pre></div></td></tr></table></div>
 
 
   
