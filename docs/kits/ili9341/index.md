@@ -13,5 +13,7 @@
 Direct write
 No support for standard micropython framebuf
 
-## Souce Code
+## Source Code
+
+[Source Code](https://github.com/dmccreary/micropython-clocks-and-watches/tree/main/src/kits/ili9341)
 
