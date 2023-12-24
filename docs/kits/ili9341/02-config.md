@@ -1,6 +1,6 @@
 # Creating a Hardware Configuration File
- 
-Rather than hard coding the pin numbers in every example, lets put all
+
+Rather than hard-coding the pin numbers in every example, let's put all
 our hardware configuration data in a single file.  All the examples
 from here on can use that configuration data.
 
@@ -27,7 +27,7 @@ WIDTH=320
 HEIGHT=240
 ```
 
-## Sample Use of Hardwre Configuration File
+## Sample Use of Haredwre Configuration File
 
 ```py
 # print out "Hello World!" using the rotation=3 using 32-bit high font
