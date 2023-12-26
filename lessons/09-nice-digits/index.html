@@ -12,13 +12,13 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/07-drawing-digits/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/09-nice-digits/">
       
       
-        <link rel="prev" href="../01-get-local-time/">
+        <link rel="prev" href="../07-drawing-digits/">
       
       
-        <link rel="next" href="../09-nice-digits/">
+        <link rel="next" href="../05-buttons/">
       
       
       <link rel="icon" href="../../img/clock-icon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Drawing Digits - MicroPython Clocks and Watch</title>
+        <title>Nice Digits - MicroPython Clocks and Watch</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drawing-clock-digits" class="md-skip">
+        <a href="#drawing-nice-digits" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Drawing Digits
+              Nice Digits
             
           </span>
         </div>
@@ -529,6 +529,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../07-drawing-digits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Digits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -544,7 +564,7 @@
           
   
   <span class="md-ellipsis">
-    Drawing Digits
+    Nice Digits
   </span>
   
 
@@ -555,7 +575,7 @@
         
   
   <span class="md-ellipsis">
-    Drawing Digits
+    Nice Digits
   </span>
   
 
@@ -577,36 +597,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-seven-segments-of-a-numeric-digit" class="md-nav__link">
-    The Seven Segments of a Numeric Digit
+  <a href="#new-thickness-parameters" class="md-nav__link">
+    New Thickness Parameters
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-segment-map" class="md-nav__link">
-    The Segment Map
+  <a href="#draw-segment-function" class="md-nav__link">
+    Draw Segment Function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#drawing-horizontal-segments" class="md-nav__link">
-    Drawing Horizontal Segments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drawing-the-vertical-segments" class="md-nav__link">
-    Drawing the Vertical Segments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-our-drawing" class="md-nav__link">
-    Testing Our Drawing
+  <a href="#full-test-program" class="md-nav__link">
+    Full Test Program
   </a>
   
 </li>
@@ -615,26 +621,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../09-nice-digits/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Nice Digits
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -825,36 +811,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-seven-segments-of-a-numeric-digit" class="md-nav__link">
-    The Seven Segments of a Numeric Digit
+  <a href="#new-thickness-parameters" class="md-nav__link">
+    New Thickness Parameters
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-segment-map" class="md-nav__link">
-    The Segment Map
+  <a href="#draw-segment-function" class="md-nav__link">
+    Draw Segment Function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#drawing-horizontal-segments" class="md-nav__link">
-    Drawing Horizontal Segments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drawing-the-vertical-segments" class="md-nav__link">
-    Drawing the Vertical Segments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-our-drawing" class="md-nav__link">
-    Testing Our Drawing
+  <a href="#full-test-program" class="md-nav__link">
+    Full Test Program
   </a>
   
 </li>
@@ -877,136 +849,28 @@
   
 
 
-<h1 id="drawing-clock-digits">Drawing Clock Digits</h1>
-<h2 id="the-seven-segments-of-a-numeric-digit">The Seven Segments of a Numeric Digit</h2>
-<p>Since the early history of computing, numeric displays were created using a grouping
-of seven individual lights to display a single digit.  These are called
-<a href="https://en.wikipedia.org/wiki/Seven-segment_display">Seven Segment Displays</a>.  An
-example is shown in the image below:</p>
-<p><img alt="Seven Segment Display" src="../../img/seven-segment-display.png" width="200" /></p>
-<p>The segments are labeled "a" through "g" starting at the top and
-going around in a clockwise direction.  Note that the seventh segment is in
-the center element is the "g" segment.</p>
-<p>Technically, many displays have an 8th segment for the decimal point (DP).  To keep
-things simple we will just focus on the main seven segments in this lesson.</p>
-<p>Clocks also usually have a colon that separates the hours and minutes
-and an AM/PM indicator for 12-hour displays.  We will be treating
-these and independent drawing components in this lab.  Many digital
-clocks have the colon flash on and off every second.</p>
-<h2 id="the-segment-map">The Segment Map</h2>
-<p>To start out, we need to create a "digit-to-segment map" data structure.
-We use this to help us figure out what segments to turn on
-for any given digit.</p>
-<p>We will also need to convert the segment letters into integers.  These integers will form the index of an array.</p>
-<p><img alt="Seven Segment Display Numeric Codes" src="../../img/seven-segment-display-numbers.png" width="400" /></p>
-<p>To write our code, we ask, for any given digit, is the segment on or off?</p>
-<p>To do this, we can create an array of segments like this:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">segmentMapping</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="c1">#a, b, c, d, e, f, g</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1"># 0</span>
-  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1"># 1</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 2</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 3</span>
-  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 4</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 5</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 6</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1"># 7</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 8</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># 9</span>
-<span class="p">];</span>
-</code></pre></div></td></tr></table></div>
-<p>For any given digit like "2" we can then just pass the index of "2"
-to a Python list to get a list of the segments to turn on.  That line
-of code looks like this:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">segmentOn</span> <span class="o">=</span> <span class="n">segmentMapping</span><span class="p">[</span><span class="n">digit</span><span class="p">];</span>
-</code></pre></div></td></tr></table></div>
-<p>This will return the segments that are to be turned on for any given
-input digit.  For example:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">segmentOn</span> <span class="o">=</span> <span class="n">segmentMapping</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">segmentOn</span><span class="p">)</span>
-<span class="c1"># returns:</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</code></pre></div></td></tr></table></div>
-<p>We now have the data structure to do the drawing.  We
-will do this in two steps.</p>
+<h1 id="drawing-nice-digits">Drawing Nice Digits</h1>
+<p>In the last section, we drew a seven-segment digit number using the line
+function.  In this section, we will add a better function that
+will add a new parameter for the thickness of the digit segments.</p>
+<h2 id="new-thickness-parameters">New Thickness Parameters</h2>
+<p>Placing the rectangles correctly within a seven-segment display when
+we have many drawing parameters requires some precision.  We
+will use a decomposition process and take "one step at a time" to work out the details.</p>
+<p><img alt="" src="../../img/seven-segment-thickness.png" /></p>
+<h2 id="draw-segment-function">Draw Segment Function</h2>
+<p>Here is our revised parameters list:</p>
 <ol>
-<li>Draw the three horizontal lines for a digit if they are on</li>
-<li>Draw all vertical lines for a given digit, keeping in mind
-that we need to only draw half the way down the digit for
-the upper left and upper right vertical segments (1 and 5)</li>
+<li>The digit to display - an integer in the range 0-9</li>
+<li>x of the upper left corner</li>
+<li>y of the upper left corner</li>
+<li>the width of the digit (about 20 is a good value)</li>
+<li>the height of the digit</li>
+<li>(NEW) the thickness of each segment (3 or 4 are good values)</li>
+<li>the color (0=black, 1=white)</li>
 </ol>
-<p>We will start out with a simple digit drawing using a
-single-pixel width line.  Later we will add a parameter
-to change the thickness of the line.  But we want to take
-this one-step-at-a-time.</p>
-<h2 id="drawing-horizontal-segments">Drawing Horizontal Segments</h2>
-<p><img alt="" src="../../img/horizontal-lines.png" /></p>
-<p>This sample code will step through the horizontal lines
-for segments 0, 3 and 6.  It will check using the <code>segmentOn[i]</code>
-line which will ONLY be true if that segment should be turned
-on for a given digit.</p>
-<p>Next, we figure out how high to draw the horizontal line.
-To do this we will need to figure out the vertical offset (yOffset).
-The top line (segment 0) has no offset and the bottom line
-has the full height of the digit.</p>
-<p>Unlike the vertical lines, the horizontal lines will span
-the entire width of the area. That makes our code
-simple because the line will have a horizontal length of exactly the 
-x plus the width of the digit.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># reasonable test values for a small display</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">width</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="c1"># Horizontal segments</span>
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]:</span>
-    <span class="c1"># check if this digit has the segment on</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">segmentOn</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span> <span class="c1"># top</span>
-          <span class="n">yOffset</span> <span class="o">=</span> <span class="mi">0</span> 
-      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">3</span><span class="p">):</span>
-          <span class="n">yOffset</span> <span class="o">=</span> <span class="n">height</span> <span class="c1"># bottom element</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">6</span><span class="p">):</span>
-          <span class="n">yOffset</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span> <span class="c1"># bottom</span>
-      <span class="c1"># draw a signal thin line</span>
-      <span class="n">oled</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">yOffset</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">yOffset</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="drawing-the-vertical-segments">Drawing the Vertical Segments</h2>
-<p><img alt="" src="../../img/vertical-lines.png" /></p>
-<p>Next, we need to create some code to draw the four vertical
-segments.  This is a little more complex because the lines
-do NOT span the full height of the digit.</p>
+<p>Here is our revised function for drawing a single digit with the
+segment thickness added.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1026,44 +890,69 @@ do NOT span the full height of the digit.</p>
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Draw Vertical segments</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">width</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="c1"># Draw the vertical segments ur, lr, ll, ul</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># digit is the number to display</span>
+<span class="c1"># x and y are upper-left-corner</span>
+<span class="c1"># width and height are the dimensions of the digit</span>
+<span class="c1"># thickness is the width of the line segments</span>
+<span class="c1"># color is 1 for white and 0 for black</span>
+<span class="k">def</span> <span class="nf">drawDigit</span><span class="p">(</span><span class="n">digit</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+  <span class="c1"># get a list of the segments that are on for this digit</span>
+  <span class="n">segmentOn</span> <span class="o">=</span> <span class="n">segmentMapping</span><span class="p">[</span><span class="n">digit</span><span class="p">];</span>
+
+  <span class="c1"># Draw the horizontal segments: top, bottom, middle</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">segmentOn</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span> <span class="c1"># top</span>
+          <span class="n">yOffset</span> <span class="o">=</span> <span class="mi">0</span> 
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">3</span><span class="p">):</span>
+          <span class="n">yOffset</span> <span class="o">=</span> <span class="n">height</span> <span class="o">-</span> <span class="n">thickness</span> <span class="c1"># bottom element</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">6</span><span class="p">):</span>
+          <span class="n">yOffset</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">thickness</span> <span class="o">//</span> <span class="mi">2</span><span class="c1"># bottom</span>
+      <span class="c1"># oled.line(x - size, y+yOffset-size, x + size, y+yOffset-size, 1);</span>
+      <span class="n">oled</span><span class="o">.</span><span class="n">fill_rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">yOffset</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+
+  <span class="c1"># Draw the vertical segments ur, lr, ll, ul</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">segmentOn</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">:</span>
-        <span class="c1"># top two segments</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span>
-            <span class="n">startY</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="n">endY</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">2</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">4</span><span class="p">):</span>
-            <span class="n">startY</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span>
-            <span class="n">endY</span> <span class="o">=</span> <span class="n">height</span>
-        <span class="c1"># left segments</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">4</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span> <span class="n">xOffset</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="c1"># right segments</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">2</span><span class="p">):</span> <span class="n">xOffset</span> <span class="o">=</span> <span class="n">width</span>
-        <span class="n">oled</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">xOffset</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">startY</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">xOffset</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">endY</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="c1"># upper vertical lines</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span>
+          <span class="n">startY</span> <span class="o">=</span> <span class="n">y</span>
+          <span class="n">endY</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span>
+      <span class="c1"># lower two vertical lines (2=lower right and 4=lower left)</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">2</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">4</span><span class="p">):</span>
+          <span class="n">startY</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span>
+          <span class="n">endY</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">4</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span> <span class="n">xOffset</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">2</span><span class="p">):</span> <span class="n">xOffset</span> <span class="o">=</span> <span class="n">width</span><span class="o">-</span><span class="n">thickness</span>
+
+      <span class="n">oled</span><span class="o">.</span><span class="n">fill_rect</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">xOffset</span><span class="p">,</span> <span class="n">startY</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">endY</span><span class="o">-</span><span class="n">startY</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="testing-our-drawing">Testing Our Drawing</h2>
-<p>We can now wrap the code above in a <code>drawDigit()</code> function, and we will
-test each of the digits 0-9 in a small test program.</p>
-<p>Our first version of drawDigit is modeled after the rect() function.
-After we pass in the digit, it takes in the (x,y) and width and height
-parameters and the color value.</p>
-<p>Draw Digit Function Parameters:</p>
-<ol>
-<li>The digit to display - an integer in the range 0-9</li>
-<li>x of the upper left corner</li>
-<li>y of the upper left corner</li>
-<li>the width of the digit (about 20 is a good value)</li>
-<li>the height of the digit</li>
-<li>the color (0=black, 1=white)</li>
-</ol>
-<p>Here is our testing program that draws digits 0-9 in the center
-of a standard 128x64 monochrome OLED display:</p>
+<p>Let's now take a look at how we had to modify our code.</p>
+<p>The first item to note is that when we calculate a starting point
+to draw, we can't just draw at the edge of the region.  We need
+to back off our initial drawing point by the width of the segment.</p>
+<p>Here is an example of subtracting the thickness from y when
+we draw the bottom segment:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">yOffset</span> <span class="o">=</span> <span class="n">height</span> <span class="o">-</span> <span class="n">thickness</span> <span class="c1"># bottom element</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="" src="../../img/horizontal-lines-thickness.png" /></p>
+<h2 id="full-test-program">Full Test Program</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1152,8 +1041,10 @@ of a standard 128x64 monochrome OLED display:</p>
 <span class="normal">86</span>
 <span class="normal">87</span>
 <span class="normal">88</span>
-<span class="normal">89</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Lab 20: Draw Digits with just the line function</span>
-<span class="c1"># this lab uses the line() function to draw the segments</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Clock Lab 20: Draw Seven Segments</span>
+<span class="c1"># this lab uses the fill_rect function to draw the segments</span>
 <span class="kn">import</span> <span class="nn">machine</span>
 <span class="kn">import</span> <span class="nn">utime</span>
 <span class="kn">import</span> <span class="nn">ssd1306</span>
@@ -1167,10 +1058,8 @@ of a standard 128x64 monochrome OLED display:</p>
 <span class="n">RES</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">DC</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">CS</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">128</span>
-<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">64</span>
 
-<span class="n">oled</span> <span class="o">=</span> <span class="n">ssd1306</span><span class="o">.</span><span class="n">SSD1306_SPI</span><span class="p">(</span><span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="n">spi</span><span class="p">,</span> <span class="n">DC</span><span class="p">,</span> <span class="n">RES</span><span class="p">,</span> <span class="n">CS</span><span class="p">)</span>
+<span class="n">oled</span> <span class="o">=</span> <span class="n">ssd1306</span><span class="o">.</span><span class="n">SSD1306_SPI</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">spi</span><span class="p">,</span> <span class="n">DC</span><span class="p">,</span> <span class="n">RES</span><span class="p">,</span> <span class="n">CS</span><span class="p">)</span>
 
 <span class="n">segmentMapping</span> <span class="o">=</span> <span class="p">[</span>
   <span class="c1">#a, b, c, d, e, f, g</span>
@@ -1186,39 +1075,42 @@ of a standard 128x64 monochrome OLED display:</p>
   <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># 9</span>
 <span class="p">];</span>
 
-
-<span class="c1"># x and y are the center of the digit, size is the center to edge</span>
-<span class="k">def</span> <span class="nf">drawDigit</span><span class="p">(</span><span class="n">digit</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+<span class="c1"># digit is the numer to display</span>
+<span class="c1"># x and y are upper-left-corner</span>
+<span class="c1"># width and height are the dimensions of the digit</span>
+<span class="c1"># thickness is the width of the line segments</span>
+<span class="c1"># color is 1 for white and 0 for black</span>
+<span class="k">def</span> <span class="nf">drawDigit</span><span class="p">(</span><span class="n">digit</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
   <span class="c1"># get a list of the segments that are on for this digit</span>
   <span class="n">segmentOn</span> <span class="o">=</span> <span class="n">segmentMapping</span><span class="p">[</span><span class="n">digit</span><span class="p">];</span>
 
-  <span class="c1"># Draw the horizontal segments: top, bottem, middle</span>
+  <span class="c1"># Draw the horizontal segments: top, bottom, middle</span>
   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]:</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">segmentOn</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
       <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span> <span class="c1"># top</span>
           <span class="n">yOffset</span> <span class="o">=</span> <span class="mi">0</span> 
       <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">3</span><span class="p">):</span>
-          <span class="n">yOffset</span> <span class="o">=</span> <span class="n">height</span> <span class="c1"># bottom element</span>
+          <span class="n">yOffset</span> <span class="o">=</span> <span class="n">height</span> <span class="o">-</span> <span class="n">thickness</span> <span class="c1"># bottom element</span>
       <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">6</span><span class="p">):</span>
-          <span class="n">yOffset</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span> <span class="c1"># middle line</span>
-      <span class="n">oled</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">yOffset</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">yOffset</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+          <span class="n">yOffset</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">thickness</span> <span class="o">//</span> <span class="mi">2</span><span class="c1"># bottom</span>
+      <span class="c1"># oled.line(x - size, y+yOffset-size, x + size, y+yOffset-size, 1);</span>
+      <span class="n">oled</span><span class="o">.</span><span class="n">fill_rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">yOffset</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
 
   <span class="c1"># Draw the vertical segments ur, lr, ll, ul</span>
   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">segmentOn</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">:</span>
-        <span class="c1"># top two segments</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span>
-            <span class="n">startY</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="n">endY</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">2</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">4</span><span class="p">):</span>
-            <span class="n">startY</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span>
-            <span class="n">endY</span> <span class="o">=</span> <span class="n">height</span>
-        <span class="c1"># left segments</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">4</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span> <span class="n">xOffset</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="c1"># right segments</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">2</span><span class="p">):</span> <span class="n">xOffset</span> <span class="o">=</span> <span class="n">width</span>
-        <span class="n">oled</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">xOffset</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">startY</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">xOffset</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">endY</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="c1"># upper vertical lines</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span>
+          <span class="n">startY</span> <span class="o">=</span> <span class="n">y</span>
+          <span class="n">endY</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span>
+      <span class="c1"># lower two vertical lines (2=lower right and 4=lower left)</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">2</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">4</span><span class="p">):</span>
+          <span class="n">startY</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span>
+          <span class="n">endY</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">4</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span> <span class="n">xOffset</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span><span class="o">==</span><span class="mi">2</span><span class="p">):</span> <span class="n">xOffset</span> <span class="o">=</span> <span class="n">width</span><span class="o">-</span><span class="n">thickness</span>
 
+      <span class="n">oled</span><span class="o">.</span><span class="n">fill_rect</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">xOffset</span><span class="p">,</span> <span class="n">startY</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">endY</span><span class="o">-</span><span class="n">startY</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
 
 <span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;Lab 12: rect&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -1226,15 +1118,16 @@ of a standard 128x64 monochrome OLED display:</p>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># upper left corner y</span>
 <span class="n">w</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># digit width</span>
 <span class="n">h</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># digit height</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mi">3</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
 
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="c1"># create an outline one px away from the drawing region</span>
-        <span class="n">oled</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">w</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span> <span class="n">h</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># create an outline on px away from the drawing region</span>
+        <span class="n">oled</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">w</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="n">h</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
         <span class="c1"># draw one digit</span>
-        <span class="n">drawDigit</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">drawDigit</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
         <span class="c1"># draw a second digit</span>
         <span class="c1">#drawDigit(i, x + w + 4, w, h, t, 1)</span>
         <span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -1242,19 +1135,6 @@ of a standard 128x64 monochrome OLED display:</p>
         <span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
         <span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>This <code>drawDigit()</code> is very handy.  We just need to
-give the function some parameters and it will draw
-the right digit at a location (x,y) as the upper
-left corner with the correct width and height!</p>
-<p>But the lines are somewhat thin.  A more robust implementation
-will also allow us the change the thickness of the segments.
-That will be more complex since we will have to adjust
-the starting point of where we draw each segment based
-on the thickness of the segment.  We
-will also need to use a rectangle, not a line.  This
-requires we figure out the exact width and height
-before we draw.</p>
-<p>We explore that function in the next lesson.</p>
 
 
   
@@ -1284,7 +1164,7 @@ before we draw.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../01-get-local-time/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Get Local Time" rel="prev">
+          <a href="../07-drawing-digits/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Drawing Digits" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -1294,20 +1174,20 @@ before we draw.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Get Local Time
+                Drawing Digits
               </div>
             </div>
           </a>
         
         
           
-          <a href="../09-nice-digits/" class="md-footer__link md-footer__link--next" aria-label="Next: Nice Digits" rel="next">
+          <a href="../05-buttons/" class="md-footer__link md-footer__link--next" aria-label="Next: Buttons" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Nice Digits
+                Buttons
               </div>
             </div>
             <div class="md-footer__button md-icon">
