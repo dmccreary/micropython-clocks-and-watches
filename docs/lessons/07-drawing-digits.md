@@ -2,29 +2,38 @@
 
 ## The Seven Segments of a Numeric Digit
 
-Since the early history of computing, numeric displays used a grouping
-of seven individaul lights to display a single digit.  This is shown in
-the image below:
+Since the early history of computing, numeric displays were created using a grouping
+of seven individual lights to display a single digit.  These are called
+[Seven Segment Displays](https://en.wikipedia.org/wiki/Seven-segment_display).  An
+example is shown in the image below:
 
-![Seven Segment Display](../../img/seven-segment-display.png)
+![Seven Segment Display](../../img/seven-segment-display.png){ width="200" }
 
 The segments are labeled "a" through "g" starting at the top and
-going around in a clockwise direction.  The center element is
-the "g" element.
+going around in a clockwise direction.  Note that the seventh segment is in
+the center element is the "g" segment.
 
 Technically, many displays have an 8th segment for the decimal point (DP).  To keep
-things simple we will just focus on the seven segments in this lesson.
+things simple we will just focus on the main seven segments in this lesson.
 
 Clocks also usually have a colon that separates the hours and minutes
 and an AM/PM indicator for 12-hour displays.  We will be treating
-these and independant drawing components in this lab.  Many digital
+these and independent drawing components in this lab.  Many digital
 clocks have the colon flash on and off every second.
 
 ## The Segment Map
 
-For any digit, is the segment on or off?
+To start out, we need to create a "digit-to-segment map" data structure.
+We use this to help us figure out what segments to turn on
+for any given digit.
 
-We can create an array of the segments like this:
+We will also need to convert the segment letters into integers.  These integers will form the index of an array.
+
+![Seven Segment Display Numeric Codes](../../img/seven-segment-display-numbers.png){ width="400" }
+
+To write our code, we ask, for any given digit, is the segment on or off?
+
+To do this, we can create an array of segments like this:
 
 ```py
 segmentMapping = [
@@ -42,38 +51,130 @@ segmentMapping = [
 ];
 ```
 
-## Drawing Horizontal Lines
+For any given digit like "2" we can then just pass the index of "2"
+to a Python list to get a list of the segments to turn on.  That line
+of code looks like this:
 
 ```py
+segmentOn = segmentMapping[digit];
+```
+
+This will return the segments that are to be turned on for any given
+input digit.  For example:
+
+```py
+segmentOn = segmentMapping[2];
+print(segmentOn)
+# returns:
+[1, 1, 0, 1, 1, 0, 1]
+```
+
+We now have the data structure to do the drawing.  We
+will do this in two steps.
+
+1. Draw the three horizontal lines for a digit if they are on
+2. Draw all vertical lines for a given digit, keeping in mind
+that we need to only draw half the way down the digit for
+the upper left and upper right vertical segments (1 and 5)
+
+We will start out with a simple digit drawing using a
+single-pixel width line.  Later we will add a parameter
+to change the thickness of the line.  But we want to take
+this one-step-at-a-time.
+
+## Drawing Horizontal Segments
+
+![](../img/horizontal-lines.png)
+
+This sample code will step through the horizontal lines
+for segments 0, 3 and 6.  It will check using the ```segmentOn[i]```
+line which will ONLY be true if that segment should be turned
+on for a given digit.
+
+Next, we figure out how high to draw the horizontal line.
+To do this we will need to figure out the vertical offset (yOffset).
+The top line (segment 0) has no offset and the bottom line
+has the full height of the digit.
+
+Unlike the vertical lines, the horizontal lines will span
+the entire width of the area. That makes our code
+simple because the line will have a horizontal length of exactly the 
+x plus the width of the digit.
+
+```py
+# reasonable test values for a small display
+x = 10
+y = 10
+width = 20
+height = 30
 # Horizontal segments
   for i in [0, 3, 6]:
+    # check if this digit has the segment on
     if (segmentOn[i]):
-      if (i==0): yOffset = 0 # top
-      if (i==3): yOffset = size*2 # bottom element
-      if (i==6): yOffset = size # middle
-      # oled.line(x - size, y+yOffset-size, x + size, y+yOffset-size, 1);
-      drawThickHorizLine(x - size, x + size, y+yOffset-size, width)
+      if (i==0): # top
+          yOffset = 0 
+      if (i==3):
+          yOffset = height # bottom element
+      if (i==6):
+          yOffset = height // 2 # bottom
+      # draw a signal thin line
+      oled.line(x, y+yOffset, x + width, y+yOffset, 1)
 ```
 ## Drawing the Vertical Segments
 
-```py
-  # Vertical segments
-  for i in [1, 2, 4, 5]:
-    if (segmentOn[i]) :
-      if (i==1 or i==5):
-          startY = y-size
-          endY = y
-      if (i==2 or i==4):
-          startY = y
-          endY = y + size
-      if (i==4 or i==5): xOffset = -size
-      if (i==1 or i==2): xOffset = +size
-      xpos = x + xOffset
-      # oled.line(xpos, startY, xpos, endY, 1)
-      drawThickVertLine(startY, endY, xpos, width)```
+![](../img/vertical-lines.png)
+
+Next, we need to create some code to draw the four vertical
+segments.  This is a little more complex because the lines
+do NOT span the full height of the digit.
 
 ```py
-# clock digits
+# Draw Vertical segments
+x = 10
+y = 10
+width = 20
+height = 30
+# Draw the vertical segments ur, lr, ll, ul
+for i in [1, 2, 4, 5]:
+    if (segmentOn[i]) :
+        # top two segments
+        if (i==1 or i==5):
+            startY = 0
+            endY = height // 2
+        if (i==2 or i==4):
+            startY = height // 2
+            endY = height
+        # left segments
+        if (i==4 or i==5): xOffset = 0
+        # right segments
+        if (i==1 or i==2): xOffset = width
+        oled.line(x+xOffset, y+startY, x+xOffset, y+endY, 1)
+```
+
+## Testing Our Drawing
+
+We can now wrap the code above in a ```drawDigit()``` function, and we will
+test each of the digits 0-9 in a small test program.
+
+Our first version of drawDigit is modeled after the rect() function.
+After we pass in the digit, it takes in the (x,y) and width and height
+parameters and the color value.
+
+Draw Digit Function Parameters:
+
+1. The digit to display - an integer in the range 0-9
+2. x of the upper left corner
+3. y of the upper left corner
+4. the width of the digit (about 20 is a good value)
+5. the height of the digit
+6. the color (0=black, 1=white)
+
+Here is our testing program that draws digits 0-9 in the center
+of a standard 128x64 monochrome OLED display:
+
+```py
+# Lab 20: Draw Digits with just the line function
+# this lab uses the line() function to draw the segments
 import machine
 import utime
 import ssd1306
@@ -87,8 +188,10 @@ spi=machine.SPI(0, sck=SCL, mosi=SDA, baudrate=100000)
 RES = machine.Pin(4)
 DC = machine.Pin(5)
 CS = machine.Pin(6)
+WIDTH = 128
+HEIGHT = 64
 
-oled = ssd1306.SSD1306_SPI(128, 64, spi, DC, RES, CS)
+oled = ssd1306.SSD1306_SPI(WIDTH, HEIGHT, spi, DC, RES, CS)
 
 segmentMapping = [
   #a, b, c, d, e, f, g
@@ -104,118 +207,75 @@ segmentMapping = [
   [1, 1, 1, 1, 0, 1, 1]  # 9
 ];
 
-def drawThickHorizLine(x1, x2, y, width):
-# for portability with other MicroPython drawing libraries that use framebuf
-def line(x1,y1,x2,y2,color):
-    oled.draw_line(x1,y1,x2,y2,color)
-
-def fill(color):
-    oled.fill_rectangle(0, 0, WIDTH, HEIGHT, color)
-
-def fill_rect(x,y,w,h,color):
-    oled.fill_rectangle(x, y, w, h, color)
-
-def drawThickHorizLine(x1, x2, y, width, color):
-    fill_rect(x1, y, x2-x1, width, color)
-
-def drawThickVertLine(y1, y2, x, width, color):
-    fill_rect(x, y1, width, y2-y1, color)
-        
+ 
 # x and y are the center of the digit, size is the center to edge
-def drawDigit(digit, x, y, size, width):
+def drawDigit(digit, x, y, width, height, color):
+  # get a list of the segments that are on for this digit
   segmentOn = segmentMapping[digit];
   
-  # Horizontal segments
+  # Draw the horizontal segments: top, bottem, middle
   for i in [0, 3, 6]:
     if (segmentOn[i]):
-      if (i==0): yOffset = 0 # top
-      if (i==3): yOffset = size*2 # bottom element
-      if (i==6): yOffset = size # middle
-      # oled.line(x - size, y+yOffset-size, x + size, y+yOffset-size, 1);
-      drawThickHorizLine(x - size, x + size, y+yOffset-size, width)
+      if (i==0): # top
+          yOffset = 0 
+      if (i==3):
+          yOffset = height # bottom element
+      if (i==6):
+          yOffset = height // 2 # middle line
+      oled.line(x, y+yOffset, x + width, y+yOffset, 1)
 
-  # Vertical segments
+  # Draw the vertical segments ur, lr, ll, ul
   for i in [1, 2, 4, 5]:
     if (segmentOn[i]) :
-      if (i==1 or i==5):
-          startY = y-size
-          endY = y
-      if (i==2 or i==4):
-          startY = y
-          endY = y + size
-      if (i==4 or i==5): xOffset = -size
-      if (i==1 or i==2): xOffset = +size
-      xpos = x + xOffset
-      # oled.line(xpos, startY, xpos, endY, 1)
-      drawThickVertLine(startY, endY, xpos, width)
+        # top two segments
+        if (i==1 or i==5):
+            startY = 0
+            endY = height // 2
+        if (i==2 or i==4):
+            startY = height // 2
+            endY = height
+        # left segments
+        if (i==4 or i==5): xOffset = 0
+        # right segments
+        if (i==1 or i==2): xOffset = width
+        oled.line(x+xOffset, y+startY, x+xOffset, y+endY, 1)
 
-def update_screen(digit_val):
-    oled.fill(0)
-    oled.text('Clock Digit Lab', 0, 0, 1)
-    dr = 10 # digit radius
-    dch = 26 # digit center hight
-    lm = 10 # left margin for all 4-digits
-    dw = 24 # digit width (2*dr + spacing between digits
-    cm = 8 # colon left margin
-    width = 3
-    
-    # draw the hour digits
-    hour = localtime()[3]
-    if hour > 12:
-        hour = hour - 12
-        am_pm = 'pm'
-    else:
-        am_pm = 'am'
-    if hour < 10:
-        # just draw the second digit
-        drawDigit(hour, lm+dw, dch, dr, width)
-    else:
-        # we have 10, 11 or 12 so the first digit is 1
-        drawDigit(1, lm, dch, dr, width)
-        # subtract 10 from the second digit
-        drawDigit(hour-10, lm+dw, dch, dr, width)
-       
-    # draw the colon
-    if localtime()[5] % 2:
-        draw_colon(lm+dw*2+cm-16,dch-5)
-    
-    # draw the minutes
-    minutes = localtime()[4]
-    # value, x, y, size
-    # left minute digit after the colon
-    drawDigit(minutes // 10, lm+dw*2+cm, dch, dr, width)
-    # right minute digit
-    drawDigit(minutes % 10, lm+dw*3+cm+2, dch, dr, width)
-    
-    # draw the AM/PM
-    oled.text(am_pm, lm+dw*4+cm-8, dch+3, 1)
-    
-    #oled.text(timeStrFmt(), 0, 46, 1)
-    oled.text(str(localtime()[5]), 0, 54)
-    #oled.text(str(digit_val), 0, 54, 1)
 
-    oled.show()
+oled.fill(0)
+oled.text('Lab 12: rect', 0, 0, 1)
+x = 10 # upper left corner x
+y = 10 # upper left corner y
+w = 20 # digit width
+h = 30 # digit height
 
-def draw_colon(x,y):
-    oled.fill_rect(x, y, 2, 2,1)
-    oled.fill_rect(x, y+8, 2, 2,1)
-
-def timeStrFmt():
-    hour = localtime()[3]
-    if hour > 12:
-        hour = hour - 12
-        am_pm = ' pm'
-    else: am_pm = ' am'
-    # format minutes and seconds with leading zeros
-    minutes = "{:02d}".format(localtime()[4])
-    return str(hour) + ':' + minutes + am_pm
-
-counter = 0
 while True:
-    update_screen(counter)
-    sleep(1)
-    counter += 1
-    if counter > 9:
-        counter = 0
+    for i in range(0, 10):
 
+        print(i)
+        # create an outline one px away from the drawing region
+        oled.rect(x-2, y-2, w+5, h+5, 1)
+        # draw one digit
+        drawDigit(i, x, y, w, h, 1)
+        # draw a second digit
+        #drawDigit(i, x + w + 4, w, h, t, 1)
+        oled.text(str(i), 0, 54, 1)
+        oled.show()
+        sleep(2)
+        oled.fill(0)
 ```
+
+This ```drawDigit()``` is very handy.  We just need to
+give the function some parameters and it will draw
+the right digit at a location (x,y) as the upper
+left corner with the correct width and height!
+
+But the lines are somewhat thin.  A more robust implementation
+will also allow us the change the thickness of the segments.
+That will be more complex since we will have to adjust
+the starting point of where we draw each segment based
+on the thickness of the segment.  We
+will also need to use a rectangle, not a line.  This
+requires we figure out the exact width and height
+before we draw.
+
+We explore that function in the next lesson.

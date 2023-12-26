@@ -6,7 +6,7 @@ The ILI9341 is a low-cost color single-chip driver for a TFT liquid crystal disp
 
 ![](../../img/ili9341-listing.png)
 
-The board for the ILI9341 with a display costs around $9.00.
+The board for the ILI9341 with a display costs around $9.00.  Although these displays are not a high contrast as OLED displays, they are still adequate for many clock projects that would like to draw smooth circles on a clock face.
 
 ## Driver
 

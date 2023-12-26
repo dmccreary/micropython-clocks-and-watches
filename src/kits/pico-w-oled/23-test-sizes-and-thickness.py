@@ -1,4 +1,5 @@
-# Lab 10: clock digits
+# Clock Lab 20: Draw Seven Segments
+# this lab uses the fill_rect function to draw the segments
 import machine
 import utime
 import ssd1306
@@ -29,26 +30,26 @@ segmentMapping = [
   [1, 1, 1, 1, 0, 1, 1]  # 9
 ];
 
-
+# digit is the numer to display
 # x and y are upper-left-corner
 # width and height are the dimensions of the digit
-# thinkness is the width of the line segments
+# thickness is the width of the line segments
 # color is 1 for white and 0 for black
-def drawDigit(digit, x, y, width, height, thinkness, color):
+def drawDigit(digit, x, y, width, height, thickness, color):
   # get a list of the segments that are on for this digit
   segmentOn = segmentMapping[digit];
   
-  # Draw the horizontal segments: top, bottem, middle
+  # Draw the horizontal segments: top, bottom, middle
   for i in [0, 3, 6]:
     if (segmentOn[i]):
       if (i==0): # top
           yOffset = 0 
       if (i==3):
-          yOffset = height - thinkness # bottem element
+          yOffset = height - thickness # bottom element
       if (i==6):
-          yOffset = height // 2 - thinkness // 2# bottum
+          yOffset = height // 2 - thickness // 2# bottom
       # oled.line(x - size, y+yOffset-size, x + size, y+yOffset-size, 1);
-      oled.fill_rect(x, y+yOffset, width, thinkness, color)
+      oled.fill_rect(x, y+yOffset, width, thickness, color)
 
   # Draw the vertical segments ur, lr, ll, ul
   for i in [1, 2, 4, 5]:
@@ -59,25 +60,36 @@ def drawDigit(digit, x, y, width, height, thinkness, color):
           endY = y + height // 2
       # lower two vertical lines (2=lower right and 4=lower left)
       if (i==2 or i==4):
-          startY = y + height // 2
+          startY = y + (height // 2)
           endY = y + height
       if (i==4 or i==5): xOffset = 0
-      if (i==1 or i==2): xOffset = width-thinkness
+      if (i==1 or i==2): xOffset = width-thickness
 
-      oled.fill_rect(x+xOffset, startY, thinkness, endY-startY, color)
+      oled.fill_rect(x+xOffset, startY, thickness, endY-startY, color)
 
-def update_screen(digit_val):
-    oled.fill(0)
-    oled.text('Clock Digit Lab', 0, 0, 1)
-    drawDigit(digit_val, 10, 10, 20, 30, 4, 1)
-    oled.text(str(digit_val), 0, 54, 1)
-    oled.show()
-    
-counter = 0
+oled.fill(0)
+oled.text('Lab 12: rect', 0, 0, 1)
+x = 5 # upper left corner x
+y = 5 # upper left corner y
+w = 10 # digit width
+h = 15 # digit height
+t = 3
+
 while True:
-    update_screen(counter)
-    sleep(1)
-    counter += 1
-    if counter > 9:
-        counter = 0
+    for t in range(1,5):
+        for i in range(0, 10):
+            print(i)
+            # create an outline on px away from the drawing region
+            # oled.rect(x-2, y-2, w+4, h+4, 1)
+            # draw one digit
+            drawDigit(i, x,    y, w, h, t, 1)
+            drawDigit(i, x+15, y, w+10, h+10, t+2, 1)
+            drawDigit(i, x+40, y, w+20, h+20, t+4, 1)
+            drawDigit(i, x+80, y, w+30, h+30, t+6, 1)
 
+            # draw a second digit
+            #drawDigit(i, x + w + 4, w, h, t, 1)
+            oled.text(str(i), 0, 54, 1)
+            oled.show()
+            sleep(.5)
+            oled.fill(0)
