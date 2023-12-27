@@ -12,13 +12,13 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/03-drawing-face/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/12-draw-time-functions/">
       
       
-        <link rel="prev" href="../02-display-text/">
+        <link rel="prev" href="../09-digit-functions/">
       
       
-        <link rel="next" href="../04-larger-fonts/">
+        <link rel="next" href="../05-buttons/">
       
       
       <link rel="icon" href="../../img/clock-icon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Drawing a Clock Face - MicroPython Clocks and Watch</title>
+        <title>Draw Time Functions - MicroPython Clocks and Watch</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drawing-watch-faces" class="md-skip">
+        <a href="#draw-a-digital-clock-time-function" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Drawing a Clock Face
+              Draw Time Functions
             
           </span>
         </div>
@@ -451,29 +451,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Drawing a Clock Face
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03-drawing-face/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,33 +462,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -618,9 +571,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../12-draw-time-functions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Draw Time Functions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -629,6 +602,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#12-hour-display-format" class="md-nav__link">
+    12-Hour Display Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatically-scaling-the-layout" class="md-nav__link">
+    Automatically Scaling the Layout
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -819,8 +826,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#12-hour-display-format" class="md-nav__link">
+    12-Hour Display Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatically-scaling-the-layout" class="md-nav__link">
+    Automatically Scaling the Layout
   </a>
   
 </li>
@@ -843,23 +857,185 @@
   
 
 
-<h1 id="drawing-watch-faces">Drawing Watch Faces</h1>
-<p>An analog watch ususally has hands that
-are drawn from the center to the edge
-of the display.</p>
-<p>The lines or marks that indicate the hours are often referred to as "hour indices" or "hour markers."</p>
-<p>The smaller lines that indicate the minutes are called "minute indices" or "minute markers."</p>
-<p>For simple lines, we can use the <code>line(x1,y1, x2,y2,color)</code> function which draws
-a sinle pixel line from the starting point at (x1,y1) to the end pint at (x2,y2) using the fifth
-color parameter.  For monochrome clocks the color 1 is whtie and 0 is black.</p>
-<p>For thinker lines we can use the display.rect() function.</p>
-<p>Some watches have more complex hands that are composed of 
-multiple geometries such as triangles.</p>
-<p>For most modern display drivers we can use the MicroPython poly() function to draw polygons on the screen.
-These are part of the MicroPython framebuf function.</p>
-<p>Some older drivers don't yet support these functions, so we might have to craft our own functions.</p>
-<h2 id="references">References</h2>
-<p><a href="https://www.instructables.com/Drawing-Filled-Circles-and-Triangles-With-MicroPyt/">Instructables on Filled Circles and Triangles by TonyGo2</a></p>
+<h1 id="draw-a-digital-clock-time-function">Draw a Digital Clock Time Function</h1>
+<p>In this section, we will create a new function called <code>drawTime</code>.  The input will be the upper left starting point (x,w), width and height, hours and minutes
+and the format (12-hour or 24-hour) and the color (black or white).</p>
+<p>This lab will build in the prior lab that displayed a single digit.</p>
+<p>Let's first of all create a plan of how we will layout our digital clock display.</p>
+<p>Our goal is to create a function that will be reusable over many types of displays with little or no modification.  This will require us to think through the potential ways our users will use this function and anticipate their needs so they
+are not tempted to rewrite our code on their own.</p>
+<h2 id="12-hour-display-format">12-Hour Display Format</h2>
+<p>Here is an example of our 12-hour clock layout:</p>
+<p><img alt="" src="../img/clock-time-layout.png" /></p>
+<p>Note that there are six horizontal x-dimension numbers and three vertical y-dimension numbers that you can adjust to create a pleasant interface.</p>
+<h2 id="automatically-scaling-the-layout">Automatically Scaling the Layout</h2>
+<p>It would be tempting to just hard-code the layout using a single set of numbers.
+But what if the user wanted a smaller or larger portion of their display used to
+display the time?</p>
+<p>As the user selects the height and width of their clock we would like to scale these numbers accordingly.  The absolute values of these numbers is not too important
+now.  We just want to get the relative values down.  To start the process, I did
+a layout on an 11-inch wide drawing and I assigned the width of each digit to be 3.0.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># horizontal</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">.73</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">.73</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">x4</span> <span class="o">=</span> <span class="mf">1.35</span>
+<span class="n">x5</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">x6</span> <span class="o">=</span> <span class="mf">.35</span>
+<span class="n">x7</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">x8</span> <span class="o">=</span> <span class="mf">.35</span>
+<span class="n">x9</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="c1"># Vertical</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="mf">5.31</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="mf">1.58</span>
+<span class="n">y3</span> <span class="o">=</span> <span class="mf">.68</span>
+<span class="n">y4</span> <span class="o">=</span> <span class="mf">.68</span>
+</code></pre></div></td></tr></table></div>
+<p>We need to make the width of the display be x1 + x2 + 3*x3 + x4 + x5 + x6 + x7 which is</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Scale Test</span>
+
+<span class="k">def</span> <span class="nf">drawTime12h</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="c1"># horizontal</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="mf">.73</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="mf">.73</span>
+    <span class="n">x3</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="c1"># digit width</span>
+    <span class="n">x4</span> <span class="o">=</span> <span class="mf">1.35</span>
+    <span class="n">x5</span> <span class="o">=</span> <span class="mf">.5</span>
+    <span class="n">x6</span> <span class="o">=</span> <span class="mf">.35</span>
+    <span class="n">x7</span> <span class="o">=</span> <span class="mf">1.5</span>
+    <span class="n">x8</span> <span class="o">=</span> <span class="mf">.35</span>
+    <span class="n">x9</span> <span class="o">=</span> <span class="mf">.5</span> <span class="c1"># colon width and height</span>
+
+    <span class="c1"># vertical</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="mf">5.31</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="mf">1.58</span> <span class="c1"># to top colon</span>
+    <span class="n">y3</span> <span class="o">=</span> <span class="mf">.68</span> <span class="c1"># between colons</span>
+
+    <span class="n">total_width</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="n">x4</span> <span class="o">+</span> <span class="n">x5</span> <span class="o">+</span> <span class="n">x6</span> <span class="o">+</span> <span class="n">x7</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total width:&quot;</span><span class="p">,</span> <span class="n">total_width</span><span class="p">)</span>
+    <span class="n">total_height</span> <span class="o">=</span> <span class="n">y1</span>
+
+    <span class="c1"># calculate the scaling ratios</span>
+    <span class="n">x_scale</span> <span class="o">=</span> <span class="n">width</span> <span class="o">/</span> <span class="n">total_width</span>
+    <span class="n">y_scale</span> <span class="o">=</span> <span class="n">height</span> <span class="o">/</span> <span class="n">total_height</span> 
+
+    <span class="n">digit_width</span> <span class="o">=</span> <span class="n">x3</span> <span class="o">*</span> <span class="n">x_scale</span>
+    <span class="n">digit_height</span> <span class="o">=</span> <span class="n">y1</span> <span class="o">*</span> <span class="n">y_scale</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x scale:&quot;</span><span class="p">,</span> <span class="n">x_scale</span><span class="p">,</span> <span class="s2">&quot;y scale:&quot;</span><span class="p">,</span> <span class="n">y_scale</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">hour</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+        <span class="n">hour12</span> <span class="o">=</span> <span class="n">hour</span> <span class="o">-</span> <span class="mi">12</span>
+
+    <span class="c1"># hour tens</span>
+    <span class="k">if</span> <span class="n">hour12</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">oled</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">x1</span><span class="o">*</span><span class="n">x_scale</span><span class="p">),</span><span class="nb">int</span><span class="p">(</span><span class="n">y1</span><span class="o">*</span><span class="n">y_scale</span><span class="p">))</span>
+
+    <span class="c1"># hour ones x,y,w,h</span>
+    <span class="n">drawDigit</span><span class="p">(</span><span class="n">hour</span> <span class="o">%</span> <span class="mi">10</span><span class="p">,</span> <span class="nb">int</span><span class="p">((</span><span class="n">x</span> <span class="o">+</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span><span class="p">)</span><span class="o">*</span><span class="n">x_scale</span><span class="p">),</span> <span class="n">y</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">x3</span><span class="o">*</span><span class="n">x_scale</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">y1</span><span class="o">*</span><span class="n">y_scale</span><span class="p">))</span>
+
+    <span class="c1"># minute tens ones digit, x,y,w,h</span>
+    <span class="n">min_tens_x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">x</span> <span class="o">+</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span> <span class="o">+</span> <span class="n">x3</span> <span class="o">+</span> <span class="n">x4</span><span class="p">)</span><span class="o">*</span><span class="n">x_scale</span><span class="p">)</span>
+    <span class="n">drawDigit</span><span class="p">(</span><span class="n">minute</span> <span class="o">//</span> <span class="mi">10</span><span class="p">,</span> <span class="n">min_tens_x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">x3</span><span class="o">*</span><span class="n">x_scale</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">y1</span><span class="o">*</span><span class="n">y_scale</span><span class="p">))</span>
+
+    <span class="c1"># minute  ones x,y,w,h</span>
+    <span class="n">min_ones_x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">x</span> <span class="o">+</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="n">x4</span> <span class="o">+</span> <span class="n">x5</span><span class="p">)</span><span class="o">*</span><span class="n">x_scale</span><span class="p">)</span>
+    <span class="n">drawDigit</span><span class="p">(</span><span class="n">minute</span> <span class="o">%</span> <span class="mi">10</span><span class="p">,</span> <span class="n">min_ones_x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">x3</span><span class="o">*</span><span class="n">x_scale</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">y1</span><span class="o">*</span><span class="n">y_scale</span><span class="p">))</span>
+
+    <span class="c1"># draw colon</span>
+    <span class="n">colon_size</span> <span class="o">=</span> <span class="n">x9</span>
+    <span class="c1"># top colon</span>
+    <span class="n">oled</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="o">+</span><span class="n">x3</span><span class="o">+</span><span class="n">x8</span><span class="p">)</span><span class="o">*</span><span class="n">x_scale</span><span class="p">),</span> <span class="n">y</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">y2</span><span class="o">*</span><span class="n">y_scale</span><span class="p">),</span> <span class="n">colon_size</span><span class="p">,</span> <span class="n">colon_size</span><span class="p">)</span>
+    <span class="c1"># bottom colon</span>
+    <span class="n">oled</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="o">+</span><span class="n">x3</span><span class="o">+</span><span class="n">x8</span><span class="p">)</span><span class="o">*</span><span class="n">x_scale</span><span class="p">),</span> <span class="n">y</span><span class="o">+</span><span class="nb">int</span><span class="p">((</span><span class="n">y2</span><span class="o">+</span><span class="n">y3</span><span class="p">)</span><span class="o">*</span><span class="n">y_scale</span><span class="p">),</span> <span class="n">colon_size</span><span class="p">,</span> <span class="n">colon_size</span><span class="p">)</span>
+
+    <span class="c1"># AM/PM</span>
+    <span class="k">if</span> <span class="n">hours</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
+        <span class="n">am_pm_text</span> <span class="o">=</span> <span class="s1">&#39;am&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">am_pm_text</span> <span class="o">=</span> <span class="s1">&#39;pm&#39;</span>
+    <span class="n">am_pm_x</span> <span class="o">=</span> <span class="n">min_ones_x</span> <span class="o">+</span> <span class="nb">int</span><span class="p">((</span><span class="n">x3</span><span class="o">+</span><span class="n">x6</span><span class="p">)</span><span class="o">*</span><span class="n">x_scale</span><span class="p">)</span>
+    <span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">am_pm_text</span><span class="p">,</span> <span class="n">am_pm_x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">y1</span><span class="o">*</span><span class="n">y_scale</span><span class="p">))</span> 
+
+<span class="n">drawTime12h</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 
   
@@ -889,7 +1065,7 @@ These are part of the MicroPython framebuf function.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../02-display-text/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Displaying Text" rel="prev">
+          <a href="../09-digit-functions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Digit Functions" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -899,20 +1075,20 @@ These are part of the MicroPython framebuf function.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Displaying Text
+                Digit Functions
               </div>
             </div>
           </a>
         
         
           
-          <a href="../04-larger-fonts/" class="md-footer__link md-footer__link--next" aria-label="Next: Larger Fonts" rel="next">
+          <a href="../05-buttons/" class="md-footer__link md-footer__link--next" aria-label="Next: Buttons" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Larger Fonts
+                Buttons
               </div>
             </div>
             <div class="md-footer__button md-icon">
