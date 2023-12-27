@@ -12,28 +12,28 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/01-hello-world/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/40-machine-info/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../06-draw-performance/">
       
       
-        <link rel="next" href="../02-hello-config/">
+        <link rel="next" href="../../kits/">
       
       
-      <link rel="icon" href="../../../img/clock-icon.png">
+      <link rel="icon" href="../../img/clock-icon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>Hello World - MicroPython Clocks and Watch</title>
+        <title>Machine Info - MicroPython Clocks and Watch</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hello-world" class="md-skip">
+        <a href="#machine-info" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href="../.." title="MicroPython Clocks and Watch" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="../../../img/clock-icon.png" alt="logo">
+  <img src="../../img/clock-icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hello World
+              Machine Info
             
           </span>
         </div>
@@ -208,9 +208,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
+    <a href="../.." title="MicroPython Clocks and Watch" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watch" data-md-component="logo">
       
-  <img src="../../../img/clock-icon.png" alt="logo">
+  <img src="../../img/clock-icon.png" alt="logo">
 
     </a>
     MicroPython Clocks and Watch
@@ -236,7 +236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -255,7 +255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -290,7 +290,7 @@
         
   
   
-    <a href="../../../setup/parts.md" class="md-nav__link">
+    <a href="../../setup/parts.md" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -313,73 +313,6 @@
       
   
   
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../lessons/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Lessons
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -400,104 +333,6 @@
       
         
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Kits
-  </span>
-  
-
-            </a>
-            
-              <label class="md-nav__link " for="__nav_5">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Kits
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../led-strips/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    LED Strip Kits
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    
-    
-      
-        
-          
         
       
         
@@ -522,7 +357,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -531,25 +366,265 @@
               
   
   <span class="md-ellipsis">
-    Pico with OLED
+    Lessons
   </span>
   
 
             </a>
             
-              <label class="md-nav__link " for="__nav_5_3">
+              <label class="md-nav__link " for="__nav_4">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Pico with OLED
+            Lessons
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-hardware-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware Config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-drawing-coordinates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Coordinates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-display-text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Displaying Text
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-drawing-face/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing a Clock Face
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-larger-fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Larger Fonts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-hardware-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware Config Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-get-local-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get Local Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-drawing-digits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing 7-Segment Digits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-digits-functions.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digit Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-draw-time.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Time Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-buttons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-draw-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Performance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -567,341 +642,73 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Machine Info
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Hello World
+    Machine Info
   </span>
   
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-hello-config/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    Hello Config
-  </span>
-  
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01-hello-world-firmware.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hello Firmware
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-display-time/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Display Time
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-display-localtime/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Display Localtime
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-display-localtime-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Display Localtime Updates
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05-clock-hands/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Display Clock Hands
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
     
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
   
   
-    <a href="../../ili9341/" class="md-nav__link">
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    Modules
+  </a>
   
-  <span class="md-ellipsis">
-    ILI9341
-  </span>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clock-frequency" class="md-nav__link">
+    Clock Frequency
+  </a>
   
-
+</li>
       
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+        <li class="md-nav__item">
+  <a href="#operating-system" class="md-nav__link">
+    Operating System
+  </a>
   
-
+</li>
       
-    </li>
+        <li class="md-nav__item">
+  <a href="#platform" class="md-nav__link">
+    Platform
+  </a>
   
-
-              
-            
-              
-                
+</li>
+      
+    </ul>
   
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../gc9a01/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    GC9A01
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../lilygo/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    LILYGO SY7789
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../waveshare/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Waveshare
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
+</nav>
       
     </li>
   
@@ -920,8 +727,61 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../kits/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Kits
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../references/" class="md-nav__link">
+      <a href="../../references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,6 +833,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    Modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clock-frequency" class="md-nav__link">
+    Clock Frequency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operating-system" class="md-nav__link">
+    Operating System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform" class="md-nav__link">
+    Platform
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -989,61 +885,23 @@
   
 
 
-<h1 id="hello-world">Hello World</h1>
-<p>To get started, let's just draw the string "Hello world!" on the display.</p>
-<p>Here is the code:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">machine</span>
-<span class="kn">import</span> <span class="nn">ssd1306</span>
-
-<span class="n">SCL</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># SPI CLock</span>
-<span class="n">SDA</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># SPI Data</span>
-
-<span class="n">RES</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># Reset</span>
-<span class="n">DC</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Data/command</span>
-<span class="n">CS</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># Chip Select</span>
-
-<span class="n">spi</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">SPI</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sck</span><span class="o">=</span><span class="n">SCL</span><span class="p">,</span> <span class="n">mosi</span><span class="o">=</span><span class="n">SDA</span><span class="p">)</span>
-<span class="n">oled</span> <span class="o">=</span> <span class="n">ssd1306</span><span class="o">.</span><span class="n">SSD1306_SPI</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">spi</span><span class="p">,</span> <span class="n">DC</span><span class="p">,</span> <span class="n">RES</span><span class="p">,</span> <span class="n">CS</span><span class="p">)</span>
-
-<span class="c1"># erase the entire screen with black</span>
-<span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># place a hello message at point (0,0) in white</span>
-<span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># send the entire frame buffer to the display via the SPI bus</span>
-<span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<h1 id="machine-info">Machine Info</h1>
+<h2 id="modules">Modules</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">help</span><span class="p">(</span><span class="s1">&#39;modules&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<div class="admonition challenges">
-<p class="admonition-title">Challenges</p>
-<ol>
-<li>Can you change the message from "Hello world!" to have your name in it?</li>
-<li>Can you change the location of the text on the screen by changing the location point from (0,0) to another place on the screen?  The screen is 128 pixels wide by 64 pixels high.</li>
-<li>How far down can you display the message without going off the screen?</li>
-<li>How many characters wide can a message be before it goes off the right edge of the dipsplay?</li>
-<li>Can you display multiple messages on different lines?</li>
-</ol>
-</div>
+<h2 id="clock-frequency">Clock Frequency</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">machine</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;freq:&#39;</span><span class="p">,</span> <span class="n">machine</span><span class="o">.</span><span class="n">freq</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="operating-system">Operating System</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">os</span><span class="o">.</span><span class="n">uname</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">os</span><span class="o">.</span><span class="n">statvfs</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="platform">Platform</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">platform</span><span class="o">.</span><span class="n">platform</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 
   
@@ -1073,7 +931,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+          <a href="../06-draw-performance/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Draw Performance" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -1083,20 +941,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Draw Performance
               </div>
             </div>
           </a>
         
         
           
-          <a href="../02-hello-config/" class="md-footer__link md-footer__link--next" aria-label="Next: Hello Config" rel="next">
+          <a href="../../kits/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction to Watch Kits" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Hello Config
+                Introduction to Watch Kits
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1129,10 +987,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>

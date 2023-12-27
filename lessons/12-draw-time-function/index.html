@@ -12,13 +12,9 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/10-machine-info/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/12-draw-time-function/">
       
       
-        <link rel="prev" href="../06-draw-performance/">
-      
-      
-        <link rel="next" href="../../kits/">
       
       
       <link rel="icon" href="../../img/clock-icon.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Machine Info - MicroPython Clocks and Watch</title>
+        <title>Draw a Digital Clock Time Function - MicroPython Clocks and Watch</title>
       
     
     
@@ -87,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#machine-info" class="md-skip">
+        <a href="#draw-a-digital-clock-time-function" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Machine Info
+              Draw a Digital Clock Time Function
             
           </span>
         </div>
@@ -313,8 +309,6 @@
       
   
   
-    
-  
   
     
     
@@ -347,354 +341,32 @@
       
         
       
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+  
+  
+    <a href="../" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     Lessons
   </span>
   
 
-            </a>
-            
-              <label class="md-nav__link " for="__nav_4">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Lessons
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00-hardware-config/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hardware Config
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01-drawing-coordinates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Drawing Coordinates
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-display-text/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Displaying Text
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-drawing-face/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Drawing a Clock Face
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-larger-fonts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Larger Fonts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00-hardware-config/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hardware Config Files
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01-get-local-time/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Get Local Time
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../07-drawing-digits/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Drawing Digits
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../09-nice-digits/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Nice Digits
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05-buttons/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Buttons
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06-draw-performance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Draw Performance
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <span class="md-nav__icon md-icon"></span>
       
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Machine Info
-  </span>
+    </a>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Machine Info
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
-    Modules
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clock-frequency" class="md-nav__link">
-    Clock Frequency
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operating-system" class="md-nav__link">
-    Operating System
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#platform" class="md-nav__link">
-    Platform
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -818,29 +490,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
-    Modules
+  <a href="#12-hour-display-format" class="md-nav__link">
+    12-Hour Display Format
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clock-frequency" class="md-nav__link">
-    Clock Frequency
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operating-system" class="md-nav__link">
-    Operating System
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#platform" class="md-nav__link">
-    Platform
+  <a href="#automatically-scaling-the-layout" class="md-nav__link">
+    Automatically Scaling the Layout
   </a>
   
 </li>
@@ -863,23 +521,55 @@
   
 
 
-<h1 id="machine-info">Machine Info</h1>
-<h2 id="modules">Modules</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">help</span><span class="p">(</span><span class="s1">&#39;modules&#39;</span><span class="p">)</span>
+<h1 id="draw-a-digital-clock-time-function">Draw a Digital Clock Time Function</h1>
+<p>In this section, we will create a new function called <code>drawTime</code>.  The input will be the upper left starting point (x,w), width and height, hours and minutes
+and the format (12-hour or 24-hour) and the color (black or white).</p>
+<p>This lab will build in the prior lab that displayed a single digit.</p>
+<p>Let's first of all create a plan of how we will layout our digital clock display.</p>
+<p>Our goal is to create a function that will be reusable over many types of displays with little or no modification.  This will require us to think through the potential ways our users will use this function and anticipate their needs so they
+are not tempted to rewrite our code on their own.</p>
+<h2 id="12-hour-display-format">12-Hour Display Format</h2>
+<p>Here is an example of our 12-hour clock layout:</p>
+<p><img alt="" src="../img/clock-time-layout.png" /></p>
+<p>Note that there are six horizontal x-dimension numbers and three vertical y-dimension numbers that you can adjust to create a pleasant interface.</p>
+<h2 id="automatically-scaling-the-layout">Automatically Scaling the Layout</h2>
+<p>It would be tempting to just hard-code the layout using a single set of numbers.
+But what if the user wanted a smaller or larger portion of their display used to
+display the time?</p>
+<p>As the user selects the height and width of their clock we would like to scale these numbers accordingly.  The absolute values of these numbers is not too important
+now.  We just want to get the relative values down.  To start the process, I did
+a layout on an 11-inch wide drawing and I assigned the width of each digit to be 3.0.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># horizontal</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">.73</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">.73</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">x4</span> <span class="o">=</span> <span class="mf">1.35</span>
+<span class="n">x5</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">x6</span> <span class="o">=</span> <span class="mf">.35</span>
+<span class="n">x7</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">x8</span> <span class="o">=</span> <span class="mf">.35</span>
+<span class="n">x9</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="c1"># Vertical</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="mf">5.31</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="mf">1.58</span>
+<span class="n">y3</span> <span class="o">=</span> <span class="mf">.68</span>
+<span class="n">y4</span> <span class="o">=</span> <span class="mf">.68</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="clock-frequency">Clock Frequency</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">machine</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;freq:&#39;</span><span class="p">,</span> <span class="n">machine</span><span class="o">.</span><span class="n">freq</span><span class="p">())</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="operating-system">Operating System</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">os</span><span class="o">.</span><span class="n">uname</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">os</span><span class="o">.</span><span class="n">statvfs</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="platform">Platform</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">platform</span><span class="o">.</span><span class="n">platform</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
+<p>We need to make the width of the display be x1 + x2 + 3*x3 + x4 + x5 + x6 + x7 which is</p>
 
 
   
@@ -904,44 +594,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../06-draw-performance/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Draw Performance" rel="prev">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Draw Performance
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../../kits/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction to Watch Kits" rel="next">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Introduction to Watch Kits
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

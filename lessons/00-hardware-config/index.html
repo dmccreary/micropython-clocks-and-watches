@@ -347,6 +347,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -545,7 +547,7 @@
         
   
   <span class="md-ellipsis">
-    Drawing Digits
+    Drawing 7-Segment Digits
   </span>
   
 
@@ -561,11 +563,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../09-nice-digits/" class="md-nav__link">
+      <a href="../09-digits-functions.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Nice Digits
+    Digit Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-draw-time.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draw Time Functions
   </span>
   
 
@@ -621,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10-machine-info/" class="md-nav__link">
+      <a href="../40-machine-info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -800,7 +822,9 @@ that file into each of our examples.</p>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Dan&#39;s Robot Labs configuration file for ILI9341 clock project</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Dan&#39;s Robot Labs configuration file for ILI9341 clock project</span>
 <span class="c1"># The colors on the SPI bus cable are:</span>
 <span class="c1"># 3.3v power - red</span>
 <span class="c1"># SCK - orange</span>
@@ -819,6 +843,8 @@ that file into each of our examples.</p>
 
 <span class="n">WIDTH</span><span class="o">=</span><span class="mi">320</span>
 <span class="n">HEIGHT</span><span class="o">=</span><span class="mi">240</span>
+<span class="n">BUTTON_1_PIN</span> <span class="o">=</span> <span class="mi">14</span> <span class="c1"># one up from lower-left corner</span>
+<span class="n">BUTTON_2_PIN</span> <span class="o">=</span> <span class="mi">15</span> <span class="c1"># lower left corner with USB on top</span>
 </code></pre></div></td></tr></table></div>
 <p>To use this configuration file you will need to do two things:</p>
 <ol>

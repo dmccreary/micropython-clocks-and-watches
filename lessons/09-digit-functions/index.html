@@ -12,13 +12,9 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/09-nice-digits/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/09-digit-functions/">
       
       
-        <link rel="prev" href="../07-drawing-digits/">
-      
-      
-        <link rel="next" href="../05-buttons/">
       
       
       <link rel="icon" href="../../img/clock-icon.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Nice Digits - MicroPython Clocks and Watch</title>
+        <title>Creating Digit Functions - MicroPython Clocks and Watch</title>
       
     
     
@@ -87,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drawing-nice-digits" class="md-skip">
+        <a href="#creating-digit-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nice Digits
+              Creating Digit Functions
             
           </span>
         </div>
@@ -313,8 +309,6 @@
       
   
   
-    
-  
   
     
     
@@ -347,347 +341,32 @@
       
         
       
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+  
+  
+    <a href="../" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     Lessons
   </span>
   
 
-            </a>
-            
-              <label class="md-nav__link " for="__nav_4">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Lessons
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00-hardware-config/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hardware Config
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01-drawing-coordinates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Drawing Coordinates
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-display-text/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Displaying Text
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-drawing-face/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Drawing a Clock Face
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-larger-fonts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Larger Fonts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00-hardware-config/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hardware Config Files
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01-get-local-time/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Get Local Time
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../07-drawing-digits/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Drawing Digits
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <span class="md-nav__icon md-icon"></span>
       
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Nice Digits
-  </span>
+    </a>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Nice Digits
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#new-thickness-parameters" class="md-nav__link">
-    New Thickness Parameters
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#draw-segment-function" class="md-nav__link">
-    Draw Segment Function
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#full-test-program" class="md-nav__link">
-    Full Test Program
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05-buttons/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Buttons
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06-draw-performance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Draw Performance
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../10-machine-info/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Machine Info
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -849,10 +528,11 @@
   
 
 
-<h1 id="drawing-nice-digits">Drawing Nice Digits</h1>
+<h1 id="creating-digit-functions">Creating Digit Functions</h1>
 <p>In the last section, we drew a seven-segment digit number using the line
-function.  In this section, we will add a better function that
-will add a new parameter for the thickness of the digit segments.</p>
+function.  In this section, we will build a better function that
+will add a flexible new parameter for the thickness of the digit segments.  We will then test the function under a variety of conditions and see how
+we can make the function easier to use.</p>
 <h2 id="new-thickness-parameters">New Thickness Parameters</h2>
 <p>Placing the rectangles correctly within a seven-segment display when
 we have many drawing parameters requires some precision.  We
@@ -1159,44 +839,6 @@ we draw the bottom segment:</p>
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../07-drawing-digits/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Drawing Digits" rel="prev">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Drawing Digits
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../05-buttons/" class="md-footer__link md-footer__link--next" aria-label="Next: Buttons" rel="next">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Buttons
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
