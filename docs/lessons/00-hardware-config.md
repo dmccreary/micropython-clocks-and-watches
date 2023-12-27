@@ -35,6 +35,8 @@ ROTATION = 90
 
 WIDTH=320
 HEIGHT=240
+BUTTON_1_PIN = 14 # one up from lower-left corner
+BUTTON_2_PIN = 15 # lower left corner with USB on top
 ```
 
 To use this configuration file you will need to do two things:

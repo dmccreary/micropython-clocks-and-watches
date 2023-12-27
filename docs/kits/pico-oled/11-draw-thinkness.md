@@ -1,2 +1,5 @@
-# Draw Seven Segments with Thinkness
+# Draw Seven Segments with Thickness
+
+```py
+```
 

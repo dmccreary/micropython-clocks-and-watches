@@ -20,11 +20,12 @@ nav:
     - Larger Fonts: lessons/04-larger-fonts.md
     - Hardware Config Files: lessons/00-hardware-config.md
     - Get Local Time: lessons/01-get-local-time.md
-    - Drawing Digits: lessons/07-drawing-digits.md
-    - Nice Digits: lessons/09-nice-digits.md
+    - Drawing 7-Segment Digits: lessons/07-drawing-digits.md
+    - Digit Functions: lessons/09-digits-functions.md
+    - Draw Time Functions: lessons/12-draw-time.md
     - Buttons: lessons/05-buttons.md
     - Draw Performance: lessons/06-draw-performance.md
-    - Machine Info: lessons/10-machine-info.md
+    - Machine Info: lessons/40-machine-info.md
   - Kits:
     - Introduction to Watch Kits: kits/index.md
     - LED Strip Kits: 

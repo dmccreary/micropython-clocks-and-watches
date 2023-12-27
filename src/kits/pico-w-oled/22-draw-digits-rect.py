@@ -1,20 +1,24 @@
 # Clock Lab 20: Draw Seven Segments
 # this lab uses the fill_rect function to draw the segments
-import machine
+from machine import Pin
 import utime
 import ssd1306
 from utime import sleep, localtime
+import config
+
 led = machine.Pin(25, machine.Pin.OUT)
 
-SCL=machine.Pin(2) # SPI CLock
-SDA=machine.Pin(3) # SPI Data
-spi=machine.SPI(0, sck=SCL, mosi=SDA, baudrate=100000)
+SCL=Pin(config.SCL_PIN) # SPI CLock
+SDA=Pin(config.SDA_PIN) # SPI Data
 
-RES = machine.Pin(4)
-DC = machine.Pin(5)
-CS = machine.Pin(6)
+RES = Pin(config.RESET_PIN) # Reset
+DC = Pin(config.DC_PIN) # Data/command
+CS = Pin(config.CS_PIN) # Chip Select
+WIDTH = config.WIDTH
+HEIGHT = config.HEIGHT
 
-oled = ssd1306.SSD1306_SPI(128, 64, spi, DC, RES, CS)
+spi=machine.SPI(config.SPI_BUS, sck=SCL, mosi=SDA, baudrate=100000)
+oled = ssd1306.SSD1306_SPI(WIDTH, HEIGHT, spi, DC, RES, CS)
 
 segmentMapping = [
   #a, b, c, d, e, f, g
@@ -60,7 +64,7 @@ def drawDigit(digit, x, y, width, height, thickness, color):
           endY = y + height // 2
       # lower two vertical lines (2=lower right and 4=lower left)
       if (i==2 or i==4):
-          startY = y + (height // 2)
+          startY = y + height // 2
           endY = y + height
       if (i==4 or i==5): xOffset = 0
       if (i==1 or i==2): xOffset = width-thickness
@@ -68,16 +72,14 @@ def drawDigit(digit, x, y, width, height, thickness, color):
       oled.fill_rect(x+xOffset, startY, thickness, endY-startY, color)
 
 oled.fill(0)
-oled.text('Lab 12: rect', 0, 0, 1)
-x = 10 # upper left corner x
-y = 10 # upper left corner y
-w = 20 # digit width
-h = 30 # digit height
-t = 3
+w = 30 # digit width
+h = 50 # digit height
+x = (WIDTH // 2) - w # upper left corner x
+y = 5 # upper left corner y
+t = 8
 
 while True:
     for i in range(0, 10):
-
         print(i)
         # create an outline on px away from the drawing region
         oled.rect(x-2, y-2, w+4, h+4, 1)
