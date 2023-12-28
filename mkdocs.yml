@@ -9,7 +9,9 @@ nav:
   - Home: index.md
   - About: about.md
   - Setup:
-    - Parts: setup/parts.md
+    - Introduction: setup/index.md
+    - Desktop Setup: setup/desktop.md
+    - Purchasing Parts: setup/02-purchasing-parts.md
     - 7-Wire SPI Cables: setup/display-cable.md
   - Lessons:
     - Introduction: lessons/index.md
@@ -23,6 +25,7 @@ nav:
     - Drawing 7-Segment Digits: lessons/07-drawing-digits.md
     - Digit Functions: lessons/09-digit-functions.md
     - Draw Time Functions: lessons/12-draw-time-functions.md
+    - Scale Testing: lessons/15-scale-testing.md
     - Buttons: lessons/05-buttons.md
     - Draw Performance: lessons/06-draw-performance.md
     - Machine Info: lessons/40-machine-info.md
