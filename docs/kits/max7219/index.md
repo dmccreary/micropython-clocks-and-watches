@@ -68,3 +68,7 @@ understand MicroPython syntax and basic commands.
 -   Supplement the course with online resources and forums for additional support.
 -   Encourage students to document their progress and challenges for a reflective learning experience.
 -   Consider having a session for students to present their finished clocks and share their learning experiences with the class.
+
+## References
+
+[DIY clock | Homemade 7 segments "nixie" tubes](https://www.youtube.com/watch?v=LkrGmI_SAOs)

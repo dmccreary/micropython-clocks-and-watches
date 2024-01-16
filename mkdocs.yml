@@ -67,6 +67,7 @@ nav:
       - Color Lab: kits/waveshare/02-color-test.md
       - Drawing Hands: kits/waveshare/03-drawing-hands.md
       - Font Lab: kits/waveshare/04-5x8-font.md
+    - MAX7219: kits/max7219/index.md
   - References: references.md
   - Contact: contact.md
 
