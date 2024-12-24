@@ -8,6 +8,7 @@ repo_url: 'https://github.com/dmccreary/micropython-clocks-and-watches'
 nav:
   - Home: index.md
   - About: about.md
+  - Course Description: course-description.md
   - Setup:
     - Introduction: setup/index.md
     - Desktop Setup: setup/desktop.md

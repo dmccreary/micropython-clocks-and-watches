@@ -2,11 +2,11 @@
 
 <!-- 
 Sample Prompt:
-Create a persuave motivational article about the values of a website dedicated
+Create a persuasive motivational article about the values of a website dedicated
 to the creation of clocks and watches using MicroPython.
 Reference the following points:
 
-1. Kids love clocs and watches
+1. Kids love clocks and watches
 2. The lower cost of components
 3. The need to teach computational thinking
 4. The value of project-based learning
@@ -18,7 +18,7 @@ Reference the following points:
 My STEM students often hold a special facination with timekeeping.
 I don't know exactly what it is that gets them so excited about
 these projects.  But the bottom line is they quickly become
-motiviated to learn Python to create their own timekeeping
+motivated to learn Python to create their own timekeeping
 devices that are customized to their interests.  Owning their
 own devices and showing off these
 projects to their friends is also a big plus.
@@ -56,7 +56,7 @@ research to show that students that learn in groups have higer participation rat
 
 ## Engineered for User Experience
 
-Geat STEM projects don't just fall off a shelf into our laps.  They need to be designed and tested carefully using the same agile processes that we use in software development.  [User Experience](https://en.wikipedia.org/wiki/User_experience) (UX) professionals need to help us observe our students using and learning from our lessons.
+Great STEM projects don't just fall off a shelf into our laps.  They need to be designed and tested carefully using the same agile processes that we use in software development.  [User Experience](https://en.wikipedia.org/wiki/User_experience) (UX) professionals need to help us observe our students using and learning from our lessons.
 
 
 ## In Conclusion
