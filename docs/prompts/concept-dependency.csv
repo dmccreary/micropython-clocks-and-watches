@@ -1,0 +1,116 @@
+ConceptID,ConceptLabel,DependsOn
+0,Timekeeping Components
+1,MicroPython,0
+2,Raspberry Pi Pico W,1
+3,Breadboard,0
+4,Power,0
+5,USB Power,4
+6,Battery Power,4
+7,Battery Backup,6
+8,Battery Drain Calculation,6
+9,LED Clock Displays,1
+10,Real-time Clocks,0
+11,The Thonny IDE,1
+12,Synchronizing Time from the PC,10|1|11
+13,The localtime() Function,1
+14,MicroPython Syntax,1
+15,Loops,14
+16,Conditionals,14
+17,Functions,14
+18,Libraries,14
+19,Loading MicroPython Drivers,18
+20,Printing Time to the Console,14
+21,Displays,0.19
+22,Drawing Lines,21
+23,Drawing Text,21
+24,Drawing Pixels,21
+25,Drawing Rectangles,21
+26,Drawing Circles,21
+27,Drawing Ellipses,21
+28,Drawing Arcs,21
+29,Drawing Polygons,21
+30,Changing Fonts,21
+31,Using MicroPython Drivers,19
+32,OLED Displays,21
+33,Smartwatch Displays,21
+34,Using 16 Bits to Represent Color,33
+35,Framebuffer in MicroPython,21
+36,SPI Interfaces,31
+37,Updating the Entire Screen via SPI,36
+38,Incremental Screen Drawing,37
+39,Drawing Hands on an Analog Clock,22|40|93|33
+40,Using math.sin() and math.cos(),14|33
+41,Drawing Tick Marks on a Watch Face,21|22|40
+42,Drawing Numbers on a Watch Face,21|23|40
+43,Loading Custom Fonts,30
+44,Using the time Module for Scheduling,14
+45,Using Internal Timers on the Raspberry Pi Pico,2|44
+46,External RTC Modules (DS1307 and DS3231),10|19
+47,Setting the System Clock from an External RTC,46
+48,Network Time Synchronization (NTP),50
+49,Setting Up WiFi on the Pico W,2|1
+50,Working the network module,49
+51,Parsing JSON,50
+52,Displaying Date and Day of Week,10
+53,Creating a 7-Segment Style Digital Display,21
+54,Custom Segment-Based Displays,53
+55,Minimizing Power Consumption (Sleep Modes),2|4
+56,Waking from Deep Sleep on RTC Alarm,55
+57,Setting Time with Buttons,58|59
+58,Using Interrupts for Button Input,14
+59,Button Debouncing Techniques,58
+60,Using A Rotary Encoder,58
+61,Setting Alarms with the RTC,10
+62,Connecting Speakers,2
+63,Playing a Sound,0|62
+64,Sound Encoding,63
+65,Timer-Based Events,44
+66,Playing Chimes,63|65
+67,Cuckoo Clocks,66
+68,Generating Beep or Alarm Tones,63
+69,Integrating External Sensors,19
+70,Temperature and Humidity,69
+71,Displaying Sensor Data,70|21
+72,Accelerometers for Orientation,69
+73,Tilt-Based Wake for Watch Display,72|55
+74,Ultra-Low Power,55
+75,Using E-Paper Displays,31
+76,Partial Refresh on E-Paper,75
+77,Techniques to Minimize Ghosting on E-Paper,76
+78,Using TFT Displays (e.g., ST7735, ILI9341),31
+79,Comparing Display Technologies,32|75|78
+80,Color Animations on Watch Faces,35|40
+81,Flicker Reduction Techniques,80
+82,Double Buffering for Smooth Animations,80
+83,Using the micropython-ufont Library,18
+84,Asynchronous Code with uasyncio,1|14
+85,Time-Based Tasks with uasyncio,84
+86,Handling Concurrency of Time Updates & UI,85|44
+87,Using a Watchdog Timer for Reliability,45
+88,Logging & Debugging Time Issues,44
+89,Sleep Scheduling,55
+90,Tools for Measuring Battery Usage,8
+91,Hardware Documentation,
+92,3D Printing Watch Enclosures,91
+93,Using math Module for Geometry,14
+94,Time Zones & UTC Offsets,44
+95,Daylight Saving Time,94
+96,Using the Built-In Filesystem on Pico,2|14
+97,Logging Time Data to an SD Card,96|44
+98,Using I²C Sensors & Modules,69
+99,Menu Systems for Watch Settings,14
+100,Servo Motors for Mechanical Pointers,2|19
+101,Converting Between datetime Objects and Timestamps,44
+102,Generating Waveforms for Audio,40|63
+103,Implementing Clock Themes,21
+104,Fast Redraw Techniques (Blitting),35
+105,Partial Screen Updates for Watch Faces,104
+106,Color Conversion & Palettes in MicroPython,21|34
+107,Handling 12-Hour vs. 24-Hour Formats,44
+108,WiFi-Based Weather & Forecast Updates,50|51
+109,Using Sensors for Step Counting (Pedometer),72
+110,Adding a LiPo Charging Circuit,6
+111,Chronograph Functionality,44
+112,Timer,44
+113,Stopwatch,44
+114,World Clocks,94

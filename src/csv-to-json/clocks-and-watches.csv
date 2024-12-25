@@ -1,0 +1,121 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+0,Timekeeping Components,,1
+1,MicroPython,0,1
+2,Raspberry Pi Pico W,1,1
+3,Breadboard,0,1
+4,Power,0,1
+5,USB Power,4,1
+6,Battery Power,4,1
+7,Battery Backup,6,1
+8,Battery Drain Calculation,6,1
+9,LED Clock Displays,1,3
+10,Real-time Clocks,0,1
+11,The Thonny IDE,1,1
+12,Synchronizing Time from the PC,10|1|11,6
+13,The localtime() Function,1,2
+14,MicroPython Syntax,1,2
+15,Loops,14,2
+16,Conditionals,14,2
+17,Functions,14,2
+18,Libraries,14,2
+19,Loading MicroPython Drivers,18,4
+20,Printing Time to the Console,14,2
+21,Displays,0|19,3
+22,Drawing Lines,21,4
+23,Drawing Text,21,4
+24,Drawing Pixels,21,4
+25,Drawing Rectangles,21,4
+26,Drawing Circles,21,4
+27,Drawing Ellipses,21,4
+28,Drawing Arcs,21,4
+29,Drawing Polygons,21,4
+30,Changing Fonts,21,4
+31,Using MicroPython Drivers,19,4
+32,OLED Displays,21,3
+33,Smartwatch Displays,21,3
+34,Using 16 Bits to Represent Color,33,2
+35,Framebuffer in MicroPython,21,5
+36,SPI Interfaces,31,10
+37,Updating the Entire Screen via SPI,36,10
+38,Incremental Screen Drawing,37,10
+39,Drawing Hands on an Analog Clock,22|40|93|33,5
+40,Using math.sin() and math.cos(),14|33,5
+41,Drawing Tick Marks on a Watch Face,21|22|40,5
+42,Drawing Numbers on a Watch Face,21|23|40,5
+43,Loading Custom Fonts,30,4
+44,Using the time Module for Scheduling,14,10
+45,Using Internal Timers on the Raspberry Pi Pico,2|44,6
+46,External RTC Modules (DS1307 and DS3231),10|19,7
+47,Setting the System Clock from an External RTC,46,7
+48,Network Time Synchronization (NTP),50,6
+49,Setting Up WiFi on the Pico W,2|1,6
+50,Working the network module,49,6
+51,Parsing JSON,50,6
+52,Displaying Date and Day of Week,10,8
+53,Creating a 7-Segment Style Digital Display,21,3
+54,Custom Segment-Based Displays,53,3
+55,Minimizing Power Consumption (Sleep Modes),2|4,9
+56,Waking from Deep Sleep on RTC Alarm,55,9
+57,Setting Time with Buttons,58|59,8
+58,Using Interrupts for Button Input,14,8
+59,Button Debouncing Techniques,58,8
+60,Using A Rotary Encoder,58,8
+61,Setting Alarms with the RTC,10,8
+62,Connecting Speakers,2,9
+63,Playing a Sound,0|62,9
+64,Sound Encoding,63,9
+65,Timer-Based Events,44,6
+66,Playing Chimes,63|65,9
+67,Cuckoo Clocks,66,9
+68,Generating Beep or Alarm Tones,63,9
+69,Integrating External Sensors,19,7
+70,Temperature and Humidity,69,7
+71,Displaying Sensor Data,70|21,7
+72,Accelerometers for Orientation,69,7
+73,Tilt-Based Wake for Watch Display,72|55,7
+74,Ultra-Low Power,55,8
+75,Using E-Paper Displays,31,3
+76,Partial Refresh on E-Paper,75,3
+77,Techniques to Minimize Ghosting on E-Paper,76,3
+78,Using TFT Displays (e.g., ST7735, ILI9341),31,3
+79,Comparing Display Technologies,32|75|78,3
+80,Color Animations on Watch Faces,35|40,5
+81,Flicker Reduction Techniques,80,5
+82,Double Buffering for Smooth Animations,80,5
+83,Using the micropython-ufont Library,18,5
+84,Asynchronous Code with uasyncio,1|14,6
+85,Time-Based Tasks with uasyncio,84,6
+86,Handling Concurrency of Time Updates & UI,85|44,6
+87,Using a Watchdog Timer for Reliability,45,9
+88,Logging & Debugging Time Issues,44,9
+89,Sleep Scheduling,55,9
+90,Tools for Measuring Battery Usage,8,7
+91,Hardware Documentation,,1
+92,3D Printing Watch Enclosures,91,10
+93,Using math Module for Geometry,14,2
+94,Time Zones & UTC Offsets,44,2
+95,Daylight Saving Time,94,2
+96,Using the Built-In Filesystem on Pico,2|14,8
+97,Logging Time Data to an SD Card,96|44,8
+98,Using I²C Sensors & Modules,69,7
+99,Menu Systems for Watch Settings,14,8
+100,Servo Motors for Mechanical Pointers,2|19,7
+101,Converting Between datetime Objects and Timestamps,44,2
+102,Generating Waveforms for Audio,40|63,9
+103,Implementing Clock Themes,21,3
+104,Fast Redraw Techniques (Blitting),35,5
+105,Partial Screen Updates for Watch Faces,104,5
+106,Color Conversion & Palettes in MicroPython,21|34,5
+107,Handling 12-Hour vs. 24-Hour Formats,44,8
+108,WiFi-Based Weather & Forecast Updates,50|51,6
+109,Using Sensors for Step Counting (Pedometer),72,7
+110,Adding a LiPo Charging Circuit,6,7
+111,Chronograph Functionality,44,8
+112,Timer Project,44,10
+113,Stopwatch Project,44,10
+114,World Clock Project,94,10
+115,Alarm Clock Project,44|63,10
+116,Basic Clock Project,1|9|11,10
+117,Smartwatch Project,33,10
+118,E-Ink Displays,31,3
+119,The Low Power Clock Project,118,10

@@ -1,0 +1,1205 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "label": "Timekeeping Components",
+            "group": 1
+        },
+        {
+            "id": 1,
+            "label": "MicroPython",
+            "group": 1
+        },
+        {
+            "id": 2,
+            "label": "Raspberry Pi Pico W",
+            "group": 1
+        },
+        {
+            "id": 3,
+            "label": "Breadboard",
+            "group": 1
+        },
+        {
+            "id": 4,
+            "label": "Power",
+            "group": 1
+        },
+        {
+            "id": 5,
+            "label": "USB Power",
+            "group": 1
+        },
+        {
+            "id": 6,
+            "label": "Battery Power",
+            "group": 1
+        },
+        {
+            "id": 7,
+            "label": "Battery Backup",
+            "group": 1
+        },
+        {
+            "id": 8,
+            "label": "Battery Drain Calculation",
+            "group": 1
+        },
+        {
+            "id": 9,
+            "label": "LED Clock Displays",
+            "group": 3
+        },
+        {
+            "id": 10,
+            "label": "Real-time Clocks",
+            "group": 1
+        },
+        {
+            "id": 11,
+            "label": "The Thonny IDE",
+            "group": 1
+        },
+        {
+            "id": 12,
+            "label": "Synchronizing Time from the PC",
+            "group": 6
+        },
+        {
+            "id": 13,
+            "label": "The localtime() Function",
+            "group": 2
+        },
+        {
+            "id": 14,
+            "label": "MicroPython Syntax",
+            "group": 2
+        },
+        {
+            "id": 15,
+            "label": "Loops",
+            "group": 2
+        },
+        {
+            "id": 16,
+            "label": "Conditionals",
+            "group": 2
+        },
+        {
+            "id": 17,
+            "label": "Functions",
+            "group": 2
+        },
+        {
+            "id": 18,
+            "label": "Libraries",
+            "group": 2
+        },
+        {
+            "id": 19,
+            "label": "Loading MicroPython Drivers",
+            "group": 4
+        },
+        {
+            "id": 20,
+            "label": "Printing Time to the Console",
+            "group": 2
+        },
+        {
+            "id": 21,
+            "label": "Displays",
+            "group": 3
+        },
+        {
+            "id": 22,
+            "label": "Drawing Lines",
+            "group": 4
+        },
+        {
+            "id": 23,
+            "label": "Drawing Text",
+            "group": 4
+        },
+        {
+            "id": 24,
+            "label": "Drawing Pixels",
+            "group": 4
+        },
+        {
+            "id": 25,
+            "label": "Drawing Rectangles",
+            "group": 4
+        },
+        {
+            "id": 26,
+            "label": "Drawing Circles",
+            "group": 4
+        },
+        {
+            "id": 27,
+            "label": "Drawing Ellipses",
+            "group": 4
+        },
+        {
+            "id": 28,
+            "label": "Drawing Arcs",
+            "group": 4
+        },
+        {
+            "id": 29,
+            "label": "Drawing Polygons",
+            "group": 4
+        },
+        {
+            "id": 30,
+            "label": "Changing Fonts",
+            "group": 4
+        },
+        {
+            "id": 31,
+            "label": "Using MicroPython Drivers",
+            "group": 4
+        },
+        {
+            "id": 32,
+            "label": "OLED Displays",
+            "group": 3
+        },
+        {
+            "id": 33,
+            "label": "Smartwatch Displays",
+            "group": 3
+        },
+        {
+            "id": 34,
+            "label": "Using 16 Bits to Represent Color",
+            "group": 2
+        },
+        {
+            "id": 35,
+            "label": "Framebuffer in MicroPython",
+            "group": 5
+        },
+        {
+            "id": 36,
+            "label": "SPI Interfaces",
+            "group": 10
+        },
+        {
+            "id": 37,
+            "label": "Updating the Entire Screen via SPI",
+            "group": 10
+        },
+        {
+            "id": 38,
+            "label": "Incremental Screen Drawing",
+            "group": 10
+        },
+        {
+            "id": 39,
+            "label": "Drawing Hands on an Analog Clock",
+            "group": 5
+        },
+        {
+            "id": 40,
+            "label": "Using math.sin() and math.cos()",
+            "group": 5
+        },
+        {
+            "id": 41,
+            "label": "Drawing Tick Marks on a Watch Face",
+            "group": 5
+        },
+        {
+            "id": 42,
+            "label": "Drawing Numbers on a Watch Face",
+            "group": 5
+        },
+        {
+            "id": 43,
+            "label": "Loading Custom Fonts",
+            "group": 4
+        },
+        {
+            "id": 44,
+            "label": "Using the time Module for Scheduling",
+            "group": 10
+        },
+        {
+            "id": 45,
+            "label": "Using Internal Timers on the Raspberry Pi Pico",
+            "group": 6
+        },
+        {
+            "id": 46,
+            "label": "External RTC Modules (DS1307 and DS3231)",
+            "group": 7
+        },
+        {
+            "id": 47,
+            "label": "Setting the System Clock from an External RTC",
+            "group": 7
+        },
+        {
+            "id": 48,
+            "label": "Network Time Synchronization (NTP)",
+            "group": 6
+        },
+        {
+            "id": 49,
+            "label": "Setting Up WiFi on the Pico W",
+            "group": 6
+        },
+        {
+            "id": 50,
+            "label": "Working the network module",
+            "group": 6
+        },
+        {
+            "id": 51,
+            "label": "Parsing JSON",
+            "group": 6
+        },
+        {
+            "id": 52,
+            "label": "Displaying Date and Day of Week",
+            "group": 8
+        },
+        {
+            "id": 53,
+            "label": "Creating a 7-Segment Style Digital Display",
+            "group": 3
+        },
+        {
+            "id": 54,
+            "label": "Custom Segment-Based Displays",
+            "group": 3
+        },
+        {
+            "id": 55,
+            "label": "Minimizing Power Consumption (Sleep Modes)",
+            "group": 9
+        },
+        {
+            "id": 56,
+            "label": "Waking from Deep Sleep on RTC Alarm",
+            "group": 9
+        },
+        {
+            "id": 57,
+            "label": "Setting Time with Buttons",
+            "group": 8
+        },
+        {
+            "id": 58,
+            "label": "Using Interrupts for Button Input",
+            "group": 8
+        },
+        {
+            "id": 59,
+            "label": "Button Debouncing Techniques",
+            "group": 8
+        },
+        {
+            "id": 60,
+            "label": "Using A Rotary Encoder",
+            "group": 8
+        },
+        {
+            "id": 61,
+            "label": "Setting Alarms with the RTC",
+            "group": 8
+        },
+        {
+            "id": 62,
+            "label": "Connecting Speakers",
+            "group": 9
+        },
+        {
+            "id": 63,
+            "label": "Playing a Sound",
+            "group": 9
+        },
+        {
+            "id": 64,
+            "label": "Sound Encoding",
+            "group": 9
+        },
+        {
+            "id": 65,
+            "label": "Timer-Based Events",
+            "group": 6
+        },
+        {
+            "id": 66,
+            "label": "Playing Chimes",
+            "group": 9
+        },
+        {
+            "id": 67,
+            "label": "Cuckoo Clocks",
+            "group": 9
+        },
+        {
+            "id": 68,
+            "label": "Generating Beep or Alarm Tones",
+            "group": 9
+        },
+        {
+            "id": 69,
+            "label": "Integrating External Sensors",
+            "group": 7
+        },
+        {
+            "id": 70,
+            "label": "Temperature and Humidity",
+            "group": 7
+        },
+        {
+            "id": 71,
+            "label": "Displaying Sensor Data",
+            "group": 7
+        },
+        {
+            "id": 72,
+            "label": "Accelerometers for Orientation",
+            "group": 7
+        },
+        {
+            "id": 73,
+            "label": "Tilt-Based Wake for Watch Display",
+            "group": 7
+        },
+        {
+            "id": 74,
+            "label": "Ultra-Low Power",
+            "group": 8
+        },
+        {
+            "id": 75,
+            "label": "Using E-Paper Displays",
+            "group": 3
+        },
+        {
+            "id": 76,
+            "label": "Partial Refresh on E-Paper",
+            "group": 3
+        },
+        {
+            "id": 77,
+            "label": "Techniques to Minimize Ghosting on E-Paper",
+            "group": 3
+        },
+        {
+            "id": 79,
+            "label": "Comparing Display Technologies",
+            "group": 3
+        },
+        {
+            "id": 80,
+            "label": "Color Animations on Watch Faces",
+            "group": 5
+        },
+        {
+            "id": 81,
+            "label": "Flicker Reduction Techniques",
+            "group": 5
+        },
+        {
+            "id": 82,
+            "label": "Double Buffering for Smooth Animations",
+            "group": 5
+        },
+        {
+            "id": 83,
+            "label": "Using the micropython-ufont Library",
+            "group": 5
+        },
+        {
+            "id": 84,
+            "label": "Asynchronous Code with uasyncio",
+            "group": 6
+        },
+        {
+            "id": 85,
+            "label": "Time-Based Tasks with uasyncio",
+            "group": 6
+        },
+        {
+            "id": 86,
+            "label": "Handling Concurrency of Time Updates & UI",
+            "group": 6
+        },
+        {
+            "id": 87,
+            "label": "Using a Watchdog Timer for Reliability",
+            "group": 9
+        },
+        {
+            "id": 88,
+            "label": "Logging & Debugging Time Issues",
+            "group": 9
+        },
+        {
+            "id": 89,
+            "label": "Sleep Scheduling",
+            "group": 9
+        },
+        {
+            "id": 90,
+            "label": "Tools for Measuring Battery Usage",
+            "group": 7
+        },
+        {
+            "id": 91,
+            "label": "Hardware Documentation",
+            "group": 1
+        },
+        {
+            "id": 92,
+            "label": "3D Printing Watch Enclosures",
+            "group": 10
+        },
+        {
+            "id": 93,
+            "label": "Using math Module for Geometry",
+            "group": 2
+        },
+        {
+            "id": 94,
+            "label": "Time Zones & UTC Offsets",
+            "group": 2
+        },
+        {
+            "id": 95,
+            "label": "Daylight Saving Time",
+            "group": 2
+        },
+        {
+            "id": 96,
+            "label": "Using the Built-In Filesystem on Pico",
+            "group": 8
+        },
+        {
+            "id": 97,
+            "label": "Logging Time Data to an SD Card",
+            "group": 8
+        },
+        {
+            "id": 98,
+            "label": "Using I\u00b2C Sensors & Modules",
+            "group": 7
+        },
+        {
+            "id": 99,
+            "label": "Menu Systems for Watch Settings",
+            "group": 8
+        },
+        {
+            "id": 100,
+            "label": "Servo Motors for Mechanical Pointers",
+            "group": 7
+        },
+        {
+            "id": 101,
+            "label": "Converting Between datetime Objects and Timestamps",
+            "group": 2
+        },
+        {
+            "id": 102,
+            "label": "Generating Waveforms for Audio",
+            "group": 9
+        },
+        {
+            "id": 103,
+            "label": "Implementing Clock Themes",
+            "group": 3
+        },
+        {
+            "id": 104,
+            "label": "Fast Redraw Techniques (Blitting)",
+            "group": 5
+        },
+        {
+            "id": 105,
+            "label": "Partial Screen Updates for Watch Faces",
+            "group": 5
+        },
+        {
+            "id": 106,
+            "label": "Color Conversion & Palettes in MicroPython",
+            "group": 5
+        },
+        {
+            "id": 107,
+            "label": "Handling 12-Hour vs. 24-Hour Formats",
+            "group": 8
+        },
+        {
+            "id": 108,
+            "label": "WiFi-Based Weather & Forecast Updates",
+            "group": 6
+        },
+        {
+            "id": 109,
+            "label": "Using Sensors for Step Counting (Pedometer)",
+            "group": 7
+        },
+        {
+            "id": 110,
+            "label": "Adding a LiPo Charging Circuit",
+            "group": 7
+        },
+        {
+            "id": 111,
+            "label": "Chronograph Functionality",
+            "group": 8
+        },
+        {
+            "id": 112,
+            "label": "Timer Project",
+            "group": 10
+        },
+        {
+            "id": 113,
+            "label": "Stopwatch Project",
+            "group": 10
+        },
+        {
+            "id": 114,
+            "label": "World Clock Project",
+            "group": 10
+        },
+        {
+            "id": 115,
+            "label": "Alarm Clock Project",
+            "group": 10
+        },
+        {
+            "id": 116,
+            "label": "Basic Clock Project",
+            "group": 10
+        },
+        {
+            "id": 117,
+            "label": "Smartwatch Project",
+            "group": 10
+        },
+        {
+            "id": 118,
+            "label": "E-Ink Displays",
+            "group": 3
+        },
+        {
+            "id": 119,
+            "label": "The Low Power Clock Project",
+            "group": 10
+        }
+    ],
+    "edges": [
+        {
+            "from": 1,
+            "to": 0
+        },
+        {
+            "from": 2,
+            "to": 1
+        },
+        {
+            "from": 3,
+            "to": 0
+        },
+        {
+            "from": 4,
+            "to": 0
+        },
+        {
+            "from": 5,
+            "to": 4
+        },
+        {
+            "from": 6,
+            "to": 4
+        },
+        {
+            "from": 7,
+            "to": 6
+        },
+        {
+            "from": 8,
+            "to": 6
+        },
+        {
+            "from": 9,
+            "to": 1
+        },
+        {
+            "from": 10,
+            "to": 0
+        },
+        {
+            "from": 11,
+            "to": 1
+        },
+        {
+            "from": 12,
+            "to": 10
+        },
+        {
+            "from": 12,
+            "to": 1
+        },
+        {
+            "from": 12,
+            "to": 11
+        },
+        {
+            "from": 13,
+            "to": 1
+        },
+        {
+            "from": 14,
+            "to": 1
+        },
+        {
+            "from": 15,
+            "to": 14
+        },
+        {
+            "from": 16,
+            "to": 14
+        },
+        {
+            "from": 17,
+            "to": 14
+        },
+        {
+            "from": 18,
+            "to": 14
+        },
+        {
+            "from": 19,
+            "to": 18
+        },
+        {
+            "from": 20,
+            "to": 14
+        },
+        {
+            "from": 21,
+            "to": 0
+        },
+        {
+            "from": 21,
+            "to": 19
+        },
+        {
+            "from": 22,
+            "to": 21
+        },
+        {
+            "from": 23,
+            "to": 21
+        },
+        {
+            "from": 24,
+            "to": 21
+        },
+        {
+            "from": 25,
+            "to": 21
+        },
+        {
+            "from": 26,
+            "to": 21
+        },
+        {
+            "from": 27,
+            "to": 21
+        },
+        {
+            "from": 28,
+            "to": 21
+        },
+        {
+            "from": 29,
+            "to": 21
+        },
+        {
+            "from": 30,
+            "to": 21
+        },
+        {
+            "from": 31,
+            "to": 19
+        },
+        {
+            "from": 32,
+            "to": 21
+        },
+        {
+            "from": 33,
+            "to": 21
+        },
+        {
+            "from": 34,
+            "to": 33
+        },
+        {
+            "from": 35,
+            "to": 21
+        },
+        {
+            "from": 36,
+            "to": 31
+        },
+        {
+            "from": 37,
+            "to": 36
+        },
+        {
+            "from": 38,
+            "to": 37
+        },
+        {
+            "from": 39,
+            "to": 22
+        },
+        {
+            "from": 39,
+            "to": 40
+        },
+        {
+            "from": 39,
+            "to": 93
+        },
+        {
+            "from": 39,
+            "to": 33
+        },
+        {
+            "from": 40,
+            "to": 14
+        },
+        {
+            "from": 40,
+            "to": 33
+        },
+        {
+            "from": 41,
+            "to": 21
+        },
+        {
+            "from": 41,
+            "to": 22
+        },
+        {
+            "from": 41,
+            "to": 40
+        },
+        {
+            "from": 42,
+            "to": 21
+        },
+        {
+            "from": 42,
+            "to": 23
+        },
+        {
+            "from": 42,
+            "to": 40
+        },
+        {
+            "from": 43,
+            "to": 30
+        },
+        {
+            "from": 44,
+            "to": 14
+        },
+        {
+            "from": 45,
+            "to": 2
+        },
+        {
+            "from": 45,
+            "to": 44
+        },
+        {
+            "from": 46,
+            "to": 10
+        },
+        {
+            "from": 46,
+            "to": 19
+        },
+        {
+            "from": 47,
+            "to": 46
+        },
+        {
+            "from": 48,
+            "to": 50
+        },
+        {
+            "from": 49,
+            "to": 2
+        },
+        {
+            "from": 49,
+            "to": 1
+        },
+        {
+            "from": 50,
+            "to": 49
+        },
+        {
+            "from": 51,
+            "to": 50
+        },
+        {
+            "from": 52,
+            "to": 10
+        },
+        {
+            "from": 53,
+            "to": 21
+        },
+        {
+            "from": 54,
+            "to": 53
+        },
+        {
+            "from": 55,
+            "to": 2
+        },
+        {
+            "from": 55,
+            "to": 4
+        },
+        {
+            "from": 56,
+            "to": 55
+        },
+        {
+            "from": 57,
+            "to": 58
+        },
+        {
+            "from": 57,
+            "to": 59
+        },
+        {
+            "from": 58,
+            "to": 14
+        },
+        {
+            "from": 59,
+            "to": 58
+        },
+        {
+            "from": 60,
+            "to": 58
+        },
+        {
+            "from": 61,
+            "to": 10
+        },
+        {
+            "from": 62,
+            "to": 2
+        },
+        {
+            "from": 63,
+            "to": 0
+        },
+        {
+            "from": 63,
+            "to": 62
+        },
+        {
+            "from": 64,
+            "to": 63
+        },
+        {
+            "from": 65,
+            "to": 44
+        },
+        {
+            "from": 66,
+            "to": 63
+        },
+        {
+            "from": 66,
+            "to": 65
+        },
+        {
+            "from": 67,
+            "to": 66
+        },
+        {
+            "from": 68,
+            "to": 63
+        },
+        {
+            "from": 69,
+            "to": 19
+        },
+        {
+            "from": 70,
+            "to": 69
+        },
+        {
+            "from": 71,
+            "to": 70
+        },
+        {
+            "from": 71,
+            "to": 21
+        },
+        {
+            "from": 72,
+            "to": 69
+        },
+        {
+            "from": 73,
+            "to": 72
+        },
+        {
+            "from": 73,
+            "to": 55
+        },
+        {
+            "from": 74,
+            "to": 55
+        },
+        {
+            "from": 75,
+            "to": 31
+        },
+        {
+            "from": 76,
+            "to": 75
+        },
+        {
+            "from": 77,
+            "to": 76
+        },
+        {
+            "from": 79,
+            "to": 32
+        },
+        {
+            "from": 79,
+            "to": 75
+        },
+        {
+            "from": 79,
+            "to": 78
+        },
+        {
+            "from": 80,
+            "to": 35
+        },
+        {
+            "from": 80,
+            "to": 40
+        },
+        {
+            "from": 81,
+            "to": 80
+        },
+        {
+            "from": 82,
+            "to": 80
+        },
+        {
+            "from": 83,
+            "to": 18
+        },
+        {
+            "from": 84,
+            "to": 1
+        },
+        {
+            "from": 84,
+            "to": 14
+        },
+        {
+            "from": 85,
+            "to": 84
+        },
+        {
+            "from": 86,
+            "to": 85
+        },
+        {
+            "from": 86,
+            "to": 44
+        },
+        {
+            "from": 87,
+            "to": 45
+        },
+        {
+            "from": 88,
+            "to": 44
+        },
+        {
+            "from": 89,
+            "to": 55
+        },
+        {
+            "from": 90,
+            "to": 8
+        },
+        {
+            "from": 92,
+            "to": 91
+        },
+        {
+            "from": 93,
+            "to": 14
+        },
+        {
+            "from": 94,
+            "to": 44
+        },
+        {
+            "from": 95,
+            "to": 94
+        },
+        {
+            "from": 96,
+            "to": 2
+        },
+        {
+            "from": 96,
+            "to": 14
+        },
+        {
+            "from": 97,
+            "to": 96
+        },
+        {
+            "from": 97,
+            "to": 44
+        },
+        {
+            "from": 98,
+            "to": 69
+        },
+        {
+            "from": 99,
+            "to": 14
+        },
+        {
+            "from": 100,
+            "to": 2
+        },
+        {
+            "from": 100,
+            "to": 19
+        },
+        {
+            "from": 101,
+            "to": 44
+        },
+        {
+            "from": 102,
+            "to": 40
+        },
+        {
+            "from": 102,
+            "to": 63
+        },
+        {
+            "from": 103,
+            "to": 21
+        },
+        {
+            "from": 104,
+            "to": 35
+        },
+        {
+            "from": 105,
+            "to": 104
+        },
+        {
+            "from": 106,
+            "to": 21
+        },
+        {
+            "from": 106,
+            "to": 34
+        },
+        {
+            "from": 107,
+            "to": 44
+        },
+        {
+            "from": 108,
+            "to": 50
+        },
+        {
+            "from": 108,
+            "to": 51
+        },
+        {
+            "from": 109,
+            "to": 72
+        },
+        {
+            "from": 110,
+            "to": 6
+        },
+        {
+            "from": 111,
+            "to": 44
+        },
+        {
+            "from": 112,
+            "to": 44
+        },
+        {
+            "from": 113,
+            "to": 44
+        },
+        {
+            "from": 114,
+            "to": 94
+        },
+        {
+            "from": 115,
+            "to": 44
+        },
+        {
+            "from": 115,
+            "to": 63
+        },
+        {
+            "from": 116,
+            "to": 1
+        },
+        {
+            "from": 116,
+            "to": 9
+        },
+        {
+            "from": 116,
+            "to": 11
+        },
+        {
+            "from": 117,
+            "to": 33
+        },
+        {
+            "from": 118,
+            "to": 31
+        },
+        {
+            "from": 119,
+            "to": 118
+        }
+    ]
+}

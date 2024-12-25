@@ -75,6 +75,7 @@ nav:
     - MAX7219: kits/max7219/index.md
   - MicroSims:
     - sims/index.md
+    - sims/learning-graph/index.md
     - sims/4-digits/index.md
     - sims/analog-face/index.md
     - sims/learning-graph/index.md
