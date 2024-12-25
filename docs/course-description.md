@@ -1,11 +1,11 @@
 # Course Description
 
-**Course Title:** Building Clocks and Watches with MicroPython
-**Duration:** 14 Weeks
-**Appropriate for:** High School Students
+**Course Title:** Building Clocks and Watches with MicroPython<br/>
+**Duration:** 14 Weeks<br/>
+**Target Audience:** High School Students Learning Computational Thinking
 
 **Course Description:**
-In this 14-week, hands-on course, high school students will learn to design and program functional timekeeping devices---from simple LED clocks to sophisticated stopwatches and web-connected displays---using MicroPython on the Raspberry Pi Pico W. Throughout the course, students will be guided by the 2001 revision of Bloom's Taxonomy, moving from foundational knowledge to creative invention.
+In this 14-week, hands-on course, high school students will learn to design and program functional timekeeping devices---from simple LED clocks to sophisticated stopwatches and web-connected displays---using MicroPython on the Raspberry Pi Pico W. Throughout the course, students will be guided by hands on labs, moving from foundational knowledge to creative invention.
 
 1.  **Remember:** Students begin by identifying essential electronic components---breadboards, microcontrollers, buttons, knobs, and displays---and recalling the fundamental concepts of MicroPython programming.
 2.  **Understand:** Through teacher-led demonstrations, students explore how timing functions, input/output operations, and hardware connections work together to create a basic LED clock. They deepen their grasp of computational thinking by examining concepts like abstraction (focusing on relevant details) and decomposition (breaking large problems into smaller parts).
