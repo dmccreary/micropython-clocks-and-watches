@@ -12,10 +12,8 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/setup/03-approach/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/prompts/03-concept-dependency/">
       
-      
-        <link rel="prev" href="../02-purchsing-parts/">
       
       
       
@@ -24,7 +22,7 @@
     
     
       
-        <title>Our Learning Approach - MicroPython Clocks and Watches</title>
+        <title>Concept Dependency - MicroPython Clocks and Watches</title>
       
     
     
@@ -84,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#our-learning-approach" class="md-skip">
+        <a href="#concept-dependency" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Our Learning Approach
+              Concept Dependency
             
           </span>
         </div>
@@ -320,7 +318,7 @@
         
   
   
-    <a href="../" class="md-nav__link">
+    <a href="../../setup/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -580,7 +578,7 @@
         
   
   
-    <a href="../../prompts/index.md" class="md-nav__link">
+    <a href="../index.md" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -686,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-desktop/" class="md-nav__link">
+      <a href="../../setup/01-desktop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-purchsing-parts/" class="md-nav__link">
+      <a href="../../setup/02-purchsing-parts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,19 +721,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../setup/03-approach/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +733,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -785,15 +773,58 @@
   
 
 
-<h1 id="our-learning-approach">Our Learning Approach</h1>
-<p>Our strategy for teaching is to provide a base
-set of examples of working clocks and watches. We then also
-provide a set of "Challenges" for students to go
-further.</p>
-<p>We also provide a sample set of prompts you
-can use to feed generative AI systems to
-create other lesson plans and learning artifacts such as <a href="https://dmccreary.github.io/microsims/">MicroSims</a> to complement these
-resources.</p>
+<h1 id="concept-dependency">Concept Dependency</h1>
+<p>``` prompt
+    I am creating a course on
+    "Building Clock and Watches with MicroPython".</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>The goal of this course is to provide high-school students a fun way to learn computational thinking.
+
+I have listed below about 150 concepts taught in this course in a CSV file.  The first column is the ConceptID and the second column is the ConceptLabel.
+
+Please create a fully connected concept dependency graph
+for the concepts in this course.
+
+In this step, for each Concept on this list below, create a new
+list of other concepts on which it depends.  If a concept
+depends on a specific concept that is not listed,
+then we will need to add it as a new concept.
+This will help us determine the teaching order of the Concepts.
+
+Return the new list as a CSV file using the following format:
+
+1. The first column in the CSV file is a numeric concept
+ID you assigned in the list above.
+2. The second column is the concept name.
+3. The third column is a pipe-delimited list of the Concept IDs that the concept depends upon.
+
+Check your results to make sure that all concepts are connected to at least one other concept.
+
+Foundation Concepts are concepts that have no dependant concepts in this set.  
+Foundation Concepts have an empty third column.
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -826,28 +857,6 @@ resources.</p>
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../02-purchsing-parts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Parts Purchasing Guide">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Parts Purchasing Guide
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
