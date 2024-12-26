@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching drawing on a clock or watch face. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="Resources for STEM clock and watch projects using low-cost parts and MicroPython. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
       
       
         <meta name="author" content="Dan McCreary">
@@ -309,6 +309,8 @@
       
         
       
+        
+      
     
     
     
@@ -354,6 +356,8 @@
       
         
           
+        
+      
         
       
         
@@ -864,6 +868,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../30-ili9341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ILI9341 Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../40-machine-info/" class="md-nav__link">
         
   
@@ -913,9 +938,7 @@
         
       
         
-      
-        
-      
+          
         
       
         
@@ -971,6 +994,34 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1009,28 +1060,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../sims/templates/index.md - sims/learning-graph/index.md - sims/4-digits/index.md - sims/analog-face/index.md - sims/learning-graph/index.md - sims/seven-segments/index.md - sims/themes/index.md" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    None
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
       
-      
-  
-  
-  
-  
-    
-    
+        
       
         
       
@@ -1124,186 +1159,6 @@
   
   <span class="md-ellipsis">
     STEM Robots FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../30-ili9341/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ILI9341 Drawing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/01-desktop/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    01 desktop
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/02-purchsing-parts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Parts Purchasing Guide
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/03-approach/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Our Learning Approach
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../kits/e-ink/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    E-Ink Displays
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../kits/led-display/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    LED Display Clock
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../prompts/03-concept-dependency/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Concept Dependency
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../prompts/04-concept-taxonomy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Concept Taxonomy
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../prompts/05-taxonomy-assignment/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Taxonomy Assignment
   </span>
   
 
@@ -1478,8 +1333,9 @@
 
 <h1 id="getting-local-time">Getting Local Time</h1>
 <h2 id="lesson-overview">Lesson Overview</h2>
-<p>In this lesson, we will learn how to get the local date and time from the MicroPython runtime.  We will learn the components of the list of numbers returned by these functions.</p>
-<p>MicroPython provides a very convenient function called <code>localtime()</code> that will get the time from the host computer that you connect to via your USB cable.  Your local computer has a clock and knows the time in the local timezone.  This information is sent to MicroPython runtime when the computer is connected to the USB cable.</p>
+<p>In this lesson, we will learn how to get the local date and time from the MicroPython runtime using the
+standard <code>localtime()</code> function.  We will learn about how to use the eight integers returned by the <code>localtime()</code> functions.</p>
+<p>MicroPython provides a very convenient function called <code>localtime()</code> that will get the time from the host computer in your local timezone that you connect to via your USB cable.  Your local computer has a clock and knows the time in the local timezone.  This information is usually sent to MicroPython runtime when the computer is connected to the USB cable.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>gmtime()</code> function returns the time in UTC (Coordinated Universal Time) time.  Use this if you want time stamps that are not dependent on time zone and daylight savings rules.  For example, log files should use this function.</p>
@@ -1529,7 +1385,7 @@
 <li>Hour is the hour in 24-hour format.  If we want to display the
 hour in 12-hour format we will need to do some formatting.</li>
 <li>Weekday is a numeric code that runs from 0 for Monday to 6 for Sunday.</li>
-<li>Yearday is the day of the year.  January 1st is the fist day of the year so it is a 1.</li>
+<li>Yearday is the day of the year.  January 1st is the fist day of the year so it is a 1 (not 0).</li>
 </ol>
 <h2 id="printing-formatted-dates">Printing Formatted Dates</h2>
 <h3 id="sample-code_1">Sample Code</h3>
@@ -1637,8 +1493,12 @@ Time: 7:46 pm
 </code></pre></div></td></tr></table></div>
 <h2 id="modifying-the-thonny-parameters">Modifying the Thonny Parameters</h2>
 <p>By default Thonny syncs the host time at power up.</p>
-<p><img alt="" src="../../img/thonny-interpreter-clock-sync.png" /></p>
-<p>We can disable this.</p>
+<p><img alt="Thonny Default Time Settings" src="../../img/thonny-default-time-settings.png" /></p>
+<p>However, to test that our code is setting the correct local time
+we will need to disable this in future labs.</p>
+<p><img alt="Thonny Default Time Settings" src="../../img/thonny-interpreter-clock-sync.png" /></p>
+<p>After we do this, the <code>localtime()</code> will return the number of seconds
+after midnight on January 1st, 2021.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>
@@ -1646,7 +1506,7 @@ Time: 7:46 pm
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(2021, 1, 1, 0, 0, 22, 4, 1)
 </code></pre></div></td></tr></table></div>
 This was printed 22 seconds after power up.</p>
-<p>The Pico "W" can sync with the <a href="https://mpython.readthedocs.io/en/master/library/micropython/ntptime.html">NTP</a> functions.</p>
+<p>We will used this when we use a RTC and use the Pico "W" to sync with the <a href="https://mpython.readthedocs.io/en/master/library/micropython/ntptime.html">NTP</a> functions.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>

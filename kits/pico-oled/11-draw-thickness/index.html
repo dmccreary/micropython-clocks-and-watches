@@ -12,13 +12,13 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/waveshare/02-color-test/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/11-draw-thickness/">
       
       
-        <link rel="prev" href="../02-display-text/">
+        <link rel="prev" href="../10-draw-seven-segments/">
       
       
-        <link rel="next" href="../03-drawing-hands/">
+        <link rel="next" href="../15-digital-clock/">
       
       
       <link rel="icon" href="../../../img/clock-icon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Color Lab - MicroPython Clocks and Watches</title>
+        <title>Segment Thickness - MicroPython Clocks and Watches</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#color-tests" class="md-skip">
+        <a href="#draw-seven-segments-with-thickness" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Color Lab
+              Segment Thickness
             
           </span>
         </div>
@@ -595,6 +595,8 @@
                 
   
   
+    
+  
   
   
     
@@ -628,29 +630,264 @@
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="../../pico-oled/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Pico with OLED
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Pico with OLED
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-hello-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-hello-world-firmware.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firmware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-display-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-display-localtime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Localtime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-display-localtime-updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Localtime Updates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-clock-hands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Clock Hands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-draw-seven-segments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7-Segment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Segment Thickness
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-digital-clock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Clock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -821,8 +1058,6 @@
                 
   
   
-    
-  
   
   
     
@@ -846,207 +1081,29 @@
     
     
       
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+  
+  
+    <a href="../../waveshare/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     Waveshare
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6_8">
-            <span class="md-nav__icon md-icon"></span>
-            Waveshare
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01-hello-world/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hello World
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-display-text/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Display Text
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <span class="md-nav__icon md-icon"></span>
       
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Color Lab
-  </span>
+    </a>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Color Lab
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#custom-color-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Custom Color Lists
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#converting-rgb888-to-brg556" class="md-nav__link">
-    <span class="md-ellipsis">
-      Converting RGB888 to BRG556
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-drawing-hands/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Drawing Hands
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-5x8-font/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Font Lab
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1312,32 +1369,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#custom-color-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Custom Color Lists
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#converting-rgb888-to-brg556" class="md-nav__link">
-    <span class="md-ellipsis">
-      Converting RGB888 to BRG556
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1354,182 +1385,8 @@
   
 
 
-<h1 id="color-tests">Color Tests</h1>
-<p>Now let's try to make the background screen change colors:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">LCD_1inch28</span> <span class="kn">import</span> <span class="n">LCD_1inch28</span>
-<span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span>
-
-<span class="n">LCD</span> <span class="o">=</span> <span class="n">LCD_1inch28</span><span class="p">()</span>  
-<span class="n">LCD</span><span class="o">.</span><span class="n">set_bl_pwm</span><span class="p">(</span><span class="mi">65535</span><span class="p">)</span>
-
-<span class="n">LCD</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">LCD</span><span class="o">.</span><span class="n">black</span><span class="p">)</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">LCD</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
-<span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">LCD</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">LCD</span><span class="o">.</span><span class="n">green</span><span class="p">)</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">LCD</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>What happens when you change the color "red" to be "orange"?  You shouild see:</p>
-<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 10, in &lt;module&gt;
-AttributeError: &#39;LCD_1inch28&#39; object has no attribute &#39;orange&#39;
-</code></pre></div>
-<p>This shows you that although the driver knows about some basic colors, (black, white, red, green and blue), it has
-no understanding of other colors.</p>
-<p>To draw these colors we need to add our own color lists.</p>
-<h2 id="custom-color-lists">Custom Color Lists</h2>
-<p>In order to get more nuanced colors, we need to define them using the binary of their red, green and blue values.  With
-this display, we order the bits, blue, red and green.</p>
-<p>We can use the following binary notation to represent the colors:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># binary representations of colors B=Blue bits, R=Red bits, G=Green bits</span>
-<span class="c1"># color = 0bBBBBBRRRRRGGGGGG</span>
-<span class="c1"># Cyan has all the blue and green bits on and the red bits off</span>
-<span class="n">cyan</span> <span class="o">=</span> <span class="n">cyan</span> <span class="o">=</span> <span class="mb">0b1111100000111111</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span><span class="n">I2C</span><span class="p">,</span><span class="n">SPI</span><span class="p">,</span><span class="n">PWM</span><span class="p">,</span><span class="n">ADC</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
-<span class="kn">from</span> <span class="nn">LCD_1inch28</span> <span class="kn">import</span> <span class="n">LCD_1inch28</span><span class="p">,</span> <span class="n">QMI8658</span>
-
-<span class="n">CENTER</span> <span class="o">=</span> <span class="mi">120</span>
-<span class="n">LCD</span> <span class="o">=</span> <span class="n">LCD_1inch28</span><span class="p">()</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">set_bl_pwm</span><span class="p">(</span><span class="mi">65535</span><span class="p">)</span>
-
-<span class="c1"># draw readability</span>
-<span class="n">ON</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">OFF</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">NO_FILL</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">FILL</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="c1"># hex representation of colors</span>
-<span class="c1"># note that the bit order is blue, red, green</span>
-<span class="n">black</span> <span class="o">=</span> <span class="mh">0x0000</span>
-<span class="n">red</span>   <span class="o">=</span> <span class="mh">0x07E0</span>
-<span class="n">green</span> <span class="o">=</span> <span class="mh">0x001f</span>
-<span class="n">blue</span>  <span class="o">=</span> <span class="mh">0xf800</span>
-<span class="n">white</span> <span class="o">=</span> <span class="mh">0xffff</span>
-
-<span class="c1"># binary representations of colors</span>
-<span class="c1"># binary representations of colors B=5 Blue bits, R=5 Red bits, G=6 green bits</span>
-<span class="c1"># color = 0bBBBBBRRRRRGGGGGG</span>
-<span class="n">yellow</span> <span class="o">=</span> <span class="mb">0b0000011111111111</span>
-<span class="n">orange</span> <span class="o">=</span> <span class="mb">0b0000001111000010</span>
-<span class="n">cyan</span> <span class="o">=</span> <span class="mb">0b1111100000111111</span>
-<span class="n">brown</span> <span class="o">=</span> <span class="mb">0b0000000001000001</span>
-<span class="n">gold</span> <span class="o">=</span> <span class="mb">0b0000001110011110</span>
-<span class="n">purple</span> <span class="o">=</span> <span class="mb">0b1111111111000000</span>
-<span class="n">magenta</span> <span class="o">=</span> <span class="mb">0b0000001100011000</span>
-<span class="n">pink</span> <span class="o">=</span> <span class="mb">0b0000111111000010</span>
-<span class="n">olive</span> <span class="o">=</span> <span class="mb">0b0000000001000010</span>
-<span class="n">gray</span> <span class="o">=</span> <span class="mb">0b00001000010000100</span>
-<span class="n">lightGreen</span> <span class="o">=</span> <span class="mb">0b0000100001111111</span>
-<span class="n">darkGreen</span>  <span class="o">=</span> <span class="mb">0b0000000000000001</span>
-
-<span class="n">ColorList</span> <span class="o">=</span>  <span class="p">(</span><span class="n">red</span><span class="p">,</span>    <span class="n">green</span><span class="p">,</span>   <span class="n">blue</span><span class="p">,</span>   <span class="n">white</span><span class="p">,</span>   <span class="n">yellow</span><span class="p">,</span>  <span class="n">orange</span><span class="p">,</span>
-              <span class="n">cyan</span><span class="p">,</span> <span class="n">brown</span><span class="p">,</span> <span class="n">gold</span><span class="p">,</span> <span class="n">purple</span><span class="p">,</span> <span class="n">magenta</span><span class="p">,</span> <span class="n">pink</span><span class="p">,</span> <span class="n">olive</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="n">lightGreen</span><span class="p">,</span> <span class="n">darkGreen</span><span class="p">)</span>
-<span class="n">ColorNames</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="s1">&#39;gold&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;magenta&#39;</span><span class="p">,</span> <span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="s1">&#39;olive&#39;</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="s1">&#39;lightGreen&#39;</span><span class="p">,</span> <span class="s1">&#39;darkGreen&#39;</span><span class="p">)</span>
-
-<span class="n">radius</span> <span class="o">=</span> <span class="mi">120</span>
-<span class="n">LCD</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">LCD</span><span class="o">.</span><span class="n">black</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ColorList</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ColorNames</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="c1"># LCD.ellipse(CENTER, CENTER, radius, radius, ColorList[i], FILL)</span>
-    <span class="n">LCD</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">ColorList</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">LCD</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">ColorNames</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">LCD</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">ColorNames</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="n">white</span><span class="p">)</span>
-    <span class="n">LCD</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>Note that we are using the fill function to draw on all the pixels on the screen.
-We could have used the ellipse funtion to draw into the frame buffer, but the fill function is a bit easier.</p>
-<h2 id="converting-rgb888-to-brg556">Converting RGB888 to BRG556</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">convert_color_RGB888_RGB565</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">B</span><span class="p">):</span> <span class="c1"># Convert RGB888 to RGB565</span>
-    <span class="k">return</span> <span class="p">(((</span><span class="n">G</span><span class="o">&amp;</span><span class="mb">0b00011100</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span><span class="p">((</span><span class="n">B</span><span class="o">&amp;</span><span class="mb">0b11111000</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">R</span><span class="o">&amp;</span><span class="mb">0b11111000</span><span class="p">)</span><span class="o">+</span><span class="p">((</span><span class="n">G</span><span class="o">&amp;</span><span class="mb">0b11100000</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">5</span><span class="p">)</span>
+<h1 id="draw-seven-segments-with-thickness">Draw Seven Segments with Thickness</h1>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>
 </code></pre></div></td></tr></table></div>
 
 
@@ -1568,7 +1425,7 @@ We could have used the ellipse funtion to draw into the frame buffer, but the fi
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../02-display-text/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Display Text">
+          <a href="../10-draw-seven-segments/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7-Segment">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -1578,20 +1435,20 @@ We could have used the ellipse funtion to draw into the frame buffer, but the fi
                 Previous
               </span>
               <div class="md-ellipsis">
-                Display Text
+                7-Segment
               </div>
             </div>
           </a>
         
         
           
-          <a href="../03-drawing-hands/" class="md-footer__link md-footer__link--next" aria-label="Next: Drawing Hands">
+          <a href="../15-digital-clock/" class="md-footer__link md-footer__link--next" aria-label="Next: Digital Clock">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Drawing Hands
+                Digital Clock
               </div>
             </div>
             <div class="md-footer__button md-icon">
