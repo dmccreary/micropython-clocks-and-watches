@@ -2,290 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/about/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/contact/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/course-description/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/faq/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/references/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/e-ink/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/gc9a01/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/gc9a01/01-hello-world/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/gc9a01/02-display-time/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/gc9a01/03-display-hand/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/gc9a01/04-cycle-fonts/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/gc9a01/05-draw-ticks/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/gc9a01/07-draw-12-digits/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/gc9a01/08-draw-filled-triangle/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/gc9a01/09-watch-face/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/ili9341/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/ili9341/01-rainbow-test/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/ili9341/02-config/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/ili9341/03-multiple-fonts/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-display/</loc>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-strips/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-strips/01-binary-clock/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-strips/02-seven-segment-clock/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/lilygo/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/max7219/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/01-hello-world/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/02-display-time/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/02-hello-config/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/03-display-localtime/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/04-display-localtime-updates/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/05-clock-hands/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/10-draw-seven-segments/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/11-draw-thinkness/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/15-digital-clock/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/waveshare/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/waveshare/01-hello-world/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/waveshare/02-color-test/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/waveshare/02-display-text/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/waveshare/03-drawing-hands/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/waveshare/04-5x8-font/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/00-hardware-config/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/01-drawing-coordinates/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/01-get-local-time/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/02-display-text/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/03-drawing-face/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/04-larger-fonts/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/05-buttons/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/06-draw-performance/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/07-drawing-digits/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/09-digit-functions/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/12-draw-time-functions/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/15-scale-testing/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/30-ili9341/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/40-machine-info/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/prompts/01-course-description/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/prompts/02-concept-enumeration/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/prompts/03-concept-dependency/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/prompts/04-concept-taxonomy/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/prompts/05-taxonomy-assignment/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/setup/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/setup/01-desktop/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/setup/02-purchsing-parts/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/setup/03-approach/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/sims/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/sims/4-digits/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/sims/analog-face/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/sims/binary-clock/</loc>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/sims/learning-graph/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/sims/seven-segments/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/sims/templates/</loc>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/sims/themes/</loc>
-         <lastmod>2024-12-25</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
 </urlset>
