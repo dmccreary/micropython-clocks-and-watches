@@ -20,15 +20,25 @@ We can hook this up to  the Raspberry Pi.
 
 ## MicroPython Driver
 
-[Mcauser GitHub Example](https://github.com/mcauser/micropython-tm1637)
+[Mike Causer GitHub Example](https://github.com/mcauser/micropython-tm1637)
 
 ## Sample Code
+
+## Python Imports
 
 ```python
 import tm1637
 from machine import Pin
 from utime import sleep
-tm = tm1637.TM1637(clk=Pin(5), dio=Pin(4))
+tm = tm1637.TM1637(clk=Pin(0), dio=Pin(1))
+```
+
+## Test Program
+```python
+import tm1637
+from machine import Pin
+from utime import sleep
+tm = tm1637.TM1637(clk=Pin(0), dio=Pin(1))
 
 while True:
     # all LEDS on "88:88"
@@ -70,3 +80,14 @@ while True:
     tm.temperature(24)
     sleep(1)
 ```
+
+Next, will will use the ```localtime()``` function to build a simple
+clock.
+
+[Simple Clock](./clock-simple.md)
+
+
+## References
+
+* [Mike Causer TM1637 Driver GitHub Repo](https://github.com/mcauser/micropython-tm1637)
+* [YouTube Video by NerdCave](https://youtu.be/D68XtvZlk00?si=97WdbeKOTFt6Rt6e)

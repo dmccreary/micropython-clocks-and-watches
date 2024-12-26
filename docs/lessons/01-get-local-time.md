@@ -2,9 +2,10 @@
 
 ## Lesson Overview
 
-In this lesson, we will learn how to get the local date and time from the MicroPython runtime.  We will learn the components of the list of numbers returned by these functions.
+In this lesson, we will learn how to get the local date and time from the MicroPython runtime using the
+standard ```localtime()``` function.  We will learn about how to use the eight integers returned by the ```localtime()``` functions.
 
-MicroPython provides a very convenient function called ```localtime()``` that will get the time from the host computer that you connect to via your USB cable.  Your local computer has a clock and knows the time in the local timezone.  This information is sent to MicroPython runtime when the computer is connected to the USB cable.
+MicroPython provides a very convenient function called ```localtime()``` that will get the time from the host computer in your local timezone that you connect to via your USB cable.  Your local computer has a clock and knows the time in the local timezone.  This information is usually sent to MicroPython runtime when the computer is connected to the USB cable.
 
 !!! Note
     The ```gmtime()``` function returns the time in UTC (Coordinated Universal Time) time.  Use this if you want time stamps that are not dependent on time zone and daylight savings rules.  For example, log files should use this function.
@@ -52,7 +53,7 @@ Most of the values are pretty intuitive to figure out.  There are a few notes.
 1. Hour is the hour in 24-hour format.  If we want to display the
 hour in 12-hour format we will need to do some formatting.
 1. Weekday is a numeric code that runs from 0 for Monday to 6 for Sunday.
-2. Yearday is the day of the year.  January 1st is the fist day of the year so it is a 1.
+2. Yearday is the day of the year.  January 1st is the fist day of the year so it is a 1 (not 0).
 
 ## Printing Formatted Dates
 
@@ -131,9 +132,15 @@ Time: 7:46 pm
 
 By default Thonny syncs the host time at power up.
 
-![](../img/thonny-interpreter-clock-sync.png)
+![Thonny Default Time Settings](../img/thonny-default-time-settings.png)
 
-We can disable this.
+However, to test that our code is setting the correct local time
+we will need to disable this in future labs.
+
+![Thonny Default Time Settings](../img/thonny-interpreter-clock-sync.png)
+
+After we do this, the ```localtime()``` will return the number of seconds
+after midnight on January 1st, 2021.
 
 ```py
 import time
@@ -146,7 +153,7 @@ print(time.localtime())
 ```
 This was printed 22 seconds after power up.
 
-The Pico "W" can sync with the [NTP](https://mpython.readthedocs.io/en/master/library/micropython/ntptime.html) functions.
+We will used this when we use a RTC and use the Pico "W" to sync with the [NTP](https://mpython.readthedocs.io/en/master/library/micropython/ntptime.html) functions.
 
 ```py
 from mpython import *

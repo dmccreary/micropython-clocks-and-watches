@@ -1,5 +1,5 @@
 site_name: MicroPython Clocks and Watches
-site_description: 'Resources for teaching drawing on a clock or watch face. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_description: 'Resources for STEM clock and watch projects using low-cost parts and MicroPython. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/micropython-clocks-and-watches'
@@ -11,9 +11,10 @@ nav:
   - Course Description: course-description.md
   - Setup:
     - Introduction: setup/index.md
-    - Desktop Setup: setup/desktop.md
+    - Desktop Setup: setup/01-desktop.md
     - Purchasing Parts: setup/02-purchasing-parts.md
     - 7-Wire SPI Cables: setup/display-cable.md
+    - Approach: setup/03-approach.md
   - Lessons:
     - Introduction: lessons/index.md
     - Hardware Config: lessons/00-hardware-config.md
@@ -29,13 +30,12 @@ nav:
     - Scale Testing: lessons/15-scale-testing.md
     - Buttons: lessons/05-buttons.md
     - Draw Performance: lessons/06-draw-performance.md
+    - ILI9341 Display: lessons/30-ili9341.md
     - Machine Info: lessons/40-machine-info.md
   - Kits:
     - Introduction Kits: kits/index.md
-    - kits/ili9341/03-multiple-fonts.md
-    - kits/pico-oled/10-draw-seven-segments.md
-    - kits/pico-oled/11-draw-thinkness.md
-    - kits/pico-oled/15-digital-clock.md
+    - LED Display:
+      - Intro: kits/led-display/index.md
     - LED Strip Kits: 
       - Introduction: kits/led-strips/index.md
       - Binary Clock: kits/led-strips/01-binary-clock.md
@@ -43,16 +43,20 @@ nav:
     - Pico with OLED:
       - Introduction: kits/pico-oled/index.md
       - Hello World: kits/pico-oled/01-hello-world.md
-      - Hello Config: kits/pico-oled/02-hello-config.md
-      - Hello Firmware: kits/pico-oled/01-hello-world-firmware.md
+      - Config: kits/pico-oled/02-hello-config.md
+      - Firmware: kits/pico-oled/01-hello-world-firmware.md
       - Display Time: kits/pico-oled/02-display-time.md
       - Display Localtime: kits/pico-oled/03-display-localtime.md
       - Display Localtime Updates: kits/pico-oled/04-display-localtime-updates.md
       - Display Clock Hands:  kits/pico-oled/05-clock-hands.md
+      - 7-Segment: kits/pico-oled/10-draw-seven-segments.md
+      - Segment Thickness: kits/pico-oled/11-draw-thickness.md
+      - Digital Clock: kits/pico-oled/15-digital-clock.md
     - ILI9341:
       - Introduction: kits/ili9341/index.md
       - Rainbow Test: kits/ili9341/01-rainbow-test.md
       - Hardware Config: kits/ili9341/02-config.md
+      - Fonts: kits/ili9341/03-multiple-fonts.md
     - GC9A01:
       - Introduction: kits/gc9a01/index.md
       - Hello World: kits/gc9a01/01-hello-world.md
@@ -73,10 +77,11 @@ nav:
       - Drawing Hands: kits/waveshare/03-drawing-hands.md
       - Font Lab: kits/waveshare/04-5x8-font.md
     - MAX7219: kits/max7219/index.md
+    - E-Ink: kits/e-ink/index.md
   - MicroSims:
-    - sims/index.md
+    - List of MicroSims: sims/index.md
     - sims/binary-clock/index.md
-  - sims/templates/index.md
+    - sims/templates/index.md
     - sims/learning-graph/index.md
     - sims/4-digits/index.md
     - sims/analog-face/index.md
@@ -87,24 +92,13 @@ nav:
     - Introduction: prompts/index.md
     - Course Description: prompts/01-course-description.md
     - Concept Enumeration: prompts/02-concept-enumeration.md
-    - Concept Dependencies: prompts/03-concept-dependencies.md
+    - Concept Dependencies: prompts/03-concept-dependency.md
+    - Concept Taxonomies: prompts/04-concept-taxonomy.md
+    - Taxonomy Assignments: prompts/05-taxonomy-assignment.md
   - References: references.md
   - Contact: contact.md
   - faq.md
-
-  - lessons/30-ili9341.md
-  - setup/01-desktop.md
-  - setup/02-purchsing-parts.md
-  - setup/03-approach.md
-  - kits/e-ink/index.md
-  - kits/led-display/index.md
-  - prompts/03-concept-dependency.md
-  - prompts/04-concept-taxonomy.md
-  - prompts/05-taxonomy-assignment.md
-
-
-
-# CoderDojo Microsite Standards from here down
+# Dan's Microsite Standards from here down
 edit_uri: 'blob/master/docs'
 theme:
   name: material

@@ -111,7 +111,7 @@ More complex graphics techniques and math-based rendering.
 11.  (106) Color Conversion & Palettes in MicroPython
 12.  (83) Using the micropython-ufont Library
 
-### Category 6: Network, Asynchronous, & Concurrency
+### Category 6: Graphics, Asynchronous, & Concurrency
 
 All about getting time from the internet, using Wi-Fi, and handling multiple tasks.
 
