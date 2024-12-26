@@ -75,6 +75,8 @@ nav:
     - MAX7219: kits/max7219/index.md
   - MicroSims:
     - sims/index.md
+    - sims/binary-clock/index.md
+  - sims/templates/index.md
     - sims/learning-graph/index.md
     - sims/4-digits/index.md
     - sims/analog-face/index.md
@@ -94,6 +96,11 @@ nav:
   - setup/01-desktop.md
   - setup/02-purchsing-parts.md
   - setup/03-approach.md
+  - kits/e-ink/index.md
+  - kits/led-display/index.md
+  - prompts/03-concept-dependency.md
+  - prompts/04-concept-taxonomy.md
+  - prompts/05-taxonomy-assignment.md
 
 
 
