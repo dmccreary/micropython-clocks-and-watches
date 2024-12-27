@@ -22,7 +22,7 @@
     
     
       
-        <title>Simple Clock - MicroPython Clocks and Watches</title>
+        <title>A Simple Clock with the TM1637 LED Display - MicroPython Clocks and Watches</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#simple-clock" class="md-skip">
+        <a href="#a-simple-clock-with-the-tm1637-led-display" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Simple Clock
+              A Simple Clock with the TM1637 LED Display
             
           </span>
         </div>
@@ -706,6 +706,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#removing-leading-zeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Leading Zeros
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -724,7 +733,7 @@
   
 
 
-<h1 id="simple-clock">Simple Clock</h1>
+<h1 id="a-simple-clock-with-the-tm1637-led-display">A Simple Clock with the TM1637 LED Display</h1>
 <p>Here is a simple clock program that will display the hours and minutes
 from the localtime() function.  It will also turn the colon LEDs
 on and off every second using the <code>modulo</code> function to
@@ -748,15 +757,13 @@ test for the even/odd property of the second.</p>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># display hours and minutes on the TM1637 LED display</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># display hours and minutes on the TM1637 LED display</span>
 <span class="c1"># make the colon go on and off every second</span>
 <span class="kn">import</span> <span class="nn">tm1637</span>
 <span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
 <span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span><span class="p">,</span> <span class="n">localtime</span>
 <span class="n">tm</span> <span class="o">=</span> <span class="n">tm1637</span><span class="o">.</span><span class="n">TM1637</span><span class="p">(</span><span class="n">clk</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">dio</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 
-<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">now</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">()</span> <span class="c1"># returns 8 inits for date and time</span>
     <span class="n">hours</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
@@ -770,6 +777,88 @@ test for the even/odd property of the second.</p>
         <span class="n">tm</span><span class="o">.</span><span class="n">numbers</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<p>That is it!  Pretty cool that you can write an entire clock program
+in that few lines of code.  But it is not perfect.  Let's
+find some ways to make the clock work a little better.</p>
+<p>Note that the hours is always in 24 hour time.  If you want to 
+use 12 hour time you will need to subtract 12 from the hours if
+the hours is greater than 12.</p>
+<p>We can add the following lines of code to make the display better
+for people that use a 12-hour clock.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="n">hours</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+    <span class="n">hours</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">hours</span> <span class="o">=</span> <span class="n">hours</span> <span class="o">-</span> <span class="mi">12</span>
+</code></pre></div></td></tr></table></div>
+<p>This will work, but it has the disadvantage of displaying the leading zero
+before the ones digit.  Unfortunately, this is the way that the <code>numbers()</code> function
+was written in the TM1637 module.  Let's take a look at how we can clean this up a bit.</p>
+<h2 id="removing-leading-zeros">Removing Leading Zeros</h2>
+<p>In order to fix the leading zeros problem in the hours place, we
+need to write our own version of the <code>numbers()</code> function
+that changes '0' to be a space (all 7 segments off) if the hours
+is less than 10.</p>
+<p>Here is the original <code>numbers()</code> function taken directly from the driver:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">colon</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Display two numeric values -9 through 99, with leading zeros</span>
+<span class="sd">    and separated by a colon.&quot;&quot;&quot;</span>
+    <span class="n">num1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
+    <span class="n">num2</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">num2</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
+    <span class="n">segments</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encode_string</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:0&gt;2d}{1:0&gt;2d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">colon</span><span class="p">:</span>
+        <span class="n">segments</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">|=</span> <span class="mh">0x80</span> <span class="c1"># colon on</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">segments</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>You can see that the author used the Python .format function to
+display the first number using a leading zero.  This is fine
+for our minutes, but not a standard for the hours.</p>
+<p>We will need to modify this code to put in a space character in if the hours is
+less than 10 and to only display the hours number without a leading
+zero.  The format <code>{0:0&gt;2d}</code> will be changed to be: <code>{prefix}{num1:d}</code>
+where:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">prefix</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="k">if</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">numbers_nlz</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">colon</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Display two numeric values -9 through 99, with a leading space before</span>
+<span class="sd">    single-digit first numbers and separated by a colon.&quot;&quot;&quot;</span>
+    <span class="n">num1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
+    <span class="n">num2</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">num2</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="k">if</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}{</span><span class="n">num1</span><span class="si">:</span><span class="s1">d</span><span class="si">}{</span><span class="n">num2</span><span class="si">:</span><span class="s1">0&gt;2d</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+    <span class="n">segments</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">encode_string</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}{</span><span class="n">num1</span><span class="si">:</span><span class="s1">d</span><span class="si">}{</span><span class="n">num2</span><span class="si">:</span><span class="s1">0&gt;2d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">colon</span><span class="p">:</span>
+        <span class="n">segments</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">|=</span> <span class="mh">0x80</span>  <span class="c1"># colon on</span>
+    <span class="n">tm</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">segments</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Now the display will work as most normal digital clocks.</p>
+<p>So as long as the localtime() function is working, this
+clock should work fine.  An as long as your device is connected
+to your computer via an USB cable it will be fine.</p>
+<p>What if you would like your clock to work without being connected
+to a computer.  We have two options:</p>
+<ol>
+<li>Used a Raspberry Pi Pico W to get time from a central time service over Wifi</li>
+<li>or use a local clock and set the time manually</li>
+</ol>
 
 
 
