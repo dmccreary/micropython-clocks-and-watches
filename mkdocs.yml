@@ -34,8 +34,10 @@ nav:
     - Machine Info: lessons/40-machine-info.md
   - Kits:
     - Introduction Kits: kits/index.md
-    - LED Display:
+    - LED Display TM1637:
       - Intro: kits/led-display/index.md
+      - Simple Clock: kits/led-display/simple-clock.md
+      - Setting Time: kits/led-display/setting-time.md
     - LED Strip Kits: 
       - Introduction: kits/led-strips/index.md
       - Binary Clock: kits/led-strips/01-binary-clock.md
