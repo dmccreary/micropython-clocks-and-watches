@@ -1,8 +1,12 @@
-# Parts Purchasing Guide
+# Strategy for Parts Purchasing Guide
 
 ## Breadboards
 
+We strongly suggest purchasing breadboards in bulk at least 10 at a time.
+
 ## MicroControllers
+
+We love MicroCenter because they sell the Pico for $4
 
 ### Raspberry Pi Pico
 
@@ -11,6 +15,9 @@
 ## Displays
 
 ### OLED Displays
+
+Although the small 1" OLED displays work, they are hard to read from a distance.
+We like the 2.42" inch OLED displays since they are bright and have a wide viewing angle.
 
 ### SmartWatch Displays
 

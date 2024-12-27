@@ -12,10 +12,7 @@ generative AI chatbot about sourcing strategies that balance low-cost and fast d
 
 ## Minimal Setup
 
-![](../img/pico-on-breadboard.jpg)
-
-Image Caption: An example of a 2.42" OLED display connected to a 400-tie breadboard holding
-a Raspberry Pi W with two buttons for changing the display settings.
+![](../img/minimal-parts.png)
 
 The minimal setup consists of just four parts:
 
@@ -26,6 +23,10 @@ The minimal setup consists of just four parts:
 
 If you are patient and clever you can purchase these parts in bulk and keep the kit price
 under $10 - although the OLED display will be hard to read from more than a few feet away.
+
+![](../img/pico-on-breadboard.jpg)
+Image Caption: An example of a 2.42" OLED display connected to a 400-tie breadboard holding
+a Raspberry Pi W with two buttons for changing the display settings.
 
 ### Sample Amazon Links
 
@@ -49,6 +50,10 @@ Note that MicroCenter sells the Pico for [$3.99](https://www.microcenter.com/pro
 5. [2.42" OLED Display 128*64 SPI SSD1309](https://www.ebay.com/itm/176451452762)
 
 ## Other Components
+
+### Display Cable Harness
+
+[Display Cable Harness](./display-cable-harness.md)
 
 ### Real Time Clocks
 
