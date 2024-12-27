@@ -12,13 +12,9 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/sims/binary-clock/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/50-ds1307-breadboard/">
       
       
-        <link rel="prev" href="../">
-      
-      
-        <link rel="next" href="../templates/">
       
       
       <link rel="icon" href="../../img/clock-icon.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Binary Clock - MicroPython Clocks and Watches</title>
+        <title>Using the DS1307 IC On A Breadboard - MicroPython Clocks and Watches</title>
       
     
     
@@ -86,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#binary-clock" class="md-skip">
+        <a href="#using-the-ds1307-ic-on-a-breadboard" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Binary Clock
+              Using the DS1307 IC On A Breadboard
             
           </span>
         </div>
@@ -399,7 +395,7 @@
         
   
   
-    <a href="../../lessons/" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -489,269 +485,74 @@
       
   
   
-    
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
-    
-    
+  
+    <a href="../../sims/" class="md-nav__link">
       
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-    
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
   
   <span class="md-ellipsis">
     MicroSims
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            MicroSims
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <span class="md-nav__icon md-icon"></span>
       
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Binary Clock
-  </span>
+    </a>
   
 
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MicroSim Templates
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../learning-graph/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Learning Graph for Clocks and Watches with MicroPython
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../4-digits/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Example of a Four-Digit Digital Clock Face
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../analog-face/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Analog Clock Face
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../learning-graph/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Learning Graph for Clocks and Watches with MicroPython
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../seven-segments/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../themes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -906,9 +707,47 @@
   
 
 
-<h1 id="binary-clock">Binary Clock</h1>
-<p><a href="binary-clock.html">Run the Binary Clock MicroSim</a></p>
-<p><a href="https://editor.p5js.org/dmccreary/sketches/LXuuI8MvN">Edit the Microsim</a></p>
+<h1 id="using-the-ds1307-ic-on-a-breadboard">Using the DS1307 IC On A Breadboard</h1>
+<p>You can use the DS1307 IC directly on a breadboard without a development board. 
+Here's what you'll need:</p>
+<ol>
+<li>DS1307 IC (8-pin DIP package)</li>
+<li>32.768 kHz crystal oscillator</li>
+<li>CR2032 battery holder and battery (for backup power)</li>
+<li>Two 4.7kΩ pull-up resistors (for I2C)</li>
+<li>0.1µF decoupling capacitor</li>
+<li>Standard through-hole breadboard</li>
+</ol>
+<p>The basic connections are:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>DS1307 Pinout:
+Pin 1 (X1) -&gt; Crystal
+Pin 2 (X2) -&gt; Crystal
+Pin 3 (VBAT) -&gt; Battery positive
+Pin 4 (GND) -&gt; Ground
+Pin 5 (SDA) -&gt; I2C Data (needs pull-up)
+Pin 6 (SCL) -&gt; I2C Clock (needs pull-up)
+Pin 7 (SQW) -&gt; Optional square wave output
+Pin 8 (VCC) -&gt; 5V power`
+</code></pre></div></td></tr></table></div>
+<p>The biggest advantages of using the raw IC are:</p>
+<ul>
+<li>Lower cost than module boards</li>
+<li>Smaller footprint</li>
+<li>More control over the circuit design</li>
+<li>Better understanding of the RTC system</li>
+</ul>
+<p>Just remember that the DS1307 requires 5V power 
+(unlike its successor DS3231 which can work with 3.3V), 
+so make sure your microcontroller's I2C lines can 
+handle 5V or use a level shifter if necessary.</p>
 
 
 
@@ -941,44 +780,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: List of MicroSims">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                List of MicroSims
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../templates/" class="md-footer__link md-footer__link--next" aria-label="Next: MicroSim Templates">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                MicroSim Templates
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

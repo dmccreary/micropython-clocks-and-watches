@@ -85,6 +85,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#a-guide-to-setting-up-your-clocks-and-watches-labs" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -788,6 +793,97 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#minimal-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimal Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Minimal Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-amazon-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Amazon Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-e-bay-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample E-Bay Links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-time-clocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real Time Clocks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real Time Clocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-ds1307" class="md-nav__link">
+    <span class="md-ellipsis">
+      The DS1307
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ds3231" class="md-nav__link">
+    <span class="md-ellipsis">
+      The DS3231
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -805,9 +901,75 @@
   
 
 
-  <h1>Introduction</h1>
-
-
+<h1 id="a-guide-to-setting-up-your-clocks-and-watches-labs">A Guide to Setting up Your Clocks and Watches Labs</h1>
+<p>This section is intended for parents, mentors, teachers and curriculum developers who are responsible for creating a great experience for your students.  Within this audience
+we have typically seen two extremes.</p>
+<ol>
+<li>
+<p>Value-based purchasers with limited budgets who are good at long-term planning.  They pre-order parts form China on eBay and Alibaba in bulk and avoid high-cost shipping fees.</p>
+</li>
+<li>
+<p>Parents in high-disposable income households with limited time and large budgets.  They just want to click on a few links and have the parts shipped overnight.</p>
+</li>
+</ol>
+<p>This Setup Guide attempts to provide information for both of these groups.  Note that we have used generative AI to help you source the lowest costs parts.  We encourage you to ask your
+generative AI chatbot about sourcing strategies that balance low-cost and fast delivery.</p>
+<h2 id="minimal-setup">Minimal Setup</h2>
+<p><img alt="" src="../img/pico-on-breadboard.jpg" /></p>
+<p>Image Caption: An example of a 2.42" OLED display connected to a 400-tie breadboard holding
+a Raspberry Pi W with two buttons for changing the display settings.</p>
+<p>The minimal setup consists of just four parts:</p>
+<ol>
+<li>A 1/2 size solderless breadboard - about $2</li>
+<li>20cm jumper wires (male-to-female) - also known as Dupont connectors - about $1</li>
+<li>A Raspberry Pi Pico - about $4 or $5 with headers presoldered - you can get the "W" if you want to go wireless and use WiFi to sync the time</li>
+<li>A OLED display - which range from $5 to $20 depending on the size</li>
+</ol>
+<p>If you are patient and clever you can purchase these parts in bulk and keep the kit price
+under $10 - although the OLED display will be hard to read from more than a few feet away.</p>
+<h3 id="sample-amazon-links">Sample Amazon Links</h3>
+<p>Here are the Amazon Links for these parts:</p>
+<ol>
+<li><a href="https://www.amazon.com/half-size-breadboard/s?k=half-size+breadboard">Half Size Solderless Breadboard Search on Amazon</a></li>
+<li><a href="https://www.amazon.com/Pcs-MCIGICM-Points-Solderless-Breadboard/dp/B07PCJP9DY">Sample 4-Pack for $6</a></li>
+<li><a href="https://www.amazon.com/California-JOS-Breadboard-Optional-Multicolored/dp/B0BRTHR2RL?crid=1UU9NQV2KET3J&amp;th=1">20cm male-to-female Dupont Connectors $4 for 40 connectors</a></li>
+<li><a href="https://www.amazon.com/Raspberry-Pi-Pico/dp/B09KVB8LVR">Raspberry Pi Pico $8</a></li>
+<li><a href="https://www.amazon.com/s?k=2.42%22+OLED+Display+128*64+SPI+SSD1309">Amazon Keyword Search for 2.42" OLED Display 128*64 SPI SSD1309</a></li>
+<li><a href="https://www.amazon.com/DWEII-Display-SSD1309-Interface-Electronic/dp/B0B2R57SCJ?th=1">Amazon Prime 2.42" OLED Display for $14 in 4 Colors</a></li>
+</ol>
+<p>Note that MicroCenter sells the Pico for <a href="https://www.microcenter.com/product/661033/raspberry-pi-pico-microcontroller-development-board">$3.99</a>.  So you are paying about double on Amazon for some of these parts.</p>
+<h3 id="sample-e-bay-links">Sample E-Bay Links</h3>
+<ol>
+<li><a href="https://www.ebay.com/sch/i.html?_nkw=Half+Size+Solderless+Breadboard">Half Size Solderless Breadboard Search on EBay</a></li>
+<li><a href="https://www.ebay.com/itm/193868631702">10X 400 Point Solderless Breadboard for $14</a></li>
+<li><a href="https://www.ebay.com/sch/i.html?_nkw=20cm+male-to-female+dupont+connectors">20cm male-to-female dupont connectors</a></li>
+<li><a href="https://www.ebay.com/itm/394946481407">10/20/30CM MM, MF, FF Dupont Wire Jumper Cable 40PIN Dupont Line Connector for $4</a></li>
+<li><a href="https://www.ebay.com/itm/176451452762">2.42" OLED Display 128*64 SPI SSD1309</a></li>
+</ol>
+<h2 id="other-components">Other Components</h2>
+<h3 id="real-time-clocks">Real Time Clocks</h3>
+<p>Technically you can get a clock or watch running without a real-time clock (RTC).
+The problem is that the clock will not be very accurate unless you continually
+sync the time using WiFi or with your host computer.</p>
+<p>However, learning how to use the a RTC is a key learning concept and
+learning how to use the I2C serial interface is also a good concept to
+know.  So it is optional but strongly encouraged.</p>
+<h4 id="the-ds1307">The DS1307</h4>
+<p>Although this board is old, it is a simple and low-cost part that is easy to use.
+Most of the development boards come with their own crystal and an I2C interface.</p>
+<h4 id="the-ds3231">The DS3231</h4>
+<p>The DS3231 is one of the most commonly used real-time clock (RTC) modules paired with microcontrollers like the Raspberry Pi Pico. It's popular because it:</p>
+<ol>
+<li>Has high accuracy (temperature-compensated crystal oscillator)</li>
+<li>Maintains accuracy over a wide temperature range</li>
+<li>Has built-in temperature compensation</li>
+<li>Uses the I2C interface, which is easy to implement</li>
+<li>Includes a battery backup option</li>
+<li>Is relatively inexpensive</li>
+<li>Has extensive library support across different platforms</li>
+</ol>
+<p>The second most common is probably the DS1307, which is an older and simpler version. While less accurate than the DS3231, it's even less expensive and still perfectly suitable for many basic timekeeping applications.</p>
+<p>For microcontrollers in particular, the DS3231 tends to be favored because its accuracy doesn't depend on the microcontroller's clock, and it maintains accurate time even when the main microcontroller is reset or loses power.</p>
 
 
 
