@@ -12,28 +12,28 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/lessons/06-setting-time/">
       
       
-        <link rel="prev" href="../setup/05-ai-in-the-classroom/">
+        <link rel="prev" href="../05-buttons/">
       
       
-        <link rel="next" href="00-hardware-config/">
+        <link rel="next" href="../07-drawing-digits/">
       
       
-      <link rel="icon" href="../img/clock-icon.png">
+      <link rel="icon" href="../../img/clock-icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
-        <title>Introduction - Clocks and Watches with MicroPython</title>
+        <title>Setting Time - Clocks and Watches with MicroPython</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-project-based-learning-building-clocks-and-watches-with-smart-watch-displays" class="md-skip">
+        <a href="#manually-setting-time" class="md-skip">
           Skip to content
         </a>
       
@@ -102,9 +102,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Clocks and Watches with MicroPython" class="md-header__button md-logo" aria-label="Clocks and Watches with MicroPython" data-md-component="logo">
+    <a href="../.." title="Clocks and Watches with MicroPython" class="md-header__button md-logo" aria-label="Clocks and Watches with MicroPython" data-md-component="logo">
       
-  <img src="../img/clock-icon.png" alt="logo">
+  <img src="../../img/clock-icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Setting Time
             
           </span>
         </div>
@@ -208,9 +208,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Clocks and Watches with MicroPython" class="md-nav__button md-logo" aria-label="Clocks and Watches with MicroPython" data-md-component="logo">
+    <a href="../.." title="Clocks and Watches with MicroPython" class="md-nav__button md-logo" aria-label="Clocks and Watches with MicroPython" data-md-component="logo">
       
-  <img src="../img/clock-icon.png" alt="logo">
+  <img src="../../img/clock-icon.png" alt="logo">
 
     </a>
     Clocks and Watches with MicroPython
@@ -237,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -257,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -277,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course-description/" class="md-nav__link">
+      <a href="../../course-description/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -326,7 +326,7 @@
         
   
   
-    <a href="../setup/" class="md-nav__link">
+    <a href="../../setup/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -408,7 +408,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -419,7 +419,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -441,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="00-hardware-config/" class="md-nav__link">
+      <a href="../00-hardware-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01-get-local-time/" class="md-nav__link">
+      <a href="../01-get-local-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -483,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01-drawing-coordinates/" class="md-nav__link">
+      <a href="../01-drawing-coordinates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -504,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02-display-text/" class="md-nav__link">
+      <a href="../02-display-text/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -525,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03-drawing-face/" class="md-nav__link">
+      <a href="../03-drawing-face/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04-larger-fonts/" class="md-nav__link">
+      <a href="../04-larger-fonts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="05-buttons/" class="md-nav__link">
+      <a href="../05-buttons/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,10 +585,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="06-setting-time/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Setting Time
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -597,6 +617,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-mode-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Mode Button
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Mode Button">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-1-clock-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mode 1: Clock Running
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-2-setting-the-hour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mode 2: Setting the Hour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-3-setting-the-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mode 3: Setting the Minute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-4-setting-ampm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mode 4: Setting AM/PM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -609,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="07-drawing-digits/" class="md-nav__link">
+      <a href="../07-drawing-digits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="09-digit-functions/" class="md-nav__link">
+      <a href="../09-digit-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="12-draw-time-functions/" class="md-nav__link">
+      <a href="../12-draw-time-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -672,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="13-testing-the-rtc/" class="md-nav__link">
+      <a href="../13-testing-the-rtc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -693,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="15-scale-testing/" class="md-nav__link">
+      <a href="../15-scale-testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="06-draw-performance/" class="md-nav__link">
+      <a href="../06-draw-performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -735,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="30-ili9341/" class="md-nav__link">
+      <a href="../30-ili9341/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="40-machine-info/" class="md-nav__link">
+      <a href="../40-machine-info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="50-ds1307-breadboard/" class="md-nav__link">
+      <a href="../50-ds1307-breadboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,7 +935,7 @@
         
   
   
-    <a href="../kits/" class="md-nav__link">
+    <a href="../../kits/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -921,7 +1012,7 @@
         
   
   
-    <a href="../sims/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -974,7 +1065,7 @@
         
   
   
-    <a href="../prompts/index.md" class="md-nav__link">
+    <a href="../../prompts/index.md" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1000,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1020,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1080,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1120,46 +1211,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#weeks-1-2-introduction-to-python-and-basic-concepts" class="md-nav__link">
+  <a href="#the-mode-button" class="md-nav__link">
     <span class="md-ellipsis">
-      Weeks 1-2: Introduction to Python and Basic Concepts
+      The Mode Button
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Weeks 1-2: Introduction to Python and Basic Concepts">
+    <nav class="md-nav" aria-label="The Mode Button">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lesson-1-introduction-to-python" class="md-nav__link">
+  <a href="#mode-1-clock-running" class="md-nav__link">
     <span class="md-ellipsis">
-      Lesson 1: Introduction to Python
+      Mode 1: Clock Running
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lesson-2-hello-world" class="md-nav__link">
+  <a href="#mode-2-setting-the-hour" class="md-nav__link">
     <span class="md-ellipsis">
-      Lesson 2: Hello, World!
+      Mode 2: Setting the Hour
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lesson-3-variables-and-data-types" class="md-nav__link">
+  <a href="#mode-3-setting-the-minute" class="md-nav__link">
     <span class="md-ellipsis">
-      Lesson 3: Variables and Data Types
+      Mode 3: Setting the Minute
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lesson-4-basic-operations" class="md-nav__link">
+  <a href="#mode-4-setting-ampm" class="md-nav__link">
     <span class="md-ellipsis">
-      Lesson 4: Basic Operations
+      Mode 4: Setting AM/PM
     </span>
   </a>
   
@@ -1167,264 +1258,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weeks-3-4-control-structures-and-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Weeks 3-4: Control Structures and Functions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weeks 3-4: Control Structures and Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lesson-5-conditionals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 5: Conditionals
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lesson-6-loops" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 6: Loops
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lesson-7-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 7: Functions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weeks-5-6-working-with-libraries-and-hardware" class="md-nav__link">
-    <span class="md-ellipsis">
-      Weeks 5-6: Working with Libraries and Hardware
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weeks 5-6: Working with Libraries and Hardware">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lesson-8-importing-libraries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 8: Importing Libraries
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lesson-9-introduction-to-hardware-interaction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 9: Introduction to Hardware Interaction
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weeks-7-8-project-1-basic-digital-clock" class="md-nav__link">
-    <span class="md-ellipsis">
-      Weeks 7-8: Project 1: Basic Digital Clock
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weeks 7-8: Project 1: Basic Digital Clock">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lesson-10-planning-the-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 10: Planning the Project
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lesson-11-building-a-basic-digital-clock" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 11: Building a Basic Digital Clock
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weeks-9-10-intermediate-python-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Weeks 9-10: Intermediate Python Concepts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weeks 9-10: Intermediate Python Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lesson-12-lists-and-dictionaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 12: Lists and Dictionaries
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lesson-13-error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 13: Error Handling
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weeks-11-12-project-2-analog-clock-display" class="md-nav__link">
-    <span class="md-ellipsis">
-      Weeks 11-12: Project 2: Analog Clock Display
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weeks 11-12: Project 2: Analog Clock Display">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lesson-14-planning-the-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 14: Planning the Project
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lesson-15-building-an-analog-clock-display" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 15: Building an Analog Clock Display
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weeks-13-14-advanced-python-concepts-and-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Weeks 13-14: Advanced Python Concepts and Optimization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weeks 13-14: Advanced Python Concepts and Optimization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lesson-16-more-about-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 16: More About Functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lesson-17-optimization-techniques" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 17: Optimization Techniques
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weeks-15-16-final-project-customizable-clockwatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Weeks 15-16: Final Project: Customizable Clock/Watch
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weeks 15-16: Final Project: Customizable Clock/Watch">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lesson-18-planning-the-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 18: Planning the Project
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lesson-19-building-a-customizable-clockwatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 19: Building a Customizable Clock/Watch
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lesson-20-final-project-presentations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lesson 20: Final Project Presentations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ongoing-reflection-and-feedback" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ongoing: Reflection and Feedback
-    </span>
-  </a>
   
 </li>
       
@@ -1446,143 +1279,12 @@
   
 
 
-<h1 id="python-project-based-learning-building-clocks-and-watches-with-smart-watch-displays">Python Project-Based Learning: Building Clocks and Watches with Smart Watch Displays</h1>
-<p>These lessons are general to all of our kits.  We often use the
-Pico OLED for many examples since that is the kit
-we have been using for the longest time.</p>
-<p>These lessons focus on using functions like the 
-MicroPython localtime() to get the time in your
-current timezone.</p>
-<p>They also focus on drawing scalable numbers on
-different size displays and drawing times
-on larger color displays.</p>
-<p>Here are some sample lesson plans for a 14-week semimester
-hich school course on learning computational thining
-by using MicroPython to write clock and smartwatch
-application.  This course assumes no prior knowledge
-of programming.</p>
-<h2 id="weeks-1-2-introduction-to-python-and-basic-concepts"><strong>Weeks 1-2: Introduction to Python and Basic Concepts</strong></h2>
-<h3 id="lesson-1-introduction-to-python">Lesson 1: Introduction to Python</h3>
-<ul>
-<li>What is Python?</li>
-<li>Why learn Python?</li>
-<li>Data Science</li>
-<li>Artificial Intellegence</li>
-<li>Python Installation and Setup</li>
-</ul>
-<h3 id="lesson-2-hello-world">Lesson 2: Hello, World!</h3>
-<ul>
-<li>Writing the first Python program</li>
-<li>Drawing a simple rectangle to the screen</li>
-<li>Making the rectangle bounce around the screen</li>
-<li>Understanding Python syntax</li>
-<li>Using the graphics library for your clock or watch</li>
-</ul>
-<h3 id="lesson-3-variables-and-data-types">Lesson 3: Variables and Data Types</h3>
-<ul>
-<li>Introduction to variables</li>
-<li>Common data types (integers, floats, strings, booleans)</li>
-<li>Drawing with pixels, lines and rectangles</li>
-<li>Chainging color</li>
-</ul>
-<h3 id="lesson-4-basic-operations">Lesson 4: Basic Operations</h3>
-<ul>
-<li>Arithmetic operations</li>
-<li>Concatenation and repetition</li>
-<li>Assignment operators</li>
-<li>Lists of colors</li>
-</ul>
-<h2 id="weeks-3-4-control-structures-and-functions"><strong>Weeks 3-4: Control Structures and Functions</strong></h2>
-<h3 id="lesson-5-conditionals">Lesson 5: Conditionals</h3>
-<ul>
-<li><code>if</code>, <code>else</code>, and <code>elif</code> statements</li>
-<li>Alternating the color of your lines</li>
-<li>Horizontal and radial lines</li>
-</ul>
-<h3 id="lesson-6-loops">Lesson 6: Loops</h3>
-<ul>
-<li><code>for</code> and <code>while</code> loops</li>
-<li>Loop control with <code>break</code> and <code>continue</code></li>
-<li>Draing the tick marks on a watch</li>
-</ul>
-<h3 id="lesson-7-functions">Lesson 7: Functions</h3>
-<ul>
-<li>Defining and calling functions</li>
-<li>Arguments and return values</li>
-</ul>
-<h2 id="weeks-5-6-working-with-libraries-and-hardware"><strong>Weeks 5-6: Working with Libraries and Hardware</strong></h2>
-<h3 id="lesson-8-importing-libraries">Lesson 8: Importing Libraries</h3>
-<ul>
-<li>What is a library?</li>
-<li>Importing and using libraries</li>
-</ul>
-<h3 id="lesson-9-introduction-to-hardware-interaction">Lesson 9: Introduction to Hardware Interaction</h3>
-<ul>
-<li>Communicating with smart watch displays</li>
-<li>Sending and receiving data</li>
-</ul>
-<h2 id="weeks-7-8-project-1-basic-digital-clock"><strong>Weeks 7-8: Project 1: Basic Digital Clock</strong></h2>
-<h3 id="lesson-10-planning-the-project">Lesson 10: Planning the Project</h3>
-<ul>
-<li>Project overview</li>
-<li>Creating a project plan</li>
-</ul>
-<h3 id="lesson-11-building-a-basic-digital-clock">Lesson 11: Building a Basic Digital Clock</h3>
-<ul>
-<li>Displaying time on the smart watch display</li>
-<li>Updating the time</li>
-</ul>
-<h2 id="weeks-9-10-intermediate-python-concepts"><strong>Weeks 9-10: Intermediate Python Concepts</strong></h2>
-<h3 id="lesson-12-lists-and-dictionaries">Lesson 12: Lists and Dictionaries</h3>
-<ul>
-<li>Creating and manipulating lists and dictionaries</li>
-</ul>
-<h3 id="lesson-13-error-handling">Lesson 13: Error Handling</h3>
-<ul>
-<li><code>try</code> and <code>except</code> blocks</li>
-</ul>
-<h2 id="weeks-11-12-project-2-analog-clock-display"><strong>Weeks 11-12: Project 2: Analog Clock Display</strong></h2>
-<h3 id="lesson-14-planning-the-project">Lesson 14: Planning the Project</h3>
-<ul>
-<li>Project overview</li>
-<li>Creating a project plan</li>
-</ul>
-<h3 id="lesson-15-building-an-analog-clock-display">Lesson 15: Building an Analog Clock Display</h3>
-<ul>
-<li>Designing an analog clock</li>
-<li>Rotating clock hands based on the current time</li>
-</ul>
-<h2 id="weeks-13-14-advanced-python-concepts-and-optimization"><strong>Weeks 13-14: Advanced Python Concepts and Optimization</strong></h2>
-<h3 id="lesson-16-more-about-functions">Lesson 16: More About Functions</h3>
-<ul>
-<li>Lambda functions, higher-order functions</li>
-</ul>
-<h3 id="lesson-17-optimization-techniques">Lesson 17: Optimization Techniques</h3>
-<ul>
-<li>Improving code efficiency</li>
-</ul>
-<h2 id="weeks-15-16-final-project-customizable-clockwatch"><strong>Weeks 15-16: Final Project: Customizable Clock/Watch</strong></h2>
-<h3 id="lesson-18-planning-the-project">Lesson 18: Planning the Project</h3>
-<ul>
-<li>Project overview</li>
-<li>Creating a project plan</li>
-</ul>
-<h3 id="lesson-19-building-a-customizable-clockwatch">Lesson 19: Building a Customizable Clock/Watch</h3>
-<ul>
-<li>Adding customization options (color, style, etc.)</li>
-<li>Implementing user input for customization</li>
-</ul>
-<h3 id="lesson-20-final-project-presentations">Lesson 20: Final Project Presentations</h3>
-<ul>
-<li>Students present their final projects</li>
-<li>Review and feedback session</li>
-</ul>
-<h2 id="ongoing-reflection-and-feedback"><strong>Ongoing: Reflection and Feedback</strong></h2>
-<ul>
-<li>After each project, have students reflect on what went well, what they struggled with, and what they learned.</li>
-<li>Continuously solicit feedback from students to improve the learning experience.</li>
-</ul>
-<p>This outline provides a balance between teaching Python concepts and applying them to real-world projects, which can keep students engaged and help them to better retain what they've learned. Tailor this outline to meet the specific needs and pace of your students, and ensure to provide plenty of opportunities for students to practice their skills, ask questions, and get feedback.</p>
+<h1 id="manually-setting-time">Manually Setting Time</h1>
+<h2 id="the-mode-button">The Mode Button</h2>
+<h3 id="mode-1-clock-running">Mode 1: Clock Running</h3>
+<h3 id="mode-2-setting-the-hour">Mode 2: Setting the Hour</h3>
+<h3 id="mode-3-setting-the-minute">Mode 3: Setting the Minute</h3>
+<h3 id="mode-4-setting-ampm">Mode 4: Setting AM/PM</h3>
 
 
 
@@ -1620,7 +1322,7 @@ of programming.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../setup/05-ai-in-the-classroom/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AI in the Classroom">
+          <a href="../05-buttons/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Buttons">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -1630,20 +1332,20 @@ of programming.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                AI in the Classroom
+                Buttons
               </div>
             </div>
           </a>
         
         
           
-          <a href="00-hardware-config/" class="md-footer__link md-footer__link--next" aria-label="Next: Hardware Config Files">
+          <a href="../07-drawing-digits/" class="md-footer__link md-footer__link--next" aria-label="Next: Drawing 7-Segment Digits">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Hardware Config Files
+                Drawing 7-Segment Digits
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1677,10 +1379,10 @@ of programming.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
