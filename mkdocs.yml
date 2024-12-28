@@ -1,5 +1,5 @@
-site_name: "Clocks and Watches with MicroPython"
-site_description: 'Resources for STEM clock and watch projects using low-cost parts and MicroPython. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_name: "Clocks and Watches with AI"
+site_description: 'Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking.'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/micropython-clocks-and-watches'
