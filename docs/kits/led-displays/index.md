@@ -1,12 +1,19 @@
 # LED Display Clock
 
+## Simple TM1637
+
+[Simple TM1637](clock-simple.md)
+
+## Shift Register Displays
+
+[Shift Register Displays](shift-register-displays.md)
+
 ![LED Clock Displays](./led-clock-displays.png)
 
 We can use the TM1637 4-Digit LED Display Module which can be purchased
 on e-Bay for a few dollars.  This means that your clock will cost under $10 total.
 
 [Sample Listing on EBay](https://www.ebay.com/itm/1452339091850)
-
 
 ## Hookup Instructions
 
@@ -20,7 +27,7 @@ We can hook this up to  the Raspberry Pi.
 
 ## MicroPython Driver
 
-[Mike Causer GitHub Example](https://github.com/mcauser/micropython-tm1637)
+[Mike Causer's TM1637 GitHub Driver](https://github.com/mcauser/micropython-tm1637)
 
 ## Sample Code
 

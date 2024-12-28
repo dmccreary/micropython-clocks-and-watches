@@ -1,6 +1,6 @@
-# MicroPython Clocks and Watches
+# Designing and Building Clocks and Watches with MicroPython
 
-Welcome to the MicroPython Clocks and Watches website.
+Welcome to the Clocks and Watches website!
 
 ![Banner](./img/banner.png)
 
@@ -8,17 +8,19 @@ Welcome to the MicroPython Clocks and Watches website.
 
 The mission of this website is to serve as a resource for teachers, mentors and
 students who want to learn how to use the popular MicroPython language
-to enable high-school students to design their own digital clocks and watches using Python.  
-This website contains instructions for finding low-cost parts (under $20/student) and customizing your custom clock and watch displays.
+to enable high-school students to design their own digital clocks and smart watches using MicroPython. 
+
+This website contains instructions for finding low-cost parts 
+(many under $20/student) and customizing your custom clock and watch displays.
 
 These projects have only recently been possible due to the following developments:
 
 1. The 2021 release of the powerful $4 Raspberry Pi Pico microcontroller.
 1. The availability of low-cost high-contrast OLED and TFT displays for as low as [$7 each](https://www.ebay.com/sch/i.html?_nkw=watch+SPI+240x240+display).  When we use the $4 Raspberry Pi Pico our classrooms can create a development system for under $15.
-2. The support of highly optimized drawing of complex ellipse and polygon shapes into the Framebuf by the MicroPython runtime. This only became available in [version 20](https://github.com/micropython/micropython/releases/tag/v1.20.0) of the standard MicroPython runtime released in April of 2023.  Before this every clock and watch project used custom math functions that slowed drawing times.
+2. The support of highly optimized drawing of complex ellipse and polygon shapes into the frame buffer by the MicroPython runtime. This only became available in [version 20](https://github.com/micropython/micropython/releases/tag/v1.20.0) of the standard MicroPython runtime released in April of 2023.  Before this every clock and watch project used custom math functions that slowed drawing times.
 3. The ability of WiFi-enabled microcontrollers that can synchronize with centralized time services using
 standard WiFi networks. We use the $5 Raspberry Pi Pico W in many of our projects.
-
+4. The availability of low-cost yet ultra-precise real-time clock chips like the [DS3231](./glossary.md#ds3231)
 Our goal is to provide fun ways to teach computational thinking to a wide variety of students from 6th to 12th grade.  If you can type we have fun lesson plans from drawing simple shapes to complex clock and watch face designs.
 
 ## Acknowledgments

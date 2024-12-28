@@ -1,4 +1,4 @@
-site_name: MicroPython Clocks and Watches
+site_name: "Clocks and Watches with MicroPython"
 site_description: 'Resources for STEM clock and watch projects using low-cost parts and MicroPython. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
@@ -34,12 +34,19 @@ nav:
     - Draw Performance: lessons/06-draw-performance.md
     - ILI9341 Display: lessons/30-ili9341.md
     - Machine Info: lessons/40-machine-info.md
+    - lessons/50-ds1307-breadboard.md
   - Kits:
     - Introduction Kits: kits/index.md
-    - LED Display TM1637:
-      - Intro: kits/led-display/index.md
-      - Simple Clock: kits/led-display/simple-clock.md
-      - Setting Time: kits/led-display/setting-time.md
+    - LED Displays:
+      - Intro: kits/led-displays/index.md
+      - Simple TM1637 Display: kits/led-displays/clock-simple.md
+      - Setting Time: kits/led-displays/setting-time.md
+      - Shift Register Displays:
+        - Intro: kits/shift-register-clock/index.md
+        - kits/led-displays/shift-register-displays.md
+        - kits/shift-register-clock/clock-main.md
+        - kits/shift-register-clock/sample-prompt.md
+      - Reference: kits/led-displays/reference.md
     - LED Strip Kits: 
       - Introduction: kits/led-strips/index.md
       - Binary Clock: kits/led-strips/01-binary-clock.md
@@ -81,7 +88,8 @@ nav:
       - Drawing Hands: kits/waveshare/03-drawing-hands.md
       - Font Lab: kits/waveshare/04-5x8-font.md
     - MAX7219: kits/max7219/index.md
-    - E-Ink: kits/e-ink/index.md
+    - E-Ink: 
+      - Intro: kits/e-ink/index.md
   - MicroSims:
     - List of MicroSims: sims/index.md
     - sims/binary-clock/index.md

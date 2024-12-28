@@ -1,6 +1,6 @@
 # Sample ChatGPT Prompt
 
-``` prompt
+!!! prompt
     Please help me write a micropython program for a 4-digit clock.  I have a digital clock display with 4 digits I purchased on eBay.  Each of the 4 digits has 7 segments and there is also a colon between the 2nd and 3rd digits.  The part says they use 74hc595 shift registers.  The names of the connectors are:
 
     1. GND
@@ -13,6 +13,7 @@
 
     Here is the code that is working:
 
+```python
 # SPDX-FileCopyrightText: 2021 Mike Causer <https://github.com/mcauser>
 # SPDX-License-Identifier: MIT
 
@@ -41,8 +42,6 @@ oe = Pin(3, Pin.OUT, value=0)  # low enables output
 srclr = Pin(3, Pin.OUT, value=1)  # pulsing low clears data
 
 sr = SR74HC595_BITBANG(ser, srclk, rclk, srclr, oe)
-
-
 
 while True:
     
@@ -78,4 +77,4 @@ while True:
     sr.enable()  # outputs enabled
     sr.enable(0)  # outputs disabled
     sleep(1)
-
+```

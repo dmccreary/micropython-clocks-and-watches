@@ -48,8 +48,8 @@ ConceptID,ConceptLabel,Dependencies,TaxonomyID
 46,External RTC Modules (DS1307 and DS3231),10|19,7
 47,Setting the System Clock from an External RTC,46,7
 48,Network Time Synchronization (NTP),50,6
-49,Setting Up WiFi on the Pico W,2|1,6
-50,Working the network module,49,6
+49,WiFi on the Pico W,2|1,6
+50,Python network module,49,6
 51,Parsing JSON,50,6
 52,Displaying Date and Day of Week,10,8
 53,Creating a 7-Segment Style Digital Display,21,3
@@ -100,7 +100,7 @@ ConceptID,ConceptLabel,Dependencies,TaxonomyID
 98,Using I²C Sensors & Modules,69,7
 99,Menu Systems for Watch Settings,14,8
 100,Servo Motors for Mechanical Pointers,2|19,7
-101,Converting Between datetime Objects and Timestamps,44,2
+101,Date Objects and Timestamps,44,2
 102,Generating Waveforms for Audio,40|63,9
 103,Implementing Clock Themes,21,3
 104,Fast Redraw Techniques (Blitting),35,5
@@ -114,3 +114,9 @@ ConceptID,ConceptLabel,Dependencies,TaxonomyID
 112,Timer,44,10
 113,Stopwatch,44,10
 114,World Clocks,94,6
+115,DS3231 Real-Time Clock,10|46,7
+116,DS1307 Real-Time Clock,10|46,7
+117,WAV Sound Files,63|64,9
+118,Digital to Analog Converters,63|64,9
+119,I2S Sound Bus,64|118,9
+120,PCM5102A DAC I2S,64|118|119,9

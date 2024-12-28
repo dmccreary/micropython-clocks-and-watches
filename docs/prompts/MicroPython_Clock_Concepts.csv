@@ -76,7 +76,7 @@ ConceptID,ConceptLabel
 75,Using E-Paper Displays
 76,Partial Refresh on E-Paper
 77,Techniques to Minimize Ghosting on E-Paper
-78,"Using TFT Displays (e.g., ST7735, ILI9341)"
+78,Using TFT Displays (ST7735 ILI9341)
 79,Comparing Display Technologies
 80,Color Animations on Watch Faces
 81,Flicker Reduction Techniques
@@ -106,10 +106,11 @@ ConceptID,ConceptLabel
 105,Partial Screen Updates for Watch Faces
 106,Color Conversion & Palettes in MicroPython
 107,Handling 12-Hour vs. 24-Hour Formats
-108,Wi‑Fi–Based Weather & Forecast Updates
+108,WiFi-Based Weather & Forecast Updates
 109,Using Sensors for Step Counting (Pedometer)
 110,Adding a LiPo Charging Circuit
 111,Chronograph Functionality
 112,Timer
 113,Stopwatch
 114,World Clocks
+115,
