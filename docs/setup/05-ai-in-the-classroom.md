@@ -1,9 +1,4 @@
-# Our Learning Approach
-
-Our strategy for teaching is to provide a base
-set of examples of working clocks and watches. We then also
-provide a set of "Challenges" for students to go
-further.
+# AI in the Classroom
 
 We also provide a sample set of prompts you
 can use to feed generative AI systems to
