@@ -12,28 +12,28 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-display/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-displays/clock-simple/">
       
       
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../led-strips/">
+        <link rel="next" href="../../shift-register-clock/">
       
       
-      <link rel="icon" href="../../img/clock-icon.png">
+      <link rel="icon" href="../../../img/clock-icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
-        <title>Intro - MicroPython Clocks and Watches</title>
+        <title>Simple TM1637 Display - Clocks and Watches with MicroPython</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#led-display-clock" class="md-skip">
+        <a href="#a-simple-clock-with-the-tm1637-led-display" class="md-skip">
           Skip to content
         </a>
       
@@ -102,9 +102,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="MicroPython Clocks and Watches" class="md-header__button md-logo" aria-label="MicroPython Clocks and Watches" data-md-component="logo">
+    <a href="../../.." title="Clocks and Watches with MicroPython" class="md-header__button md-logo" aria-label="Clocks and Watches with MicroPython" data-md-component="logo">
       
-  <img src="../../img/clock-icon.png" alt="logo">
+  <img src="../../../img/clock-icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -115,13 +115,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            MicroPython Clocks and Watches
+            Clocks and Watches with MicroPython
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Simple TM1637 Display
             
           </span>
         </div>
@@ -208,12 +208,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MicroPython Clocks and Watches" class="md-nav__button md-logo" aria-label="MicroPython Clocks and Watches" data-md-component="logo">
+    <a href="../../.." title="Clocks and Watches with MicroPython" class="md-nav__button md-logo" aria-label="Clocks and Watches with MicroPython" data-md-component="logo">
       
-  <img src="../../img/clock-icon.png" alt="logo">
+  <img src="../../../img/clock-icon.png" alt="logo">
 
     </a>
-    MicroPython Clocks and Watches
+    Clocks and Watches with MicroPython
   </label>
   
     <div class="md-nav__source">
@@ -237,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -257,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -277,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../course-description/" class="md-nav__link">
+      <a href="../../../course-description/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -326,7 +326,7 @@
         
   
   
-    <a href="../../setup/" class="md-nav__link">
+    <a href="../../../setup/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -390,6 +390,8 @@
       
         
       
+        
+      
     
     
     
@@ -403,7 +405,7 @@
         
   
   
-    <a href="../../lessons/" class="md-nav__link">
+    <a href="../../../lessons/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -456,8 +458,6 @@
         
       
         
-          
-        
       
     
     
@@ -473,7 +473,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -518,6 +518,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -532,18 +536,18 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    LED Display TM1637
+    LED Displays
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -552,7 +556,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
-            LED Display TM1637
+            LED Displays
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -562,14 +566,93 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="simple-clock.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Simple TM1637 Display
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Simple Clock
+    Simple TM1637 Display
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-localtime-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Localtime function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-leading-zeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Leading Zeros
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-time.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Time
   </span>
   
 
@@ -585,12 +668,64 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../shift-register-clock/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Shift Register Displays
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="setting-time.md" class="md-nav__link">
+      <a href="../reference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setting Time
+    Reference
   </span>
   
 
@@ -638,7 +773,7 @@
         
   
   
-    <a href="../led-strips/" class="md-nav__link">
+    <a href="../../led-strips/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -704,7 +839,7 @@
         
   
   
-    <a href="../pico-oled/" class="md-nav__link">
+    <a href="../../pico-oled/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -756,7 +891,7 @@
         
   
   
-    <a href="../ili9341/" class="md-nav__link">
+    <a href="../../ili9341/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -818,7 +953,7 @@
         
   
   
-    <a href="../gc9a01/" class="md-nav__link">
+    <a href="../../gc9a01/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -864,7 +999,7 @@
         
   
   
-    <a href="../lilygo/" class="md-nav__link">
+    <a href="../../lilygo/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -920,7 +1055,7 @@
         
   
   
-    <a href="../waveshare/" class="md-nav__link">
+    <a href="../../waveshare/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -947,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../max7219/" class="md-nav__link">
+      <a href="../../max7219/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,16 +1102,41 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../e-ink/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../e-ink/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     E-Ink
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1047,7 +1207,7 @@
         
   
   
-    <a href="../../sims/" class="md-nav__link">
+    <a href="../../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1100,7 +1260,7 @@
         
   
   
-    <a href="../../prompts/index.md" class="md-nav__link">
+    <a href="../../../prompts/index.md" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1126,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/" class="md-nav__link">
+      <a href="../../../references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1146,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
+      <a href="../../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1166,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
+      <a href="../../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1206,54 +1366,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hookup-instructions" class="md-nav__link">
+  <a href="#the-localtime-function" class="md-nav__link">
     <span class="md-ellipsis">
-      Hookup Instructions
+      The Localtime function
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#micropython-driver" class="md-nav__link">
+  <a href="#removing-leading-zeros" class="md-nav__link">
     <span class="md-ellipsis">
-      MicroPython Driver
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sample-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-imports" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python Imports
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-program" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test Program
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
+      Removing Leading Zeros
     </span>
   </a>
   
@@ -1277,31 +1401,12 @@
   
 
 
-<h1 id="led-display-clock">LED Display Clock</h1>
-<p><img alt="LED Clock Displays" src="led-clock-displays.png" /></p>
-<p>We can use the TM1637 4-Digit LED Display Module which can be purchased
-on e-Bay for a few dollars.  This means that your clock will cost under $10 total.</p>
-<p><a href="https://www.ebay.com/itm/1452339091850">Sample Listing on EBay</a></p>
-<h2 id="hookup-instructions">Hookup Instructions</h2>
-<p>We can hook this up to  the Raspberry Pi.</p>
-<p>|Name|Pin||
-|5 Volts|VBUS or VSYS|
-|GND|Any GND Pin|
-|CLK|Pins 4| 
-|Data|Pin 5 |</p>
-<h2 id="micropython-driver">MicroPython Driver</h2>
-<p><a href="https://github.com/mcauser/micropython-tm1637">Mike Causer GitHub Example</a></p>
-<h2 id="sample-code">Sample Code</h2>
-<h2 id="python-imports">Python Imports</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">tm1637</span>
-<span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
-<span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span>
-<span class="n">tm</span> <span class="o">=</span> <span class="n">tm1637</span><span class="o">.</span><span class="n">TM1637</span><span class="p">(</span><span class="n">clk</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">dio</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="test-program">Test Program</h2>
+<h1 id="a-simple-clock-with-the-tm1637-led-display">A Simple Clock with the TM1637 LED Display</h1>
+<p>Here is a simple clock program that will display the hours and minutes
+from the localtime() function.  It will also turn the colon LEDs
+on and off every second using the <code>modulo</code> function to
+test for the even/odd property of the second.</p>
+<h2 id="the-localtime-function">The Localtime function</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1320,84 +1425,108 @@ on e-Bay for a few dollars.  This means that your clock will cost under $10 tota
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">tm1637</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># display hours and minutes on the TM1637 LED display</span>
+<span class="c1"># make the colon go on and off every second</span>
+<span class="kn">import</span> <span class="nn">tm1637</span>
 <span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
-<span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span><span class="p">,</span> <span class="n">localtime</span>
 <span class="n">tm</span> <span class="o">=</span> <span class="n">tm1637</span><span class="o">.</span><span class="n">TM1637</span><span class="p">(</span><span class="n">clk</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">dio</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="c1"># all LEDS on &quot;88:88&quot;</span>
-    <span class="n">tm</span><span class="o">.</span><span class="n">write</span><span class="p">([</span><span class="mi">127</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">])</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># all LEDS off</span>
-    <span class="n">tm</span><span class="o">.</span><span class="n">write</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># show &quot;0123&quot;</span>
-    <span class="n">tm</span><span class="o">.</span><span class="n">write</span><span class="p">([</span><span class="mi">63</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">79</span><span class="p">])</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># show &quot;COOL&quot;</span>
-    <span class="n">tm</span><span class="o">.</span><span class="n">write</span><span class="p">([</span><span class="mb">0b00111001</span><span class="p">,</span> <span class="mb">0b00111111</span><span class="p">,</span> <span class="mb">0b00111111</span><span class="p">,</span> <span class="mb">0b00111000</span><span class="p">])</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># show &quot;HELP&quot;</span>
-    <span class="n">tm</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;help&#39;</span><span class="p">)</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># display &quot;dEAd&quot;, &quot;bEEF&quot;</span>
-    <span class="n">tm</span><span class="o">.</span><span class="n">hex</span><span class="p">(</span><span class="mh">0xdead</span><span class="p">)</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="n">tm</span><span class="o">.</span><span class="n">hex</span><span class="p">(</span><span class="mh">0xbeef</span><span class="p">)</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># show &quot;12:59&quot;</span>
-    <span class="n">tm</span><span class="o">.</span><span class="n">numbers</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">59</span><span class="p">)</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># show &quot;-123&quot;</span>
-    <span class="n">tm</span><span class="o">.</span><span class="n">number</span><span class="p">(</span><span class="o">-</span><span class="mi">123</span><span class="p">)</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># show temperature &#39;24*C&#39;</span>
-    <span class="n">tm</span><span class="o">.</span><span class="n">temperature</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">()</span> <span class="c1"># returns 8 inits for date and time</span>
+    <span class="n">hours</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">minutes</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">seconds</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">seconds</span><span class="p">)</span>
+    <span class="c1"># flash the colon on and off every second</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">seconds</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span> <span class="c1"># modulo 2 will be true for odd numbers</span>
+        <span class="n">tm</span><span class="o">.</span><span class="n">numbers</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">tm</span><span class="o">.</span><span class="n">numbers</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Next, will will use the <code>localtime()</code> function to build a simple
-clock.</p>
-<p><a href="clock-simple/">Simple Clock</a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://github.com/mcauser/micropython-tm1637">Mike Causer TM1637 Driver GitHub Repo</a></li>
-<li><a href="https://youtu.be/D68XtvZlk00?si=97WdbeKOTFt6Rt6e">YouTube Video by NerdCave</a></li>
-</ul>
+<p>That is it!  Pretty cool that you can write an entire clock program
+in that few lines of code.  But it is not perfect.  Let's
+find some ways to make the clock work a little better.</p>
+<p>Note that the hours is always in 24 hour time.  If you want to 
+use 12 hour time you will need to subtract 12 from the hours if
+the hours is greater than 12.</p>
+<p>We can add the following lines of code to make the display better
+for people that use a 12-hour clock.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="n">hours</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+    <span class="n">hours</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">hours</span> <span class="o">=</span> <span class="n">hours</span> <span class="o">-</span> <span class="mi">12</span>
+</code></pre></div></td></tr></table></div>
+<p>This will work, but it has the disadvantage of displaying the leading zero
+before the ones digit.  Unfortunately, this is the way that the <code>numbers()</code> function
+was written in the TM1637 module.  Let's take a look at how we can clean this up a bit.</p>
+<h2 id="removing-leading-zeros">Removing Leading Zeros</h2>
+<p>In order to fix the leading zeros problem in the hours place, we
+need to write our own version of the <code>numbers()</code> function
+that changes '0' to be a space (all 7 segments off) if the hours
+is less than 10.</p>
+<p>Here is the original <code>numbers()</code> function taken directly from the driver:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">colon</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Display two numeric values -9 through 99, with leading zeros</span>
+<span class="sd">    and separated by a colon.&quot;&quot;&quot;</span>
+    <span class="n">num1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
+    <span class="n">num2</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">num2</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
+    <span class="n">segments</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encode_string</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:0&gt;2d}{1:0&gt;2d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">colon</span><span class="p">:</span>
+        <span class="n">segments</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">|=</span> <span class="mh">0x80</span> <span class="c1"># colon on</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">segments</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>You can see that the author used the Python .format function to
+display the first number using a leading zero.  This is fine
+for our minutes, but not a standard for the hours.</p>
+<p>We will need to modify this code to put in a space character in if the hours is
+less than 10 and to only display the hours number without a leading
+zero.  The format <code>{0:0&gt;2d}</code> will be changed to be: <code>{prefix}{num1:d}</code>
+where:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">prefix</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="k">if</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">numbers_nlz</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">colon</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Display two numeric values -9 through 99, with a leading space before</span>
+<span class="sd">    single-digit first numbers and separated by a colon.&quot;&quot;&quot;</span>
+    <span class="n">num1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
+    <span class="n">num2</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">num2</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="k">if</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}{</span><span class="n">num1</span><span class="si">:</span><span class="s1">d</span><span class="si">}{</span><span class="n">num2</span><span class="si">:</span><span class="s1">0&gt;2d</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+    <span class="n">segments</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">encode_string</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}{</span><span class="n">num1</span><span class="si">:</span><span class="s1">d</span><span class="si">}{</span><span class="n">num2</span><span class="si">:</span><span class="s1">0&gt;2d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">colon</span><span class="p">:</span>
+        <span class="n">segments</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">|=</span> <span class="mh">0x80</span>  <span class="c1"># colon on</span>
+    <span class="n">tm</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">segments</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Now the display will work as most normal digital clocks.</p>
+<p>So as long as the localtime() function is working, this
+clock should work fine.  An as long as your device is connected
+to your computer via an USB cable it will be fine.</p>
+<p>What if you would like your clock to work without being connected
+to a computer.  We have two options:</p>
+<ol>
+<li>Used a Raspberry Pi Pico W to get time from a central time service over Wifi</li>
+<li>or use a local clock and set the time manually</li>
+</ol>
 
 
 
@@ -1435,7 +1564,7 @@ clock.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction Kits">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -1445,20 +1574,20 @@ clock.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Introduction Kits
+                Intro
               </div>
             </div>
           </a>
         
         
           
-          <a href="../led-strips/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+          <a href="../../shift-register-clock/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1492,10 +1621,10 @@ clock.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

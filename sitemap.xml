@@ -21,6 +21,10 @@
          <lastmod>2024-12-28</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/glossary/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/references/</loc>
          <lastmod>2024-12-28</lastmod>
     </url>
@@ -85,15 +89,19 @@
          <lastmod>2024-12-28</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-display/</loc>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-displays/</loc>
          <lastmod>2024-12-28</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-display/clock-simple/</loc>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-displays/clock-simple/</loc>
          <lastmod>2024-12-28</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-display/reference/</loc>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-displays/reference/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-displays/shift-register-displays/</loc>
          <lastmod>2024-12-28</lastmod>
     </url>
     <url>
