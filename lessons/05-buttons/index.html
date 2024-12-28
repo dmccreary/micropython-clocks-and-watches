@@ -621,6 +621,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#three-button-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Button Set
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1177,6 +1186,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#three-button-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Button Set
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1267,7 +1285,7 @@ adjusting the hour you have to make sure the cycle value starts at the current h
 <span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ifrom</span> <span class="n">utime</span> <span class="kn">import</span> <span class="nn">sleep</span><span class="o">,</span> <span class="nn">ticks_ms</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span><span class="p">,</span> <span class="n">ticks_ms</span>
 <span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
 
 <span class="c1"># Sample Raspberry Pi Pico MicroPython button press example with a debounce delay value of 200ms in the interrupt handler</span>
@@ -1318,6 +1336,155 @@ adjusting the hour you have to make sure the cycle value starts at the current h
         <span class="n">builtin_led</span><span class="o">.</span><span class="n">toggle</span><span class="p">()</span>
         <span class="n">old_cycle</span> <span class="o">=</span> <span class="n">cycle</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mf">.1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="three-button-set">Three Button Set</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># Pin setup</span>
+<span class="n">mode_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+<span class="n">next_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+<span class="n">previous_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+
+<span class="c1"># Time state</span>
+<span class="n">hour</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">minute</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">is_pm</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">mode_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;set hour&quot;</span><span class="p">,</span> <span class="s2">&quot;set minute&quot;</span><span class="p">,</span> <span class="s2">&quot;set AM/PM&quot;</span><span class="p">]</span>
+<span class="n">mode_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mode_names</span><span class="p">)</span>
+
+<span class="c1"># Debounce state</span>
+<span class="n">last_mode_press</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">last_next_press</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">last_prev_press</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">DEBOUNCE_MS</span> <span class="o">=</span> <span class="mi">200</span>
+
+<span class="k">def</span> <span class="nf">format_time</span><span class="p">():</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">hour</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">minute</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;PM&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">is_pm</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;AM&#39;</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">def</span> <span class="nf">handle_mode</span><span class="p">(</span><span class="n">pin</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">mode</span><span class="p">,</span> <span class="n">last_mode_press</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">current_time</span><span class="p">,</span> <span class="n">last_mode_press</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">DEBOUNCE_MS</span><span class="p">:</span>
+        <span class="n">mode</span> <span class="o">=</span> <span class="p">(</span><span class="n">mode</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">mode_count</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mode: </span><span class="si">{</span><span class="n">mode_names</span><span class="p">[</span><span class="n">mode</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">last_mode_press</span> <span class="o">=</span> <span class="n">current_time</span>
+
+<span class="k">def</span> <span class="nf">handle_next</span><span class="p">(</span><span class="n">pin</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">is_pm</span><span class="p">,</span> <span class="n">last_next_press</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">current_time</span><span class="p">,</span> <span class="n">last_next_press</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">DEBOUNCE_MS</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Set hour</span>
+            <span class="n">hour</span> <span class="o">=</span> <span class="p">(</span><span class="n">hour</span> <span class="o">%</span> <span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># Set minute</span>
+            <span class="n">minute</span> <span class="o">=</span> <span class="p">(</span><span class="n">minute</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">60</span>
+        <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>  <span class="c1"># Toggle AM/PM</span>
+            <span class="n">is_pm</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">is_pm</span>
+
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">format_time</span><span class="p">())</span>
+        <span class="n">last_next_press</span> <span class="o">=</span> <span class="n">current_time</span>
+
+<span class="k">def</span> <span class="nf">handle_previous</span><span class="p">(</span><span class="n">pin</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">is_pm</span><span class="p">,</span> <span class="n">last_prev_press</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">current_time</span><span class="p">,</span> <span class="n">last_prev_press</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">DEBOUNCE_MS</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Set hour</span>
+            <span class="n">hour</span> <span class="o">=</span> <span class="p">((</span><span class="n">hour</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># Set minute</span>
+            <span class="n">minute</span> <span class="o">=</span> <span class="p">(</span><span class="n">minute</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">60</span>
+        <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>  <span class="c1"># Toggle AM/PM</span>
+            <span class="n">is_pm</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">is_pm</span>
+
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">format_time</span><span class="p">())</span>
+        <span class="n">last_prev_press</span> <span class="o">=</span> <span class="n">current_time</span>
+
+<span class="c1"># Set up interrupts</span>
+<span class="n">mode_pin</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="n">Pin</span><span class="o">.</span><span class="n">IRQ_FALLING</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="n">handle_mode</span><span class="p">)</span>
+<span class="n">next_pin</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="n">Pin</span><span class="o">.</span><span class="n">IRQ_FALLING</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="n">handle_next</span><span class="p">)</span>
+<span class="n">previous_pin</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="n">Pin</span><span class="o">.</span><span class="n">IRQ_FALLING</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="n">handle_previous</span><span class="p">)</span>
+
+<span class="c1"># Main loop</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Clock started. Press mode button to change settings.&quot;</span><span class="p">)</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Only update display in run mode</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">format_time</span><span class="p">())</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
 
