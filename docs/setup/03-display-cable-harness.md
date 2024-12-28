@@ -6,7 +6,7 @@ To keep our displays running reliably, we can use a 20 cm ribbon cable and some 
 
 We start by purchasing some 20 cm long Male-Female Dupont ribbon connectors from eBay. The price should be about $8 for 120 connectors. Make sure to get the Male-Female version.
 
-![20 cm dupont](dupont-ribbon-cable-m-f)
+![20 cm dupont](../img/dupont-ribbon-cable-m-f.png)
 
 We then will separate 7 of these wires making sure to put the black and red colors in the GND and VCC edge of the group of wires.
 
