@@ -891,30 +891,31 @@
 
 <h1 id="display-cable-harness">Display Cable Harness</h1>
 <p>Unlike simple sensors that only have a few wires, displays have up to seven wires that need to be connected. This can be tricky when we use breadboards where we can accidentally pull one wire out.</p>
-<p>To keep our displays running reliably, we can use a 20 cm ribbon cable and some hot glue to make a connector that is easy to hook up. It will be very reliable.</p>
-<p>We start by purchasing some 20 cm long Male-Female Dupont ribbon connectors from eBay. The price should be about $8 for 120 connectors. Make sure to get the Male-Female version.</p>
+<p>To keep our displays running reliably, we can use a 20 cm ribbon cable and some hot glue to make a connector that is easy to hook up and be much more reliable.</p>
+<p>We start by purchasing some 20cm long Male-Female Dupont ribbon connectors from eBay. The price should be about $8 for 120 connectors. Make sure to get the Male-Female version.</p>
 <p><img alt="20 cm dupont" src="../../img/dupont-ribbon-cable-m-f.png" /></p>
-<p>We then will separate 7 of these wires making sure to put the black and red colors in the GND and VCC edge of the group of wires.</p>
+<p>We then separate out seven of these wires trying to use the black and red colors in the GND and VCC edge of the group of wires.</p>
 <p><img alt="Display Cable Harness 1" src="../../img/display-harness-1.jpg" /></p>
 <p>You can see a close-up of each of the colors and their connections in the picture below.</p>
 <p><img alt="Display Cable Harness 2" src="../../img/display-harness-2.jpg" /></p>
 <p>At the other end of the cable, we need to make a small change in the order of the cable. Here are the changes:</p>
 <ol>
-<li>We separate the red wire from the rest of the group and connect the red to the 3.3V regulated output of the Raspberry Pi Pico.</li>
-<li>We move the back GND wire two be in between the blue and purple CS and DC wires. This allows the row of all the wires to be connected in a single block of wires.</li>
+<li>We separate the red wire from the rest of the group and connect the red to the 3.3V regulated output of the Raspberry Pi Pico.  All our displays run on 3.3v now.</li>
+<li>We move the back GND wire to be in between the blue and purple CS and DC wires. This allows the row of all the wires to be connected in a single block of wires.</li>
 </ol>
 <p><img alt="Display Cable Harness 3" src="../../img/display-harness-3.jpg" /></p>
-<p>We can then plug this group of wires directly into the breadboard from breadboard rows 3 to 9. This is shown below.</p>
+<p>We can then plug this group of wires directly into the breadboard from breadboard rows 3 to 9. This is shown below.  Make sure the black GND is on the Pico GND on row 8 of the breadboard.</p>
 <p><img alt="Display Cable Harness 3" src="../../img/display-harness-4.jpg" /></p>
 <p>We designed these connections with the following rules:</p>
 <ol>
 <li>The Clock (SCL) and Data (SDA) MUST be connected to rows 4 and 5 respectively because this is where SPI0 CLK and SPI0 TX are located.</li>
-<li>The other three signals RES, DC and CS can be on pin so we will use the rows that make the cable connectors direct to rows 6, 7 and 9. Note that GND is on breadboard row 8.</li>
+<li>The other three signals RES, DC and CS can be on pin so we will use the rows that make the cable connectors direct to rows 6, 7 and 9. Note that GND is on breadboard row 8 which I mark with a black
+marker.</li>
 </ol>
 <p>We have found that once we create these cable assemblies with hot glue to keep the pins in the right order it makes it much easier to connect the displays.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Note that we still MUST make sure that the black wire in the wiring harness is connected to the GND. It is easy to get the cable reversed so make sure to double-check the cable orientation before you use it.</p>
+<p>Note that we still MUST make sure that the black wire in the wiring harness is connected to the GND. It is easy to get the cable reversed so make sure to double-check the cable orientation before you use power on the board.</p>
 </div>
 
 
