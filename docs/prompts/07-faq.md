@@ -1,3 +1,14 @@
+# FAQ Prompt
+
+!!! prompt
+    Take a look at the course description and the concepts lists file in this project.
+    Now create a FAQ of the 100 most likely questions that students will ask.
+
+    Return the FAQ in Markdown format with the question in level 4 headers and 
+    the answers in the body text.  Group the FAQs in level 2 headers.
+
+## Result
+
 # Building Clocks and Watches with MicroPython - Frequently Asked Questions
 
 ## General Course Information
@@ -46,9 +57,7 @@ We'll learn to sync time using web services (when Wi-Fi is available) and progra
 
 #### How will I be graded?
 Assessment typically includes:
-
 - Participation in class activities and discussions
-- Ability to work in teams
 - Completion of hands-on labs and exercises
 - Quality and functionality of projects
 - Final project presentation and documentation
@@ -80,7 +89,6 @@ Each concept builds on previous learning, but we'll provide catch-up resources a
 
 #### How will we debug our code?
 We'll learn several debugging techniques:
-
 - Using print statements for troubleshooting
 - Reading error messages
 - Using the Thonny debugger
@@ -93,7 +101,6 @@ The Pico W and components we use operate at very low voltages (3.3V or 5V) which
 
 #### How do I protect the electronic components?
 We'll cover basic handling procedures including:
-
 - Static electricity precautions
 - Proper connection techniques
 - Component storage and handling
@@ -103,7 +110,6 @@ We'll cover basic handling procedures including:
 
 #### Can we add features like alarms or stopwatch functions?
 Yes! As you progress through the course, you'll learn to add various features including:
-
 - Multiple alarms
 - Stopwatch and timer functions
 - Custom sounds and alerts
@@ -111,7 +117,6 @@ Yes! As you progress through the course, you'll learn to add various features in
 
 #### Will we learn about power management?
 Yes, we'll cover power management including:
-
 - Battery operation
 - Sleep modes
 - Power-efficient programming
@@ -121,7 +126,6 @@ Yes, we'll cover power management including:
 
 #### Can I use these skills for other projects?
 Absolutely! The skills you'll learn apply to many other electronics and programming projects:
-
 - Other types of electronic devices
 - Home automation projects
 - Sensor-based systems
@@ -129,7 +133,6 @@ Absolutely! The skills you'll learn apply to many other electronics and programm
 
 #### How does this course prepare me for further study?
 This course builds valuable skills for:
-
 - Computer science courses
 - Engineering programs
 - Electronics projects
@@ -140,7 +143,6 @@ This course builds valuable skills for:
 
 #### What online resources can we use?
 We'll use various resources including:
-
 - MicroPython documentation
 - Raspberry Pi Pico documentation
 - Component datasheets
@@ -157,7 +159,6 @@ Yes! Many activities will involve pair programming or team collaboration. The fi
 
 #### How can we share our projects with others?
 We'll discuss ways to:
-
 - Document your work
 - Create project presentations
 - Share code responsibly
@@ -168,7 +169,6 @@ We'll discuss ways to:
 
 #### What if I get stuck on a problem?
 Multiple support options are available:
-
 - In-class help from instructors
 - Peer support
 - Office hours
@@ -176,14 +176,12 @@ Multiple support options are available:
 - Lab assistance sessions
 
 #### Can I get extra help outside of class?
-Yes, instructors will have office hours and may offer additional 
-lab time for students who want extra practice or help.
+Yes, instructors will have office hours and may offer additional lab time for students who want extra practice or help.
 
 ## Course Materials
 
 #### What should I bring to class?
 Typically you'll need:
-
 - Notebook for taking notes
 - Computer (if not provided)
 - Any assigned reading materials
@@ -191,7 +189,6 @@ Typically you'll need:
 
 #### How should I store and transport my projects?
 We'll provide guidance on:
-
 - Component storage
 - Project organization
 - Safe transport methods
@@ -201,7 +198,6 @@ We'll provide guidance on:
 
 #### What makes a good final project?
 Strong final projects typically:
-
 - Solve a real problem or fulfill a genuine need
 - Demonstrate technical skills learned in the course
 - Show creativity and originality
@@ -209,5 +205,4 @@ Strong final projects typically:
 - Function reliably
 
 #### Can I continue working on my project after the course ends?
-Yes! You'll have the knowledge to continue developing and improving
-your projects. We'll discuss ways to extend your learning and continue exploring electronics and programming.
+Yes! You'll have the knowledge to continue developing and improving your projects. We'll discuss ways to extend your learning and continue exploring electronics and programming.
