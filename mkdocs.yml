@@ -27,6 +27,7 @@ nav:
     - Drawing 7-Segment Digits: lessons/07-drawing-digits.md
     - Digit Functions: lessons/09-digit-functions.md
     - Draw Time Functions: lessons/12-draw-time-functions.md
+    - Testing the RTC: lessons/13-testing-the-rtc.md
     - Scale Testing: lessons/15-scale-testing.md
     - Buttons: lessons/05-buttons.md
     - Draw Performance: lessons/06-draw-performance.md
