@@ -18,19 +18,19 @@ nav:
     - AI in the Classroom: setup/05-ai-in-the-classroom.md
   - Lessons:
     - Introduction: lessons/index.md
-    - Hardware Config: lessons/00-hardware-config.md
+    - Hardware Config Files: lessons/00-hardware-config.md
+    - Get Local Time: lessons/01-get-local-time.md
     - Drawing Coordinates: lessons/01-drawing-coordinates.md
     - Displaying Text: lessons/02-display-text.md
     - Drawing a Clock Face: lessons/03-drawing-face.md
     - Larger Fonts: lessons/04-larger-fonts.md
-    - Hardware Config Files: lessons/00-hardware-config.md
-    - Get Local Time: lessons/01-get-local-time.md
+    - Buttons: lessons/05-buttons.md
+    - Setting Time: lessons/06-setting-time.md
     - Drawing 7-Segment Digits: lessons/07-drawing-digits.md
     - Digit Functions: lessons/09-digit-functions.md
     - Draw Time Functions: lessons/12-draw-time-functions.md
     - Testing the RTC: lessons/13-testing-the-rtc.md
     - Scale Testing: lessons/15-scale-testing.md
-    - Buttons: lessons/05-buttons.md
     - Draw Performance: lessons/06-draw-performance.md
     - ILI9341 Display: lessons/30-ili9341.md
     - Machine Info: lessons/40-machine-info.md
@@ -40,7 +40,6 @@ nav:
     - LED Displays:
       - Intro: kits/led-displays/index.md
       - Simple TM1637 Display: kits/led-displays/clock-simple.md
-      - Setting Time: kits/led-displays/setting-time.md
       - Shift Register Displays:
         - Intro: kits/shift-register-clock/index.md
         - kits/led-displays/shift-register-displays.md
