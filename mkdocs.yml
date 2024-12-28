@@ -107,6 +107,8 @@ nav:
     - Concept Dependencies: prompts/03-concept-dependency.md
     - Concept Taxonomies: prompts/04-concept-taxonomy.md
     - Taxonomy Assignments: prompts/05-taxonomy-assignment.md
+  - Glossary: glossary.md
+  - FAQ: faq.md
   - References: references.md
   - Contact: contact.md
   - faq.md
