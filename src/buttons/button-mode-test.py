@@ -1,72 +1,78 @@
-from mp_button import Button
-from time import localtime, sleep
 from machine import Pin
+from utime import localtime, sleep, ticks_ms, ticks_diff
 
+# Pin setup
 mode_pin = Pin(16, Pin.IN, Pin.PULL_UP)
 next_pin = Pin(17, Pin.IN, Pin.PULL_UP)
 previous_pin = Pin(18, Pin.IN, Pin.PULL_UP)
 
-# we create a counter to increment as we press
-# and one to increment as we release
-counter_pressed = 0
-counter_released = 0
-mode = 0 # default clock running
-mode_names = ["run","set hour","set minute","set AM/PM"]
-mode_count = len(mode_names)
+# Time state
 now = localtime()
-hours = now[3]
-minutes = now[4]
-am_pm = 0
+hour = now[3]
+minute = now[4]
+if hour < 12:
+    is_pm = False
+else:
+    is_pm = True
+mode = 0
+mode_names = ["run", "set hour", "set minute", "set AM/PM"]
+mode_count = len(mode_names)
 
-# the following method (function) will be invoked
-# when the button changes state
-# the Button module expects a callback to handle 
-# - pin number
-# - event (Button.PRESSED | Button.RELEASED)
-# the event contains a string 'pressed' or 'released'
-# which can be used in your code to act upon
-def button_mode_irq(button, event):
-    global mode, hours, minutes
-    if event == Button.PRESSED:
-        mode +=1
-        # cycle back to zero if greater than mode_count
-        mode =  mode % mode_count
-        print('new mode:', mode, mode_names[mode])
+# Debounce state
+last_mode_press = 0
+last_next_press = 0
+last_prev_press = 0
+DEBOUNCE_MS = 200
 
-def button_next_irq(button, event):
-    global mode, hours, minutes, am_pm
-    if event == Button.PRESSED:
-        if mode == 1:
-            hours += 1
-        if mode == 2:
-            minutes += 1
-        if mode == 3:
-            if am_pm == 0:
-                am_pm = 1
-            else:
-                am_pm = 0
-        print('next button:', hours, minutes, am_pm)
-            
-def button_previous_irq(button, event):
-    global mode, hours, minutes, am_pm
-    if event == Button.PRESSED:
-        if mode == 1:
-            hours -= 1
-        if mode == 2:
-            minutes -= 1
-        if mode == 3:
-            if am_pm == 0:
-                am_pm = 1
-            else:
-                am_pm = 0
-        print('prev button:', hours, minutes, am_pm)
+def format_time():
+    return f"{hour:d}:{minute:02d} {'PM' if is_pm else 'AM'}"
 
-button_mode = Button(16, False, button_mode_irq, internal_pullup = True, debounce_time = 100)
-button_next = Button(17, False, button_next_irq, internal_pullup = True, debounce_time = 100)
-button_previous = Button(18, False, button_previous_irq, internal_pullup = True, debounce_time = 100)
+def handle_mode(pin):
+    global mode, last_mode_press
+    current_time = ticks_ms()
+    if ticks_diff(current_time, last_mode_press) > DEBOUNCE_MS:
+        mode = (mode + 1) % mode_count
+        print(f"Mode: {mode_names[mode]}")
+        last_mode_press = current_time
 
-print("year:", now[0], "month:", now[1], "day-of-month:", now[2], "hours", now[3], "minutes:", now[4])
-while(True):
-    button_mode.update()
-    button_next.update()
-    button_previous.update()
+def handle_next(pin):
+    global hour, minute, is_pm, last_next_press
+    current_time = ticks_ms()
+    if ticks_diff(current_time, last_next_press) > DEBOUNCE_MS:
+        if mode == 1:  # Set hour
+            hour = (hour % 12) + 1
+        elif mode == 2:  # Set minute
+            minute = (minute + 1) % 60
+        elif mode == 3:  # Toggle AM/PM
+            is_pm = not is_pm
+        
+        if mode != 0:
+            print(format_time())
+        last_next_press = current_time
+
+def handle_previous(pin):
+    global hour, minute, is_pm, last_prev_press
+    current_time = ticks_ms()
+    if ticks_diff(current_time, last_prev_press) > DEBOUNCE_MS:
+        if mode == 1:  # Set hour
+            hour = ((hour - 2) % 12) + 1
+        elif mode == 2:  # Set minute
+            minute = (minute - 1) % 60
+        elif mode == 3:  # Toggle AM/PM
+            is_pm = not is_pm
+        
+        if mode != 0:
+            print(format_time())
+        last_prev_press = current_time
+
+# Set up interrupts
+mode_pin.irq(trigger=Pin.IRQ_FALLING, handler=handle_mode)
+next_pin.irq(trigger=Pin.IRQ_FALLING, handler=handle_next)
+previous_pin.irq(trigger=Pin.IRQ_FALLING, handler=handle_previous)
+
+# Main loop
+print("Clock started. Press mode button to change settings.")
+while True:
+    if mode == 0:  # Only update display in run mode
+        print(format_time())
+        sleep(1)
