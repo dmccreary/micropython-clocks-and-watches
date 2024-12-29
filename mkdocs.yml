@@ -39,7 +39,7 @@ nav:
     - Introduction Kits: kits/index.md
     - TM1637 LED Kit:
       - Intro: kits/tm1637/index.md
-      - Manually Setting Time: kits/tm1637/manually-setting-time.md
+      - Manually Setting Time: kits/tm1637/manually-time-setting.md
       - Running the Clock: kits/tm1637/running-clock.md
     - LED Displays: 
       - Intro: kits/led-displays/index.md
