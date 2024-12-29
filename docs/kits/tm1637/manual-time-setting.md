@@ -1,5 +1,9 @@
 # Manually Setting the Time
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0fLNS-BfQ48?si=9EUzF7gv-UDJ5R3z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[Setting the Time](https://youtu.be/0fLNS-BfQ48)
+
 Next, we will create a complete program that implements a clock with 
 manual time setting using the three buttons. This is a great practical 
 example that teaches state management and user input handling.
