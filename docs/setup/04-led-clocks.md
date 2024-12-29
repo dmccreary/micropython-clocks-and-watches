@@ -17,9 +17,12 @@ curiosity.
 
 ## Basic Custom LED Circuit Approach
 
-![](../img/wiring-challenge.png)
+<figure markdown>
+  ![](../img/wiring-challenge.png){ width="300" }
+  <figcaption>This LED art-clock used individual RGB LEDs.  Each RGB LED required four independent soldering connections.</figcaption>
+</figure>
 
-Used LEDs requires more wiring and the need to understand how to use
+Using individual LEDs requires more wiring and the need to understand how to use
 current limiting resistors.  This approach promotes lower-level
 understanding of concepts such as current, voltage drop, resistors, current measuring and soldering.
 Students can place the LEDs in any arrangement on foam-core board, plexiglass or wood.
