@@ -19,7 +19,8 @@ def extract_terms_with_definitions(file_path):
 def sort_and_write_glossary(input_file_path, output_file_path):
     terms_with_definitions = extract_terms_with_definitions(input_file_path)
 
-    sorted_terms = sorted(terms_with_definitions.keys())
+    # Changed this line to use case-insensitive sorting
+    sorted_terms = sorted(terms_with_definitions.keys(), key=str.lower)
 
     print(f"Writing to file: {output_file_path}")  # Print the name of the file being written
     

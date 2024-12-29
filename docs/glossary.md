@@ -1,5 +1,3 @@
-# Glossary of Terms DIY Clocks and Watches with MicroPython
-
 #### 12-Hour vs 24-Hour Formats
 Methods for displaying time in either 12-hour (AM/PM) or 24-hour (military) format, including conversion between the two.
 
@@ -149,17 +147,15 @@ A specialized arrangement of LED segments for showing numbers or characters.
 
 **Example:** Creating unique digit patterns using individual LED segments.
 
-#### DS1307
-
-#### DS3231
-A high-precision real-time clock (RTC) integrated circuit with temperature compensation for accurate timekeeping.
-
-**Example:** Using the DS3231 to maintain time accuracy within seconds per month.
-
 #### Date and Calendar Display
 Showing current date information including day of week, month, and year.
 
 **Example:** Formatting and displaying full date alongside time information.
+
+#### datetime Objects
+Programming structures that store date and time information together.
+
+**Example:** Converting between timestamp integers and datetime format.
 
 #### Daylight Saving Time
 A seasonal time adjustment typically involving a one-hour shift.
@@ -256,6 +252,13 @@ Creating small indicators around a clock face.
 
 **Example:** Marking hours and minutes on an analog display.
 
+#### DS1307
+
+#### DS3231
+A high-precision real-time clock (RTC) integrated circuit with temperature compensation for accurate timekeeping.
+
+**Example:** Using the DS3231 to maintain time accuracy within seconds per month.
+
 #### E-Paper Display
 A low-power screen technology that maintains its image without constant power.
 
@@ -304,11 +307,6 @@ Reusable blocks of code that perform specific tasks.
 
 **Example:** Creating a function to convert between 12-hour and 24-hour formats.
 
-#### GPIO Pin
-General Purpose Input/Output connection on a microcontroller that can be programmed to send or receive electrical signals.
-
-**Example:** Using GPIO pin 16 for the mode button: `mode_pin = Pin(16, Pin.IN, Pin.PULL_UP)`
-
 #### Generating Waveforms for Audio
 Creating electrical signals for producing sounds and tones using digital-to-analog conversion or PWM.
 
@@ -318,6 +316,11 @@ Creating electrical signals for producing sounds and tones using digital-to-anal
 A visual artifact where previous images remain partially visible on certain display types.
 
 **Example:** Using display clearing techniques on e-paper screens.
+
+#### GPIO Pin
+General Purpose Input/Output connection on a microcontroller that can be programmed to send or receive electrical signals.
+
+**Example:** Using GPIO pin 16 for the mode button: `mode_pin = Pin(16, Pin.IN, Pin.PULL_UP)`
 
 #### Hardware Documentation
 Technical specifications and usage instructions for electronic components.
@@ -360,6 +363,11 @@ A digital timepiece display using light-emitting diodes arranged in segments or 
 #### LED Matrix
 An array of light-emitting diodes arranged in rows and columns that can display patterns, numbers, or text.
 
+#### Libraries
+Collections of pre-written code that provide useful functions and features.
+
+**Example:** Using the `math` module for trigonometric calculations.
+
 #### LiPo Charging
 The process of safely recharging Lithium Polymer batteries.
 
@@ -370,15 +378,15 @@ Electronic system for safely charging Lithium Polymer batteries while protecting
 
 **Example:** Implementing USB charging with voltage regulation and protection features.
 
-#### Libraries
-Collections of pre-written code that provide useful functions and features.
-
-**Example:** Using the `math` module for trigonometric calculations.
-
 #### Loading Drivers
 Installing and initializing software that controls specific hardware components.
 
 **Example:** Importing and configuring TFT display drivers.
+
+#### localtime() Function
+A MicroPython function that returns the current time as a tuple of values.
+
+**Example:** `year, month, day, hour, minute, second = localtime()`
 
 #### Logging
 The practice of recording program events and data for debugging or analysis.
@@ -400,6 +408,11 @@ A collection of mathematical functions for complex calculations.
 
 **Example:** Using trigonometry to position clock hands.
 
+#### math.sin() and math.cos()
+Trigonometric functions used for calculating positions on circular displays.
+
+**Example:** Computing analog clock hand coordinates.
+
 #### Menu System
 An interface allowing users to navigate options and settings.
 
@@ -418,15 +431,20 @@ Built-in functions for creating visual elements on displays.
 
 **Example:** Using framebuf methods to draw shapes and text.
 
+#### MicroPython network
+A module providing Wi-Fi and network connectivity functions.
+
+**Example:** Connecting to wireless networks for time synchronization.
+
 #### MicroPython Syntax
 The specific programming language rules and structure for MicroPython code.
 
 **Example:** Using Python-style indentation for code blocks.
 
-#### MicroPython network
-A module providing Wi-Fi and network connectivity functions.
+#### micropython-ufont Library
+A specialized library for handling compact font rendering in MicroPython applications.
 
-**Example:** Connecting to wireless networks for time synchronization.
+**Example:** Loading custom digit fonts optimized for small displays.
 
 #### Network Time Protocol (NTP)
 A method for synchronizing time over the internet.
@@ -435,14 +453,6 @@ A method for synchronizing time over the internet.
 
 #### OLED Display
 A thin, bright display that uses organic light-emitting diodes to show text and graphics without a backlight.
-
-#### PWM
-Pulse Width Modulation - a technique for creating varying levels of brightness or speed by rapidly switching a signal on and off.
-
-#### PWM Audio
-Using Pulse Width Modulation to generate sounds and tones.
-
-**Example:** Creating alarm beeps and hourly chimes.
 
 #### Partial Refresh
 Updating only changed portions of a display to improve efficiency.
@@ -453,6 +463,8 @@ Updating only changed portions of a display to improve efficiency.
 Techniques for refreshing only the changed portions of a display to improve efficiency and reduce flicker.
 
 **Example:** Updating only the seconds digits while leaving hours and minutes static.
+
+
 
 #### Pedometer
 A feature that counts steps using motion sensor data.
@@ -477,6 +489,14 @@ An electronic component that ensures a consistent voltage level on input pins wh
 
 **Example:** Using internal pull-up resistors with `Pin.PULL_UP` for button inputs.
 
+#### PWM
+Pulse Width Modulation - a technique for creating varying levels of brightness or speed by rapidly switching a signal on and off.
+
+#### PWM Audio
+Using Pulse Width Modulation to generate sounds and tones.
+
+**Example:** Creating alarm beeps and hourly chimes.
+
 #### Raspberry Pi Pico W
 A small, low-cost microcontroller board with built-in wireless capabilities, designed for learning and DIY projects.
 
@@ -494,14 +514,6 @@ A comprehensive explanation of how real-time clock modules maintain accurate tim
 A input device that converts rotational movement into digital signals.
 
 **Example:** Using encoder rotation to adjust time settings.
-
-#### SPI
-Serial Peripheral Interface - a fast communication protocol for connecting digital components using multiple signal lines.
-
-#### SPI Interface
-A high-speed serial communication protocol for connecting displays and sensors.
-
-**Example:** Transferring data to TFT displays efficiently.
 
 #### Screen Tearing Prevention
 Techniques to avoid visual artifacts caused by updating display content while it's being refreshed.
@@ -573,6 +585,14 @@ Methods for storing and playing audio data for alarms and notifications.
 
 **Example:** Converting WAV files to suitable format for playback.
 
+#### SPI
+Serial Peripheral Interface - a fast communication protocol for connecting digital components using multiple signal lines.
+
+#### SPI Interface
+A high-speed serial communication protocol for connecting displays and sensors.
+
+**Example:** Transferring data to TFT displays efficiently.
+
 #### State Machine
 A programming concept where a system can be in one of several defined states, with specific rules for transitioning between them.
 
@@ -593,20 +613,20 @@ The process of setting a microcontroller's clock using the connected computer's 
 
 **Example:** Using Thonny IDE to automatically update the Pico's RTC when uploading code.
 
-#### TFT Displays
-Thin-film-transistor liquid crystal displays for showing color graphics.
+#### Temperature and Humidity
+Integration of environmental sensors to display current conditions alongside time.
 
-**Example:** Using ST7735 or ILI9341 displays for watch faces.
+**Example:** Reading DHT22 sensor data to show temperature and humidity with clock display.
 
 #### Temperature Sensor
 A component that measures ambient temperature.
 
 **Example:** Displaying current temperature alongside time.
 
-#### Temperature and Humidity
-Integration of environmental sensors to display current conditions alongside time.
+#### TFT Displays
+Thin-film-transistor liquid crystal displays for showing color graphics.
 
-**Example:** Reading DHT22 sensor data to show temperature and humidity with clock display.
+**Example:** Using ST7735 or ILI9341 displays for watch faces.
 
 #### Thonny IDE
 An integrated development environment optimized for MicroPython programming.
@@ -643,23 +663,23 @@ Actions triggered by internal timing mechanisms.
 
 **Example:** Updating display elements at specific intervals.
 
-#### USB Power
-A 5-volt power source available through Universal Serial Bus connections, commonly used for powering small electronic projects.
-
-#### UTC
-Coordinated Universal Time, the primary time standard for global time coordination.
-
-**Example:** Converting local time to UTC for synchronization.
-
 #### Ultra-Low Power
 Operating modes and techniques that minimize energy consumption.
 
 **Example:** Using sleep modes and efficient screen updates.
 
+#### USB Power
+A 5-volt power source available through Universal Serial Bus connections, commonly used for powering small electronic projects.
+
 #### Using 16 Bits to Represent Color
 A color depth specification that allocates 16 bits per pixel, typically with 5 bits for red, 6 for green, and 5 for blue (RGB565 format).
 
 **Example:** Converting RGB colors to 16-bit format for efficient storage and display.
+
+#### UTC
+Coordinated Universal Time, the primary time standard for global time coordination.
+
+**Example:** Converting local time to UTC for synchronization.
 
 #### Wake on Alarm
 Feature that activates the device from sleep mode at specific times.
@@ -701,22 +721,3 @@ A timepiece that displays times for multiple time zones simultaneously.
 
 **Example:** Showing local time alongside other major cities' times.
 
-#### datetime Objects
-Programming structures that store date and time information together.
-
-**Example:** Converting between timestamp integers and datetime format.
-
-#### localtime() Function
-A MicroPython function that returns the current time as a tuple of values.
-
-**Example:** `year, month, day, hour, minute, second = localtime()`
-
-#### math.sin() and math.cos()
-Trigonometric functions used for calculating positions on circular displays.
-
-**Example:** Computing analog clock hand coordinates.
-
-#### micropython-ufont Library
-A specialized library for handling compact font rendering in MicroPython applications.
-
-**Example:** Loading custom digit fonts optimized for small displays.
