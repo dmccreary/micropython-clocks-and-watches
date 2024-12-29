@@ -446,6 +446,14 @@ A specialized library for handling compact font rendering in MicroPython applica
 
 **Example:** Loading custom digit fonts optimized for small displays.
 
+### NeoPixel
+
+A programmable light-emitting diode that combines red, green, and blue elements in a single package with built-in control circuitry.
+
+NeoPixel's strips only require three wires: GND, 5V and data.  It makes creating clock display patterns very easy.
+
+**Example:** Creating a ring of 12 individually addressable RGB LEDs to mark hour positions on a clock face.
+
 #### Network Time Protocol (NTP)
 A method for synchronizing time over the internet.
 
@@ -463,8 +471,6 @@ Updating only changed portions of a display to improve efficiency.
 Techniques for refreshing only the changed portions of a display to improve efficiency and reduce flicker.
 
 **Example:** Updating only the seconds digits while leaving hours and minutes static.
-
-
 
 #### Pedometer
 A feature that counts steps using motion sensor data.

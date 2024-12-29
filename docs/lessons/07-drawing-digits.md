@@ -7,7 +7,7 @@ of seven individual lights to display a single digit.  These are called
 [Seven Segment Displays](https://en.wikipedia.org/wiki/Seven-segment_display).  An
 example is shown in the image below:
 
-![Seven Segment Display](../../img/seven-segment-display.png){ width="200" }
+![Seven Segment Display](../img/seven-segment-display.png){ width="200" }
 
 The segments are labeled "a" through "g" starting at the top and
 going around in a clockwise direction.  Note that the seventh segment is in
@@ -29,7 +29,7 @@ for any given digit.
 
 We will also need to convert the segment letters into integers.  These integers will form the index of an array.
 
-![Seven Segment Display Numeric Codes](../../img/seven-segment-display-numbers.png){ width="400" }
+![Seven Segment Display Numeric Codes](../img/seven-segment-display-numbers.png){ width="400" }
 
 To write our code, we ask, for any given digit, is the segment on or off?
 
@@ -213,7 +213,7 @@ def drawDigit(digit, x, y, width, height, color):
   # get a list of the segments that are on for this digit
   segmentOn = segmentMapping[digit];
   
-  # Draw the horizontal segments: top, bottem, middle
+  # Draw the horizontal segments: top, bottom, middle
   for i in [0, 3, 6]:
     if (segmentOn[i]):
       if (i==0): # top
@@ -278,4 +278,4 @@ will also need to use a rectangle, not a line.  This
 requires we figure out the exact width and height
 before we draw.
 
-We explore that function in the next lesson.
+We explore the line width function in the next lesson.

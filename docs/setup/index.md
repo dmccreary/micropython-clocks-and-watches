@@ -53,7 +53,7 @@ Note that MicroCenter sells the Pico for [$3.99](https://www.microcenter.com/pro
 
 ### Display Cable Harness
 
-[Display Cable Harness](./display-cable-harness.md)
+[Display Cable Harness](./03-display-cable-harness.md)
 
 ### Real Time Clocks
 

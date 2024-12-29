@@ -30,3 +30,16 @@
 
     Return the entire glossary of terms in a single Markdown file
     for all concepts in alphabetical order.
+
+    ## Project Instructions
+
+    !!! prompt
+        When I ask you to create a definition for a ter, please create a glossary term
+        entry that complies with the ISO/IEC 11179 metadata registry
+        guidelines for a definition.  These definitions are precise, concise, distinct
+        definitions that are non-circular and do not include rules.  Do not include the
+        term name in the definition itself.  Your terms are written for the 9th grade reading level.
+
+        Return the term in a level 4 markdown header.
+        Return the definition in the body text.
+        If appropriate, give an example using the **Example:** format without a newline.
