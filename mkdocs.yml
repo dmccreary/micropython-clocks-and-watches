@@ -37,7 +37,11 @@ nav:
     - lessons/50-ds1307-breadboard.md
   - Kits:
     - Introduction Kits: kits/index.md
-    - LED Displays:
+    - TM1637 LED Kit:
+      - Intro: kits/tm1637/index.md
+      - Manually Setting Time: kits/tm1637/manually-setting-time.md
+      - Running the Clock: kits/tm1637/running-clock.md
+    - LED Displays: 
       - Intro: kits/led-displays/index.md
       - Simple TM1637 Display: kits/led-displays/clock-simple.md
       - Shift Register Displays:
