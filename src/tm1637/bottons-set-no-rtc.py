@@ -9,6 +9,7 @@ PM_PIN = 25
 mode_pin = Pin(16, Pin.IN, Pin.PULL_UP)
 next_pin = Pin(17, Pin.IN, Pin.PULL_UP)
 previous_pin = Pin(18, Pin.IN, Pin.PULL_UP)
+# PM indicator LED
 pm_pin = Pin(PM_PIN, Pin.OUT)
 
 # Time state
