@@ -1,3 +1,8 @@
+#### 12-Hour vs 24-Hour Formats
+Methods for displaying time in either 12-hour (AM/PM) or 24-hour (military) format, including conversion between the two.
+
+**Example:** Converting 13:00 to 1:00 PM and handling the AM/PM indicator.
+
 #### 3D Printing Watch Enclosures
 A process of creating custom protective cases for watch components using additive manufacturing technology.
 
@@ -79,6 +84,11 @@ The process of modifying text appearance by loading and applying different typef
 
 **Example:** Using the micropython-ufont library to load compact digital number styles.
 
+#### Chimes
+Musical or tone sequences played at specific intervals or times.
+
+**Example:** Playing Westminster quarter-hour chimes using PWM audio output.
+
 #### Chronograph
 A timepiece with both timekeeping and stopwatch capabilities.
 
@@ -91,6 +101,11 @@ Dynamic changes in display colors to create visual effects or indicate status.
 The process of transforming between different color representation systems.
 
 **Example:** Converting RGB colors to 16-bit format for TFT displays.
+
+#### Color Conversion & Palettes
+Methods for transforming between different color representations and managing limited color sets.
+
+**Example:** Converting RGB colors to display-specific formats and creating custom color themes.
 
 #### Color Depth
 The number of bits used to represent colors in a display.
@@ -106,6 +121,11 @@ The ability to handle multiple tasks or events simultaneously in a program.
 Programming statements that perform different actions based on whether a condition is true or false.
 
 **Example:** Switching between 12-hour and 24-hour time formats.
+
+#### Connecting Speakers
+Methods for attaching and controlling audio output devices to create sound effects and alarms.
+
+**Example:** Wiring a piezo speaker to a PWM-capable GPIO pin for generating tones.
 
 #### Console Output
 Text-based information displayed in the development environment for debugging.
@@ -128,6 +148,16 @@ A specialized arrangement of LED segments for showing numbers or characters.
 **Example:** Creating unique digit patterns using individual LED segments.
 
 #### DS1307
+
+#### DS3231
+A high-precision real-time clock (RTC) integrated circuit with temperature compensation for accurate timekeeping.
+
+**Example:** Using the DS3231 to maintain time accuracy within seconds per month.
+
+#### Date and Calendar Display
+Showing current date information including day of week, month, and year.
+
+**Example:** Formatting and displaying full date alongside time information.
 
 #### Daylight Saving Time
 A seasonal time adjustment typically involving a one-hour shift.
@@ -229,7 +259,10 @@ A low-power screen technology that maintains its image without constant power.
 
 **Example:** Using partial updates to change only modified portions of the display.
 
-#### Event Handler
+#### Error Handling and Recovery
+Techniques for detecting and recovering from timing errors, power issues, or communication failures.
+
+**Example:** Implementing watchdog timers and automatic resynchronization after power loss.#### Event Handler
 A function that responds to specific occurrences like button presses or timer updates.
 
 **Example:** The `button_mode_irq` function handles mode button press events.
@@ -274,6 +307,11 @@ General Purpose Input/Output connection on a microcontroller that can be program
 
 **Example:** Using GPIO pin 16 for the mode button: `mode_pin = Pin(16, Pin.IN, Pin.PULL_UP)`
 
+#### Generating Waveforms for Audio
+Creating electrical signals for producing sounds and tones using digital-to-analog conversion or PWM.
+
+**Example:** Synthesizing different frequencies for alarm sounds and hourly chimes.
+
 #### Ghosting
 A visual artifact where previous images remain partially visible on certain display types.
 
@@ -292,6 +330,11 @@ Digital components that communicate using the I2C protocol to provide measuremen
 
 **Example:** Reading temperature and humidity data for weather display.
 
+#### Implementing Clock Themes
+Creating customizable visual styles for clock displays, including colors, fonts, and layouts.
+
+**Example:** Allowing users to switch between day/night themes or seasonal variations.
+
 #### Incremental Drawing
 Updating only the necessary portions of a display to improve efficiency.
 
@@ -307,6 +350,11 @@ A text-based data format commonly used for exchanging information with web servi
 
 **Example:** Parsing weather data from online APIs.
 
+#### LED Clock Displays
+A digital timepiece display using light-emitting diodes arranged in segments or matrices to show time information.
+
+**Example:** Using a four-digit seven-segment LED display to show hours and minutes.
+
 #### LED Matrix
 An array of light-emitting diodes arranged in rows and columns that can display patterns, numbers, or text.
 
@@ -314,6 +362,11 @@ An array of light-emitting diodes arranged in rows and columns that can display 
 The process of safely recharging Lithium Polymer batteries.
 
 **Example:** Implementing USB charging circuits with protection features.
+
+#### LiPo Charging Circuit
+Electronic system for safely charging Lithium Polymer batteries while protecting against overcharge and overdischarge.
+
+**Example:** Implementing USB charging with voltage regulation and protection features.
 
 #### Libraries
 Collections of pre-written code that provide useful functions and features.
@@ -330,6 +383,11 @@ The practice of recording program events and data for debugging or analysis.
 
 **Example:** Saving timing discrepancies to investigate accuracy issues.
 
+#### Logging Time Data to an SD Card
+Recording timestamped information to external storage for debugging or data collection.
+
+**Example:** Saving temperature readings with timestamps every hour.
+
 #### Loops
 Programming structures that repeat code blocks multiple times.
 
@@ -344,6 +402,11 @@ A collection of mathematical functions for complex calculations.
 An interface allowing users to navigate options and settings.
 
 **Example:** Creating hierarchical settings menus for watch configuration.
+
+#### Menu Systems for Watch Settings
+Hierarchical interface structures for configuring watch parameters and features.
+
+**Example:** Creating nested menus for time, alarm, and display settings.
 
 #### MicroPython
 A streamlined version of Python programming language designed to run on microcontrollers and embedded systems.
@@ -384,6 +447,11 @@ Updating only changed portions of a display to improve efficiency.
 
 **Example:** Refreshing only the seconds digits each update.
 
+#### Partial Screen Updates
+Techniques for refreshing only the changed portions of a display to improve efficiency and reduce flicker.
+
+**Example:** Updating only the seconds digits while leaving hours and minutes static.
+
 #### Pedometer
 A feature that counts steps using motion sensor data.
 
@@ -396,6 +464,11 @@ A metal connector on electronic components that carries electrical signals or po
 Techniques for minimizing and controlling energy consumption.
 
 **Example:** Using sleep modes and efficient display updates.
+
+#### Power Monitoring
+Methods for measuring and tracking power consumption in battery-operated devices.
+
+**Example:** Logging battery voltage and current draw to optimize device lifetime.
 
 #### Pull-up Resistor
 An electronic component that ensures a consistent voltage level on input pins when buttons or switches are not pressed.
@@ -410,6 +483,11 @@ A specialized chip or circuit that keeps accurate time even when main power is r
 
 **Example:** Using the RTC module to maintain accurate time: `rtc = RTC()`
 
+#### Real-time Clock (RTC) Overview
+A comprehensive explanation of how real-time clock modules maintain accurate time, including initialization, synchronization, and backup power considerations.
+
+**Example:** Understanding how the RTC maintains time even when main power is disconnected.
+
 #### Rotary Encoder
 A input device that converts rotational movement into digital signals.
 
@@ -422,6 +500,11 @@ Serial Peripheral Interface - a fast communication protocol for connecting digit
 A high-speed serial communication protocol for connecting displays and sensors.
 
 **Example:** Transferring data to TFT displays efficiently.
+
+#### Screen Tearing Prevention
+Techniques to avoid visual artifacts caused by updating display content while it's being refreshed.
+
+**Example:** Using vsync or double buffering to ensure clean display updates.
 
 #### Screen Update
 The process of refreshing display contents to show new information.
@@ -443,6 +526,21 @@ Configuring the internal timekeeping system with accurate time.
 
 **Example:** Updating RTC time from an external time source.
 
+#### Setting Time with Buttons
+Interface design and implementation for adjusting clock time using physical buttons.
+
+**Example:** Using mode, increment, and decrement buttons to set hours and minutes.
+
+#### Setting Up I²C Communication
+Configuring and using the Inter-Integrated Circuit (I²C) protocol for connecting multiple devices.
+
+**Example:** Initializing I²C bus for communicating with RTC and sensor modules.
+
+#### Setting Up Wi‑Fi on the Pico W
+Process of configuring wireless network connectivity on the Raspberry Pi Pico W microcontroller.
+
+**Example:** Connecting to a local network using SSID and password credentials.
+
 #### Seven-Segment Display
 A display made of seven LED segments plus a decimal point that can show numbers and some letters.
 
@@ -463,6 +561,11 @@ Managing when the device enters and exits low-power states.
 
 **Example:** Programming wake-up times for hourly updates.
 
+#### Smartwatch Displays
+Advanced display modules designed specifically for wearable devices, optimizing size, power consumption, and readability.
+
+**Example:** Using a small, high-resolution display with automatic brightness adjustment.
+
 #### Sound Encoding
 Methods for storing and playing audio data for alarms and notifications.
 
@@ -473,6 +576,21 @@ A programming concept where a system can be in one of several defined states, wi
 
 **Example:** Clock modes including "run", "set hour", "set minute", and "set AM/PM".
 
+#### Step Counting (Pedometer)
+Using motion sensors to detect and count walking steps for fitness tracking.
+
+**Example:** Processing accelerometer data to identify step patterns and maintain daily count.
+
+#### Stopwatch
+A timing device that measures elapsed time from a starting point, typically with precision to fractions of a second.
+
+**Example:** Implementing start, stop, and lap timing functions with millisecond accuracy.
+
+#### Synchronizing Time from the PC
+The process of setting a microcontroller's clock using the connected computer's time.
+
+**Example:** Using Thonny IDE to automatically update the Pico's RTC when uploading code.
+
 #### TFT Displays
 Thin-film-transistor liquid crystal displays for showing color graphics.
 
@@ -482,6 +600,11 @@ Thin-film-transistor liquid crystal displays for showing color graphics.
 A component that measures ambient temperature.
 
 **Example:** Displaying current temperature alongside time.
+
+#### Temperature and Humidity
+Integration of environmental sensors to display current conditions alongside time.
+
+**Example:** Reading DHT22 sensor data to show temperature and humidity with clock display.
 
 #### Thonny IDE
 An integrated development environment optimized for MicroPython programming.
@@ -502,6 +625,11 @@ Process of updating device time from an accurate external source.
 A region that observes a uniform standard time.
 
 **Example:** Converting between local time and UTC.
+
+#### Time-Based Tasks with uasyncio
+Scheduling and managing time-dependent operations using MicroPython's asynchronous I/O framework.
+
+**Example:** Updating multiple display elements at different intervals without blocking.
 
 #### Timer
 A system resource that generates regular time-based events.
@@ -526,10 +654,20 @@ Operating modes and techniques that minimize energy consumption.
 
 **Example:** Using sleep modes and efficient screen updates.
 
+#### Using 16 Bits to Represent Color
+A color depth specification that allocates 16 bits per pixel, typically with 5 bits for red, 6 for green, and 5 for blue (RGB565 format).
+
+**Example:** Converting RGB colors to 16-bit format for efficient storage and display.
+
 #### Wake on Alarm
 Feature that activates the device from sleep mode at specific times.
 
 **Example:** Waking the display for scheduled notifications.
+
+#### Watch Face Design
+Principles and techniques for creating visually appealing and functional clock displays.
+
+**Example:** Balancing aesthetics and readability in analog and digital layouts.
 
 #### Watchdog Timer
 A hardware feature that resets the system if the program stops responding.
@@ -539,7 +677,9 @@ A hardware feature that resets the system if the program stops responding.
 #### Weather Updates
 Real-time environmental data obtained through internet services.
 
-**Example:** Displaying current conditions alongside time.#### Web Services
+**Example:** Displaying current conditions alongside time.
+
+#### Web Services
 Online resources that provide data or functionality through standard internet protocols.
 
 **Example:** Fetching current time from an internet time server for clock synchronization.
@@ -548,6 +688,11 @@ Online resources that provide data or functionality through standard internet pr
 Hardware that enables wireless network connectivity.
 
 **Example:** Connecting to the internet for time synchronization.
+
+#### Wi‑Fi–Based Weather Updates
+Retrieving and displaying current weather conditions using wireless internet connectivity.
+
+**Example:** Fetching temperature, humidity, and forecast data from online weather services.
 
 #### World Clock
 A timepiece that displays times for multiple time zones simultaneously.
@@ -568,4 +713,9 @@ A MicroPython function that returns the current time as a tuple of values.
 Trigonometric functions used for calculating positions on circular displays.
 
 **Example:** Computing analog clock hand coordinates.
+
+#### micropython-ufont Library
+A specialized library for handling compact font rendering in MicroPython applications.
+
+**Example:** Loading custom digit fonts optimized for small displays.
 

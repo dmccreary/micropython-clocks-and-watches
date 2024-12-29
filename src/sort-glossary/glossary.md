@@ -988,3 +988,155 @@ Principles and techniques for creating visually appealing and functional clock d
 Techniques for detecting and recovering from timing errors, power issues, or communication failures.
 
 **Example:** Implementing watchdog timers and automatic resynchronization after power loss.
+
+#### LED Clock Displays
+A digital timepiece display using light-emitting diodes arranged in segments or matrices to show time information.
+
+**Example:** Using a four-digit seven-segment LED display to show hours and minutes.
+
+#### Real-time Clock (RTC) Overview
+A comprehensive explanation of how real-time clock modules maintain accurate time, including initialization, synchronization, and backup power considerations.
+
+**Example:** Understanding how the RTC maintains time even when main power is disconnected.
+
+#### Synchronizing Time from the PC
+The process of setting a microcontroller's clock using the connected computer's time.
+
+**Example:** Using Thonny IDE to automatically update the Pico's RTC when uploading code.
+
+#### Stopwatch
+A timing device that measures elapsed time from a starting point, typically with precision to fractions of a second.
+
+**Example:** Implementing start, stop, and lap timing functions with millisecond accuracy.
+
+#### 12-Hour vs 24-Hour Formats
+Methods for displaying time in either 12-hour (AM/PM) or 24-hour (military) format, including conversion between the two.
+
+**Example:** Converting 13:00 to 1:00 PM and handling the AM/PM indicator.
+
+#### Setting Time with Buttons
+Interface design and implementation for adjusting clock time using physical buttons.
+
+**Example:** Using mode, increment, and decrement buttons to set hours and minutes.
+
+#### Implementing Clock Themes
+Creating customizable visual styles for clock displays, including colors, fonts, and layouts.
+
+**Example:** Allowing users to switch between day/night themes or seasonal variations.
+
+#### Connecting Speakers
+Methods for attaching and controlling audio output devices to create sound effects and alarms.
+
+**Example:** Wiring a piezo speaker to a PWM-capable GPIO pin for generating tones.
+
+#### Temperature and Humidity
+Integration of environmental sensors to display current conditions alongside time.
+
+**Example:** Reading DHT22 sensor data to show temperature and humidity with clock display.
+
+#### Partial Screen Updates
+Techniques for refreshing only the changed portions of a display to improve efficiency and reduce flicker.
+
+**Example:** Updating only the seconds digits while leaving hours and minutes static.
+
+
+
+#### Setting Up Wi‑Fi on the Pico W
+Process of configuring wireless network connectivity on the Raspberry Pi Pico W microcontroller.
+
+**Example:** Connecting to a local network using SSID and password credentials.
+
+#### Smartwatch Displays
+Advanced display modules designed specifically for wearable devices, optimizing size, power consumption, and readability.
+
+**Example:** Using a small, high-resolution display with automatic brightness adjustment.
+
+#### Using 16 Bits to Represent Color
+A color depth specification that allocates 16 bits per pixel, typically with 5 bits for red, 6 for green, and 5 for blue (RGB565 format).
+
+**Example:** Converting RGB colors to 16-bit format for efficient storage and display.
+
+#### micropython-ufont Library
+A specialized library for handling compact font rendering in MicroPython applications.
+
+**Example:** Loading custom digit fonts optimized for small displays.
+
+#### Time-Based Tasks with uasyncio
+Scheduling and managing time-dependent operations using MicroPython's asynchronous I/O framework.
+
+**Example:** Updating multiple display elements at different intervals without blocking.
+
+#### Logging Time Data to an SD Card
+Recording timestamped information to external storage for debugging or data collection.
+
+**Example:** Saving temperature readings with timestamps every hour.
+
+#### Menu Systems for Watch Settings
+Hierarchical interface structures for configuring watch parameters and features.
+
+**Example:** Creating nested menus for time, alarm, and display settings.
+
+#### Generating Waveforms for Audio
+Creating electrical signals for producing sounds and tones using digital-to-analog conversion or PWM.
+
+**Example:** Synthesizing different frequencies for alarm sounds and hourly chimes.
+
+#### Color Conversion & Palettes
+Methods for transforming between different color representations and managing limited color sets.
+
+**Example:** Converting RGB colors to display-specific formats and creating custom color themes.
+
+#### Wi‑Fi–Based Weather Updates
+Retrieving and displaying current weather conditions using wireless internet connectivity.
+
+**Example:** Fetching temperature, humidity, and forecast data from online weather services.
+
+#### Step Counting (Pedometer)
+Using motion sensors to detect and count walking steps for fitness tracking.
+
+**Example:** Processing accelerometer data to identify step patterns and maintain daily count.
+
+#### LiPo Charging Circuit
+Electronic system for safely charging Lithium Polymer batteries while protecting against overcharge and overdischarge.
+
+**Example:** Implementing USB charging with voltage regulation and protection features.
+
+#### DS3231
+A high-precision real-time clock (RTC) integrated circuit with temperature compensation for accurate timekeeping.
+
+**Example:** Using the DS3231 to maintain time accuracy within seconds per month.
+
+#### Chimes
+Musical or tone sequences played at specific intervals or times.
+
+**Example:** Playing Westminster quarter-hour chimes using PWM audio output.
+
+#### Setting Up I²C Communication
+Configuring and using the Inter-Integrated Circuit (I²C) protocol for connecting multiple devices.
+
+**Example:** Initializing I²C bus for communicating with RTC and sensor modules.
+
+#### Screen Tearing Prevention
+Techniques to avoid visual artifacts caused by updating display content while it's being refreshed.
+
+**Example:** Using vsync or double buffering to ensure clean display updates.
+
+#### Power Monitoring
+Methods for measuring and tracking power consumption in battery-operated devices.
+
+**Example:** Logging battery voltage and current draw to optimize device lifetime.
+
+#### Date and Calendar Display
+Showing current date information including day of week, month, and year.
+
+**Example:** Formatting and displaying full date alongside time information.
+
+#### Watch Face Design
+Principles and techniques for creating visually appealing and functional clock displays.
+
+**Example:** Balancing aesthetics and readability in analog and digital layouts.
+
+#### Error Handling and Recovery
+Techniques for detecting and recovering from timing errors, power issues, or communication failures.
+
+**Example:** Implementing watchdog timers and automatic resynchronization after power loss.
