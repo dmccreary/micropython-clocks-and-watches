@@ -110,6 +110,9 @@ nav:
     - Concept Dependencies: prompts/03-concept-dependency.md
     - Concept Taxonomies: prompts/04-concept-taxonomy.md
     - Taxonomy Assignments: prompts/05-taxonomy-assignment.md
+    - Generating a Banner Image: prompts/06-banner-image.md
+    - Generating a FAQ: prompts/07-faq.md
+    - Generating a Glossary of Terms: prompts/08-glossary.md
   - Glossary: glossary.md
   - FAQ: faq.md
   - References: references.md
