@@ -1592,7 +1592,7 @@ of a standard 128x64 monochrome OLED display:</p>
   <span class="c1"># get a list of the segments that are on for this digit</span>
   <span class="n">segmentOn</span> <span class="o">=</span> <span class="n">segmentMapping</span><span class="p">[</span><span class="n">digit</span><span class="p">];</span>
 
-  <span class="c1"># Draw the horizontal segments: top, bottem, middle</span>
+  <span class="c1"># Draw the horizontal segments: top, bottom, middle</span>
   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]:</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">segmentOn</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
       <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span> <span class="c1"># top</span>
@@ -1654,7 +1654,7 @@ on the thickness of the segment.  We
 will also need to use a rectangle, not a line.  This
 requires we figure out the exact width and height
 before we draw.</p>
-<p>We explore that function in the next lesson.</p>
+<p>We explore the line width function in the next lesson.</p>
 
 
 

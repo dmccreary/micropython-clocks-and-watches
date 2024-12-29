@@ -434,6 +434,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    LED Clocks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -443,6 +454,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-custom-led-circuit-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Custom LED Circuit Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neopixel-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      NeoPixel Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -881,6 +938,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-custom-led-circuit-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Custom LED Circuit Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neopixel-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      NeoPixel Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -904,6 +996,48 @@ provide a set of "Challenges" for students to go
 further.  One challenge is can you use simple LEDs
 to create your own clock?  This is where creativity
 comes in.</p>
+<p>Much of the creativity in this course relies on displaying time
+information in creative ways using both simple LEDs as well
+as using LED strips also known as NeoPixel strips.</p>
+<p>There are tradeoffs for each of these approaches.  There is
+no single answer and each student will have different
+curiosity.</p>
+<h2 id="basic-custom-led-circuit-approach">Basic Custom LED Circuit Approach</h2>
+<p><img alt="" src="../../img/wiring-challenge.png" /></p>
+<p>Used LEDs requires more wiring and the need to understand how to use
+current limiting resistors.  This approach promotes lower-level
+understanding of concepts such as current, voltage drop, resistors, current measuring and soldering.
+Students can place the LEDs in any arrangement on foam-core board, plexiglass or wood.</p>
+<p>Remember that a digit requires seven segments with each segment requiring up to
+3 LEDs.  For a four digit clock that means you will need around 70 LEDs.</p>
+<h2 id="neopixel-approach">NeoPixel Approach</h2>
+<figure>
+<p><img alt="12 segment NeoPixel ring" src="../../img/neopixel-ring-12.jpg" width="300" />
+  </p>
+<figcaption>This 12-element NeoPixel ring is perfect for a clock face.  Different colors
+can be used to display the hours, minutes and seconds.</figcaption>
+</figure>
+<p><a href="../../glossary/#neopixel">NeoPixels</a> are connivent since you can wire an entire clock display including the seven-segments for four digits, the flashing colon and the AM/PM indicator with a single LED strip or a string of
+addressable LED lights.  The focus will be on programming these strips to
+display the correct time.</p>
+<p>You can get NeoPixels in strips (the most common) but also in strings that can be
+easily moved into the pattern of an 7-segment display.</p>
+<figure>
+<p><img alt="NeoPixel String" src="../../img/neopixel-string.png" width="300" />
+  </p>
+<figcaption>The NeoPixel string allows you to easily place the pixels in the shape of a 7-segment digit.</figcaption>
+</figure>
+<p>For more examples of using NeoPixels with MicroPython, please refer to the <a href="https://dmccreary.github.io/moving-rainbow/">Moving Rainbow</a> website.  This site has detailed tutorials appropriate for begging Python students.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>
+<p><a href="https://gist.github.com/danmou/ced74b8df3719988a7c8294f9f6ffb25">Daniel Mouritzen NeoPixel Clock in MicroPython</a> - this uses a ESP32 but the code should be mostly the same.</p>
+</li>
+<li>
+<p><a href="https://www.instructables.com/LED-Arduino-Clock/">LED Arduino Clock on Instructables by Trask River Productions</a> This incredible clock uses 5 packages of 25 RGB LEDs.  Each LED requires four connections for a total of almost
+500 connections that must to be manually soldered and tested.</p>
+</li>
+</ul>
 
 
 
