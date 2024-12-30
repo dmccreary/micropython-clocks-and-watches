@@ -17,8 +17,22 @@ way to try out different designs.  This web app allows you to change the format 
 
 ## Inspirational Electronic Clocks
 
-["The Clock" using 1,916 parts by Gislain Benoit](https://techno-logic-art.com/clock.htm)
+* [Simple Pico Clock](https://www.instructables.com/Simple-Pico-Clock/)
 
-[Divoom Times Gate Clock](https://divoom.com/products/time-gate) - Five 128x128 color LCD displays.
+* [PicoClock - RPI PICO Multifunctional Digital Clock](https://www.instructables.com/PicoClock-RPI-PICO-Multifunctional-Digital-Clock/)
 
-[ClocTech Tube Shaped Nixie Clock](https://clocteck.com/products/clocteck-nixie-tube-clock-wood-rgb-digital-clock-with-beautiful-package) available for [$49](https://www.walmart.com/ip/Nixie-Tube-Clock-Walnut-Digital-Clock-Support-Wi-Fi-Time-Calibration-Alarm-and-12-24H-Display-No-Assemble-Required/5266860953?wmlspartner=wlpa&selectedSellerId=101191931) at WalMart.  This clock shines an LED into a Plexiglass plate to give the appearance of a 3D Nixie Tube.
+* [Raspberry Pi Pico W Fibonacci Clock Project](https://divoom.com/products/time-gate) - [YouTube Video](https://www.youtube.com/watch?v=TrzDxgc1X7A)
+
+* ["The Clock" using 1,916 parts by Gislain Benoit](https://techno-logic-art.com/clock.htm)
+
+* [Divoom Times Gate Clock](https://divoom.com/products/time-gate) - Five 128x128 color LCD displays.
+
+* [ClocTech Tube Shaped Nixie Clock](https://clocteck.com/products/clocteck-nixie-tube-clock-wood-rgb-digital-clock-with-beautiful-package) available for [$49](https://www.walmart.com/ip/Nixie-Tube-Clock-Walnut-Digital-Clock-Support-Wi-Fi-Time-Calibration-Alarm-and-12-24H-Display-No-Assemble-Required/5266860953?wmlspartner=wlpa&selectedSellerId=101191931) at WalMart.  This clock shines an LED into a Plexiglass plate to give the appearance of a 3D Nixie Tube.
+
+* [Single Digit Clock with 7 Servos](https://www.instructables.com/Single-Digit-Clock/)
+
+## Data Sheets
+
+### Battery Management
+
+[HT4928S - T6845C Data sheet][https://components101.com/sites/default/files/component_datasheet/T6845C-Datasheet.pdf] 8 pin battery management Chip

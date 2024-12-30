@@ -1,16 +1,45 @@
 # Strategy for Parts Purchasing Guide
 
+We have seen many well intended parent come into our workshops telling stories
+about a $400 robot kit that was used for an hour and then sat in the back
+of a closet.  Before you go out and purchase an expensive STEM kit, we
+suggest you start small and see if your student will really use the kit.
+
 ## Breadboards
 
 We strongly suggest purchasing breadboards in bulk at least 10 at a time.
+We use eBay for purchasing all our breadboards.
+
+Many of our projects use the 1/2 size 400-tie breadboards.  This is usually
+sufficient for simple projects.
+
+
 
 ## MicroControllers
 
-We love MicroCenter because they sell the Pico for $4
+Because all or examples run MicroPython, your microcontroller will also need to run MicroPython.
+Unfortunately, older microcontrollers like the Arduino Uno only come with 2K of RAM.  Since we need at least 16K of RAM to run MicroPython, the older Arduino systems will not work.
 
-### Raspberry Pi Pico
+Therefore we strongly suggest you go with a newer microcontroller like the Raspberry Pi Pico which
+typically sells for under $4.
+
+### Purchasing the Raspberry Pi Pico
+
+We love MicroCenter because they sell the [Raspberry Pi Pico for only $3.99](https://www.microcenter.com/product/661033/raspberry-pi-pico-microcontroller-development-board).  If there is a MicroCenter near your home, we strongly suggest purchasing the parts there.  
+
+![Pico](../img/microcenter-pico.png)
 
 ### Raspberry Pi Pico W
+
+If you are going wireless, you will need to pay an extra dollar to get the [Raspberry Pi Pico for $5.99](https://www.microcenter.com/product/650108/raspberry-pi-pico-w)
+
+![Pico W](../img/microcenter-pico-w.png)
+
+If the Raspberry Pi Picos are out of stock, a backup plan might be an ESP-32 microcontroller.
+There are two challenges you might face with the ESP-32:
+
+1. The development boards at MicroCenter, SparkFun and Adafruit are 4x more expensive
+2. There is a huge variety of these boards from many different manufactures.  So the instructions you get on each website may not match the device you purchase.
 
 ## Displays
 
