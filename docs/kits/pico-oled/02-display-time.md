@@ -37,3 +37,4 @@ oled.text(str(month) + "/" + str(day) + "/" + str(year), 0, 10, 1)
 oled.show()
 ```
 
+

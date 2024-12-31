@@ -1,3 +1,4 @@
+# Clock with no RTC module using tm1637 4-digit 7-segment display
 from machine import Pin, RTC
 from utime import localtime, sleep, ticks_ms, ticks_diff
 import tm1637
@@ -144,10 +145,13 @@ while True:
     if mode == 0:  # Only update time in run mode the power has not been reset
         current_time = localtime()
         hour = current_time[3]
+        # Convert 24-hour to 12-hour format
+        display_hour = ((hour - 1) % 12) + 1
         minute = current_time[4]
         second = current_time[5]
         set_pm()  # Update AM/PM status based on hour
-        numbers_nlz(hour, minute, True, flash_state, 'run')  
+        # Add code here to onl display the hour from 1 to 12
+        numbers_nlz(display_hour, minute, True, flash_state, 'run')  
         pm_pin.value(1 if is_pm else 0)
     elif mode == 1:  # Set hour mode
         power_reset = False
