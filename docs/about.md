@@ -1,4 +1,15 @@
-# About the MicroPython Clocks and Watchs Site
+# About the MicroPython Clocks and Watches Site
+
+![](./img/timekeeping-art-computational-thinking.png)
+
+Innovation often occurs at the seams of specialties.  This book fits
+at the intersection of timekeeping, art and teaching computational thinking.
+
+This book can serve as a hands-on guide to introducing students to the fun
+world of building your own customized clocks and watches with low-cost parts and some
+MicroPython code to make it all work together.
+
+## Why We Created This Book
 
 <!-- 
 Sample Prompt:
@@ -57,7 +68,6 @@ research to show that students that learn in groups have higer participation rat
 ## Engineered for User Experience
 
 Great STEM projects don't just fall off a shelf into our laps.  They need to be designed and tested carefully using the same agile processes that we use in software development.  [User Experience](https://en.wikipedia.org/wiki/User_experience) (UX) professionals need to help us observe our students using and learning from our lessons.
-
 
 ## In Conclusion
 
