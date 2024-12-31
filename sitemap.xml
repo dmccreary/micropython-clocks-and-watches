@@ -181,6 +181,18 @@
          <lastmod>2024-12-31</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/ssd1306-i2c/</loc>
+         <lastmod>2024-12-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/ssd1306-i2c/adjusting-digit-display/</loc>
+         <lastmod>2024-12-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/ssd1306-i2c/integrating-localtime/</loc>
+         <lastmod>2024-12-31</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/tm1637/</loc>
          <lastmod>2024-12-31</lastmod>
     </url>
@@ -322,6 +334,10 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/prompts/08-glossary/</loc>
+         <lastmod>2024-12-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/prompts/09-oled-test/</loc>
          <lastmod>2024-12-31</lastmod>
     </url>
     <url>
