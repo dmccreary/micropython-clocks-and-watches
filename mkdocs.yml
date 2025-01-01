@@ -97,7 +97,7 @@ nav:
       - Font Lab: kits/waveshare/04-5x8-font.md
     - MAX7219: kits/max7219/index.md
     - Fibonacci Clock:
-      - Intro: kits/fibonacci/index.md
+      - Intro: kits/fibonacci-clock/index.md
     - E-Ink: 
       - Intro: kits/e-ink/index.md
   - MicroSims:
