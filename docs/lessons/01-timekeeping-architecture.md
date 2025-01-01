@@ -6,12 +6,20 @@ Throughout history people have designed clocks that were not just functional, bu
 
 Today, creating precise feature rich clocks is within the reach of anyone with $10 and a bit of curiosity.  Despite the fact that everyone uses their mobile phone to check the time, the landscape of creative and beautiful timekeeping devices continues to expand.  For example the market for beautiful Nixie tube clocks is perhaps larger than it has ever been due to the dedication of craftspeople from [Millclock](https://millclock.com) in Ukraine.
 
-![Astronomical Clock on Prague](../img/nixie-tube-clock-zin70.png)
+![ZIN 70 mm high Nixie Tube Clock](../img/nixie-tube-clock-zin70.png)
 
-It is interesting to note that many of the clocks created by the artisans at Millclock have some of the same features as this amazing $2,000 timepiece.  Although to be sure, our displays are not as nice as the glowing 70 mm high digits in a Nixie tube.
+I personally think that the Nixie Tube clocks, especially those created by Millclock are some of the 
+most pleasing forms of handcrafted artwork I have seen.  The amount of engineering that goes
+into manufacturing these 70 mm high retro-vacuum tubs is incredible.  Each wire in the tubes
+are made by hand, which is why a price of almost $2,000 is not surprising.
 
-Regardless of your interest in timekeeping be it art, science, astronomy, programming or AI, there are projects to help you build your own highly personalized and customized clock or watch using
+It is interesting to note that many of the clocks in this course have features similar to
+the Millclock clocks such as syncing with time servers to get accurate times.
+
+Regardless of your interest in timekeeping be it art, science, astronomy, programming or AI, there are projects here to help you build your own highly personalized and customized clock or watch using
 low cost components starting around $10.
+
+One of the key things we learn about architecture choices is that there are few solutions that fit everyone's needs.
 
 First let take a look at the key architectural components of a timekeeping device.
 
