@@ -1,6 +1,8 @@
 # Buttons
 
-Our standard watch kit places two buttons on the breadboard.
+![Set buttons on breadboard](../img/set-buttons-on-breadboard.png)
+
+Our standard watch kits places two or three buttons on the breadboard.
 You can use these buttons to set the time.
 
 The buttons are connected to the lower-left corner of the pico
