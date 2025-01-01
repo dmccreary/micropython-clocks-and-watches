@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/">
       
       
-        <link rel="prev" href="../lessons/50-ds1307-breadboard/">
+        <link rel="prev" href="../lessons/70-power/">
       
       
         <link rel="next" href="tm1637/">
@@ -392,6 +392,16 @@
       
         
       
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -447,6 +457,10 @@
       
         
       
+        
+      
+        
+          
         
       
         
@@ -768,6 +782,27 @@
   
 
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="oled-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wireless OLED
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1376,28 +1411,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#standard-oled" class="md-nav__link">
+  <a href="#led-clocks" class="md-nav__link">
     <span class="md-ellipsis">
-      Standard OLED
+      LED Clocks
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Standard OLED">
+    <nav class="md-nav" aria-label="LED Clocks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#raspberry-pi-and-monchorme-oled" class="md-nav__link">
+  <a href="#standard-tm1637-led-clock" class="md-nav__link">
     <span class="md-ellipsis">
-      Raspberry Pi and Monchorme OLED
+      Standard TM1637 LED Clock
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#raspberry-pi-w-and-monchorme-oled" class="md-nav__link">
+  <a href="#tinyssd1306-oled-with-an-i2c-interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Raspberry Pi W and Monchorme OLED
+      TinySSD1306 OLED with an I2C Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#larger-242-oled-ssd1306-with-spi-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Larger 2.42" OLED SSD1306 with SPI Interface
     </span>
   </a>
   
@@ -1409,9 +1453,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lilygo-rp240" class="md-nav__link">
+  <a href="#lilygo-rp2040" class="md-nav__link">
     <span class="md-ellipsis">
-      LilyGo RP240
+      LilyGo RP2040
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smartwatch-displays" class="md-nav__link">
+    <span class="md-ellipsis">
+      SmartWatch Displays
     </span>
   </a>
   
@@ -1436,10 +1489,23 @@
 
 
 <h1 id="introduction-to-clock-and-watch-kits">Introduction to Clock and Watch Kits</h1>
-<h2 id="standard-oled">Standard OLED</h2>
-<h3 id="raspberry-pi-and-monchorme-oled">Raspberry Pi and Monchorme OLED</h3>
-<h3 id="raspberry-pi-w-and-monchorme-oled">Raspberry Pi W and Monchorme OLED</h3>
-<h2 id="lilygo-rp240">LilyGo RP240</h2>
+<h2 id="led-clocks">LED Clocks</h2>
+<h3 id="standard-tm1637-led-clock">Standard TM1637 LED Clock</h3>
+<p>Easy to program LED clock with 4 7-segment displays.</p>
+<p><a href="tm1637/">TM1637 LED Clock Kit</a></p>
+<h3 id="tinyssd1306-oled-with-an-i2c-interface">TinySSD1306 OLED with an I2C Interface</h3>
+<p>~</p>
+<p>This small low-cost OLED display is easy to hook up with just 4 wires.
+The combination of low-cost and easy hookup makes it an ideal
+starter project.</p>
+<p>We hav purchased these OLEDs on eBay for under $4 each.  Some of
+they have the first 20 rows yellow and the remaining 44 rows blue.</p>
+<p><a href="./ssd1306-i2c/">Tiny SSD1306 OLED with I2C Interface</a></p>
+<h3 id="larger-242-oled-ssd1306-with-spi-interface">Larger 2.42" OLED SSD1306 with SPI Interface</h3>
+<p>[]</p>
+<h2 id="lilygo-rp2040">LilyGo RP2040</h2>
+<p><a href="./lilygo/">LilyGo RP2040 Kit</a></p>
+<h2 id="smartwatch-displays">SmartWatch Displays</h2>
 
 
 
@@ -1477,7 +1543,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../lessons/50-ds1307-breadboard/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using the DS1307 IC On A Breadboard">
+          <a href="../lessons/70-power/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Powering Your Clock and Watch">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -1487,7 +1553,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Using the DS1307 IC On A Breadboard
+                Powering Your Clock and Watch
               </div>
             </div>
           </a>

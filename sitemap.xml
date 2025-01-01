@@ -129,6 +129,10 @@
          <lastmod>2025-01-01</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/oled-wireless/</loc>
+         <lastmod>2025-01-01</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/kits/pico-oled/</loc>
          <lastmod>2025-01-01</lastmod>
     </url>
@@ -249,6 +253,10 @@
          <lastmod>2025-01-01</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/01-timekeeping-architecture/</loc>
+         <lastmod>2025-01-01</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/02-display-text/</loc>
          <lastmod>2025-01-01</lastmod>
     </url>
@@ -302,6 +310,14 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/50-ds1307-breadboard/</loc>
+         <lastmod>2025-01-01</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/60-sound.md/</loc>
+         <lastmod>2025-01-01</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/micropython-clocks-and-watches/lessons/70-power/</loc>
          <lastmod>2025-01-01</lastmod>
     </url>
     <url>
