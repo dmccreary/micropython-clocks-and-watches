@@ -120,7 +120,7 @@ nav:
     - Generating a Banner Image: prompts/06-banner-image.md
     - Generating a FAQ: prompts/07-faq.md
     - Generating a Glossary of Terms: prompts/08-glossary.md
-    - OLED Code Generation: - prompts/09-oled-test.md
+    - OLED Code Generation: prompts/09-oled-test.md
   - Glossary: glossary.md
   - FAQ: faq.md
   - References: references.md
