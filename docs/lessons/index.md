@@ -1,4 +1,4 @@
-# Python Project-Based Learning: Building Clocks and Watches with Smart Watch Displays
+# Building Clocks and Watches with Smart Watch Displays
 
 These lessons are general to all of our kits.  We often use the
 Pico OLED for many examples since that is the kit

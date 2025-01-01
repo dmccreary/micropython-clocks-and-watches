@@ -18,6 +18,7 @@ nav:
     - AI in the Classroom: setup/05-ai-in-the-classroom.md
   - Lessons:
     - Introduction: lessons/index.md
+    - Timekeeping Architecture: lessons/01-timekeeping-architecture.md
     - Hardware Config Files: lessons/00-hardware-config.md
     - Get Local Time: lessons/01-get-local-time.md
     - Drawing Coordinates: lessons/01-drawing-coordinates.md
@@ -34,7 +35,9 @@ nav:
     - Draw Performance: lessons/06-draw-performance.md
     - ILI9341 Display: lessons/30-ili9341.md
     - Machine Info: lessons/40-machine-info.md
-    - lessons/50-ds1307-breadboard.md
+    - DS1307: lessons/50-ds1307-breadboard.md
+    - Adding Sound: lessons/60-sound.md/index.md
+    - Powering Your Clock and Watch: lessons/70-power/index.md
   - Kits:
     - Introduction Kits: kits/index.md
     - TM1637 LED Kit:
@@ -71,6 +74,8 @@ nav:
       - 7-Segment: kits/pico-oled/10-draw-seven-segments.md
       - Segment Thickness: kits/pico-oled/11-draw-thickness.md
       - Digital Clock: kits/pico-oled/15-digital-clock.md
+    - Wireless OLED: kits/oled-wireless/index.md
+
     - ILI9341:
       - Introduction: kits/ili9341/index.md
       - Rainbow Test: kits/ili9341/01-rainbow-test.md

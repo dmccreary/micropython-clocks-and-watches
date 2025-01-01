@@ -1,4 +1,4 @@
-# LED Strip Clocks
+# NeoPixel LED Strip Clock Kits
 
 In this section we will present two clocks that use and LED strip.
 

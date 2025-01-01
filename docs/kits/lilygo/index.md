@@ -1,4 +1,4 @@
-# LILYGO T-Display RP2040 
+# LILYGO T-Display RP2040 Kit
 
 [LILYGO](https://www.lilygo.cc/) makes low-cost and high-quality microcontroller development boards that include small displays.  Although
 most of their boards run on C programs on ESP-32 processors, they
