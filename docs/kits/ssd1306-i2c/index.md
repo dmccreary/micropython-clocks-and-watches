@@ -1,5 +1,7 @@
 # A Tiny SSD1306 OLED Clock on an I2C Interface
 
+![](../../img/oled-2-color-ssd1306.jpg)
+
 ## Testing the I2C Bus
 
 We start by putting SDA on pin 0 and clock on pin 1.

@@ -13,7 +13,7 @@ different size displays and drawing times
 on larger color displays.
 
 Here are some sample lesson plans for a 14-week semimester
-hich school course on learning computational thining
+high school course on learning computational thining
 by using MicroPython to write clock and smartwatch
 application.  This course assumes no prior knowledge
 of programming.
@@ -24,7 +24,7 @@ of programming.
 - What is Python?
 - Why learn Python?
 - Data Science
-- Artificial Intellegence
+- Artificial Intelligence
 - Python Installation and Setup
 
 ### Lesson 2: Hello, World!
@@ -38,7 +38,7 @@ of programming.
 - Introduction to variables
 - Common data types (integers, floats, strings, booleans)
 - Drawing with pixels, lines and rectangles
-- Chainging color
+- Changing color
 
 ### Lesson 4: Basic Operations
 - Arithmetic operations
