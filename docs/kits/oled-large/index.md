@@ -1,4 +1,4 @@
-# Pico OLED Kits
+# OLED Kits
 
 ![Clock Digit Lab](../../img/clock-digit-lab.png)
 

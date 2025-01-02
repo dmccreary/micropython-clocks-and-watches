@@ -18,17 +18,21 @@ starter project.
 We hav purchased these OLEDs on eBay for under $4 each.  Some of
 they have the first 20 rows yellow and the remaining 44 rows blue.
 
-[Tiny SSD1306 OLED with I2C Interface](./ssd1306-i2c/)
+[Tiny SSD1306 OLED with I2C Interface](./ssd1306-i2c/index.md)
 
 ### Larger 2.42" OLED SSD1306 with SPI Interface
 
-[]
+[Larger OLED](./oled-large/index.md)
 
 ### 
 
 ## LilyGo RP2040
 
-[LilyGo RP2040 Kit](./lilygo/)
+[LilyGo RP2040 Kit](./lilygo/index.md)
 
 ## SmartWatch Displays
+
+[GC9a01 Smartwatch Display](./gc9a01/index.md)
+
+[Waveshare Smartwatch Display](./waveshare/index.md)
 
