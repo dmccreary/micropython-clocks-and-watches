@@ -2,24 +2,25 @@
 
 ![Astronomical Clock on Prague](../img/astronomical-clock-in-prague.png)
 
-Throughout history people have designed clocks that were not just functional, but were things of beauty to be admired.  The example above is from the famous Astronomical Clock called [The Orloj](https://en.wikipedia.org/wiki/Prague_astronomical_clock) was built in Prague around 1400.  It remains an important tourist attraction in the city.
+Throughout history people have designed clocks that were not just functional, but were things of beauty to be admired.  The example above is the famous Astronomical Clock called [The Orloj](https://en.wikipedia.org/wiki/Prague_astronomical_clock) which was built in Prague around 1400.  It remains an important tourist attraction in the city.
 
-Today, creating precise feature rich clocks is within the reach of anyone with $10 and a bit of curiosity.  Despite the fact that everyone uses their mobile phone to check the time, the landscape of creative and beautiful timekeeping devices continues to expand.  For example the market for beautiful Nixie tube clocks is perhaps larger than it has ever been due to the dedication of craftspeople from [Millclock](https://millclock.com) in Ukraine.
+Today, creating precise feature rich clocks is within the reach of anyone with $10 and a bit of curiosity.  Despite the fact that everyone uses their mobile phones to check the time, the landscape of creative and beautiful timekeeping devices continues to expand.  For example the market for beautiful Nixie tube clocks is perhaps larger than it has ever been due to the dedication of craftspeople like those people from [Millclock](https://millclock.com) in Ukraine.
 
 ![ZIN 70 mm high Nixie Tube Clock](../img/nixie-tube-clock-zin70.png)
 
 I personally think that the Nixie Tube clocks, especially those created by Millclock are some of the 
 most pleasing forms of handcrafted artwork I have seen.  The amount of engineering that goes
 into manufacturing these 70 mm high retro-vacuum tubs is incredible.  Each wire in the tubes
-are made by hand, which is why a price of almost $2,000 is not surprising.
+are made and assembled by hand, which is why a price of almost $2,000 for each clock is not surprising.
 
 It is interesting to note that many of the clocks in this course have features similar to
-the Millclock clocks such as syncing with time servers to get accurate times.
+the Millclock clocks such as syncing with time servers to get accurate times.  So you don't need a huge budget to get a precise clock these days!
 
-Regardless of your interest in timekeeping be it art, science, astronomy, programming or AI, there are projects here to help you build your own highly personalized and customized clock or watch using
-low cost components starting around $10.
+Regardless of your interest in timekeeping be it art, science, astronomy, being a maker, programming or AI, there are projects here to help you build your own highly personalized and customized timepiece using
+low cost components starting around $10.  These devices can be a platform for fun, learning computational thinking and artistic expression.
 
-One of the key things we learn about architecture choices is that there are few solutions that fit everyone's needs.
+One of the key things we learn about architecture choices is that there are few solutions that fit everyone's needs.  There are always trade offs.  You will find simple designs that are low-cost and easy to assemble in an hour.  You will also find complex designs that use exotic displays and integrate
+light and motion sensors to create a personalized experience for your device.
 
 First let take a look at the key architectural components of a timekeeping device.
 
