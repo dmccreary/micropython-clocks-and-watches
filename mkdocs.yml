@@ -142,7 +142,7 @@ theme:
     next: fontawesome/solid/angle-right
   extra_css:
     - styles/custom.css
-  logo: img/clock-icon.png
+  logo: img/logo-180x180.png
   favicon: img/favicon.ico
   palette:
     primary: '#642580'
@@ -160,23 +160,24 @@ theme:
     - navigation.footer
 plugins:
   - search
-extra_javascript:
-  # - js/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-#  - social
+  - social
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
   - abbr
-  - attr_list
   - md_in_html
   - pymdownx.highlight:
       linenums: true
   # enable LaTeX extensions
   - pymdownx.arithmatex:
       generic: true
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/extra.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 extra:
   analytics:
     provider: google
