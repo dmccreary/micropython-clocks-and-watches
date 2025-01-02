@@ -52,6 +52,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,6 +69,32 @@
   
 
     
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="AI in the Classroom - Clocks and Watches with AI" >
+      
+        <meta  property="og:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/setup/05-ai-in-the-classroom.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/micropython-clocks-and-watches/setup/05-ai-in-the-classroom/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="AI in the Classroom - Clocks and Watches with AI" >
+      
+        <meta  name="twitter:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/setup/05-ai-in-the-classroom.png" >
+      
     
     
   </head>
@@ -104,7 +132,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Clocks and Watches with AI" class="md-header__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
       
-  <img src="../../img/clock-icon.png" alt="logo">
+  <img src="../../img/logo-180x180.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -210,7 +238,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Clocks and Watches with AI" class="md-nav__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
       
-  <img src="../../img/clock-icon.png" alt="logo">
+  <img src="../../img/logo-180x180.png" alt="logo">
 
     </a>
     Clocks and Watches with AI
@@ -455,6 +483,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    AI in the Classroom
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -464,6 +503,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leveraging-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leveraging Projects
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -905,6 +981,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leveraging-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leveraging Projects
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -922,16 +1024,25 @@
 
 
 <h1 id="ai-in-the-classroom">AI in the Classroom</h1>
-<p>We also provide a sample set of prompts you
-can use to feed generative AI systems to
-create other lesson plans and learning artifacts such as <a href="https://dmccreary.github.io/microsims/">MicroSims</a> to complement these
+<h2 id="sample-prompts">Sample Prompts</h2>
+<p>This course provides many sample <a href="../../prompts/">prompts</a> you
+can use to give generative AI systems to
+explain code, generate sample code, generate tests and modify our existing
+code to add new features.</p>
+<p>Teachers can also use these prompts to create lesson plans and learning artifacts such as <a href="https://dmccreary.github.io/microsims/">MicroSims</a> to complement these
 resources.</p>
+<h2 id="leveraging-projects">Leveraging Projects</h2>
+<p>We also encourage you to load the kit source code into a project area that your generative AI tools can access.  Both <a href="https://claude.ai/projects">Anthropic's Claude.ai</a> and <a href="https://help.openai.com/en/articles/10169521-using-projects-in-chatgpt">OpenAI ChatGPT</a>.  This allows you to do
+things like reference a sample program and say <em>just like example 07-clock-face.py but with red digits</em>.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1024,6 +1135,8 @@ resources.</p>
     
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
