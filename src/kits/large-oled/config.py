@@ -20,3 +20,4 @@ WIDTH=128
 HEIGHT=64
 BUTTON_1_PIN = 14 # one up from lower-left corner
 BUTTON_2_PIN = 15 # lower left corner with USB on top
+BUTTON_3_PIN = 16 # lower left corner with USB on top
