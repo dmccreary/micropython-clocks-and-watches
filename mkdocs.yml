@@ -143,7 +143,7 @@ theme:
   extra_css:
     - styles/custom.css
   logo: img/clock-icon.png
-  favicon: img/clock-icon.png
+  favicon: img/favicon.ico
   palette:
     primary: '#642580'
     accent: '#41BAC1'
