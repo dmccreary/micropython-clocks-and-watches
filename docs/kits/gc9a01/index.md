@@ -1,5 +1,7 @@
 # GC9A01 Display
 
+![SmartWatch](../../img/240x240-display.png)
+
 The gc9a01 is a chip that drives a 240x240 round display that is connected to a microcontroller by
 an SPI display.
 
