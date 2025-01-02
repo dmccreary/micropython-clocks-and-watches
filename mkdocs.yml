@@ -30,7 +30,7 @@ nav:
     - Drawing 7-Segment Digits: lessons/07-drawing-digits.md
     - Digit Functions: lessons/09-digit-functions.md
     - Draw Time Functions: lessons/12-draw-time-functions.md
-    - Testing the RTC: lessons/13-testing-the-rtc.md
+    - About Real Time Clocks: lessons/13-real-time-clocks.md
     - Scale Testing: lessons/15-scale-testing.md
     - Draw Performance: lessons/06-draw-performance.md
     - ILI9341 Display: lessons/30-ili9341.md
@@ -38,6 +38,7 @@ nav:
     - DS1307: lessons/50-ds1307-breadboard.md
     - Adding Sound: lessons/60-sound.md/index.md
     - Powering Your Clock and Watch: lessons/70-power/index.md
+
   - Kits:
     - Introduction Kits: kits/index.md
     - TM1637 LED Kit:
