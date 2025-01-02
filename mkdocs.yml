@@ -59,12 +59,12 @@ nav:
       - Introduction: kits/led-strips/index.md
       - Binary Clock: kits/led-strips/01-binary-clock.md
       - 7 Segment Clock: kits/led-strips/02-seven-segment-clock.md
-    - SSD1306 I2C Clock:
+    - SSD1306 I2C:
       - Introduction: kits/ssd1306-i2c/index.md
       - Adjusting the Display Layout: kits/ssd1306-i2c/adjusting-digit-display.md
       - Integrating Localtime: kits/ssd1306-i2c/integrating-localtime.md
       - Setting the Time: kits/ssd1306-i2c/setting-time.md
-    - Pico with OLED:
+    - Large OLED:
       - Introduction: kits/oled-large/index.md
       - Hello World: kits/oled-large/01-hello-world.md
       - Config: kits/oled-large/02-hello-config.md
@@ -76,7 +76,7 @@ nav:
       - Segment Thickness: kits/oled-large/11-draw-thickness.md
       - Digital Clock: kits/oled-large/15-digital-clock.md
     - Wireless OLED: kits/oled-wireless/index.md
-
+    - SH1106 OLED: kits/sh1106/index.md
     - ILI9341:
       - Introduction: kits/ili9341/index.md
       - Rainbow Test: kits/ili9341/01-rainbow-test.md
