@@ -173,3 +173,5 @@ if __name__ == '__main__':
 ## References
 
 [74HC595 Shift Register](https://how2electronics.com/shift-register-74hc595-with-raspberry-pi-pico-micropython/)
+
+* [Kevin McAleer: Raspberry Pi Pico, 7 Segment Displays and 74hc595 shift registers YouTube Video](https://www.youtube.com/watch?v=iSTlP4Lbibs)

@@ -1,1 +1,0 @@
-# Analog Clock Face

@@ -108,14 +108,15 @@ nav:
       - Intro: kits/e-ink/index.md
   - MicroSims:
     - List of MicroSims: sims/index.md
-    - sims/binary-clock/index.md
-    - sims/templates/index.md
-    - sims/learning-graph/index.md
-    - sims/4-digits/index.md
-    - sims/analog-face/index.md
-    - sims/learning-graph/index.md
-    - sims/seven-segments/index.md
-    - sims/themes/index.md
+    - Binary Number: sims/binary-number/index.md
+    - Binary Clock: sims/binary-clock/index.md
+    - Templates: sims/templates/index.md
+    - Learning Graph: sims/learning-graph/index.md
+    - Four Digit Display: sims/4-digits/index.md
+    - Analog Clock Face: sims/analog-clock/index.md
+    - Seven Segment Display: sims/seven-segment-display/index.md
+    - Clock Face Themes: sims/themes/index.md
+    - Battery Drain: sims/battery-drain/index.md
   - Prompts:
     - Introduction: prompts/index.md
     - Course Description: prompts/01-course-description.md
