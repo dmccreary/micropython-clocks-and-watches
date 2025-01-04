@@ -31,11 +31,13 @@ nav:
     - Digit Functions: lessons/09-digit-functions.md
     - Draw Time Functions: lessons/12-draw-time-functions.md
     - About Real Time Clocks: lessons/13-real-time-clocks.md
+    - RTC Explained: lessons/13-rtc-explained.md
     - Scale Testing: lessons/15-scale-testing.md
     - Draw Performance: lessons/06-draw-performance.md
     - ILI9341 Display: lessons/30-ili9341.md
     - Machine Info: lessons/40-machine-info.md
-    - DS1307: lessons/50-ds1307-breadboard.md
+    - DS1307 Display: lessons/50-ds1307-breadboard.md
+    - Shift Registers: lessons/55-shift-registers.md
     - Adding Sound: lessons/60-sound.md/index.md
     - Powering Your Clock and Watch: lessons/70-power/index.md
 
@@ -117,6 +119,7 @@ nav:
     - Seven Segment Display: sims/seven-segment-display/index.md
     - Clock Face Themes: sims/themes/index.md
     - Battery Drain: sims/battery-drain/index.md
+    - Shift Register: sims/shift-register/index.md
   - Prompts:
     - Introduction: prompts/index.md
     - Course Description: prompts/01-course-description.md
