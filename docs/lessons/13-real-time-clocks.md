@@ -33,18 +33,22 @@ of the device.
 Key Technical and Financial Differences:
 
 1. Accuracy:
+
 - DS1307: ±2 seconds/day
 - DS3231: ±2 seconds/month due to temperature compensation
 
 2. Temperature Operation:
+
 - DS1307: 32°F to 158°F (0°C to +70°C)
 - DS3231: -40°F to 185°F (-40°C to +85°C) with compensation
 
 3. Clock Output:
+
 - DS1307: Programmable square wave (1Hz, 4kHz, 8kHz, 32kHz)
 - DS3231: 32kHz output plus programmable square wave
 
 4. Based on typical retail prices as of 2024:
+
 - DS1307: $1-2 USD
 - DS3231: $3-5 USD
 
