@@ -422,3 +422,42 @@ Unless you need absolute minimal components, stick with the DS3231 for better ac
 
 The internal RTC example on the [MicroPython RP2](https://docs.micropython.org/en/latest/rp2/quickref.html#real-time-clock-rtc) site would work functionally, but would need resetting after each power cycle.
 
+## Reading the Temperature from the DS3231 Real Time Clock
+
+The math of reading the temperature from the DS3231 is unfortunately rather complicated.  Here are the steps
+
+1. Strip off the sign bit by doing a Boolean AND with 0x7f
+2. If the MSB is set we need to make the temperature negative
+3. Then we add the fraction from the LSB
+4. Finally, we convert the temperature in C to F
+
+```python
+def read_temperature():
+    """Read temperature from DS3231 RTC."""
+    # Read temperature registers
+    i2c.writeto(DS3231_ADDR, b'\x11')
+    temp_data = i2c.readfrom(DS3231_ADDR, 2)
+    temp_msb = temp_data[0]
+    temp_lsb = temp_data[1]
+    
+    # Get raw temp value (ignoring sign bit)
+    raw_temp = temp_msb & 0x7F  # Strip off sign bit
+    
+    # 0xD7 & 0x7F = 0x57 = 87 decimal (original value minus sign bit)
+    # If sign bit was set, make it negative
+    if temp_msb & 0x80:
+        raw_temp = raw_temp ^ 0x7F  # Invert the bits
+        raw_temp = -(raw_temp + 1)  # Two's complement
+    
+    # Add fraction from LSB
+    frac = (temp_lsb >> 6) * 0.25
+    temp_c = raw_temp + frac
+    
+    # Convert to Fahrenheit
+    temp_f = (temp_c * 9.0 / 5.0) + 32.0
+    
+    print(f"Raw temp (after sign bit removal): {raw_temp}")
+    print(f"Temperature: {temp_c}°C = {temp_f}°F")
+    
+    return temp_f
+```
