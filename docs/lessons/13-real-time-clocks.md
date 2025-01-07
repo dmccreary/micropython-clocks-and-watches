@@ -352,22 +352,43 @@ Where data is a binary coded list of binary-coded integers
 that represent the datetime structure.  Here is
 an example program called ```set-rtc-from-localtime.py```
 
+One other note.  The DS3231 has an internal oscillator that
+can get turned off.  After you set the time it is important
+to make sure that the oscillator is running correctly again.  The function
+```reset_osf()``` will clear the stop flag to make sure
+that the clock is ticking.
+
 ```python
 from machine import Pin, I2C
 from utime import localtime
+
+# Constants
+DS3231_ADDR = 0x68
+STATUS_REG = 0x0F  # Status register address
 
 # I2C setup
 sda = Pin(0, Pin.OUT)
 scl = Pin(1, Pin.OUT)
 i2c = I2C(0, scl=scl, sda=sda, freq=3000000)
-DS3231_ADDR = 0x68
 
 def dec2bcd(dec):
     """Convert decimal to binary coded decimal."""
     return (dec // 10) << 4 | (dec % 10)
 
+def check_osf():
+    """Check the oscillator stop flag."""
+    status = i2c.readfrom_mem(DS3231_ADDR, STATUS_REG, 1)[0]
+    return bool(status >> 7)
+
+def reset_osf():
+    """Clear the oscillator stop flag."""
+    status = bytearray(1)
+    i2c.readfrom_mem_into(DS3231_ADDR, STATUS_REG, status)
+    i2c.writeto_mem(DS3231_ADDR, STATUS_REG, bytearray([status[0] & 0x7f]))
+
 def set_ds3231():
-    now = localtime() # get the time Thonny set on connect
+    """Set the DS3231 RTC time and ensure oscillator is running."""
+    now = localtime()
     year = now[0] % 100  # Convert to 2-digit year
     month = now[1]
     day = now[2]
@@ -375,7 +396,11 @@ def set_ds3231():
     minute = now[4]
     second = now[5]
     
-    # convert from integers to BCD format and put into a bytearray
+    # First check if oscillator is stopped
+    if check_osf():
+        print("Oscillator was stopped. Resetting OSF flag...")
+        reset_osf()
+    
     data = bytearray([
         dec2bcd(second),
         dec2bcd(minute),
@@ -388,6 +413,12 @@ def set_ds3231():
     
     i2c.writeto_mem(DS3231_ADDR, 0x00, data)
     print(f"RTC set to: {month}/{day}/{now[0]} {hour:02d}:{minute:02d}:{second:02d}")
+    
+    # Verify oscillator is running
+    if check_osf():
+        print("Warning: Oscillator still shows stopped state!")
+    else:
+        print("Oscillator running normally")
 
 if __name__ == "__main__":
     set_ds3231()
