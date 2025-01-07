@@ -1,11 +1,13 @@
 # Real Time Clocks
 
 !!! note
-    Real-time clock support has only recently been added to the core MicroPython libraries.
+    Minimal real-time clock support has only recently been added to the core MicroPython libraries.
     Make sure you are using the latest release of MicroPython to use the features
     built into the MicroPython Runtime.
 
     See [The MicroPython RTC Documentation](https://docs.micropython.org/en/latest/library/machine.RTC.html) to make sure you have the right release.
+
+    Note that the built-in MicroPython library does not setting alarms, turning on and off the oscillator stop flag or accessing the temperature of the RTC (available only on some RTCs like the DS3231).  These functions must be done through a library or by providing your own functions.
 
 ## The DS1307 and the DS3231
 
