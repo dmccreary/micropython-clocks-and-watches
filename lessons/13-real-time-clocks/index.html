@@ -891,6 +891,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reading-the-temperature-from-the-ds3231-real-time-clock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading the Temperature from the DS3231 Real Time Clock
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1560,6 +1569,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reading-the-temperature-from-the-ds3231-real-time-clock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading the Temperature from the DS3231 Real Time Clock
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2133,6 +2151,11 @@ to the RTC's clock.  Here is tha line:</p>
 <p>Where data is a binary coded list of binary-coded integers
 that represent the datetime structure.  Here is
 an example program called <code>set-rtc-from-localtime.py</code></p>
+<p>One other note.  The DS3231 has an internal oscillator that
+can get turned off.  After you set the time it is important
+to make sure that the oscillator is running correctly again.  The function
+<code>reset_osf()</code> will clear the stop flag to make sure
+that the clock is ticking.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2170,21 +2193,61 @@ an example program called <code>set-rtc-from-localtime.py</code></p>
 <span class="normal">35</span>
 <span class="normal">36</span>
 <span class="normal">37</span>
-<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">I2C</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">I2C</span>
 <span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">localtime</span>
+
+<span class="c1"># Constants</span>
+<span class="n">DS3231_ADDR</span> <span class="o">=</span> <span class="mh">0x68</span>
+<span class="n">STATUS_REG</span> <span class="o">=</span> <span class="mh">0x0F</span>  <span class="c1"># Status register address</span>
 
 <span class="c1"># I2C setup</span>
 <span class="n">sda</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
 <span class="n">scl</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
 <span class="n">i2c</span> <span class="o">=</span> <span class="n">I2C</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">scl</span><span class="o">=</span><span class="n">scl</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">sda</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">3000000</span><span class="p">)</span>
-<span class="n">DS3231_ADDR</span> <span class="o">=</span> <span class="mh">0x68</span>
 
 <span class="k">def</span> <span class="nf">dec2bcd</span><span class="p">(</span><span class="n">dec</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert decimal to binary coded decimal.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">dec</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span> <span class="o">|</span> <span class="p">(</span><span class="n">dec</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span>
 
+<span class="k">def</span> <span class="nf">check_osf</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check the oscillator stop flag.&quot;&quot;&quot;</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">i2c</span><span class="o">.</span><span class="n">readfrom_mem</span><span class="p">(</span><span class="n">DS3231_ADDR</span><span class="p">,</span> <span class="n">STATUS_REG</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">status</span> <span class="o">&gt;&gt;</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">reset_osf</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Clear the oscillator stop flag.&quot;&quot;&quot;</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">i2c</span><span class="o">.</span><span class="n">readfrom_mem_into</span><span class="p">(</span><span class="n">DS3231_ADDR</span><span class="p">,</span> <span class="n">STATUS_REG</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+    <span class="n">i2c</span><span class="o">.</span><span class="n">writeto_mem</span><span class="p">(</span><span class="n">DS3231_ADDR</span><span class="p">,</span> <span class="n">STATUS_REG</span><span class="p">,</span> <span class="nb">bytearray</span><span class="p">([</span><span class="n">status</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x7f</span><span class="p">]))</span>
+
 <span class="k">def</span> <span class="nf">set_ds3231</span><span class="p">():</span>
-    <span class="n">now</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">()</span> <span class="c1"># get the time Thonny set on connect</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set the DS3231 RTC time and ensure oscillator is running.&quot;&quot;&quot;</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">()</span>
     <span class="n">year</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">100</span>  <span class="c1"># Convert to 2-digit year</span>
     <span class="n">month</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">day</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
@@ -2192,7 +2255,11 @@ an example program called <code>set-rtc-from-localtime.py</code></p>
     <span class="n">minute</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
     <span class="n">second</span> <span class="o">=</span> <span class="n">now</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 
-    <span class="c1"># convert from integers to BCD format and put into a bytearray</span>
+    <span class="c1"># First check if oscillator is stopped</span>
+    <span class="k">if</span> <span class="n">check_osf</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oscillator was stopped. Resetting OSF flag...&quot;</span><span class="p">)</span>
+        <span class="n">reset_osf</span><span class="p">()</span>
+
     <span class="n">data</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">([</span>
         <span class="n">dec2bcd</span><span class="p">(</span><span class="n">second</span><span class="p">),</span>
         <span class="n">dec2bcd</span><span class="p">(</span><span class="n">minute</span><span class="p">),</span>
@@ -2205,6 +2272,12 @@ an example program called <code>set-rtc-from-localtime.py</code></p>
 
     <span class="n">i2c</span><span class="o">.</span><span class="n">writeto_mem</span><span class="p">(</span><span class="n">DS3231_ADDR</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RTC set to: </span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">now</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">hour</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">minute</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">second</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Verify oscillator is running</span>
+    <span class="k">if</span> <span class="n">check_osf</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: Oscillator still shows stopped state!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oscillator running normally&quot;</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">set_ds3231</span><span class="p">()</span>
@@ -2230,6 +2303,70 @@ Decimal 59 → BCD 0101 1001</p>
 <p>The machine.RTC() on the Pico uses an internal oscillator that loses time on power loss, unlike the DS3231 which maintains time with its battery backup. The DS3231 is also more accurate (±2ppm vs ±10% for the internal RTC).</p>
 <p>Unless you need absolute minimal components, stick with the DS3231 for better accuracy and battery backup capability.</p>
 <p>The internal RTC example on the <a href="https://docs.micropython.org/en/latest/rp2/quickref.html#real-time-clock-rtc">MicroPython RP2</a> site would work functionally, but would need resetting after each power cycle.</p>
+<h2 id="reading-the-temperature-from-the-ds3231-real-time-clock">Reading the Temperature from the DS3231 Real Time Clock</h2>
+<p>The math of reading the temperature from the DS3231 is unfortunately rather complicated.  Here are the steps</p>
+<ol>
+<li>Strip off the sign bit by doing a Boolean AND with 0x7f</li>
+<li>If the MSB is set we need to make the temperature negative</li>
+<li>Then we add the fraction from the LSB</li>
+<li>Finally, we convert the temperature in C to F</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_temperature</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read temperature from DS3231 RTC.&quot;&quot;&quot;</span>
+    <span class="c1"># Read temperature registers</span>
+    <span class="n">i2c</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="n">DS3231_ADDR</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x11</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">temp_data</span> <span class="o">=</span> <span class="n">i2c</span><span class="o">.</span><span class="n">readfrom</span><span class="p">(</span><span class="n">DS3231_ADDR</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">temp_msb</span> <span class="o">=</span> <span class="n">temp_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">temp_lsb</span> <span class="o">=</span> <span class="n">temp_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Get raw temp value (ignoring sign bit)</span>
+    <span class="n">raw_temp</span> <span class="o">=</span> <span class="n">temp_msb</span> <span class="o">&amp;</span> <span class="mh">0x7F</span>  <span class="c1"># Strip off sign bit</span>
+
+    <span class="c1"># 0xD7 &amp; 0x7F = 0x57 = 87 decimal (original value minus sign bit)</span>
+    <span class="c1"># If sign bit was set, make it negative</span>
+    <span class="k">if</span> <span class="n">temp_msb</span> <span class="o">&amp;</span> <span class="mh">0x80</span><span class="p">:</span>
+        <span class="n">raw_temp</span> <span class="o">=</span> <span class="n">raw_temp</span> <span class="o">^</span> <span class="mh">0x7F</span>  <span class="c1"># Invert the bits</span>
+        <span class="n">raw_temp</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">raw_temp</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Two&#39;s complement</span>
+
+    <span class="c1"># Add fraction from LSB</span>
+    <span class="n">frac</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp_lsb</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span>
+    <span class="n">temp_c</span> <span class="o">=</span> <span class="n">raw_temp</span> <span class="o">+</span> <span class="n">frac</span>
+
+    <span class="c1"># Convert to Fahrenheit</span>
+    <span class="n">temp_f</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp_c</span> <span class="o">*</span> <span class="mf">9.0</span> <span class="o">/</span> <span class="mf">5.0</span><span class="p">)</span> <span class="o">+</span> <span class="mf">32.0</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Raw temp (after sign bit removal): </span><span class="si">{</span><span class="n">raw_temp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Temperature: </span><span class="si">{</span><span class="n">temp_c</span><span class="si">}</span><span class="s2">°C = </span><span class="si">{</span><span class="n">temp_f</span><span class="si">}</span><span class="s2">°F&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">temp_f</span>
+</code></pre></div></td></tr></table></div>
 
 
 
