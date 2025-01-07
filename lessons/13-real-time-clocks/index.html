@@ -1599,10 +1599,11 @@
 <h1 id="real-time-clocks">Real Time Clocks</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Real-time clock support has only recently been added to the core MicroPython libraries.
+<p>Minimal real-time clock support has only recently been added to the core MicroPython libraries.
 Make sure you are using the latest release of MicroPython to use the features
 built into the MicroPython Runtime.</p>
 <p>See <a href="https://docs.micropython.org/en/latest/library/machine.RTC.html">The MicroPython RTC Documentation</a> to make sure you have the right release.</p>
+<p>Note that the built-in MicroPython library does not setting alarms, turning on and off the oscillator stop flag or accessing the temperature of the RTC (available only on some RTCs like the DS3231).  These functions must be done through a library or by providing your own functions.</p>
 </div>
 <h2 id="the-ds1307-and-the-ds3231">The DS1307 and the DS3231</h2>
 <p>Our lessons use two different RTC chips.  Let's do a comparison of these RTC modules and explain their implementation with the MicroPython.</p>
