@@ -64,51 +64,63 @@ if __name__ == '__main__':
     run_clock()
 ```
 
+## Core Concepts
+
 Let's break down the key concepts students need to understand:
 
-1. **Real-Time Clock (RTC)**
+### 1. Real-Time Clock (RTC)
+
    - The RTC is a hardware component that keeps track of time
    - It continues running even when the microcontroller is reset
    - Time is stored as a tuple: (year, month, day, weekday, hours, minutes, seconds, subseconds)
    - Students should understand why RTCs are important for accurate timekeeping
 
-2. **Time Formats**
+### 2. Time Formats
+
    - 24-hour vs 12-hour time conversion
    - Why we need to handle special cases (midnight = 0 hours → 12, noon = 12 stays 12)
    - The concept of AM/PM
 
-3. **Display Multiplexing**
+### 3. Display Multiplexing
+
    - How LED displays show multiple digits (though the TM1637 handles this internally)
    - Why we need a brief sleep to prevent display flicker
    - How brightness control works with PWM (Pulse Width Modulation)
 
-4. **State Management**
+### 4. State Management
    - Tracking the colon state for blinking
    - Maintaining previous second value to detect changes
    - Why we use global variables in this context
 
-5. **Program Structure**
+### 5. Program Structure
    - Main loop design
    - Function organization
    - Error handling (not shown but important in real applications)
 
-Common challenges students might encounter:
+## Common challenges 
 
-1. **Time Drift**
+Here are some challenges students might encounter:
+
+### 1. Time Drift
+
    - The RTC might drift slightly over time
    - In real applications, you'd want to sync with an NTP server periodically
 
-2. **Power Management**
+### 2. Power Management
+
    - Display brightness affects power consumption
    - Consider dimming display in low light conditions
    - Think about battery life in portable applications
 
-3. **User Interface**
+### 3. User Interface
+
    - Adding buttons to set the time
    - Handling time zone changes
    - Adding features like alarms or timers
 
-Extensions students could try:
+## Extensions
+
+Here are some additional projects that students could try:
 
 1. Add a temperature display that alternates with the time
 2. Implement automatic brightness control using a light sensor
@@ -116,6 +128,5 @@ Extensions students could try:
 4. Create a menu system for setting the time
 5. Add a battery backup system
 
-Would you like me to elaborate on any of these concepts or provide example code for any of the extensions?
-
-For reference, this code builds on the concepts shown in your clock-driver.py file, but simplifies the implementation thanks to the TM1637's built-in controller. The course-description.md suggests this would fit well in the early stages of your course, particularly during the "Understanding" phase where students explore how timing functions and hardware work together.
+For reference, this code builds on the concepts shown in our
+```clock-driver.py``` file, but simplifies the implementation thanks to the TM1637's built-in controller. 

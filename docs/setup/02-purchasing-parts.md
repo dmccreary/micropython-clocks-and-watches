@@ -13,8 +13,6 @@ We use eBay for purchasing all our breadboards.
 Many of our projects use the 1/2 size 400-tie breadboards.  This is usually
 sufficient for simple projects.
 
-
-
 ## MicroControllers
 
 Because all or examples run MicroPython, your microcontroller will also need to run MicroPython.
@@ -58,26 +56,39 @@ We like the 2.42" inch OLED displays since they are bright and have a wide viewi
 
 ## Smartwatch Displays
 
-## Real-Time Clock Boards
+## Real-Time Clocks
+
+Learning how to use a real-time clock (RTC) is a core part of building
+digital clocks.  So almost all our kits include an RTC.  Here is
+a description of the two main options for RTCs.
 
 ### The DS1307
+![](../img/rtc-ds1307-front-back.jpg)
 
-Although this board is old, it is a simple and low-cost part that is easy to use.
-Most of the development boards come with their own crystal and an I2C interface.
+Although the DS1307 is has been around for a long time, it is still a simple low-cost part that is easy to use.  The DS1307 is still perfectly suitable for many basic timekeeping applications and for learning how to use a
+Most of the development boards come with their own crystal and an I2C interface.  Most of our clock kits have now been upgraded to the newer more accurate DS3231 which we can also purchase for under $1.
 
 ### The DS3231
+
+![](../img/rtc-ds3231-front-back.jpg)
+
 The DS3231 is one of the most commonly used real-time clock (RTC) modules paired with microcontrollers like the Raspberry Pi Pico. It's popular because it:
 
-1. Has high accuracy (temperature-compensated crystal oscillator)
-2. Maintains accuracy over a wide temperature range
-3. Has built-in temperature compensation
-4. Uses the I2C interface, which is easy to implement
-5. Includes a battery backup option
-6. Is relatively inexpensive
+1. Has high accuracy (temperature-compensated crystal oscillator) +/- 2 seconds per month
+2. Maintains accuracy over a wide temperature range suitable for indoor and outdoor use
+3. Uses the I2C interface, which is easy to implement
+4. Includes a 3V lithium coin-cell battery backup option which allows it to remember the time and alarm settings even when the power is off
+6. Is relatively inexpensive (under $1 each)
 7. Has extensive library support across different platforms
-
-The second most common is probably the DS1307, which is an older and simpler version. While less accurate than the DS3231, it's even less expensive and still perfectly suitable for many basic timekeeping applications.
+8. You can also use it to display the temperature
+9. Includes the ability to store 4K in EEPROM for information such as when alarms and timers should go off
 
 For microcontrollers in particular, the DS3231 tends to be favored because its accuracy doesn't depend on the microcontroller's clock, and it maintains accurate time even when the main microcontroller is reset or loses power.
 
-Since this is quite specific technical information and while I believe this is accurate, you may want to verify these details, particularly regarding current market availability and relative popularity.
+Here is an example of a DS3231 listing on eBay for under $1:
+
+![](../img/rtc-ds3231-ebay.png)
+
+AliExpress currently has the DS3231 boards listed for $0.73 each.
+
+![](../img/rtc-ds3231-aliexpress.png)
