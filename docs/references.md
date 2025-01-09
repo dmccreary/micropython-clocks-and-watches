@@ -36,3 +36,5 @@ way to try out different designs.  This web app allows you to change the format 
 ### Battery Management
 
 [HT4928S - T6845C Data sheet][https://components101.com/sites/default/files/component_datasheet/T6845C-Datasheet.pdf] 8 pin battery management Chip
+
+https://www.youtube.com/watch?v=np4NRMKOG6U

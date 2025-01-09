@@ -77,6 +77,7 @@ nav:
       - 7-Segment: kits/oled-large/10-draw-seven-segments.md
       - Segment Thickness: kits/oled-large/11-draw-thickness.md
       - Digital Clock: kits/oled-large/15-digital-clock.md
+    - Stopwatch: kits/stopwatch/index.md
     - Wireless OLED: kits/oled-wireless/index.md
     - SH1106 OLED: kits/sh1106/index.md
     - ILI9341:
