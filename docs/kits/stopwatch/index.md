@@ -1,5 +1,7 @@
 # Stopwatch
 
+![](./stopwatch.png)
+
 ## Overview
 
 Here is a two-button stopwatch that uses the OLED display.
@@ -7,6 +9,12 @@ The first button is called the **Start/Stop** button.  When you first press star
 
 The second button is the **Reset** button.  When you press Reset the
 total time accumulated will be reset back to 0.
+
+## The MicroSimulation
+
+<iframe src="../../sims/stopwatch/main.html" height="280px" width="370px"></iframe>
+
+## Program Structure
 
 Let me break down this stopwatch program in a way that's easy to understand!
 

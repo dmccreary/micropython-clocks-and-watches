@@ -117,6 +117,7 @@ nav:
     - Learning Graph: sims/learning-graph/index.md
     - Four Digit Display: sims/4-digits/index.md
     - Analog Clock Face: sims/analog-clock/index.md
+    - Stopwatch: sims/stopwatch/index.md
     - Seven Segment Display: sims/seven-segment-display/index.md
     - Clock Face Themes: sims/themes/index.md
     - Battery Drain: sims/battery-drain/index.md
