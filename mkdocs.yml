@@ -98,12 +98,12 @@ nav:
     - LILYGO SY7789:
       - Introduction: kits/lilygo/index.md
     - Waveshare:
-      - Introduction: kits/waveshare/index.md
-      - Hello World: kits/waveshare/01-hello-world.md
-      - Display Text: kits/waveshare/02-display-text.md
-      - Color Lab: kits/waveshare/02-color-test.md
-      - Drawing Hands: kits/waveshare/03-drawing-hands.md
-      - Font Lab: kits/waveshare/04-5x8-font.md
+      - Introduction: kits/waveshare-led/index.md
+      - Hello World: kits/waveshare-led/01-hello-world.md
+      - Display Text: kits/waveshare-led/02-display-text.md
+      - Color Lab: kits/waveshare-led/02-color-test.md
+      - Drawing Hands: kits/waveshare-led/03-drawing-hands.md
+      - Font Lab: kits/waveshare-led/04-5x8-font.md
     - MAX7219: kits/max7219/index.md
     - Fibonacci Clock:
       - Intro: kits/fibonacci-clock/index.md
