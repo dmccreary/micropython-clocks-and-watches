@@ -1,5 +1,7 @@
 # Pico W Setup
 
+![](../img/pico-vs-pico-w.png)
+
 When installing the Pico "W" (Wireless), you will need to download
 a different version of the MicroPython runtime.
 

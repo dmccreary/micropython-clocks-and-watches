@@ -15,6 +15,7 @@ nav:
     - Purchasing Parts: setup/02-purchasing-parts.md
     - Cable Harness: setup/03-display-cable-harness.md
     - LED Clocks: setup/04-led-clocks.md
+    - Pico Wireless: setup/06-pico-w-setup.md
     - AI in the Classroom: setup/05-ai-in-the-classroom.md
   - Lessons:
     - Introduction: lessons/index.md
@@ -37,7 +38,7 @@ nav:
     - ILI9341 Display: lessons/30-ili9341.md
     - Machine Info: lessons/40-machine-info.md
     - DS1307 Display: lessons/50-ds1307-breadboard.md
-    - Shift Registers: lessons/55-shift-registers.md
+    - Shift Registers: lessons/55-shift-registers/index.md
     - Adding Sound: lessons/60-sound.md/index.md
     - Powering Your Clock and Watch: lessons/70-power/index.md
 
@@ -80,6 +81,7 @@ nav:
     - Stopwatch: kits/stopwatch/index.md
     - Wireless OLED: kits/oled-wireless/index.md
     - SH1106 OLED: kits/sh1106/index.md
+    - ST77XX: kits/st77XX/index.md
     - ILI9341:
       - Introduction: kits/ili9341/index.md
       - Rainbow Test: kits/ili9341/01-rainbow-test.md
@@ -109,6 +111,8 @@ nav:
       - Intro: kits/fibonacci-clock/index.md
     - E-Ink: 
       - Intro: kits/e-ink/index.md
+    - Waveshare E-Paper:
+      - Intro: kits/waveshare-e-paper/index.md
   - MicroSims:
     - List of MicroSims: sims/index.md
     - Binary Number: sims/binary-number/index.md
