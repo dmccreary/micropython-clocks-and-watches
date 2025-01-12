@@ -3,7 +3,8 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0fLNS-BfQ48?si=9EUzF7gv-UDJ5R3z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 [Setting the Time](https://youtu.be/0fLNS-BfQ48)
 
-![](../../img/tm1637-led-display-alibaba.png)
+![TM1637](./tm1637.jpg)
+
 
 The TM1637 LED digital display is an incredibly popular and cost-effective 4-digit 7-segment display module widely used in hobbyist electronics and educational projects. At around 30 cents per unit when purchased in bulk, it offers exceptional value for clock projects, counters, and basic numeric displays.
 
@@ -21,12 +22,15 @@ The TM1637 LED Clock is a low-cost way to
 get started.  It is simple to setup and use
 and only requires the user to make 4 connections.
 
+![](../../img/tm1637-led-display-alibaba.png)
+
 ## Parts List
 
 1. 1/2 Size 400 tie solderless Breadboard
 2. 4 Male-Female 20cm jumper wires (Dupont Cables)
 3. Raspberry Pi Pico (or Pico W)
 4. TM1637 LED Clock display
+5. Real time clock
 
 ## Connection Diagram
 
