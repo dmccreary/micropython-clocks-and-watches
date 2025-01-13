@@ -1,6 +1,6 @@
-# Sample Prompt to Generate Clock Code
+# Sample Prompt to Generate NeoPixel Clock Code
 
-## Prompt
+## Sample Prompt
 
 !!! prompt
     We created a clock display using a 74 pixel WS2811B LED strip.

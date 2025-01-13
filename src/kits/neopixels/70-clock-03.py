@@ -57,10 +57,6 @@ def display_digit(digit, start_pixel):
     # Set pixels for each segment based on pattern
     for segment_index, segment_on in enumerate(pattern):
         set_segment_pixels(segments[segment_index], segment_on)
-    
-    # Set pixels for each segment based on pattern
-    for segment_index, segment_on in enumerate(pattern):
-        set_segment_pixels(segments[segment_index], segment_on)
 
 def set_colon(on=True):
     """Set colon pixels (42 and 43)"""

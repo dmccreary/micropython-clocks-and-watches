@@ -66,6 +66,9 @@ def set_pixels(digit, value, color):
 
 ## Clock Code
 
+Here is some working Python code that displays
+the time on the clock.
+
 ```python
 from machine import Pin
 from neopixel import NeoPixel
@@ -122,10 +125,6 @@ def display_digit(digit, start_pixel):
         start_pixel + 15,  # f: upper left (15,16,17)
         start_pixel + 18   # g: middle (18,19,20)
     ]
-    
-    # Set pixels for each segment based on pattern
-    for segment_index, segment_on in enumerate(pattern):
-        set_segment_pixels(segments[segment_index], segment_on)
     
     # Set pixels for each segment based on pattern
     for segment_index, segment_on in enumerate(pattern):
