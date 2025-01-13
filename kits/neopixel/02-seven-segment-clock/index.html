@@ -1834,6 +1834,8 @@ To turn on the segments, here is the mapping:</p>
             <span class="n">strip</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">o</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">color</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="clock-code">Clock Code</h2>
+<p>Here is some working Python code that displays
+the time on the clock.</p>
 <p>```python
 from machine import Pin
 from neopixel import NeoPixel
@@ -1887,11 +1889,7 @@ OFF_COLOR = (0, 0, 0)    # Off</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>pattern = DIGITS[digit]
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>pattern = DIGITS[digit]
 # Map the array positions to the physical segments in correct order
 segments = [
     start_pixel + 0,   # a: top (0,1,2)
@@ -1902,10 +1900,6 @@ segments = [
     start_pixel + 15,  # f: upper left (15,16,17)
     start_pixel + 18   # g: middle (18,19,20)
 ]
-
-# Set pixels for each segment based on pattern
-for segment_index, segment_on in enumerate(pattern):
-    set_segment_pixels(segments[segment_index], segment_on)
 
 # Set pixels for each segment based on pattern
 for segment_index, segment_on in enumerate(pattern):
