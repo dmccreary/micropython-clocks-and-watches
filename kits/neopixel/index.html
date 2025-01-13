@@ -12,28 +12,28 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/neopixel/">
       
       
-        <link rel="prev" href="../lessons/70-power/">
+        <link rel="prev" href="../led-displays/reference/">
       
       
-        <link rel="next" href="tm1637/">
+        <link rel="next" href="01-binary-clock/">
       
       
-      <link rel="icon" href="../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
-        <title>Introduction Kits - Clocks and Watches with AI</title>
+        <title>Introduction - Clocks and Watches with AI</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -73,11 +73,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Introduction Kits - Clocks and Watches with AI" >
+        <meta  property="og:title"  content="Introduction - Clocks and Watches with AI" >
       
         <meta  property="og:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/index.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/neopixel/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -85,15 +85,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/micropython-clocks-and-watches/kits/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/micropython-clocks-and-watches/kits/neopixel/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Introduction Kits - Clocks and Watches with AI" >
+        <meta  name="twitter:title"  content="Introduction - Clocks and Watches with AI" >
       
         <meta  name="twitter:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/index.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/neopixel/index.png" >
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-clock-and-watch-kits" class="md-skip">
+        <a href="#neopixel-led-strip-clock-kits" class="md-skip">
           Skip to content
         </a>
       
@@ -130,9 +130,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Clocks and Watches with AI" class="md-header__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
+    <a href="../.." title="Clocks and Watches with AI" class="md-header__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
       
-  <img src="../img/logo-180x180.png" alt="logo">
+  <img src="../../img/logo-180x180.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -149,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction Kits
+              Introduction
             
           </span>
         </div>
@@ -236,9 +236,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Clocks and Watches with AI" class="md-nav__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
+    <a href="../.." title="Clocks and Watches with AI" class="md-nav__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
       
-  <img src="../img/logo-180x180.png" alt="logo">
+  <img src="../../img/logo-180x180.png" alt="logo">
 
     </a>
     Clocks and Watches with AI
@@ -265,7 +265,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -285,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -305,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course-description/" class="md-nav__link">
+      <a href="../../course-description/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -356,7 +356,7 @@
         
   
   
-    <a href="../setup/" class="md-nav__link">
+    <a href="../../setup/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -451,7 +451,7 @@
         
   
   
-    <a href="../lessons/" class="md-nav__link">
+    <a href="../../lessons/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -543,7 +543,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -554,7 +554,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -599,7 +599,7 @@
         
   
   
-    <a href="tm1637/" class="md-nav__link">
+    <a href="../tm1637/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -651,7 +651,7 @@
         
   
   
-    <a href="led-displays/" class="md-nav__link">
+    <a href="../led-displays/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -675,6 +675,8 @@
                 
   
   
+    
+  
   
   
     
@@ -694,29 +696,107 @@
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="neopixel/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
   
   <span class="md-ellipsis">
     NeoPixel Clocks
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            NeoPixel Clocks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-binary-clock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary Clock
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-seven-segment-clock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 Segment Clock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04-prompt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -755,7 +835,7 @@
         
   
   
-    <a href="ssd1306-i2c/" class="md-nav__link">
+    <a href="../ssd1306-i2c/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -819,7 +899,7 @@
         
   
   
-    <a href="oled-large/" class="md-nav__link">
+    <a href="../oled-large/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -846,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="stopwatch/" class="md-nav__link">
+      <a href="../stopwatch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -867,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="oled-wireless/" class="md-nav__link">
+      <a href="../oled-wireless/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -888,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sh1106/" class="md-nav__link">
+      <a href="../sh1106/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="st77XX/" class="md-nav__link">
+      <a href="../st77XX/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,7 +1035,7 @@
         
   
   
-    <a href="ili9341/" class="md-nav__link">
+    <a href="../ili9341/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1017,7 +1097,7 @@
         
   
   
-    <a href="gc9a01/" class="md-nav__link">
+    <a href="../gc9a01/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1063,7 +1143,7 @@
         
   
   
-    <a href="lilygo/" class="md-nav__link">
+    <a href="../lilygo/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1119,7 +1199,7 @@
         
   
   
-    <a href="waveshare-lcd/" class="md-nav__link">
+    <a href="../waveshare-lcd/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1146,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="max7219/" class="md-nav__link">
+      <a href="../max7219/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1186,7 +1266,7 @@
         
   
   
-    <a href="fibonacci-clock/" class="md-nav__link">
+    <a href="../fibonacci-clock/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1232,7 +1312,7 @@
         
   
   
-    <a href="e-ink/" class="md-nav__link">
+    <a href="../e-ink/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1278,7 +1358,7 @@
         
   
   
-    <a href="waveshare-e-paper/" class="md-nav__link">
+    <a href="../waveshare-e-paper/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1375,7 +1455,7 @@
         
   
   
-    <a href="../sims/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1438,7 +1518,7 @@
         
   
   
-    <a href="../prompts/" class="md-nav__link">
+    <a href="../../prompts/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1464,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1504,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1544,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1577,83 +1657,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#led-clocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      LED Clocks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="LED Clocks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#standard-tm1637-led-clock" class="md-nav__link">
-    <span class="md-ellipsis">
-      Standard TM1637 LED Clock
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tinyssd1306-oled-with-an-i2c-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      TinySSD1306 OLED with an I2C Interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#larger-242-oled-ssd1306-with-spi-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Larger 2.42" OLED SSD1306 with SPI Interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lilygo-rp2040" class="md-nav__link">
-    <span class="md-ellipsis">
-      LilyGo RP2040
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smartwatch-displays" class="md-nav__link">
-    <span class="md-ellipsis">
-      SmartWatch Displays
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1670,26 +1673,12 @@
   
 
 
-<h1 id="introduction-to-clock-and-watch-kits">Introduction to Clock and Watch Kits</h1>
-<h2 id="led-clocks">LED Clocks</h2>
-<h3 id="standard-tm1637-led-clock">Standard TM1637 LED Clock</h3>
-<p>Easy to program LED clock with 4 7-segment displays.</p>
-<p><a href="tm1637/">TM1637 LED Clock Kit</a></p>
-<h3 id="tinyssd1306-oled-with-an-i2c-interface">TinySSD1306 OLED with an I2C Interface</h3>
-<p>This small low-cost OLED display is easy to hook up with just 4 wires.
-The combination of low-cost and easy hookup makes it an ideal
-starter project.</p>
-<p>We hav purchased these OLEDs on eBay for under $4 each.  Some of
-they have the first 20 rows yellow and the remaining 44 rows blue.</p>
-<p><a href="ssd1306-i2c/">Tiny SSD1306 OLED with I2C Interface</a></p>
-<h3 id="larger-242-oled-ssd1306-with-spi-interface">Larger 2.42" OLED SSD1306 with SPI Interface</h3>
-<p><a href="oled-large/">Larger OLED</a></p>
-<h3 id="_1"></h3>
-<h2 id="lilygo-rp2040">LilyGo RP2040</h2>
-<p><a href="lilygo/">LilyGo RP2040 Kit</a></p>
-<h2 id="smartwatch-displays">SmartWatch Displays</h2>
-<p><a href="gc9a01/">GC9a01 Smartwatch Display</a></p>
-<p><a href="./waveshare/index.md">Waveshare Smartwatch Display</a></p>
+<h1 id="neopixel-led-strip-clock-kits">NeoPixel LED Strip Clock Kits</h1>
+<p>In this section we will present two clocks that use and LED strip.</p>
+<ol>
+<li>The first kit displays binary numbers.  Hard to read but very geeky.</li>
+<li>The second requires building four seven-segment displays from the LED strip (or LED string)</li>
+</ol>
 
 
 
@@ -1730,7 +1719,7 @@ they have the first 20 rows yellow and the remaining 44 rows blue.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../lessons/70-power/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Powering Your Clock and Watch">
+          <a href="../led-displays/reference/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Reference">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -1740,20 +1729,20 @@ they have the first 20 rows yellow and the remaining 44 rows blue.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Powering Your Clock and Watch
+                Reference
               </div>
             </div>
           </a>
         
         
           
-          <a href="tm1637/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="01-binary-clock/" class="md-footer__link md-footer__link--next" aria-label="Next: Binary Clock">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                Binary Clock
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1787,12 +1776,12 @@ they have the first 20 rows yellow and the remaining 44 rows blue.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../js/extra.js"></script>
+        <script src="../../js/extra.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

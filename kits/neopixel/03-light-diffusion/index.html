@@ -12,28 +12,24 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-strips/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/neopixel/03-light-diffusion/">
       
       
-        <link rel="prev" href="../led-displays/reference/">
       
       
-        <link rel="next" href="01-binary-clock/">
-      
-      
-      <link rel="icon" href="../../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
-        <title>Introduction - Clocks and Watches with AI</title>
+        <title>NeoPixel Light Diffusion - Clocks and Watches with AI</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -73,11 +69,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Introduction - Clocks and Watches with AI" >
+        <meta  property="og:title"  content="NeoPixel Light Diffusion - Clocks and Watches with AI" >
       
         <meta  property="og:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/led-strips/index.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/neopixel/03-light-diffusion.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -85,15 +81,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/micropython-clocks-and-watches/kits/led-strips/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/micropython-clocks-and-watches/kits/neopixel/03-light-diffusion/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Introduction - Clocks and Watches with AI" >
+        <meta  name="twitter:title"  content="NeoPixel Light Diffusion - Clocks and Watches with AI" >
       
         <meta  name="twitter:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/led-strips/index.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/neopixel/03-light-diffusion.png" >
       
     
     
@@ -114,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#neopixel-led-strip-clock-kits" class="md-skip">
+        <a href="#neopixel-light-diffusion" class="md-skip">
           Skip to content
         </a>
       
@@ -130,9 +126,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Clocks and Watches with AI" class="md-header__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
+    <a href="../../.." title="Clocks and Watches with AI" class="md-header__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
       
-  <img src="../../img/logo-180x180.png" alt="logo">
+  <img src="../../../img/logo-180x180.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -149,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              NeoPixel Light Diffusion
             
           </span>
         </div>
@@ -236,9 +232,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Clocks and Watches with AI" class="md-nav__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
+    <a href="../../.." title="Clocks and Watches with AI" class="md-nav__button md-logo" aria-label="Clocks and Watches with AI" data-md-component="logo">
       
-  <img src="../../img/logo-180x180.png" alt="logo">
+  <img src="../../../img/logo-180x180.png" alt="logo">
 
     </a>
     Clocks and Watches with AI
@@ -265,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -285,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -305,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../course-description/" class="md-nav__link">
+      <a href="../../../course-description/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -356,7 +352,7 @@
         
   
   
-    <a href="../../setup/" class="md-nav__link">
+    <a href="../../../setup/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -451,7 +447,7 @@
         
   
   
-    <a href="../../lessons/" class="md-nav__link">
+    <a href="../../../lessons/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -474,139 +470,80 @@
       
   
   
-    
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
-    
-    
+  
+    <a href="../../" class="md-nav__link">
       
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
   
   <span class="md-ellipsis">
     Kits
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Kits
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../tm1637/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    TM1637 LED Kit
-  </span>
-  
-
       
         <span class="md-nav__icon md-icon"></span>
       
@@ -617,750 +554,6 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../led-displays/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    LED Displays
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
-  
-  <span class="md-ellipsis">
-    LED Strip Kits
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link md-nav__link--active" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6_4">
-            <span class="md-nav__icon md-icon"></span>
-            LED Strip Kits
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="01-binary-clock/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Binary Clock
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="02-seven-segment-clock/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7 Segment Clock
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../ssd1306-i2c/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    SSD1306 I2C
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../oled-large/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Large OLED
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../stopwatch/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Stopwatch
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../oled-wireless/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Wireless OLED
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sh1106/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SH1106 OLED
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../st77XX/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ST77XX
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../ili9341/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    ILI9341
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../gc9a01/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    GC9A01
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../lilygo/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    LILYGO SY7789
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../waveshare-lcd/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Waveshare
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../max7219/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MAX7219
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../fibonacci-clock/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Fibonacci Clock
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../e-ink/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    E-Ink
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../waveshare-e-paper/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Waveshare E-Paper
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
@@ -1432,7 +625,7 @@
         
   
   
-    <a href="../../sims/" class="md-nav__link">
+    <a href="../../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1495,7 +688,7 @@
         
   
   
-    <a href="../../prompts/" class="md-nav__link">
+    <a href="../../../prompts/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1521,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../glossary/" class="md-nav__link">
+      <a href="../../../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1541,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
+      <a href="../../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1561,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/" class="md-nav__link">
+      <a href="../../../references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1581,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
+      <a href="../../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
+      <a href="../../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1650,12 +843,29 @@
   
 
 
-<h1 id="neopixel-led-strip-clock-kits">NeoPixel LED Strip Clock Kits</h1>
-<p>In this section we will present two clocks that use and LED strip.</p>
+<h1 id="neopixel-light-diffusion">NeoPixel Light Diffusion</h1>
+<p>To make a nice clock we need to design an effective diffusion system for NeoPixels that balances visibility and brightness.</p>
+<p>For optimal diffusion while maintaining brightness, we recommend a multi-layer approach:</p>
 <ol>
-<li>The first kit displays binary numbers.  Hard to read but very geeky.</li>
-<li>The second requires building four seven-segment displays from the LED strip (or LED string)</li>
+<li>
+<p>Primary diffusion layer: Use a thin (1-3mm) sheet of white acrylic with a light frost or matte finish, positioned about 5-10mm away from the NeoPixels. This distance allows enough space for the light to blend while keeping individual pixels distinguishable.</p>
+</li>
+<li>
+<p>Air gap: The space between the NeoPixels and the diffusion layer is crucial. Too close and you'll see harsh spots; too far and you'll lose brightness. Start with 8mm and adjust based on your needs.</p>
+</li>
+<li>
+<p>Optional secondary diffusion: If you need more smoothing, add a very thin (0.5-1mm) layer of standard white diffusion film about 2-3mm in front of the primary layer.</p>
+</li>
 </ol>
+<p>Some specific materials to consider:
+- White acrylic with 30-50% light transmission
+- Light Shaping Diffuser (LSD) film with 20° beam angle
+- Frosted polycarbonate with light transmission around 80%</p>
+<p>To maximize brightness while maintaining the pixel effect, you can also:
+- Create a reflective cavity behind the NeoPixels using white material
+- Use higher brightness NeoPixels (like the WS2812B-Eco)
+- Consider adding small dividers between pixels if you want more definition</p>
+<p>Would you like me to elaborate on any of these aspects or discuss specific materials for your particular setup?</p>
 
 
 
@@ -1692,44 +902,6 @@
         <footer class="md-footer">
   
     
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../led-displays/reference/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Reference">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Reference
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="01-binary-clock/" class="md-footer__link md-footer__link--next" aria-label="Next: Binary Clock">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Binary Clock
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1753,12 +925,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.js"></script>
+        <script src="../../../js/extra.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
