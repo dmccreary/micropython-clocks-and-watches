@@ -1,4 +1,4 @@
-# Seven Segment Clock
+# Neopixel Seven Segment Clock
 
 ![](neopixel-clock.jpg)
 
