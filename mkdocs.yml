@@ -62,6 +62,7 @@ nav:
       - Introduction: kits/neopixel/index.md
       - Binary Clock: kits/neopixel/01-binary-clock.md
       - 7 Segment Clock: kits/neopixel/02-seven-segment-clock.md
+      - 
     - SSD1306 I2C:
       - Introduction: kits/ssd1306-i2c/index.md
       - Adjusting the Display Layout: kits/ssd1306-i2c/adjusting-digit-display.md
