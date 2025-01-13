@@ -39,10 +39,14 @@ segmentMapping = [
 
 ## Digit Pixel Map
 
-TBD
+Assume that a digit starts at pixel n and
+that each segment has three pixels.
+To turn on the segments, here is the mapping:
 
 * a: n, n+1, n+2
 * b: n+3, n+4, n+5
+* c: n+6, n+7, n+8
+* d: n+9, n+10, n+11
 
 ```py
 def set_pixels(digit, value, color):
