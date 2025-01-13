@@ -1,34 +1,35 @@
 # Binary Clock
 
+
 This kit just needs a Pico and a short segment of an LED strip - about 14 pixels.
 
-We can create a very simple binary clock using a single LED strip.
+We can create a very simple binary clock using a single NeoPixel LED strip
+with just 12 pixels.  You can see a simulation of the clock here:
 
-The strip will have three color bands:
+<iframe src="../../../sims/binary-clock/binary-clock.html" height="285"
+width="380"></iframe>
 
-1. One binary number will be the hour (0 to 12) (4 red pixels)
-2. One binary number will be the minutes (0 to 59) (6 green pixels)
-3. One binary number will be the seconds (0 to 59) (6 blue pixels)
+The strip will have two rows of six pixels each:
 
-We can also put spaces between the bands
+1. The first row will be the binary hour (0 to 24) (5 green pixels) and one pixel that flashes the second
+2. The second row will show the minutes (0 to 59) (6 blue pixels)
 
-We can optionally also have the seconds displayed by:
 
-1. A single LED that blinks on and off
-2. Two decimal digits
-3. A single binary from (0 to 60)
 
-## Sample Code
+## Sample Code for Three Rows with Second Counter
+
+1. Row 1 is five pixels with the hours (0-24)
+2. Row 2 is the minutes with the minutes (0-60)
+3. Row 3 is the seconds (0-60)
 
 ```py
 from machine import Pin
 from neopixel import NeoPixel
 from utime import sleep, localtime
-# get the configuration information
-import config
 
-np = config.NUMBER_PIXELS
-strip = NeoPixel(Pin(config.NEOPIXEL_PIN), np)
+NEOPIXEL_PIN = 0
+NUMBER_PIXELS = 18
+strip = NeoPixel(Pin(NEOPIXEL_PIN), NUMBER_PIXELS)
 
 sec_bits = [0,0,0,0,0,0]
 min_bits = [0,0,0,0,0,0]
@@ -41,7 +42,7 @@ def decimal_to_binary(n, a):
             a[i] = 1
         else:
             a[i] = 0
-        ## n halfed
+        # n is halfed doing a divide by 2
         n //= 2
 
 def display_binary(binary, index, color):
