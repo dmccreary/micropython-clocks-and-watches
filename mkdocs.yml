@@ -41,14 +41,12 @@ nav:
     - Shift Registers: lessons/55-shift-registers/index.md
     - Adding Sound: lessons/60-sound.md/index.md
     - Powering Your Clock and Watch: lessons/70-power/index.md
-
   - Kits:
     - Introduction Kits: kits/index.md
     - TM1637 LED Kit:
       - Intro: kits/tm1637/index.md
       - Manually Setting Time: kits/tm1637/manual-time-setting.md
       - Running the Clock: kits/tm1637/running-clock.md
-
     - LED Displays: 
       - Intro: kits/led-displays/index.md
       - Simple TM1637 Display: kits/led-displays/clock-simple.md
@@ -62,7 +60,7 @@ nav:
       - Introduction: kits/neopixel/index.md
       - Binary Clock: kits/neopixel/01-binary-clock.md
       - 7 Segment Clock: kits/neopixel/02-seven-segment-clock.md
-      - 
+      - Prompt: kits/neopixel/04-prompt.md
     - SSD1306 I2C:
       - Introduction: kits/ssd1306-i2c/index.md
       - Adjusting the Display Layout: kits/ssd1306-i2c/adjusting-digit-display.md
