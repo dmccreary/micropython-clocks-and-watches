@@ -68,9 +68,9 @@ nav:
         - kits/neopixel/seven-segment-clock/sample-prompt.md
         - kits/neopixel/02-seven-segment-clock.md
       - Fibonacci Clock:
-        - kits/neopixel/fibonacci/index.md
-        - kits/neopixel/fibonacci/assembly.md
-        - kits/neopixel/fibonacci/prompt.md
+        - kits/neopixel/fibonacci-clock/index.md
+        - kits/neopixel/fibonacci-clock/assembly.md
+        - kits/neopixel/fibonacci-clock/prompt.md
     - SSD1306 I2C:
       - Introduction: kits/ssd1306-i2c/index.md
       - Adjusting the Display Layout: kits/ssd1306-i2c/adjusting-digit-display.md

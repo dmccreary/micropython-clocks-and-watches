@@ -10,7 +10,6 @@ Easy to program LED clock with 4 7-segment displays.
 
 ### TinySSD1306 OLED with an I2C Interface
 
-
 This small low-cost OLED display is easy to hook up with just 4 wires.
 The combination of low-cost and easy hookup makes it an ideal
 starter project.
@@ -24,7 +23,20 @@ they have the first 20 rows yellow and the remaining 44 rows blue.
 
 [Larger OLED](./oled-large/index.md)
 
-### 
+## NeoPixel Clocks
+
+### Binary Clock
+
+[Binary Clock](./neopixel/binary-clock/index.md)
+
+### Seven Segment Clock
+
+[](./neopixel/seven-segment-clock/index.md)
+
+### Fibonacci Clock
+
+[Fibonacci Clock](./neopixel/fibonacci-clock/index.md)
+
 
 ## LilyGo RP2040
 
@@ -34,5 +46,9 @@ they have the first 20 rows yellow and the remaining 44 rows blue.
 
 [GC9a01 Smartwatch Display](./gc9a01/index.md)
 
-[Waveshare Smartwatch Display](./waveshare/index.md)
+[Waveshare LCD Smartwatch Display](./waveshare-lcd/index.md)
+
+## E-Paper Clocks
+
+[Waveshare e-Paper](./e-ink/index.md)
 
