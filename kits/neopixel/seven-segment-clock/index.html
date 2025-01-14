@@ -12,7 +12,7 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/neopixel/01-binary-clock-prompt/">
+        <link rel="canonical" href="https://dmccreary.github.io/micropython-clocks-and-watches/kits/neopixel/seven-segment-clock/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>01 binary clock prompt - Clocks and Watches with AI</title>
+        <title>Neopixel Seven Segment Clock - Clocks and Watches with AI</title>
       
     
     
@@ -69,11 +69,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="01 binary clock prompt - Clocks and Watches with AI" >
+        <meta  property="og:title"  content="Neopixel Seven Segment Clock - Clocks and Watches with AI" >
       
         <meta  property="og:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/neopixel/01-binary-clock-prompt.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/neopixel/seven-segment-clock/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -81,15 +81,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/micropython-clocks-and-watches/kits/neopixel/01-binary-clock-prompt/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/micropython-clocks-and-watches/kits/neopixel/seven-segment-clock/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="01 binary clock prompt - Clocks and Watches with AI" >
+        <meta  name="twitter:title"  content="Neopixel Seven Segment Clock - Clocks and Watches with AI" >
       
         <meta  name="twitter:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/neopixel/01-binary-clock-prompt.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/micropython-clocks-and-watches/assets/images/social/kits/neopixel/seven-segment-clock/index.png" >
       
     
     
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preamble" class="md-skip">
+        <a href="#neopixel-seven-segment-clock" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01 binary clock prompt
+              Neopixel Seven Segment Clock
             
           </span>
         </div>
@@ -824,6 +824,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -832,18 +834,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preamble" class="md-nav__link">
+  <a href="#digit-pixel-map" class="md-nav__link">
     <span class="md-ellipsis">
-      Preamble
+      Digit Pixel Map
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#full-program-generated" class="md-nav__link">
+  <a href="#clock-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Full Program Generated
+      Clock Code
     </span>
   </a>
   
@@ -867,29 +869,124 @@
   
 
 
-  <h1>01 binary clock prompt</h1>
+<h1 id="neopixel-seven-segment-clock">Neopixel Seven Segment Clock</h1>
+<p><img alt="" src="neopixel-clock.jpg" /></p>
+<p>We can create a large, bright clock visible in a large classroom by lighting up
+selective pixels of an LED strip and arranging the pixels in the shape
+of seven segment displays.  We can use three pixels per segment.</p>
+<p><img alt="" src="../../img/seven-segment-display.png" /></p>
+<ul>
+<li>We can use three pixels per segment.</li>
+<li>21 pixels per digit</li>
+<li>63 pixels + 6 for the "1" + two for the colon = 70 pixels</li>
+</ul>
+<p><img alt="Clock Segment Map" src="clock-segment-map.png" /></p>
+<p><a href="https://www.ebay.com/itm/165045487983">eBay 50 for $12</a></p>
+<p>Drawing Digits</p>
+<p><a href="../../lessons/07-drawing-digits.md">Lessons</a></p>
+<p>We can create an array of the segments like this:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">segmentMapping</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="c1">#a, b, c, d, e, f, g</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1"># 0</span>
+  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1"># 1</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 2</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 3</span>
+  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 4</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 5</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 6</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1"># 7</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># 8</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># 9</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="digit-pixel-map">Digit Pixel Map</h2>
+<p>Assume that a digit starts at pixel n and
+that each segment has three pixels.
+To turn on the segments, here is the mapping:</p>
+<ul>
+<li>a: n, n+1, n+2</li>
+<li>b: n+3, n+4, n+5</li>
+<li>c: n+6, n+7, n+8</li>
+<li>d: n+9, n+10, n+11</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">set_pixels</span><span class="p">(</span><span class="n">digit</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+    <span class="c1"># look up start pixel for digit</span>
+    <span class="c1"># for value turn on pixels</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">startVals</span><span class="p">[</span><span class="n">digit</span><span class="p">]</span>
 
-<div class="admonition prompt">
-<p class="admonition-title">Prompt</p>
-<p>I would like your help designing a binary clock using NeoPixels with MicroPython
-The clock will have six columns.
-Column 1 is for the hours tens digits.
-Column 2 is for the hours one digits.
-Column 3 is for the minutes tens digits
-Column 4 is for the minutes ones digits
-Column 5 is for the seconds tens digits
-Column 6 is for the seconds ones digits</p>
-<p>Column 6 (seconds ones) starts a index=0 and is 4 pixels high
-Column 5 (seconds tens) starts  index=4 and is 3 pixels high
-Column 4 (minutes ones) starts at index-7 and is 4 pixels high
-Column 3 (minutes tens) starts at index=11 and is 3 pixels high
-Column 2 (hours ones) starts at index=14 and is 4 pixels high
-Column 1 (hour tens) starts at index=18 and is 2 pixels high</p>
-<p>Put the least significant bit at the bottom of the column.
-Please generate a MicroPython application that shows the time.
-Use the following preamble.</p>
-</div>
-<h2 id="preamble">Preamble</h2>
+    <span class="n">segmentOn</span> <span class="o">=</span> <span class="n">segmentMapping</span><span class="p">[</span><span class="n">value</span><span class="p">];</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">segmentOn</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="n">o</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="mi">3</span> <span class="o">//</span> <span class="n">offset</span>
+            <span class="n">strip</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">o</span><span class="p">)</span> <span class="o">=</span> <span class="n">color</span>
+            <span class="n">strip</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">o</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">color</span>
+            <span class="n">strip</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">o</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">color</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="clock-code">Clock Code</h2>
+<p>Here is some working Python code that displays
+the time on the clock.</p>
+<p>```python
+from machine import Pin
+from neopixel import NeoPixel
+from utime import sleep, localtime</p>
+<p>NUMBER_PIXELS = 74
+strip = NeoPixel(Pin(0), NUMBER_PIXELS)</p>
+<h1 id="define-segment-patterns-for-digits-0-9">Define segment patterns for digits 0-9</h1>
+<h1 id="segments-in-order-abcdefg">Segments in order [a,b,c,d,e,f,g]:</h1>
+<h1 id="a-top-012">a: top (0,1,2)</h1>
+<h1 id="b-top-right-345">b: top right (3,4,5)</h1>
+<h1 id="c-bottom-right-678">c: bottom right (6,7,8)</h1>
+<h1 id="d-bottom-91011">d: bottom (9,10,11)</h1>
+<h1 id="e-bottom-left-121314">e: bottom left (12,13,14)</h1>
+<h1 id="f-upper-left-151617">f: upper left (15,16,17)</h1>
+<h1 id="g-middle-181920">g: middle (18,19,20)</h1>
+<p>DIGITS = {
+    #    a,b,c,d,e,f,g
+    0: [1,1,1,1,1,1,0],  # all but middle
+    1: [0,1,1,0,0,0,0],  # right side only
+    2: [1,1,0,1,1,0,1],  # all but bottom right and upper left
+    3: [1,1,1,1,0,0,1],  # all but left side
+    4: [0,1,1,0,0,1,1],  # both right, upper left, and middle
+    5: [1,0,1,1,0,1,1],  # all but top right and bottom left
+    6: [1,0,1,1,1,1,1],  # all but top right
+    7: [1,1,1,0,0,0,0],  # top and both right segments
+    8: [1,1,1,1,1,1,1],  # all segments
+    9: [1,1,1,1,0,1,1]   # all but bottom left
+}</p>
+<h1 id="color-definitions-rgb">Color definitions (RGB)</h1>
+<p>ON_COLOR = (10, 10, 10)  # Dim white
+OFF_COLOR = (0, 0, 0)    # Off</p>
+<p>def set_segment_pixels(start_idx, segment_pattern):
+    """Set three pixels for a segment based on pattern"""
+    for i in range(3):
+        strip[start_idx + i] = ON_COLOR if segment_pattern else OFF_COLOR</p>
+<p>def display_digit(digit, start_pixel):
+    """Display a single digit starting at the specified pixel"""
+    if digit not in DIGITS:
+        return</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -904,33 +1001,33 @@ Use the following preamble.</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Configuration</span>
-<span class="n">NEOPIXEL_PIN</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">NUM_PIXELS</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Total number of pixels (18 + 2)</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>pattern = DIGITS[digit]
+# Map the array positions to the physical segments in correct order
+segments = [
+    start_pixel + 0,   # a: top (0,1,2)
+    start_pixel + 3,   # b: top right (3,4,5)
+    start_pixel + 6,   # c: bottom right (6,7,8)
+    start_pixel + 9,   # d: bottom (9,10,11)
+    start_pixel + 12,  # e: bottom left (12,13,14)
+    start_pixel + 15,  # f: upper left (15,16,17)
+    start_pixel + 18   # g: middle (18,19,20)
+]
 
-<span class="c1"># Column configuration (start_index, height)</span>
-<span class="n">COLUMN_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;hours_tens&#39;</span><span class="p">:</span>   <span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># Column 1: 2 pixels (0-2)</span>
-    <span class="s1">&#39;hours_ones&#39;</span><span class="p">:</span>   <span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>  <span class="c1"># Column 2: 4 pixels (0-9)</span>
-    <span class="s1">&#39;minutes_tens&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>  <span class="c1"># Column 3: 3 pixels (0-5)</span>
-    <span class="s1">&#39;minutes_ones&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>   <span class="c1"># Column 4: 4 pixels (0-9)</span>
-    <span class="s1">&#39;seconds_tens&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>   <span class="c1"># Column 5: 3 pixels (0-5)</span>
-    <span class="s1">&#39;seconds_ones&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>   <span class="c1"># Column 6: 4 pixels (0-9)</span>
-<span class="p">}</span>
-
-<span class="c1"># Initialize NeoPixels</span>
-<span class="n">pixels</span> <span class="o">=</span> <span class="n">NeoPixel</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="n">NEOPIXEL_PIN</span><span class="p">),</span> <span class="n">NUM_PIXELS</span><span class="p">)</span>
-
-<span class="c1"># Colors (RGB values)</span>
-<span class="n">ON_COLOR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>    <span class="c1"># Cyan, dimmed for less power usage</span>
-<span class="n">OFF_COLOR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1"># Off</span>
+# Set pixels for each segment based on pattern
+for segment_index, segment_on in enumerate(pattern):
+    set_segment_pixels(segments[segment_index], segment_on)
 </code></pre></div></td></tr></table></div>
-<h2 id="full-program-generated">Full Program Generated</h2>
+<p>def set_colon(on=True):
+    """Set colon pixels (42 and 43)"""
+    color = ON_COLOR if on else OFF_COLOR
+    strip[42] = color
+    strip[43] = color</p>
+<p>def display_time(hour, minute, colon_on):
+    """Display time on the LED strip"""
+    # Convert 24-hour to 12-hour format
+    hour = hour if hour &lt;= 12 else hour - 12
+    if hour == 0:
+        hour = 12</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -951,154 +1048,53 @@ Use the following preamble.</p>
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
-<span class="kn">from</span> <span class="nn">neopixel</span> <span class="kn">import</span> <span class="n">NeoPixel</span>
-<span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">localtime</span><span class="p">,</span> <span class="n">sleep</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code># Set hours &quot;1&quot; digit if needed (pixels 65-73)
+if hour &gt;= 10:
+    for i in range(65, 74):
+        strip[i] = ON_COLOR
+else:
+    for i in range(65, 74):
+        strip[i] = OFF_COLOR
 
-<span class="c1"># Configuration</span>
-<span class="n">NEOPIXEL_PIN</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">NUM_PIXELS</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Total number of pixels (18 + 2)</span>
+# Display ones digit of hours (pixels 44-64)
+display_digit(hour % 10, 44)
 
-<span class="c1"># Column configuration (start_index, height)</span>
-<span class="n">COLUMN_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;hours_tens&#39;</span><span class="p">:</span>   <span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># Column 1: 2 pixels (0-2)</span>
-    <span class="s1">&#39;hours_ones&#39;</span><span class="p">:</span>   <span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>  <span class="c1"># Column 2: 4 pixels (0-9)</span>
-    <span class="s1">&#39;minutes_tens&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>  <span class="c1"># Column 3: 3 pixels (0-5)</span>
-    <span class="s1">&#39;minutes_ones&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>   <span class="c1"># Column 4: 4 pixels (0-9)</span>
-    <span class="s1">&#39;seconds_tens&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>   <span class="c1"># Column 5: 3 pixels (0-5)</span>
-    <span class="s1">&#39;seconds_ones&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>   <span class="c1"># Column 6: 4 pixels (0-9)</span>
-<span class="p">}</span>
+# Display tens digit of minutes (pixels 21-41)
+display_digit(minute // 10, 21)
 
-<span class="c1"># Initialize NeoPixels</span>
-<span class="n">pixels</span> <span class="o">=</span> <span class="n">NeoPixel</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="n">NEOPIXEL_PIN</span><span class="p">),</span> <span class="n">NUM_PIXELS</span><span class="p">)</span>
+# Display ones digit of minutes (pixels 0-20)
+display_digit(minute % 10, 0)
 
-<span class="c1"># Colors (RGB values)</span>
-<span class="n">ON_COLOR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>    <span class="c1"># Cyan, dimmed for less power usage</span>
-<span class="n">OFF_COLOR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1"># Off</span>
+# Set colon (pixels 42-43)
+set_colon(colon_on)
 
-<span class="k">def</span> <span class="nf">int_to_binary_column</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">num_bits</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a number to binary and return list of bits.&quot;&quot;&quot;</span>
-    <span class="n">binary</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_bits</span><span class="p">):</span>
-        <span class="n">binary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="n">number</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">)</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">binary</span>  <span class="c1"># LSB first</span>
-
-<span class="k">def</span> <span class="nf">set_column</span><span class="p">(</span><span class="n">start_index</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set the LEDs for a specific column based on the number.&quot;&quot;&quot;</span>
-    <span class="n">binary</span> <span class="o">=</span> <span class="n">int_to_binary_column</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
-
-    <span class="c1"># Set each LED in the column</span>
-    <span class="k">for</span> <span class="n">bit_pos</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
-        <span class="n">pixel_index</span> <span class="o">=</span> <span class="n">start_index</span> <span class="o">+</span> <span class="n">bit_pos</span>
-        <span class="n">pixels</span><span class="p">[</span><span class="n">pixel_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">ON_COLOR</span> <span class="k">if</span> <span class="n">binary</span><span class="p">[</span><span class="n">bit_pos</span><span class="p">]</span> <span class="k">else</span> <span class="n">OFF_COLOR</span>
-
-<span class="k">def</span> <span class="nf">update_display</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Update all columns with current time.&quot;&quot;&quot;</span>
-    <span class="c1"># Hours</span>
-    <span class="n">set_column</span><span class="p">(</span><span class="o">*</span><span class="n">COLUMN_CONFIG</span><span class="p">[</span><span class="s1">&#39;hours_tens&#39;</span><span class="p">],</span> <span class="n">hours</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">set_column</span><span class="p">(</span><span class="o">*</span><span class="n">COLUMN_CONFIG</span><span class="p">[</span><span class="s1">&#39;hours_ones&#39;</span><span class="p">],</span> <span class="n">hours</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span>
-
-    <span class="c1"># Minutes</span>
-    <span class="n">set_column</span><span class="p">(</span><span class="o">*</span><span class="n">COLUMN_CONFIG</span><span class="p">[</span><span class="s1">&#39;minutes_tens&#39;</span><span class="p">],</span> <span class="n">minutes</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">set_column</span><span class="p">(</span><span class="o">*</span><span class="n">COLUMN_CONFIG</span><span class="p">[</span><span class="s1">&#39;minutes_ones&#39;</span><span class="p">],</span> <span class="n">minutes</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span>
-
-    <span class="c1"># Seconds</span>
-    <span class="n">set_column</span><span class="p">(</span><span class="o">*</span><span class="n">COLUMN_CONFIG</span><span class="p">[</span><span class="s1">&#39;seconds_tens&#39;</span><span class="p">],</span> <span class="n">seconds</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">set_column</span><span class="p">(</span><span class="o">*</span><span class="n">COLUMN_CONFIG</span><span class="p">[</span><span class="s1">&#39;seconds_ones&#39;</span><span class="p">],</span> <span class="n">seconds</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span>
-
-    <span class="n">pixels</span><span class="o">.</span><span class="n">write</span><span class="p">()</span>  <span class="c1"># Update the NeoPixels</span>
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Binary Clock Started&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Columns from right to left:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Seconds ones (4 bits)&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Seconds tens (3 bits)&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Minutes ones (4 bits)&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4. Minutes tens (3 bits)&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5. Hours ones (4 bits)&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;6. Hours tens (2 bits)&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LSB at bottom of each column&quot;</span><span class="p">)</span>
-
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="c1"># Get current time</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">()</span>
-        <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-
-        <span class="c1"># Update the display</span>
-        <span class="n">update_display</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">)</span>
-
-        <span class="c1"># Print current time for debugging</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">hours</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">minutes</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">seconds</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-        <span class="c1"># Wait before next update</span>
-        <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
+strip.write()
 </code></pre></div></td></tr></table></div>
+<p>def clear_display():
+    """Turn off all pixels"""
+    for i in range(NUMBER_PIXELS):
+        strip[i] = OFF_COLOR
+    strip.write()</p>
+<h1 id="main-loop">Main loop</h1>
+<p>colon_state = True
+clear_display()</p>
+<p>while True:
+    current_time = localtime()
+    hour = current_time[3]
+    minute = current_time[4]
+    if hour &gt; 12:
+        display_hour = hour - 12</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>display_time(hour, minute, colon_state)
+colon_state = not colon_state
+print(f&#39;{display_hour}:{minute}&#39;)
+sleep(1)
+</code></pre></div></td></tr></table></div>
+<p>```</p>
+<p><a href="https://www.coderdojotc.org/chatgpt-for-teachers/demos/p5/7-segment-display/">7-Segment Display Demo with P5.js</a></p>
+<p><a href="https://www.instructables.com/Moving-Rainbow-Arduino-Sign/">Moving Rainbow Arduino Sign</a></p>
 
 
 
