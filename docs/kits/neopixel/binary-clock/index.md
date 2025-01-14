@@ -9,8 +9,7 @@ This kit just needs a Pico and a short segment of an LED strip - about 20 pixels
 We can create a very simple binary clock using a single NeoPixel LED strip
 with just 12 pixels.  You can see a simulation of the clock here:
 
-<iframe src="../../../sims/binary-clock/binary-clock.html" height="285"
-width="380"></iframe>
+<iframe src="../../../sims/binary-clock/binary-clock-vertical.html" width="420" height="295"></iframe>
 
 The strip will have two rows of six pixels each:
 
