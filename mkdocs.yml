@@ -58,9 +58,19 @@ nav:
       - Reference: kits/led-displays/reference.md
     - NeoPixel Clocks: 
       - Introduction: kits/neopixel/index.md
-      - Binary Clock: kits/neopixel/01-binary-clock.md
-      - 7 Segment Clock: kits/neopixel/02-seven-segment-clock.md
-      - Prompt: kits/neopixel/04-prompt.md
+      - Binary Clock:   
+        - kits/neopixel/binary-clock/index.md
+        - kits/neopixel/01-binary-clock.md
+        - kits/neopixel/binary-clock/01-binary-clock-prompt.md
+      - 7 Segment Clock:
+        - kits/neopixel/seven-segment-clock/index.md
+        - kits/neopixel/seven-segment-clock/03-light-diffusion.md
+        - kits/neopixel/seven-segment-clock/sample-prompt.md
+        - kits/neopixel/02-seven-segment-clock.md
+      - Fibonacci Clock:
+        - kits/neopixel/fibonacci/index.md
+        - kits/neopixel/fibonacci/assembly.md
+        - kits/neopixel/fibonacci/prompt.md
     - SSD1306 I2C:
       - Introduction: kits/ssd1306-i2c/index.md
       - Adjusting the Display Layout: kits/ssd1306-i2c/adjusting-digit-display.md
