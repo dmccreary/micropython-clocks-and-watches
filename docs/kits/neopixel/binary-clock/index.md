@@ -2,6 +2,8 @@
 
 ![](./binary-clock-with-time.jpg)
 
+The binary clock is a popular project where binary numbers are used to display the digits of a clock.
+
 ![](./binary-clock.jpg)
 
 This kit just needs a Pico and a short segment of an LED strip - about 20 pixels.
