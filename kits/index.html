@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-clock-and-watch-kits" class="md-skip">
+        <a href="#introduction-to-clock-and-watch-projects-and-kits" class="md-skip">
           Skip to content
         </a>
       
@@ -1584,6 +1584,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#led-clocks" class="md-nav__link">
     <span class="md-ellipsis">
       LED Clocks
@@ -1712,7 +1721,12 @@
   
 
 
-<h1 id="introduction-to-clock-and-watch-kits">Introduction to Clock and Watch Kits</h1>
+<h1 id="introduction-to-clock-and-watch-projects-and-kits">Introduction to Clock and Watch Projects and Kits</h1>
+<h2 id="project-structure">Project Structure</h2>
+<p>Each project has a brief overview of the project, a separate page for the physical assembly of the clock and a detailed guide to program the clock.  The documentation may also
+have sample generative AI prompts you can use to generate your own code using a tool such as OpenAI's ChatGPT or Anthropic Claude.  In general, the more precise your prompt is, the higher the odds that the code generated will be correct.</p>
+<p>Each project also has separate folder in the GitHub "src/kits" folder.  The running clock programs (called the "mains") come in several variations.  One uses manual buttons (main-buttons.py) to set the time after a power outage.  The other version called the "main-rtc.py" file name uses a real-time-clock to remember the time between power outages.  They require an additional RTC clock that uses a coin-cell battery to hold the current time.  If you find a "main-w.py" file that uses the secrets.py file to lookup
+your local wifi login to get the time from the internet.  These versions don't need buttons or a RTC to get the correct time. They only need internet access.</p>
 <h2 id="led-clocks">LED Clocks</h2>
 <h3 id="standard-tm1637-led-clock">Standard TM1637 LED Clock</h3>
 <p>Easy to program LED clock with 4 7-segment displays.</p>
