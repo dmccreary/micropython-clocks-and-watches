@@ -6,24 +6,22 @@ from utime import localtime, sleep
 NEOPIXEL_PIN = 0
 NUM_PIXELS = 20  # Total number of pixels (18 + 2)
 
-# Colors (RGB values) - using light/pastel versions
-HOURS_COLOR = (10, 50, 10)     # Light green
-MINUTES_COLOR = (10, 10, 60)   # Light cyan
-SECONDS_COLOR = (30, 40, 0)    # Light yellow
-OFF_COLOR = (0, 0, 0)          # Off
-
-# Column configuration (start_index, height, color)
+# Column configuration (start_index, height)
 COLUMN_CONFIG = {
-    'hours_tens':   (18, 2, HOURS_COLOR),   # Column 1: 2 pixels (0-2)
-    'hours_ones':   (14, 4, HOURS_COLOR),   # Column 2: 4 pixels (0-9)
-    'minutes_tens': (11, 3, MINUTES_COLOR), # Column 3: 3 pixels (0-5)
-    'minutes_ones': (7, 4, MINUTES_COLOR),  # Column 4: 4 pixels (0-9)
-    'seconds_tens': (4, 3, SECONDS_COLOR),  # Column 5: 3 pixels (0-5)
-    'seconds_ones': (0, 4, SECONDS_COLOR),  # Column 6: 4 pixels (0-9)
+    'hours_tens':   (18, 2),  # Column 1: 2 pixels (0-2)
+    'hours_ones':   (14, 4),  # Column 2: 4 pixels (0-9)
+    'minutes_tens': (11, 3),  # Column 3: 3 pixels (0-5)
+    'minutes_ones': (7, 4),   # Column 4: 4 pixels (0-9)
+    'seconds_tens': (4, 3),   # Column 5: 3 pixels (0-5)
+    'seconds_ones': (0, 4),   # Column 6: 4 pixels (0-9)
 }
 
 # Initialize NeoPixels
 pixels = NeoPixel(Pin(NEOPIXEL_PIN), NUM_PIXELS)
+
+# Colors (RGB values)
+ON_COLOR = (0, 20, 20)    # Cyan, dimmed for less power usage
+OFF_COLOR = (0, 0, 0)     # Off
 
 def int_to_binary_column(number, num_bits):
     """Convert a number to binary and return list of bits."""
@@ -32,14 +30,14 @@ def int_to_binary_column(number, num_bits):
         binary.append(1 if number & (1 << i) else 0)
     return binary  # LSB first
 
-def set_column(start_index, height, color, number):
+def set_column(start_index, height, number):
     """Set the LEDs for a specific column based on the number."""
     binary = int_to_binary_column(number, height)
     
     # Set each LED in the column
     for bit_pos in range(height):
         pixel_index = start_index + bit_pos
-        pixels[pixel_index] = color if binary[bit_pos] else OFF_COLOR
+        pixels[pixel_index] = ON_COLOR if binary[bit_pos] else OFF_COLOR
 
 def update_display(hours, minutes, seconds):
     """Update all columns with current time."""
@@ -60,12 +58,12 @@ def update_display(hours, minutes, seconds):
 def main():
     print("Binary Clock Started")
     print("Columns from right to left:")
-    print("1. Seconds ones (4 bits) - Light Yellow")
-    print("2. Seconds tens (3 bits) - Light Yellow")
-    print("3. Minutes ones (4 bits) - Light Cyan")
-    print("4. Minutes tens (3 bits) - Light Cyan")
-    print("5. Hours ones (4 bits) - Light Green")
-    print("6. Hours tens (2 bits) - Light Green")
+    print("1. Seconds ones (4 bits)")
+    print("2. Seconds tens (3 bits)")
+    print("3. Minutes ones (4 bits)")
+    print("4. Minutes tens (3 bits)")
+    print("5. Hours ones (4 bits)")
+    print("6. Hours tens (2 bits)")
     print("LSB at bottom of each column")
     
     while True:

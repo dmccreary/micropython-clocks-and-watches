@@ -1,7 +1,12 @@
 # Binary Clock
 
+![](./binary-clock-with-time.jpg)
 
-This kit just needs a Pico and a short segment of an LED strip - about 14 pixels.
+![](./binary-clock.jpg)
+
+This kit just needs a Pico and a short segment of an LED strip - about 20 pixels.
+
+
 
 We can create a very simple binary clock using a single NeoPixel LED strip
 with just 12 pixels.  You can see a simulation of the clock here:

@@ -69,6 +69,18 @@ research to show that students that learn in groups have higer participation rat
 
 Great STEM projects don't just fall off a shelf into our laps.  They need to be designed and tested carefully using the same agile processes that we use in software development.  [User Experience](https://en.wikipedia.org/wiki/User_experience) (UX) professionals need to help us observe our students using and learning from our lessons.
 
+## The Evolution of Learning
+
+![](./img/pre-arduino-clock.jpg)
+
+The above image was my attempt in 2014 to use a breadboard and the original ATmega328P microcontroller to build a clock.  This required deep knowledge of the ATmega328P microcontroller and programming in raw low-level C code.
+Just setting up the integrated development environment could take days.
+The code needed to be complied and the entire program downloaded into the memory just to run a simple test.  You were limited to just 2K or RAM and the clock ran at a slow 16MhZ.
+
+Today the Raspberry Pi has enough RAM to run a full Python interpreter and 264K of RAM just for program memory.  It can run up to 150MhZ and has multiple cores that can be working on different tasks such as reading sensors and updating displays.
+
+In short, this power translates into fun projects that are easy to write.  Combining these powerful microcontrollers with AI assistants means even novice programmers can quickly achieve great things!  Building DIY projects has never been so fun!
+
 ## In Conclusion
 
 A library of MicroPython Clocks and Watches isn't just a collection of projects; it’s a treasure trove of experiences, learnings, and memories. By introducing children to the magic of timekeeping in the digital age, we are equipping them with skills for the future, fostering a love for coding, and most importantly, reminding them that learning can be both fun and profoundly meaningful. The timeless allure of time, coupled with the dynamic world of coding, creates a perfect blend to mold the innovators and thinkers of tomorrow.
