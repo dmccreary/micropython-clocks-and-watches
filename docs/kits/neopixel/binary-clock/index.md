@@ -6,8 +6,6 @@
 
 This kit just needs a Pico and a short segment of an LED strip - about 20 pixels.
 
-
-
 We can create a very simple binary clock using a single NeoPixel LED strip
 with just 12 pixels.  You can see a simulation of the clock here:
 
@@ -18,7 +16,6 @@ The strip will have two rows of six pixels each:
 
 1. The first row will be the binary hour (0 to 24) (5 green pixels) and one pixel that flashes the second
 2. The second row will show the minutes (0 to 59) (6 blue pixels)
-
 
 
 ## Sample Code for Three Rows with Second Counter
