@@ -1,4 +1,12 @@
-# Introduction to Clock and Watch Kits
+# Introduction to Clock and Watch Projects and Kits
+
+## Project Structure
+
+Each project has a brief overview of the project, a separate page for the physical assembly of the clock and a detailed guide to program the clock.  The documentation may also
+have sample generative AI prompts you can use to generate your own code using a tool such as OpenAI's ChatGPT or Anthropic Claude.  In general, the more precise your prompt is, the higher the odds that the code generated will be correct.
+
+Each project also has separate folder in the GitHub "src/kits" folder.  The running clock programs (called the "mains") come in several variations.  One uses manual buttons (main-buttons.py) to set the time after a power outage.  The other version called the "main-rtc.py" file name uses a real-time-clock to remember the time between power outages.  They require an additional RTC clock that uses a coin-cell battery to hold the current time.  If you find a "main-w.py" file that uses the secrets.py file to lookup
+your local wifi login to get the time from the internet.  These versions don't need buttons or a RTC to get the correct time. They only need internet access.
 
 ## LED Clocks
 
