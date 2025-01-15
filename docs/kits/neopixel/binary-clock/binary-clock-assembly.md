@@ -5,3 +5,4 @@
 ## Testing Connections and Column Indexes
 
 ![](binary-clock-colums.jpg)
+
