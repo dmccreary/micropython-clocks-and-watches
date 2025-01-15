@@ -9,7 +9,8 @@
 ## Using an IFrame
 
 ```html
-<iframe src="./binary-clock-vertical.html" width="420" height="295"></iframe>
+<iframe src="./binary-clock-vertical.html" width="420" height="295" scrolling="no"
+  style="overflow: hidden;"></iframe>
 ```
 
 ```html
