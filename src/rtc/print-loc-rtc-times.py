@@ -7,12 +7,9 @@ I2C_CLOCK_PIN = 1
 
 I2C_ADDR = 0x68     # DEC 104, HEX 0x68
 
-# define custom I2C interface, default is 'I2C(0)'
-# check the docs of your device for further details and pin infos
-# this are the pins for the Raspberry Pi Pico adapter board
 i2c = I2C(0, scl=Pin(I2C_CLOCK_PIN), sda=Pin(I2C_DATA_PIN), freq=800000)
-# print(i2c.scan())
 rtc = DS3231(addr=I2C_ADDR, i2c=i2c)
+
 rtc_time = rtc.datetime()
 rtc_year = rtc_time[0]
 rtc_month = rtc_time[1]
