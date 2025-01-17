@@ -65,9 +65,9 @@ nav:
         - Prompt: kits/neopixel/binary-clock/binary-clock-prompt.md
       - 7 Segment Clock:
         - kits/neopixel/seven-segment-clock/index.md
-        - kits/neopixel/seven-segment-clock/03-light-diffusion.md
-        - kits/neopixel/seven-segment-clock/sample-prompt.md
-        - kits/neopixel/02-seven-segment-clock.md
+        - Assembly: kits/neopixel/seven-segment-clock/assembly.md
+        - Code: kits/neopixel/seven-segment-clock/code.md
+        - Prompt: kits/neopixel/seven-segment-clock/prompt.md
       - Fibonacci Clock:
         - kits/neopixel/fibonacci-clock/index.md
         - kits/neopixel/fibonacci-clock/assembly.md
