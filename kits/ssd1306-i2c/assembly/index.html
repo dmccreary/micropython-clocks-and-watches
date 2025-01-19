@@ -12,13 +12,13 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/clocks-and-watches/kits/shift-register-clock/clock-main/">
+        <link rel="canonical" href="https://dmccreary.github.io/clocks-and-watches/kits/ssd1306-i2c/assembly/">
       
       
-        <link rel="prev" href="../../led-displays/shift-register-displays/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../sample-prompt/">
+        <link rel="next" href="../adjusting-digit-display/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Clock Main - Clocks and Watches with AI</title>
+        <title>Assembly - Clocks and Watches with AI</title>
       
     
     
@@ -73,11 +73,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Clock Main - Clocks and Watches with AI" >
+        <meta  property="og:title"  content="Assembly - Clocks and Watches with AI" >
       
         <meta  property="og:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/clocks-and-watches/assets/images/social/kits/shift-register-clock/clock-main.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/clocks-and-watches/assets/images/social/kits/ssd1306-i2c/assembly.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -85,15 +85,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/clocks-and-watches/kits/shift-register-clock/clock-main/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/clocks-and-watches/kits/ssd1306-i2c/assembly/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Clock Main - Clocks and Watches with AI" >
+        <meta  name="twitter:title"  content="Assembly - Clocks and Watches with AI" >
       
         <meta  name="twitter:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/clocks-and-watches/assets/images/social/kits/shift-register-clock/clock-main.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/clocks-and-watches/assets/images/social/kits/ssd1306-i2c/assembly.png" >
       
     
     
@@ -112,11 +112,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#clock-main" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -149,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Clock Main
+              Assembly
             
           </span>
         </div>
@@ -621,8 +616,6 @@
                 
   
   
-    
-  
   
   
     
@@ -642,267 +635,29 @@
     
     
       
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../led-displays/" class="md-nav__link ">
-              
+  
+  
+    <a href="../../led-displays/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     LED Displays
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6_3">
-            <span class="md-nav__icon md-icon"></span>
-            LED Displays
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../led-displays/clock-simple/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Simple TM1637 Display
-  </span>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_3" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Shift Register Displays
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3_3" id="__nav_6_3_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            Shift Register Displays
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../led-displays/shift-register-displays/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shift Register Displays
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Clock Main
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Clock Main
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Details
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sample-prompt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sample ChatGPT Prompt
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../led-displays/reference/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Reference
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -965,6 +720,8 @@
                 
   
   
+    
+  
   
   
     
@@ -986,29 +743,136 @@
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="../../ssd1306-i2c/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     SSD1306 I2C
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            SSD1306 I2C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
-        <span class="md-nav__icon md-icon"></span>
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-    </a>
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Assembly
+  </span>
   
 
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adjusting-digit-display/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adjusting the Display Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrating-localtime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrating Localtime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting the Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1814,25 +1678,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Details
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1850,213 +1695,9 @@
   
 
 
-<h1 id="clock-main">Clock Main</h1>
-<h2 id="details">Details</h2>
-<p>This program use 12 hour time and also flashes the colon ever 1/2 second.
-It also is designed to work with a real-time clock that might take
-a bit of time to startup with the Pico first powers up.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">RTC</span> 
-<span class="kn">from</span> <span class="nn">sr74hc595</span> <span class="kn">import</span> <span class="n">SR74HC595_BITBANG</span>
-<span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span><span class="p">,</span> <span class="n">localtime</span><span class="p">,</span> <span class="n">ticks_ms</span>
-
-<span class="k">def</span> <span class="nf">wait_for_rtc</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Waiting for RTC to be ready...&quot;</span><span class="p">)</span>
-    <span class="n">rtc</span> <span class="o">=</span> <span class="n">RTC</span><span class="p">()</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">current_time</span> <span class="o">=</span> <span class="n">rtc</span><span class="o">.</span><span class="n">datetime</span><span class="p">()</span>
-        <span class="c1"># On Pico, default RTC starts at (2021, 1, 1, 0, 0, 0, 0, 0)</span>
-        <span class="c1"># So we check if it&#39;s been set to something else</span>
-        <span class="k">if</span> <span class="n">current_time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2021</span> <span class="ow">or</span> <span class="n">current_time</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">current_time</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RTC is ready!&quot;</span><span class="p">)</span>
-            <span class="k">return</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RTC not ready yet...&quot;</span><span class="p">)</span>
-        <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Check every second</span>
-
-<span class="k">class</span> <span class="nc">FourDigitClock</span><span class="p">:</span>
-    <span class="n">ALL_OFF</span> <span class="o">=</span> <span class="mh">0xFF</span>  <span class="c1"># All segments off (inverted logic)</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ser_pin</span><span class="p">,</span> <span class="n">srclk_pin</span><span class="p">,</span> <span class="n">rclk_pin</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ser</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="n">ser_pin</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">srclk</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="n">srclk_pin</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">rclk</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="n">rclk_pin</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sr</span> <span class="o">=</span> <span class="n">SR74HC595_BITBANG</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ser</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">srclk</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rclk</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">SEGMENTS</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> 
-            <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">:</span> <span class="mi">1</span>
-        <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">DIGIT_SEGMENTS</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;abcdef&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;bc&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;abged&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;abgcd&#39;</span><span class="p">,</span>
-            <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;fbcg&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;afgcd&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span> <span class="s1">&#39;afedcg&#39;</span><span class="p">,</span> 
-            <span class="mi">7</span><span class="p">:</span> <span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span> <span class="s1">&#39;abcdefg&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="s1">&#39;abfgcd&#39;</span>
-        <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">DIGIT_PATTERNS</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="n">digit</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_pattern</span><span class="p">(</span><span class="n">segments</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">digit</span><span class="p">,</span> <span class="n">segments</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">DIGIT_SEGMENTS</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-        <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">DIGIT_SELECT</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="mb">0b00010000</span><span class="p">,</span>  <span class="c1"># Rightmost digit</span>
-            <span class="mb">0b00100000</span><span class="p">,</span>  <span class="c1"># Second digit </span>
-            <span class="mb">0b01000000</span><span class="p">,</span>  <span class="c1"># Third digit</span>
-            <span class="mb">0b10000000</span>   <span class="c1"># Leftmost digit  </span>
-        <span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">create_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segments</span><span class="p">):</span>
-        <span class="n">pattern</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ALL_OFF</span>
-        <span class="k">for</span> <span class="n">segment</span> <span class="ow">in</span> <span class="n">segments</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">segment</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">SEGMENTS</span><span class="p">:</span>
-                <span class="n">pattern</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">SEGMENTS</span><span class="p">[</span><span class="n">segment</span><span class="p">])</span> 
-        <span class="k">return</span> <span class="n">pattern</span>
-
-    <span class="k">def</span> <span class="nf">display_digit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">digit</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">dp</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-        <span class="n">pattern</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DIGIT_PATTERNS</span><span class="p">[</span><span class="n">digit</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">dp</span><span class="p">:</span>
-            <span class="n">pattern</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Turn on decimal point</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sr</span><span class="o">.</span><span class="n">bits</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sr</span><span class="o">.</span><span class="n">bits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DIGIT_SELECT</span><span class="p">[</span><span class="n">position</span><span class="p">],</span> <span class="mi">8</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sr</span><span class="o">.</span><span class="n">latch</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">display_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">colon_state</span><span class="p">):</span>
-        <span class="c1"># Convert to 12-hour format</span>
-        <span class="k">if</span> <span class="n">hour</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
-            <span class="n">hour</span> <span class="o">-=</span> <span class="mi">12</span>
-        <span class="k">elif</span> <span class="n">hour</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  
-            <span class="n">hour</span> <span class="o">=</span> <span class="mi">12</span>
-
-        <span class="n">digits</span> <span class="o">=</span> <span class="p">[</span><span class="n">hour</span> <span class="o">//</span> <span class="mi">10</span><span class="p">,</span> <span class="n">hour</span> <span class="o">%</span> <span class="mi">10</span><span class="p">,</span> <span class="n">minute</span> <span class="o">//</span> <span class="mi">10</span><span class="p">,</span> <span class="n">minute</span> <span class="o">%</span> <span class="mi">10</span><span class="p">]</span>
-
-        <span class="k">for</span> <span class="n">position</span><span class="p">,</span> <span class="n">digit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">digits</span><span class="p">)):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">display_digit</span><span class="p">(</span><span class="n">digit</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">dp</span><span class="o">=</span><span class="p">(</span><span class="n">position</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">colon_state</span><span class="p">))</span>
-            <span class="n">sleep</span><span class="p">(</span><span class="mf">0.002</span><span class="p">)</span>  <span class="c1"># Reduced persistence timing</span>
+  <h1>Assembly</h1>
 
 
-<span class="k">def</span> <span class="nf">run_clock</span><span class="p">():</span>
-    <span class="c1"># wait for a good time to come from localtime()</span>
-    <span class="n">wait_for_rtc</span><span class="p">()</span>
-
-    <span class="n">clock</span> <span class="o">=</span> <span class="n">FourDigitClock</span><span class="p">(</span><span class="n">ser_pin</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">srclk_pin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rclk_pin</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting clock...&quot;</span><span class="p">)</span>
-
-    <span class="n">last_second</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="n">colon_state</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="n">last_toggle</span> <span class="o">=</span> <span class="n">ticks_ms</span><span class="p">()</span>
-
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">current_time</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">()</span>
-        <span class="n">hour</span> <span class="o">=</span> <span class="n">current_time</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-        <span class="n">minute</span> <span class="o">=</span> <span class="n">current_time</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-        <span class="n">current_second</span> <span class="o">=</span> <span class="n">current_time</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-
-        <span class="k">if</span> <span class="n">ticks_ms</span><span class="p">()</span> <span class="o">-</span> <span class="n">last_toggle</span> <span class="o">&gt;=</span> <span class="mi">500</span><span class="p">:</span>
-            <span class="n">colon_state</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">colon_state</span>
-            <span class="n">last_toggle</span> <span class="o">=</span> <span class="n">ticks_ms</span><span class="p">()</span>
-
-        <span class="n">clock</span><span class="o">.</span><span class="n">display_time</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">colon_state</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">run_clock</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
 
 
 
@@ -2097,7 +1738,7 @@ a bit of time to startup with the Pico first powers up.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../led-displays/shift-register-displays/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Shift Register Displays">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -2107,20 +1748,20 @@ a bit of time to startup with the Pico first powers up.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Shift Register Displays
+                Introduction
               </div>
             </div>
           </a>
         
         
           
-          <a href="../sample-prompt/" class="md-footer__link md-footer__link--next" aria-label="Next: Sample ChatGPT Prompt">
+          <a href="../adjusting-digit-display/" class="md-footer__link md-footer__link--next" aria-label="Next: Adjusting the Display Layout">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Sample ChatGPT Prompt
+                Adjusting the Display Layout
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -18,7 +18,7 @@
         <link rel="prev" href="../neopixel/fibonacci-clock/prompt/">
       
       
-        <link rel="next" href="adjusting-digit-display/">
+        <link rel="next" href="assembly/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -742,6 +742,8 @@
       
         
       
+        
+      
     
     
     
@@ -780,6 +782,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1708,6 +1731,14 @@
 
 <h1 id="a-tiny-ssd1306-oled-clock-on-an-i2c-interface">A Tiny SSD1306 OLED Clock on an I2C Interface</h1>
 <p><img alt="" src="../../img/oled-2-color-ssd1306.jpg" /></p>
+<p>This clock is an ideal starter clock since you can get
+the displays for just $3-4 for the small 1" displays.
+Because they have a simple four-wire I2C connection they
+are also easy to wire up.</p>
+<p>Note that the I2C bus can be slower than the faster SPI bus.
+However, for a clock that only updates once per second,
+this is not usually an issue since we don't need
+the 20 frames per second updates for real-time animation.</p>
 <h2 id="testing-the-i2c-bus">Testing the I2C Bus</h2>
 <p>We start by putting SDA on pin 0 and clock on pin 1.
 We can leave the freq parameter out or
@@ -1928,13 +1959,13 @@ Use 3000000 as a safe option.</p>
         
         
           
-          <a href="adjusting-digit-display/" class="md-footer__link md-footer__link--next" aria-label="Next: Adjusting the Display Layout">
+          <a href="assembly/" class="md-footer__link md-footer__link--next" aria-label="Next: Assembly">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Adjusting the Display Layout
+                Assembly
               </div>
             </div>
             <div class="md-footer__button md-icon">
