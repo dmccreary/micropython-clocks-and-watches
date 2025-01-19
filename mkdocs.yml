@@ -59,21 +59,24 @@ nav:
     - NeoPixel Clocks: 
       - Introduction: kits/neopixel/index.md
       - Binary Clock:   
-        - Intro: kits/neopixel/binary-clock/index.md
+        - Introduction: kits/neopixel/binary-clock/index.md
         - Assembly: kits/neopixel/binary-clock/binary-clock-assembly.md
         - Code: kits/neopixel/binary-clock/binary-clock-code.md
         - Prompt: kits/neopixel/binary-clock/binary-clock-prompt.md
+        - Alternative Layouts: kits/neopixel/binary-clock/alternative-layouts.md
       - 7 Segment Clock:
-        - kits/neopixel/seven-segment-clock/index.md
+        - Introduction: kits/neopixel/seven-segment-clock/index.md
         - Assembly: kits/neopixel/seven-segment-clock/assembly.md
         - Code: kits/neopixel/seven-segment-clock/code.md
         - Prompt: kits/neopixel/seven-segment-clock/prompt.md
       - Fibonacci Clock:
-        - kits/neopixel/fibonacci-clock/index.md
-        - kits/neopixel/fibonacci-clock/assembly.md
-        - kits/neopixel/fibonacci-clock/prompt.md
+        - Introduction: kits/neopixel/fibonacci-clock/index.md
+        - Assembly: kits/neopixel/fibonacci-clock/assembly.md
+        - Code: kits/neopixel/fibonacci-clock/code.md
+        - Prompt: kits/neopixel/fibonacci-clock/prompt.md
     - SSD1306 I2C:
       - Introduction: kits/ssd1306-i2c/index.md
+      - Assembly: kits/ssd1306-i2c/assembly.md
       - Adjusting the Display Layout: kits/ssd1306-i2c/adjusting-digit-display.md
       - Integrating Localtime: kits/ssd1306-i2c/integrating-localtime.md
       - Setting the Time: kits/ssd1306-i2c/setting-time.md

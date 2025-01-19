@@ -1,20 +1,23 @@
 # Clock Lab 20: Draw Seven Segments
 # this lab uses the fill_rect function to draw the segments
-import machine
+from machine import Pin
 import utime
 import ssd1306
 from utime import sleep, localtime
+import config
 led = machine.Pin(25, machine.Pin.OUT)
 
-SCL=machine.Pin(2) # SPI CLock
-SDA=machine.Pin(3) # SPI Data
-spi=machine.SPI(0, sck=SCL, mosi=SDA, baudrate=100000)
+SCL=Pin(config.SPI_SCL_PIN)
+SDA=Pin(config.SPI_SDA_PIN)
+DC = Pin(config.SPI_DC_PIN)
+RES = Pin(config.SPI_RES_PIN)
+CS = Pin(config.SPI_CS_PIN)
+SPI_BUS = config.SPI_BUS
+WIDTH = config.DISPLAY_WIDTH
+HEIGHT = config.DISPLAY_HEIGHT
 
-RES = machine.Pin(4)
-DC = machine.Pin(5)
-CS = machine.Pin(6)
-
-oled = ssd1306.SSD1306_SPI(128, 64, spi, DC, RES, CS)
+spi=machine.SPI(SPI_BUS, sck=SCL, mosi=SDA, baudrate=1000000)
+oled = ssd1306.SSD1306_SPI(WIDTH, HEIGHT, spi, DC, RES, CS)
 
 segmentMapping = [
   #a, b, c, d, e, f, g

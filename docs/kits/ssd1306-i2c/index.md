@@ -2,6 +2,16 @@
 
 ![](../../img/oled-2-color-ssd1306.jpg)
 
+This clock is an ideal starter clock since you can get
+the displays for just $3-4 for the small 1" displays.
+Because they have a simple four-wire I2C connection they
+are also easy to wire up.
+
+Note that the I2C bus can be slower than the faster SPI bus.
+However, for a clock that only updates once per second,
+this is not usually an issue since we don't need
+the 20 frames per second updates for real-time animation.
+
 ## Testing the I2C Bus
 
 We start by putting SDA on pin 0 and clock on pin 1.
