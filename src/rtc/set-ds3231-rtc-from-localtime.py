@@ -6,9 +6,9 @@ DS3231_ADDR = 0x68
 STATUS_REG = 0x0F  # Status register address
 
 # I2C setup
-sda = Pin(0, Pin.OUT)
-scl = Pin(1, Pin.OUT)
-i2c = I2C(0, scl=scl, sda=sda, freq=3000000)
+sda = Pin(0)
+scl = Pin(1)
+i2c = I2C(0, scl=scl, sda=sda, freq=100000)
 
 def dec2bcd(dec):
     """Convert decimal to binary coded decimal."""

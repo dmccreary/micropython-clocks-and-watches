@@ -1,7 +1,7 @@
 SPI_SCL_PIN = 2 # SPI CLock
 SPI_SDA_PIN = 3 # SPI Data
 
-SPI_RES_PIN = 4 # Reset
+SPI_RESET_PIN = 4 # Reset
 # note these got reversed on the cable
 SPI_DC_PIN = 6 # Data/command
 SPI_CS_PIN = 5 # Chip Select
@@ -22,7 +22,7 @@ import config
 SPI_SCL_PIN = config.SPI_SCL_PIN
 SPI_SDA_PIN = config.SPI_SDA_PIN
 
-SPI_RES_PIN = config.SPI_RES_PIN
+SPI_RESET_PIN = config.SPI_RES_PIN
 # note these got reversed on the cable
 SPI_DC_PIN = config.SPI_DC_PIN
 SPI_CS_PIN = config.SPI_CS_PIN

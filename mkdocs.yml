@@ -20,24 +20,28 @@ nav:
   - Lessons:
     - Introduction: lessons/index.md
     - Timekeeping Architecture: lessons/01-timekeeping-architecture.md
+    - Screen Drawing:
+      - Introduction: lessons/screen-drawing/index.md
+        - Drawing Coordinates: lessons/screen-drawing/01-drawing-coordinates.md
+        - Displaying Text: lessons/screen-drawing/02-display-text.md
+        - Drawing a Clock Face: lessons/screen-drawing/03-drawing-face.md
+        - Drawing 7-Segment Digits: lessons/screen-drawing/07-drawing-digits.md
+        - Digit Functions: lessons/screen-drawing/09-digit-functions.md
+        - Scale Testing: lessons/screen-drawing/15-scale-testing.md
+        - Draw Performance: lessons/screen-drawing/06-draw-performance.md
+        - Draw Time Functions: lessons/screen-drawing/12-draw-time-functions.md
+        - Larger Fonts: lessons/04-larger-fonts.md
+
     - Hardware Config Files: lessons/00-hardware-config.md
     - Get Local Time: lessons/01-get-local-time.md
-    - Drawing Coordinates: lessons/01-drawing-coordinates.md
-    - Displaying Text: lessons/02-display-text.md
-    - Drawing a Clock Face: lessons/03-drawing-face.md
-    - Larger Fonts: lessons/04-larger-fonts.md
     - Buttons: lessons/05-buttons.md
-    - Setting Time: lessons/06-setting-time.md
-    - Drawing 7-Segment Digits: lessons/07-drawing-digits.md
-    - Digit Functions: lessons/09-digit-functions.md
-    - Draw Time Functions: lessons/12-draw-time-functions.md
-    - About Real Time Clocks: lessons/13-real-time-clocks.md
-    - RTC Explained: lessons/13-rtc-explained.md
-    - Scale Testing: lessons/15-scale-testing.md
-    - Draw Performance: lessons/06-draw-performance.md
+    - Manually Setting Time: lessons/06-setting-time.md
+    - Real Time Clocks:
+      - Introduction: lessons/rtc/index.md
+      - About Real Time Clocks: lessons/rtc/13-real-time-clocks.md
+      - RTC Explained: lessons/rtc/13-rtc-explained.md
     - ILI9341 Display: lessons/30-ili9341.md
     - Machine Info: lessons/40-machine-info.md
-    - DS1307 Display: lessons/50-ds1307-breadboard.md
     - Shift Registers: lessons/55-shift-registers/index.md
     - Adding Sound: lessons/60-sound.md/index.md
     - Powering Your Clock and Watch: lessons/70-power/index.md
@@ -47,6 +51,9 @@ nav:
       - Intro: kits/tm1637/index.md
       - Manually Setting Time: kits/tm1637/manual-time-setting.md
       - Running the Clock: kits/tm1637/running-clock.md
+    - DS
+        - DS1307 Display: lessons/50-ds1307-breadboard.md
+
     - LED Displays: 
       - Intro: kits/led-displays/index.md
       - Simple TM1637 Display: kits/led-displays/clock-simple.md
