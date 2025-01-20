@@ -1568,7 +1568,7 @@
 of seven individual lights to display a single digit.  These are called
 <a href="https://en.wikipedia.org/wiki/Seven-segment_display">Seven Segment Displays</a>.  An
 example is shown in the image below:</p>
-<p><img alt="Seven Segment Display" src="../img/seven-segment-display.png" width="200" /></p>
+<p><img alt="Seven Segment Display" src="../../../img/seven-segment-display.png" width="200" /></p>
 <p>The segments are labeled "a" through "g" starting at the top and
 going around in a clockwise direction.  Note that the seventh segment is in
 the center element is the "g" segment.</p>
@@ -1583,7 +1583,7 @@ clocks have the colon flash on and off every second.</p>
 We use this to help us figure out what segments to turn on
 for any given digit.</p>
 <p>We will also need to convert the segment letters into integers.  These integers will form the index of an array.</p>
-<p><img alt="Seven Segment Display Numeric Codes" src="../img/seven-segment-display-numbers.png" width="400" /></p>
+<p><img alt="Seven Segment Display Numeric Codes" src="../../../img/seven-segment-display-numbers.png" width="400" /></p>
 <p>To write our code, we ask, for any given digit, is the segment on or off?</p>
 <p>To do this, we can create an array of segments like this:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1640,7 +1640,7 @@ single-pixel width line.  Later we will add a parameter
 to change the thickness of the line.  But we want to take
 this one-step-at-a-time.</p>
 <h2 id="drawing-horizontal-segments">Drawing Horizontal Segments</h2>
-<p><img alt="" src="../img/horizontal-lines.png" /></p>
+<p><img alt="" src="../../../img/horizontal-lines.png" /></p>
 <p>This sample code will step through the horizontal lines
 for segments 0, 3 and 6.  It will check using the <code>segmentOn[i]</code>
 line which will ONLY be true if that segment should be turned
@@ -1688,7 +1688,7 @@ x plus the width of the digit.</p>
       <span class="n">oled</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">yOffset</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">yOffset</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="drawing-the-vertical-segments">Drawing the Vertical Segments</h2>
-<p><img alt="" src="../img/vertical-lines.png" /></p>
+<p><img alt="" src="../../../img/vertical-lines.png" /></p>
 <p>Next, we need to create some code to draw the four vertical
 segments.  This is a little more complex because the lines
 do NOT span the full height of the digit.</p>

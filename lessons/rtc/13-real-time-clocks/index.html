@@ -1619,13 +1619,13 @@ built into the MicroPython Runtime.</p>
 <h2 id="the-ds1307-and-the-ds3231">The DS1307 and the DS3231</h2>
 <p>Our lessons use two different RTC chips.  Let's do a comparison of these RTC modules and explain their implementation with the MicroPython.</p>
 <h3 id="ds1307">DS1307</h3>
-<p><img alt="" src="../img/rtc-ds1307-front-back.jpg" /></p>
+<p><img alt="" src="../../../img/rtc-ds1307-front-back.jpg" /></p>
 <p>This is the original battery-backed real-time clock with I2C interface that maintains basic timekeeping functions introduced by Maxim (then Dallas Semiconductor) around 2004-2005.
 For example, the DS1307 can be used for tracking hours, minutes, seconds with ±2 seconds/day accuracy at C 77°F (25°).
 This is appropriate for room temperature household clocks that have a uniform temperature.  Large
 swings in temperature change crystal vibration frequency which can impact clock accuracy.</p>
 <h3 id="ds3231">DS3231</h3>
-<p><img alt="" src="../img/rtc-ds3231-front-back.jpg" /></p>
+<p><img alt="" src="../../../img/rtc-ds3231-front-back.jpg" /></p>
 <p>This is a newer temperature-compensated real-time clock Released by Maxim Integrated around 2009-2010.
 With integrated crystal and I2C interface that maintains highly accurate timekeeping under varying conditions.</p>
 <p>The DS3231 represented a significant advancement in accuracy and temperature compensation over the earlier DS1307. The improved technology helped make the DS3231 the preferred choice for precision timekeeping applications, despite its higher cost. The DS3231m typically maintains an accuracy of ±2 seconds each <strong>month</strong> (not day) across an incredible range of  -40°F to 185°F (-40°C to +85°C).
