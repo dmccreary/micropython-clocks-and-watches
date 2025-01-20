@@ -29,7 +29,7 @@ class AudioTest:
             sd=Pin(self.SD_PIN),
             mode=I2S.TX,
             bits=16,
-            format=I2S.MONO,
+            format=I2S.STEREO,
             rate=8000,
             ibuf=256  # Minimal internal buffer
         )
