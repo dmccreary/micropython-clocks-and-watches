@@ -20,18 +20,19 @@ nav:
   - Lessons:
     - Introduction: lessons/index.md
     - Timekeeping Architecture: lessons/01-timekeeping-architecture.md
+    - The I2C Bus: lessons/10-i2c-bus.md
+    - The SPI Bus: lessons/11-spi-bus.md
     - Screen Drawing:
       - Introduction: lessons/screen-drawing/index.md
-        - Drawing Coordinates: lessons/screen-drawing/01-drawing-coordinates.md
-        - Displaying Text: lessons/screen-drawing/02-display-text.md
-        - Drawing a Clock Face: lessons/screen-drawing/03-drawing-face.md
-        - Drawing 7-Segment Digits: lessons/screen-drawing/07-drawing-digits.md
-        - Digit Functions: lessons/screen-drawing/09-digit-functions.md
-        - Scale Testing: lessons/screen-drawing/15-scale-testing.md
-        - Draw Performance: lessons/screen-drawing/06-draw-performance.md
-        - Draw Time Functions: lessons/screen-drawing/12-draw-time-functions.md
-        - Larger Fonts: lessons/04-larger-fonts.md
-
+      - Drawing Coordinates: lessons/screen-drawing/01-drawing-coordinates.md
+      - Displaying Text: lessons/screen-drawing/02-display-text.md
+      - Drawing a Clock Face: lessons/screen-drawing/03-drawing-face.md
+      - Drawing 7-Segment Digits: lessons/screen-drawing/07-drawing-digits.md
+      - Digit Functions: lessons/screen-drawing/09-digit-functions.md
+      - Scale Testing: lessons/screen-drawing/15-scale-testing.md
+      - Draw Performance: lessons/screen-drawing/06-draw-performance.md
+      - Draw Time Functions: lessons/screen-drawing/12-draw-time-functions.md
+      - Larger Fonts: lessons/screen-drawing/04-larger-fonts.md
     - Hardware Config Files: lessons/00-hardware-config.md
     - Get Local Time: lessons/01-get-local-time.md
     - Buttons: lessons/05-buttons.md
@@ -44,6 +45,8 @@ nav:
     - Machine Info: lessons/40-machine-info.md
     - Shift Registers: lessons/55-shift-registers/index.md
     - Adding Sound: lessons/60-sound.md/index.md
+             - lessons/60-sound/index.md
+             - lessons/rtc/testing-the-rtc-type.md
     - Powering Your Clock and Watch: lessons/70-power/index.md
   - Kits:
     - Introduction Kits: kits/index.md
@@ -51,9 +54,6 @@ nav:
       - Intro: kits/tm1637/index.md
       - Manually Setting Time: kits/tm1637/manual-time-setting.md
       - Running the Clock: kits/tm1637/running-clock.md
-    - DS
-        - DS1307 Display: lessons/50-ds1307-breadboard.md
-
     - LED Displays: 
       - Intro: kits/led-displays/index.md
       - Simple TM1637 Display: kits/led-displays/clock-simple.md
