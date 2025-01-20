@@ -40,13 +40,12 @@ nav:
     - Real Time Clocks:
       - Introduction: lessons/rtc/index.md
       - About Real Time Clocks: lessons/rtc/13-real-time-clocks.md
+      - Testing The RTC: lessons/rtc/testing-the-rtc-type.md
       - RTC Explained: lessons/rtc/13-rtc-explained.md
     - ILI9341 Display: lessons/30-ili9341.md
+    - Adding Sound: lessons/60-sound/index.md
     - Machine Info: lessons/40-machine-info.md
     - Shift Registers: lessons/55-shift-registers/index.md
-    - Adding Sound: lessons/60-sound.md/index.md
-             - lessons/60-sound/index.md
-             - lessons/rtc/testing-the-rtc-type.md
     - Powering Your Clock and Watch: lessons/70-power/index.md
   - Kits:
     - Introduction Kits: kits/index.md
@@ -74,19 +73,22 @@ nav:
       - 7 Segment Clock:
         - Introduction: kits/neopixel/seven-segment-clock/index.md
         - Assembly: kits/neopixel/seven-segment-clock/assembly.md
+        - Light Diffusion: kits/neopixel/seven-segment-clock/03-light-diffusion.md
         - Code: kits/neopixel/seven-segment-clock/code.md
         - Prompt: kits/neopixel/seven-segment-clock/prompt.md
       - Fibonacci Clock:
         - Introduction: kits/neopixel/fibonacci-clock/index.md
         - Assembly: kits/neopixel/fibonacci-clock/assembly.md
         - Code: kits/neopixel/fibonacci-clock/code.md
-        - Prompt: kits/neopixel/fibonacci-clock/prompt.md
+        - GenAI Prompt: kits/neopixel/fibonacci-clock/prompt.md
     - SSD1306 I2C:
       - Introduction: kits/ssd1306-i2c/index.md
       - Assembly: kits/ssd1306-i2c/assembly.md
+      - Code: kits/ssd1306-i2c/code.md
       - Adjusting the Display Layout: kits/ssd1306-i2c/adjusting-digit-display.md
       - Integrating Localtime: kits/ssd1306-i2c/integrating-localtime.md
       - Setting the Time: kits/ssd1306-i2c/setting-time.md
+      - GenAI Prompt: kits/ssd1306-i2c/prompt.md
     - Large OLED:
       - Introduction: kits/oled-large/index.md
       - Hello World: kits/oled-large/01-hello-world.md
@@ -133,6 +135,7 @@ nav:
       - Intro: kits/e-ink/index.md
     - Waveshare E-Paper:
       - Intro: kits/waveshare-e-paper/index.md
+
   - MicroSims:
     - List of MicroSims: sims/index.md
     - Binary Number: sims/binary-number/index.md
