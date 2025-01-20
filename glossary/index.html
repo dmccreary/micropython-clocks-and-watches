@@ -478,6 +478,8 @@
         
       
         
+      
+        
           
         
       
@@ -1023,6 +1025,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#digital-to-analog-converter-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital to Analog Converter (DAC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#date-and-calendar-display" class="md-nav__link">
     <span class="md-ellipsis">
       Date and Calendar Display
@@ -1365,6 +1376,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#i2s" class="md-nav__link">
+    <span class="md-ellipsis">
+      I2S
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#implementing-clock-themes" class="md-nav__link">
     <span class="md-ellipsis">
       Implementing Clock Themes
@@ -1621,6 +1641,15 @@
   <a href="#pedometer" class="md-nav__link">
     <span class="md-ellipsis">
       Pedometer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcm5102a-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCM5102A DAC
     </span>
   </a>
   
@@ -2491,6 +2520,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#digital-to-analog-converter-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital to Analog Converter (DAC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#date-and-calendar-display" class="md-nav__link">
     <span class="md-ellipsis">
       Date and Calendar Display
@@ -2833,6 +2871,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#i2s" class="md-nav__link">
+    <span class="md-ellipsis">
+      I2S
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#implementing-clock-themes" class="md-nav__link">
     <span class="md-ellipsis">
       Implementing Clock Themes
@@ -3089,6 +3136,15 @@
   <a href="#pedometer" class="md-nav__link">
     <span class="md-ellipsis">
       Pedometer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcm5102a-dac" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCM5102A DAC
     </span>
   </a>
   
@@ -3677,6 +3733,13 @@
 <h4 id="custom-segment-display">Custom Segment Display</h4>
 <p>A specialized arrangement of LED segments for showing numbers or characters.</p>
 <p><strong>Example:</strong> Creating unique digit patterns using individual LED segments.</p>
+<h4 id="digital-to-analog-converter-dac">Digital to Analog Converter (DAC)</h4>
+<p>An integrated circuit that transforms digital data into a continuous analog voltage.
+For example we can generate sound using a microcontroller to play an alarm sounds.</p>
+<p>In our labs we use the MicroPython <a href="#i2s">I2S</a> (Inter-IC Sound) protocol for generating
+high-fidelity audio output. </p>
+<p>For example we have a lab that generates a sine wave to create audible tones through a speaker.</p>
+<p>Specifically our class uses the <a href="#pcm5102a-dac">PCM5102A DAC</a> Module to generate <a href="../docs/lessons/60-sound/index.md">Sound</a>.</p>
 <h4 id="date-and-calendar-display">Date and Calendar Display</h4>
 <p>Showing current date information including day of week, month, and year.</p>
 <p><strong>Example:</strong> Formatting and displaying full date alongside time information.</p>
@@ -3786,10 +3849,22 @@ A function that responds to specific occurrences like button presses or timer up
 <p>Technical specifications and usage instructions for electronic components.</p>
 <p><strong>Example:</strong> Consulting pinout diagrams for display connections.</p>
 <h4 id="i2c">I2C</h4>
-<p>A communication protocol that allows multiple digital components to exchange data using just two wires plus power and ground.</p>
+<p>A medium speed 4-wire communication protocol that allows multiple digital components to exchange data using just two wires plus power and ground.</p>
+<p>I2C also has many different connectors that allow you to connect I2C components without the need for soldering.</p>
 <h4 id="i2c-sensors">I2C Sensors</h4>
 <p>Digital components that communicate using the I2C protocol to provide measurements.</p>
 <p><strong>Example:</strong> Reading temperature and humidity data for weather display.</p>
+<h4 id="i2s">I2S</h4>
+<p>The Inter-sound protocol we use to transmit sound data to components such as a <a href="#digital-to-analog-converter-dac">Digital to Analog Converter</a>.</p>
+<p>Inter-IC Sound bus protocol is a synchronous serial protocol used to connect digital audio devices. </p>
+<p>I2S is a communication protocol that allows multiple digital 
+components to exchange data using just two wires plus power and ground.</p>
+<p>MicroPython 1.21 has builtin support for the I2S bus.</p>
+<ul>
+<li><a href="https://docs.micropython.org/en/latest/library/machine.I2S.html">MicroPython I2S Documentation</a></li>
+<li>See also: <a href="#digital-to-analog-converter-dac">DAC</a></li>
+<li>See also: <a href="#pcm5102a-dac">PCM5102A DAC</a></li>
+</ul>
 <h4 id="implementing-clock-themes">Implementing Clock Themes</h4>
 <p>Creating customizable visual styles for clock displays, including colors, fonts, and layouts.</p>
 <p><strong>Example:</strong> Allowing users to switch between day/night themes or seasonal variations.</p>
@@ -3875,6 +3950,12 @@ A function that responds to specific occurrences like button presses or timer up
 <h4 id="pedometer">Pedometer</h4>
 <p>A feature that counts steps using motion sensor data.</p>
 <p><strong>Example:</strong> Calculating daily step counts from accelerometer readings.</p>
+<h4 id="pcm5102a-dac">PCM5102A DAC</h4>
+<p>An audio <a href="#digital-to-analog-converter-dac">Digital to Analog</a> chip we use in
+our clock projects.</p>
+<ul>
+<li>See Also: <a href="https://www.ti.com/product/PCM5102A">PCM5102A Data Sheet</a></li>
+</ul>
 <h4 id="pin">Pin</h4>
 <p>A metal connector on electronic components that carries electrical signals or power.</p>
 <h4 id="power-management">Power Management</h4>
