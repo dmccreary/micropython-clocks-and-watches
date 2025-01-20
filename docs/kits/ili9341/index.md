@@ -1,6 +1,6 @@
 # ILI9341 Display
 
-![](../../img/tft-clock-face.jpg)
+![](./tft-clock-face.jpg)
 
 The ILI9341 is a low-cost color single-chip driver for a TFT liquid crystal display with a resolution of 240x320.  
 

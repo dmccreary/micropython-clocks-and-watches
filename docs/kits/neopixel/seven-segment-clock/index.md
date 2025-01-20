@@ -1,10 +1,15 @@
 # Neopixel Seven Segment Clock
 
-![](neopixel-clock.jpg)
+![](./7-segment-diffuse.jpg)
+
 
 We can create a large, bright clock visible in a large classroom by lighting up
 selective pixels of an LED strip and arranging the pixels in the shape
 of seven segment displays.  We can use three pixels per segment.
+
+![](neopixel-clock.jpg)
+
+## Seven Segment Digits
 
 ![](./seven-segment-display.png)
 

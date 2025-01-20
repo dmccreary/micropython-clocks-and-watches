@@ -1,3 +1,0 @@
-# Fibonacci Clock Example
-
-

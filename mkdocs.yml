@@ -50,6 +50,7 @@ nav:
     - Powering Your Clock and Watch: lessons/70-power/index.md
   - Kits:
     - Introduction Kits: kits/index.md
+    - Gallery: kits/gallery.md
     - TM1637 LED Kit:
       - Intro: kits/tm1637/index.md
       - Manually Setting Time: kits/tm1637/manual-time-setting.md

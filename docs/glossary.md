@@ -147,7 +147,20 @@ A specialized arrangement of LED segments for showing numbers or characters.
 
 **Example:** Creating unique digit patterns using individual LED segments.
 
+#### Digital to Analog Converter (DAC)
+
+An integrated circuit that transforms digital data into a continuous analog voltage.
+For example we can generate sound using a microcontroller to play an alarm sounds.
+
+In our labs we use the MicroPython [I2S](#i2s) (Inter-IC Sound) protocol for generating
+high-fidelity audio output. 
+
+For example we have a lab that generates a sine wave to create audible tones through a speaker.
+
+Specifically our class uses the [PCM5102A DAC](#pcm5102a-dac) Module to generate [Sound](../docs/lessons/60-sound/index.md).
+
 #### Date and Calendar Display
+
 Showing current date information including day of week, month, and year.
 
 **Example:** Formatting and displaying full date alongside time information.
@@ -328,12 +341,30 @@ Technical specifications and usage instructions for electronic components.
 **Example:** Consulting pinout diagrams for display connections.
 
 #### I2C
-A communication protocol that allows multiple digital components to exchange data using just two wires plus power and ground.
+
+A medium speed 4-wire communication protocol that allows multiple digital components to exchange data using just two wires plus power and ground.
+
+I2C also has many different connectors that allow you to connect I2C components without the need for soldering.
 
 #### I2C Sensors
 Digital components that communicate using the I2C protocol to provide measurements.
 
 **Example:** Reading temperature and humidity data for weather display.
+
+#### I2S
+
+The Inter-sound protocol we use to transmit sound data to components such as a [Digital to Analog Converter](#digital-to-analog-converter-dac).
+
+Inter-IC Sound bus protocol is a synchronous serial protocol used to connect digital audio devices. 
+
+I2S is a communication protocol that allows multiple digital 
+components to exchange data using just two wires plus power and ground.
+
+MicroPython 1.21 has builtin support for the I2S bus.
+
+* [MicroPython I2S Documentation](https://docs.micropython.org/en/latest/library/machine.I2S.html)
+* See also: [DAC](#digital-to-analog-converter-dac)
+* See also: [PCM5102A DAC](#pcm5102a-dac)
 
 #### Implementing Clock Themes
 Creating customizable visual styles for clock displays, including colors, fonts, and layouts.
@@ -476,6 +507,13 @@ Techniques for refreshing only the changed portions of a display to improve effi
 A feature that counts steps using motion sensor data.
 
 **Example:** Calculating daily step counts from accelerometer readings.
+
+#### PCM5102A DAC
+
+An audio [Digital to Analog](#digital-to-analog-converter-dac) chip we use in
+our clock projects.
+
+* See Also: [PCM5102A Data Sheet](https://www.ti.com/product/PCM5102A)
 
 #### Pin
 A metal connector on electronic components that carries electrical signals or power.
