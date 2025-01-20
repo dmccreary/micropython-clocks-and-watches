@@ -6,19 +6,19 @@ We can create a large, bright clock visible in a large classroom by lighting up
 selective pixels of an LED strip and arranging the pixels in the shape
 of seven segment displays.  We can use three pixels per segment.
 
-![](../../img/seven-segment-display.png)
+![](./seven-segment-display.png)
 
 * We can use three pixels per segment.
 * 21 pixels per digit
 * 63 pixels + 6 for the "1" + two for the colon = 70 pixels
 
-![Clock Segment Map](clock-segment-map.png)
+![Clock Segment Map](./clock-segment-map.png)
 
 [eBay 50 for $12](https://www.ebay.com/itm/165045487983)
 
 Drawing Digits
 
-[Lessons](../../lessons/07-drawing-digits.md)
+[Lessons](../../../lessons/screen-drawing/07-drawing-digits.md)
 
 We can create an array of the segments like this:
 

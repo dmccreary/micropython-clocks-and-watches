@@ -7,7 +7,7 @@ of seven individual lights to display a single digit.  These are called
 [Seven Segment Displays](https://en.wikipedia.org/wiki/Seven-segment_display).  An
 example is shown in the image below:
 
-![Seven Segment Display](../img/seven-segment-display.png){ width="200" }
+![Seven Segment Display](../../img/seven-segment-display.png){ width="200" }
 
 The segments are labeled "a" through "g" starting at the top and
 going around in a clockwise direction.  Note that the seventh segment is in
@@ -29,7 +29,7 @@ for any given digit.
 
 We will also need to convert the segment letters into integers.  These integers will form the index of an array.
 
-![Seven Segment Display Numeric Codes](../img/seven-segment-display-numbers.png){ width="400" }
+![Seven Segment Display Numeric Codes](../../img/seven-segment-display-numbers.png){ width="400" }
 
 To write our code, we ask, for any given digit, is the segment on or off?
 
@@ -84,7 +84,7 @@ this one-step-at-a-time.
 
 ## Drawing Horizontal Segments
 
-![](../img/horizontal-lines.png)
+![](../../img/horizontal-lines.png)
 
 This sample code will step through the horizontal lines
 for segments 0, 3 and 6.  It will check using the ```segmentOn[i]```
@@ -122,7 +122,7 @@ height = 30
 ```
 ## Drawing the Vertical Segments
 
-![](../img/vertical-lines.png)
+![](../../img/vertical-lines.png)
 
 Next, we need to create some code to draw the four vertical
 segments.  This is a little more complex because the lines

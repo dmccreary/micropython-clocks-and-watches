@@ -14,7 +14,7 @@ are not tempted to rewrite our code on their own.
 
 Here is an example of our 12-hour clock layout:
 
-![Clock Time Layout](../img/clock-time-layout.png)
+![Clock Time Layout](../../img/clock-time-layout.png)
 
 Note that there are six horizontal x-dimension numbers and three vertical y-dimension numbers that you can adjust to create a pleasant interface.
 

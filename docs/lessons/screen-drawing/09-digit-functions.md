@@ -11,7 +11,7 @@ Placing the rectangles correctly within a seven-segment display when
 we have many drawing parameters requires some precision.  We
 will use a decomposition process and take "one step at a time" to work out the details.
 
-![](../img/seven-segment-thickness.png)
+![](../../img/seven-segment-thickness.png)
 
 ## Draw Segment Function
 
@@ -80,7 +80,7 @@ we draw the bottom segment:
 yOffset = height - thickness # bottom element
 ```
 
-![](../img/horizontal-lines-thickness.png)
+![](../../img/horizontal-lines-thickness.png)
 
 ## Full Test Program
 

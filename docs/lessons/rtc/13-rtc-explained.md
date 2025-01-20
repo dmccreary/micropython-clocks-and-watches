@@ -20,7 +20,7 @@ smartphones, appliances, and many other gadgets that need to keep accurate time.
 
 Here is how the DS1307 is typically used in a microcontroller project.
 
-![](../img/rtc-ds1307-circuit-diagram.png)
+![](../../img/rtc-ds1307-circuit-diagram.png)
 
 The DS1307 is one of the most well-known RTCs.  We have a LOT of them lying around the lab.
 This little chip was first introduced in 2005 and has been widely used in various electronic projects. The DS1307 keeps track of seconds, minutes, hours, days, months, and years. It communicates with the main processor using a protocol called I2C (Inter-Integrated Circuit).
@@ -29,7 +29,7 @@ Now, let's take a look at how the DS1307 works. It has a built-in crystal oscill
 
 Speaking of power, the DS1307 uses a small coin cell battery to keep the clock running when the main power is disconnected. This battery can last for several years, ensuring that your device always has the correct time.
 
-![](../img/rtc-ds3231-front-back.jpg)
+![](../../img/rtc-ds3231-front-back.jpg)
 
 Now, let's move on to the newer and more accurate DS3231. Released in 2011, the DS3231 is known for its incredible precision. It has a temperature-compensated crystal oscillator (TCXO), which means it can maintain accurate timekeeping even when the temperature changes. This is important because temperature fluctuations can affect the frequency of regular crystal oscillators, causing the clock to drift over time.
 
@@ -56,7 +56,7 @@ Let's head to the lab and start tinkering with these amazing little chips!
 
 ## Testing the DS1307 and DS3232 Real Time Clocks
 
-![RTC DS3231 Listing on eBay](../img/rtc-ds3231-ebay.png)
+![RTC DS3231 Listing on eBay](../../img/rtc-ds3231-ebay.png)
 
 ## Hardware Configuration
 

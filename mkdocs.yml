@@ -67,9 +67,9 @@ nav:
       - Introduction: kits/neopixel/index.md
       - Binary Clock:   
         - Introduction: kits/neopixel/binary-clock/index.md
-        - Assembly: kits/neopixel/binary-clock/binary-clock-assembly.md
-        - Code: kits/neopixel/binary-clock/binary-clock-code.md
-        - Prompt: kits/neopixel/binary-clock/binary-clock-prompt.md
+        - Assembly: kits/neopixel/binary-clock/assembly.md
+        - Code: kits/neopixel/binary-clock/code.md
+        - Prompt: kits/neopixel/binary-clock/prompt.md
         - Alternative Layouts: kits/neopixel/binary-clock/alternative-layouts.md
       - 7 Segment Clock:
         - Introduction: kits/neopixel/seven-segment-clock/index.md

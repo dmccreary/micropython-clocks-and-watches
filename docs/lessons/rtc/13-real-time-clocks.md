@@ -14,7 +14,7 @@
 Our lessons use two different RTC chips.  Let's do a comparison of these RTC modules and explain their implementation with the MicroPython.
 
 ### DS1307
-![](../img/rtc-ds1307-front-back.jpg)
+![](../../img/rtc-ds1307-front-back.jpg)
 
 This is the original battery-backed real-time clock with I2C interface that maintains basic timekeeping functions introduced by Maxim (then Dallas Semiconductor) around 2004-2005.
 For example, the DS1307 can be used for tracking hours, minutes, seconds with ±2 seconds/day accuracy at C 77°F (25°).
@@ -23,7 +23,7 @@ swings in temperature change crystal vibration frequency which can impact clock 
 
 ### DS3231
 
-![](../img/rtc-ds3231-front-back.jpg)
+![](../../img/rtc-ds3231-front-back.jpg)
 
 This is a newer temperature-compensated real-time clock Released by Maxim Integrated around 2009-2010.
 With integrated crystal and I2C interface that maintains highly accurate timekeeping under varying conditions.
