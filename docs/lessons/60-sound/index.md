@@ -13,7 +13,9 @@ don't have a clear "clink" when pressed.
 
 ## Adding a Speaker
 
-## Generating Simple Sounds
+## Generating Simple Sounds with PWM
+
+[Play a Tune with PWM](./play-tune.md)
 
 ## Using a Digital to Analog Converter
 ![](../../img/dac-pcm5102.png)
