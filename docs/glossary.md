@@ -125,7 +125,7 @@ Programming statements that perform different actions based on whether a conditi
 #### Connecting Speakers
 Methods for attaching and controlling audio output devices to create sound effects and alarms.
 
-**Example:** Wiring a piezo speaker to a PWM-capable GPIO pin for generating tones.
+**Example:** Wiring a speaker to a PWM-capable GPIO pin for generating tones for an alarm clock.
 
 #### Console Output
 Text-based information displayed in the development environment for debugging.

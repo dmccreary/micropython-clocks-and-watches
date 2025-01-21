@@ -131,10 +131,8 @@ nav:
       - Drawing Hands: kits/waveshare-lcd/03-drawing-hands.md
       - Font Lab: kits/waveshare-lcd/04-5x8-font.md
     - MAX7219: kits/max7219/index.md
-    - Fibonacci Clock:
-      - Intro: kits/fibonacci-clock/index.md
-    - E-Ink: 
-      - Intro: kits/e-ink/index.md
+    - E-Paper Clock: 
+      - Intro: kits/e-paper/index.md
     - Waveshare E-Paper:
       - Intro: kits/waveshare-e-paper/index.md
 

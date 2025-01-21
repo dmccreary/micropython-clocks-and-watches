@@ -7,7 +7,7 @@ import config
 SCL=Pin(config.SPI_SCL_PIN)
 SDA=Pin(config.SPI_SDA_PIN)
 DC = Pin(config.SPI_DC_PIN)
-RES = Pin(config.SPI_RES_PIN)
+RES = Pin(config.SPI_RESET_PIN)
 CS = Pin(config.SPI_CS_PIN)
 SPI_BUS = config.SPI_BUS
 WIDTH = config.DISPLAY_WIDTH
