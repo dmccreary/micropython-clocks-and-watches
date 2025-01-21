@@ -38,3 +38,6 @@ We have found that once we create these cable assemblies with hot glue to keep t
 !!! Warning
     Note that we still MUST make sure that the black wire in the wiring harness is connected to the GND. It is easy to get the cable reversed so make sure to double-check the cable orientation before you use power on the board.
 
+For younger students, don't be shy about providing a few color-coded hints on the breadboard to guide their assembly process.
+
+![](../img/color-coded-breadboard-2.jpg)

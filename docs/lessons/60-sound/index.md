@@ -17,3 +17,7 @@ don't have a clear "clink" when pressed.
 
 ## Using a Digital to Analog Converter
 ![](../../img/dac-pcm5102.png)
+
+## References
+
+[Prof. Albrecht Schmidt Wiki](https://www.sketching-with-hardware.org/wiki/Piezo_Speaker)

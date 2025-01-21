@@ -61,7 +61,7 @@ def day_to_str(day_num):
 def month_to_str(month_num):
     """
     Convert a month number (0-11) to a three-letter month abbreviation.
-    Note: RTC month numbers are 1-12, so subtract 1 before calling this function.
+    
     Args:
         month_num (int): Month number, where 0=January through 11=December
         
@@ -119,7 +119,6 @@ def update_screen(year, month, day, hour, minute, second, weekday):
 
     oled.fill(0)
     
-    # put the date on the screen - note months are 1-12 and our function expects 0-11
     date_str = f"{day_to_str(weekday)} {month_to_str(month-1)} {day} {year}"
     oled.text(date_str, 0, 0, 1)
 
@@ -158,9 +157,11 @@ while True:
     hour = now[3]
     minute = now[4]
     second = now[5]
-    weekday = rtc.weekday
+    weekday = now[6]
     update_screen(year, month, day, hour, minute, second, weekday)
-    print("weekday:", rtc.weekday, day_to_str(rtc.weekday))
+    print("{:04d}-{:02d}-{:02d}T{:02d}:{:02d}:{:02d} weekday:{}".format(
+      rtc.year, rtc.month, rtc.day,
+      rtc.hour, rtc.minute, rtc.second, rtc.weekday))
     sleep(1)
     counter += 1
     if counter > 9:

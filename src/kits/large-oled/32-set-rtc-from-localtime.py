@@ -23,8 +23,7 @@ rtc.datetime = localtime()
 print("After setting the time from local time the RTC had: ", rtc.datetime)
 
 # Print the date and time in ISO8601 format: 2023-04-18T21:14:22
-print("Today is {:04d}-{:02d}-{:02d}T{:02d}:{:02d}:{:02d}".format(
+print("Today is {:04d}-{:02d}-{:02d}T{:02d}:{:02d}:{:02d} weekday:{}".format(
     rtc.year, rtc.month, rtc.day,
-    rtc.hour, rtc.minute, rtc.second))
-
+    rtc.hour, rtc.minute, rtc.second, rtc.weekday))
 
