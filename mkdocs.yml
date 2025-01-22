@@ -14,8 +14,9 @@ nav:
     - Desktop Setup: setup/01-desktop.md
     - Purchasing Parts: setup/02-purchasing-parts.md
     - Cable Harness: setup/03-display-cable-harness.md
-    - LED Clocks: setup/04-led-clocks.md
+    - LED Art Clocks: setup/04-led-clocks.md
     - Pico Wireless: setup/06-pico-w-setup.md
+    - Sound and Speakers: setup/07-sound.md
     - AI in the Classroom: setup/05-ai-in-the-classroom.md
   - Lessons:
     - Introduction: lessons/index.md
@@ -33,6 +34,8 @@ nav:
       - Draw Performance: lessons/screen-drawing/06-draw-performance.md
       - Draw Time Functions: lessons/screen-drawing/12-draw-time-functions.md
       - Larger Fonts: lessons/screen-drawing/04-larger-fonts.md
+      - Drawing Polygons: lessons/screen-drawing/05-drawing-polygons.md
+      - Alarm Icon: lessons/screen-drawing/16-drawing-alarm-icon.md
     - Hardware Config Files: lessons/00-hardware-config.md
     - Get Local Time: lessons/01-get-local-time.md
     - Buttons: lessons/05-buttons.md
@@ -45,6 +48,11 @@ nav:
       - RTC Breadboard Testing: lessons/rtc/50-ds1307-breadboard.md
     - ILI9341 Display: lessons/30-ili9341.md
     - Adding Sound: lessons/60-sound/index.md
+    - Digital to Analog Converters:
+      - Introduction: lessons/digital-to-analog-converters/index.md
+      - Assembly: lessons/digital-to-analog-converters/assembly.md
+      - Code: lessons/digital-to-analog-converters/code.md
+      - Prompt: lessons/digital-to-analog-converters/prompt.md
     - Machine Info: lessons/40-machine-info.md
     - Shift Registers: lessons/55-shift-registers/index.md
     - Powering Your Clock and Watch: lessons/70-power/index.md
