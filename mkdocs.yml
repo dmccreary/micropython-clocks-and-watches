@@ -101,6 +101,7 @@ nav:
       - GenAI Prompt: kits/ssd1306-i2c/prompt.md
     - Large OLED:
       - Introduction: kits/oled-large/index.md
+      - Assembly: kits/oled-large/01-assembly.md
       - Hello World: kits/oled-large/01-hello-world.md
       - Config: kits/oled-large/02-hello-config.md
       - Display Time: kits/oled-large/02-display-time.md
