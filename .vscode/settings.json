@@ -1,12 +1,18 @@
 {
     "cSpell.words": [
+        "Baudrate",
+        "baudrates",
         "bytearray",
+        "EEPROM",
         "LILYGO",
         "localtime",
         "microcontroller",
         "mosi",
         "neopixel",
         "OLED",
+        "photodetector",
+        "Piezo",
+        "piezos",
         "Pinout",
         "solderless",
         "Tannenbaum"
