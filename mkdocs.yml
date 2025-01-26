@@ -103,11 +103,11 @@ nav:
       - Introduction: kits/oled-large/index.md
       - Assembly: kits/oled-large/01-assembly.md
       - Hello World: kits/oled-large/01-hello-world.md
-      - Config: kits/oled-large/02-hello-config.md
-      - Display Time: kits/oled-large/02-display-time.md
-      - Display Localtime: kits/oled-large/03-display-localtime.md
-      - Display Localtime Updates: kits/oled-large/04-display-localtime-updates.md
-      - Display Clock Hands:  kits/oled-large/05-clock-hands.md
+      - Display Config: kits/oled-large/02-display-config.md
+      - Display Local Time Raw: kits/oled-large/03-display-localtime-raw.md
+      - Display Local Time Formatted: kits/oled-large/04-display-localtime-formatted.md
+
+      - Display Clock Hands:  kits/oled-large/10-clock-hands.md
       - 7-Segment: kits/oled-large/10-draw-seven-segments.md
       - Segment Thickness: kits/oled-large/11-draw-thickness.md
       - Digital Clock: kits/oled-large/15-digital-clock.md

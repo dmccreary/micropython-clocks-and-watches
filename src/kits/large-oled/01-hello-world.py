@@ -3,7 +3,6 @@ import ssd1306
 
 SCL=machine.Pin(2) # SPI CLock
 SDA=machine.Pin(3) # SPI Data
-
 RES = machine.Pin(4) # Reset
 DC = machine.Pin(5) # Data/command
 CS = machine.Pin(6) # Chip Select
