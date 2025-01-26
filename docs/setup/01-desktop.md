@@ -82,6 +82,128 @@ If this device does not immediately appear, then you should double-check your ca
 
 If you know your cable works fine by testing it on other devices then you may have to reboot your computer.
 
+### Setting USB Permissions on MacOS
+![](./macos-usb-permissions.png)
+
+In many classrooms with old Macs, the new security settings
+for USB connections can get in the way of a good experience for
+our students.  Since these Macs don't leave our classrooms, 
+we have decided to permanently allow USB access for your Raspberry Pi Pico on MacOS Sonoma.
+Here are the steps we use.
+
+1.  On the Mac, go to System Settings > Privacy & Security
+2.  Scroll to Security
+3.  Find "Allow accessories to connect" and select "always"
+
+
+### Debugging your USB Connection
+
+Our students have reported many frustrating experiences getting their Raspberry Pi Pico to connect to their MacOS system.
+Most of these problems can be quickly solved by checking the security settings on your MacOS.
+
+After you plug in the USB it should be listed in the `/dev/cu*` area:
+
+```sh
+ls /dev/cu*
+```
+
+A typical response includes this device:
+
+```
+/dev/cu.usbmodem1101
+```
+
+If the usbmodem11001 or similar is not listed then THonny will not connect.
+This is the time to check your cables and connectors.  Older USB cables frequently have broken wires.
+
+### Getting USB Diagnostic Information on the MacOS
+
+You can also get information about how much current will be provided to the USB
+using the following shell commnad:
+
+You can get the full information on your device using this command:
+
+```sh
+system_profiler SPUSBDataType | grep -B 6 -A 5 "MicroPython"
+```
+
+This command prints the 6 lines before and five lines after the string "MicroPython" appears in the output of the system_profiler command.
+
+```
+  Product ID: 0x0005
+  Vendor ID: 0x2e8a
+  Version: 1.00
+  Serial Number: e66178c1276d562d
+  Speed: Up to 12 Mb/s
+  Manufacturer: MicroPython
+  Location ID: 0x01100000 / 1
+  Current Available (mA): 500
+  Current Required (mA): 250
+  Extra Operating Current (mA): 0
+```
+
+#### Using the MacOS I/O Registry Command
+
+The MacOS shell command ```ioreg``` can also be useful for monitoring USB device status.
+Here is a command that lists the information of all USB devices.  The I/O Registry is a hierarchical database of all the devices and drivers on your Mac. The ```ioreg``` shell command is powerful utility to examine system hardware and device information.
+
+```sh
+ioreg -p IOUSB -w0 -l
+```
+
+Here are the parameters:
+-   **`ioreg`**:
+
+    -   The command-line tool used to display the I/O Registry, a hierarchical database of all the devices and drivers on your Mac. It's a powerful utility to examine system hardware and device information.
+-   **`-p IOUSB`**:
+
+    -   Specifies the **plane** (category of devices) to focus on. In this case, the `IOUSB` plane, which contains information about all USB devices connected to your system. Other planes include `IODeviceTree`, `IOService`, etc.
+-   **`-w0`**:
+
+    -   Sets the line wrapping for output.
+    -   **`0`** disables wrapping entirely, which means the output will display long lines without being truncated or split. This is useful for keeping all the device details on a single line, making it easier to parse or search.
+-   **`-l`**:
+
+    -   Displays the output in **long format**.
+    -   This includes all properties associated with each object in the I/O Registry. Without `-l`, the command provides a more concise list with only basic information.
+
++-o Board in FS mode@01100000  <class IOUSBHostDevice, id 0x10008dc65, registered, matched, active, busy 0 (266 ms), retain 27>
+```json
+{
+  "sessionID" = 37899561861259
+  "USBSpeed" = 1
+  "idProduct" = 5
+  "iManufacturer" = 1
+  "bDeviceClass" = 239
+  "IOPowerManagement" = {"PowerOverrideOn"=Yes,"DevicePowerState"=2,"CurrentPowerState"=2,"CapabilityFlags"=32768,"MaxPowerState"=2,"DriverPowerState"=0}
+  "bcdDevice" = 256
+  "bMaxPacketSize0" = 64
+  "iProduct" = 2
+  "iSerialNumber" = 3
+  "bNumConfigurations" = 1
+  "UsbDeviceSignature" = <8a2e0500000165363631373863313237366435363264ef02010202000a0000>
+  "USB Product Name" = "Board in FS mode"
+  "locationID" = 17825792
+  "bDeviceSubClass" = 2
+  "bcdUSB" = 512
+  "kUSBSerialNumberString" = "e66178c1276d562d"
+  "USB Address" = 1
+  "IOCFPlugInTypes" = {"9dc7b780-9ec0-11d4-a54f-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  "kUSBCurrentConfiguration" = 1
+  "bDeviceProtocol" = 1
+  "USBPortType" = 0
+  "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  "USB Vendor Name" = "MicroPython"
+  "Device Speed" = 1
+  "idVendor" = 11914
+  "kUSBProductString" = "Board in FS mode"
+  "USB Serial Number" = "e66178c1276d562d"
+  "IOGeneralInterest" = "IOCommand is not serializable"
+  "kUSBAddress" = 1
+  "kUSBVendorString" = "MicroPython"
+}
+```
+
 ### Automatic Power Draw Shutoff
 
 If your USB port is drawing too much power, then many computers will disable the port.  This can happen if you are trying to display too many LEDs or a motor.  You will see a message such as "USB Port Disabled". 
