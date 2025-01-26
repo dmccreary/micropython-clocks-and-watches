@@ -525,6 +525,48 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#setting-usb-permissions-on-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting USB Permissions on MacOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-your-usb-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging your USB Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-usb-diagnostic-information-on-the-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting USB Diagnostic Information on the MacOS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting USB Diagnostic Information on the MacOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-macos-io-registry-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the MacOS I/O Registry Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#automatic-power-draw-shutoff" class="md-nav__link">
     <span class="md-ellipsis">
       Automatic Power Draw Shutoff
@@ -1256,6 +1298,48 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#setting-usb-permissions-on-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting USB Permissions on MacOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-your-usb-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging your USB Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-usb-diagnostic-information-on-the-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting USB Diagnostic Information on the MacOS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting USB Diagnostic Information on the MacOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-macos-io-registry-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the MacOS I/O Registry Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#automatic-power-draw-shutoff" class="md-nav__link">
     <span class="md-ellipsis">
       Automatic Power Draw Shutoff
@@ -1374,6 +1458,154 @@ crw-rw-rw-<span class="w">  </span><span class="m">1</span><span class="w"> </sp
 <p>Note that the exact port name might change.  The example above is <code>cu.usbmodem101</code>.</p>
 <p>If this device does not immediately appear, then you should double-check your cable and make sure the operating system registers the USB device.</p>
 <p>If you know your cable works fine by testing it on other devices then you may have to reboot your computer.</p>
+<h3 id="setting-usb-permissions-on-macos">Setting USB Permissions on MacOS</h3>
+<p><img alt="" src="../macos-usb-permissions.png" /></p>
+<p>In many classrooms with old Macs, the new security settings
+for USB connections can get in the way of a good experience for
+our students.  Since these Macs don't leave our classrooms, 
+we have decided to permanently allow USB access for your Raspberry Pi Pico on MacOS Sonoma.
+Here are the steps we use.</p>
+<ol>
+<li>On the Mac, go to System Settings &gt; Privacy &amp; Security</li>
+<li>Scroll to Security</li>
+<li>Find "Allow accessories to connect" and select "always"</li>
+</ol>
+<h3 id="debugging-your-usb-connection">Debugging your USB Connection</h3>
+<p>Our students have reported many frustrating experiences getting their Raspberry Pi Pico to connect to their MacOS system.
+Most of these problems can be quickly solved by checking the security settings on your MacOS.</p>
+<p>After you plug in the USB it should be listed in the <code>/dev/cu*</code> area:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/dev/cu*
+</code></pre></div></td></tr></table></div>
+<p>A typical response includes this device:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/dev/cu.usbmodem1101
+</code></pre></div></td></tr></table></div>
+<p>If the usbmodem11001 or similar is not listed then THonny will not connect.
+This is the time to check your cables and connectors.  Older USB cables frequently have broken wires.</p>
+<h3 id="getting-usb-diagnostic-information-on-the-macos">Getting USB Diagnostic Information on the MacOS</h3>
+<p>You can also get information about how much current will be provided to the USB
+using the following shell commnad:</p>
+<p>You can get the full information on your device using this command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>system_profiler<span class="w"> </span>SPUSBDataType<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-B<span class="w"> </span><span class="m">6</span><span class="w"> </span>-A<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="s2">&quot;MicroPython&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>This command prints the 6 lines before and five lines after the string "MicroPython" appears in the output of the system_profiler command.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>  Product ID: 0x0005
+  Vendor ID: 0x2e8a
+  Version: 1.00
+  Serial Number: e66178c1276d562d
+  Speed: Up to 12 Mb/s
+  Manufacturer: MicroPython
+  Location ID: 0x01100000 / 1
+  Current Available (mA): 500
+  Current Required (mA): 250
+  Extra Operating Current (mA): 0
+</code></pre></div></td></tr></table></div>
+<h4 id="using-the-macos-io-registry-command">Using the MacOS I/O Registry Command</h4>
+<p>The MacOS shell command <code>ioreg</code> can also be useful for monitoring USB device status.
+Here is a command that lists the information of all USB devices.  The I/O Registry is a hierarchical database of all the devices and drivers on your Mac. The <code>ioreg</code> shell command is powerful utility to examine system hardware and device information.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ioreg<span class="w"> </span>-p<span class="w"> </span>IOUSB<span class="w"> </span>-w0<span class="w"> </span>-l
+</code></pre></div></td></tr></table></div>
+<p>Here are the parameters:
+-   <strong><code>ioreg</code></strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-   The command-line tool used to display the I/O Registry, a hierarchical database of all the devices and drivers on your Mac. It&#39;s a powerful utility to examine system hardware and device information.
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p><strong><code>-p IOUSB</code></strong>:</p>
+<ul>
+<li>Specifies the <strong>plane</strong> (category of devices) to focus on. In this case, the <code>IOUSB</code> plane, which contains information about all USB devices connected to your system. Other planes include <code>IODeviceTree</code>, <code>IOService</code>, etc.</li>
+<li>
+<p><strong><code>-w0</code></strong>:</p>
+</li>
+<li>
+<p>Sets the line wrapping for output.</p>
+</li>
+<li><strong><code>0</code></strong> disables wrapping entirely, which means the output will display long lines without being truncated or split. This is useful for keeping all the device details on a single line, making it easier to parse or search.</li>
+<li>
+<p><strong><code>-l</code></strong>:</p>
+</li>
+<li>
+<p>Displays the output in <strong>long format</strong>.</p>
+</li>
+<li>This includes all properties associated with each object in the I/O Registry. Without <code>-l</code>, the command provides a more concise list with only basic information.</li>
+</ul>
+</li>
+</ul>
+<p>+-o Board in FS mode@01100000  <class IOUSBHostDevice, id 0x10008dc65, registered, matched, active, busy 0 (266 ms), retain 27>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;sessionID&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">37899561861259</span>
+<span class="w">  </span><span class="s2">&quot;USBSpeed&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="s2">&quot;idProduct&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">  </span><span class="s2">&quot;iManufacturer&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="s2">&quot;bDeviceClass&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">239</span>
+<span class="w">  </span><span class="s2">&quot;IOPowerManagement&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;PowerOverrideOn&quot;</span><span class="err">=Yes</span><span class="p">,</span><span class="s2">&quot;DevicePowerState&quot;</span><span class="err">=</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;CurrentPowerState&quot;</span><span class="err">=</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;CapabilityFlags&quot;</span><span class="err">=</span><span class="mi">32768</span><span class="p">,</span><span class="s2">&quot;MaxPowerState&quot;</span><span class="err">=</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;DriverPowerState&quot;</span><span class="err">=</span><span class="mi">0</span><span class="p">}</span>
+<span class="w">  </span><span class="s2">&quot;bcdDevice&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">256</span>
+<span class="w">  </span><span class="s2">&quot;bMaxPacketSize0&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">64</span>
+<span class="w">  </span><span class="s2">&quot;iProduct&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">  </span><span class="s2">&quot;iSerialNumber&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">  </span><span class="s2">&quot;bNumConfigurations&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="s2">&quot;UsbDeviceSignature&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">&lt;</span><span class="mi">8</span><span class="err">a</span><span class="mf">2e0500000165363631373863313237366435363264e</span><span class="kc">f</span><span class="mi">02010202000</span><span class="err">a</span><span class="mi">0000</span><span class="err">&gt;</span>
+<span class="w">  </span><span class="s2">&quot;USB Product Name&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;Board in FS mode&quot;</span>
+<span class="w">  </span><span class="s2">&quot;locationID&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">17825792</span>
+<span class="w">  </span><span class="s2">&quot;bDeviceSubClass&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">  </span><span class="s2">&quot;bcdUSB&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">512</span>
+<span class="w">  </span><span class="s2">&quot;kUSBSerialNumberString&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;e66178c1276d562d&quot;</span>
+<span class="w">  </span><span class="s2">&quot;USB Address&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="s2">&quot;IOCFPlugInTypes&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;9dc7b780-9ec0-11d4-a54f-000a27052861&quot;</span><span class="err">=</span><span class="s2">&quot;IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle&quot;</span><span class="p">}</span>
+<span class="w">  </span><span class="s2">&quot;kUSBCurrentConfiguration&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="s2">&quot;bDeviceProtocol&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="s2">&quot;USBPortType&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="s2">&quot;IOServiceDEXTEntitlements&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">((</span><span class="s2">&quot;com.apple.developer.driverkit.transport.usb&quot;</span><span class="err">))</span>
+<span class="w">  </span><span class="s2">&quot;USB Vendor Name&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;MicroPython&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Device Speed&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="s2">&quot;idVendor&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">11914</span>
+<span class="w">  </span><span class="s2">&quot;kUSBProductString&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;Board in FS mode&quot;</span>
+<span class="w">  </span><span class="s2">&quot;USB Serial Number&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;e66178c1276d562d&quot;</span>
+<span class="w">  </span><span class="s2">&quot;IOGeneralInterest&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;IOCommand is not serializable&quot;</span>
+<span class="w">  </span><span class="s2">&quot;kUSBAddress&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="s2">&quot;kUSBVendorString&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;MicroPython&quot;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="automatic-power-draw-shutoff">Automatic Power Draw Shutoff</h3>
 <p>If your USB port is drawing too much power, then many computers will disable the port.  This can happen if you are trying to display too many LEDs or a motor.  You will see a message such as "USB Port Disabled". </p>
 <p>Your computer manufacturer will tell you what the maximum current each USB port allows.  This is typically about 1 amp, but it varies based on your computer and what other devices are connected to your computer.</p>
