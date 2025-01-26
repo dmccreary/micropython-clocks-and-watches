@@ -18,7 +18,7 @@
         <link rel="prev" href="../01-assembly/">
       
       
-        <link rel="next" href="../02-hello-config/">
+        <link rel="next" href="../02-display-config/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -823,8 +823,6 @@
       
         
       
-        
-      
     
     
     
@@ -924,11 +922,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-hello-config/" class="md-nav__link">
+      <a href="../02-display-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Config
+    Display Config
   </span>
   
 
@@ -945,11 +943,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-display-time/" class="md-nav__link">
+      <a href="../03-display-localtime-raw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Display Time
+    Display Local Time Raw
   </span>
   
 
@@ -966,11 +964,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-display-localtime/" class="md-nav__link">
+      <a href="../04-display-localtime-formatted/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Display Localtime
+    Display Local Time Formatted
   </span>
   
 
@@ -987,28 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-display-localtime-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Display Localtime Updates
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05-clock-hands/" class="md-nav__link">
+      <a href="../10-clock-hands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1803,6 +1780,7 @@
 
 <h1 id="hello-world">Hello World</h1>
 <p>To get started, let's just draw the string "Hello world!" on the display.</p>
+<p><img alt="" src="../hello-world.jpg" /></p>
 <p>Here is the code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1827,9 +1805,9 @@
 <span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">machine</span>
 <span class="kn">import</span> <span class="nn">ssd1306</span>
 
+<span class="c1"># customise these numbers if your hardware config is different</span>
 <span class="n">SCL</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># SPI CLock</span>
 <span class="n">SDA</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># SPI Data</span>
-
 <span class="n">RES</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># Reset</span>
 <span class="n">DC</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Data/command</span>
 <span class="n">CS</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># Chip Select</span>
@@ -1837,10 +1815,10 @@
 <span class="n">spi</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">SPI</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sck</span><span class="o">=</span><span class="n">SCL</span><span class="p">,</span> <span class="n">mosi</span><span class="o">=</span><span class="n">SDA</span><span class="p">)</span>
 <span class="n">oled</span> <span class="o">=</span> <span class="n">ssd1306</span><span class="o">.</span><span class="n">SSD1306_SPI</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">spi</span><span class="p">,</span> <span class="n">DC</span><span class="p">,</span> <span class="n">RES</span><span class="p">,</span> <span class="n">CS</span><span class="p">)</span>
 
-<span class="c1"># erase the entire screen with black</span>
+<span class="c1"># erase the entire screen with black (0=black)</span>
 <span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="c1"># place a hello message at point (0,0) in white</span>
+<span class="c1"># place a hello message at point (0,0) in white (1=white text)</span>
 <span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># send the entire frame buffer to the display via the SPI bus</span>
@@ -1913,13 +1891,13 @@
         
         
           
-          <a href="../02-hello-config/" class="md-footer__link md-footer__link--next" aria-label="Next: Config">
+          <a href="../02-display-config/" class="md-footer__link md-footer__link--next" aria-label="Next: Display Config">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Config
+                Display Config
               </div>
             </div>
             <div class="md-footer__button md-icon">
