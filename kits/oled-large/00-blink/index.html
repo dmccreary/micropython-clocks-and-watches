@@ -1858,11 +1858,15 @@
 
 
 <h1 id="blink-the-onboard-led">Blink The Onboard LED</h1>
+<p><img alt="Blink On-board LED" src="../../../img/blink-on-board-led.gif" /></p>
 <p>Our first program will just blink the on-board LED on the Raspberry Pi Pico.
 It is a great way to tell if you got Thonny installed correctly
 and that your computer can connect to the Raspberry Pi Pico.
-Use the "copy" icon in the upper right corner and paste it into
-your Thonny editor (or other Python programming tool).  They press the "Run" button.</p>
+Use the "copy" icon in the upper right corner to copy the code
+below into your pastebuffer.  Then open Thonny and paste it into
+a new file in your Thonny editor (or other Python programming tool).<br />
+Then press the "Run" button.  You should see the small green
+LED on the Pico flashing on and off every second.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1884,9 +1888,9 @@ your Thonny editor (or other Python programming tool).  They press the "Run" but
 <span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span> <span class="c1"># Get the Pin function from the machine module.</span>
 <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span> <span class="c1"># Get the sleep library from the time module.</span>
 
-<span class="c1"># This is the built-in green LED on the Pico.</span>
+<span class="c1"># This is the built-in green LED on the standard Pico.</span>
 <span class="c1"># BUILT_IN_LED_PIN = 25</span>
-<span class="c1"># On the Pico &quot;W&quot; we use the &quot;name&quot; of &quot;LED&quot;, not a pin number</span>
+<span class="c1"># On the Pico &quot;W&quot; we use the symbolic &quot;name&quot; of &quot;LED&quot;, not a pin number</span>
 <span class="n">BUILT_IN_LED_PIN</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="s2">&quot;LED&quot;</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
 
 <span class="c1"># The line below indicates we are configuring this as an output (not input)</span>
@@ -1899,12 +1903,14 @@ your Thonny editor (or other Python programming tool).  They press the "Run" but
     <span class="n">led</span><span class="o">.</span><span class="n">low</span><span class="p">()</span>  <span class="c1"># Turn off the LED</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># leave it off for 1/2 second</span>
 </code></pre></div></td></tr></table></div>
-<p>When you run this program, the built-in LED on the Pico will blink.</p>
+<p>When you run this program, the built-in LED on the Pico will blink every second.</p>
 <div class="admonition challenges">
 <p class="admonition-title">Challenges</p>
 <ol>
 <li>Change the delay time to be <code>0.25</code> seconds on and <code>0.25</code> second off.</li>
 <li>How fast can you make the LED blink?</li>
+<li>Go to the original <a href="https://www.coderdojotc.org/micropython/">MicroPython for Kids</a> website and search for the term "blink" in the search form in the upper right.  What variations of blink are there in other kits?</li>
+<li>If you have any LEDs and 330 ohm resistors, try adding them to the breadboard and getting the external LED to blink.  See <a href="https://www.coderdojotc.org/micropython/basics/03-blink/#blinking-an-external-led">this lab</a> for sample code.</li>
 </ol>
 </div>
 <h2 id="debugging-tips">Debugging Tips.</h2>
