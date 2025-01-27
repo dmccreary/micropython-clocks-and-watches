@@ -102,6 +102,7 @@ nav:
     - Large OLED:
       - Introduction: kits/oled-large/index.md
       - Assembly: kits/oled-large/01-assembly.md
+      - Blink: kits/oled-large/00-blink.md
       - Hello World: kits/oled-large/01-hello-world.md
       - Display Config: kits/oled-large/02-display-config.md
       - Display Local Time Raw: kits/oled-large/03-display-localtime-raw.md
