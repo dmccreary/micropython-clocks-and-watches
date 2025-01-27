@@ -12,7 +12,7 @@ SPI_BUS = config.SPI_BUS
 WIDTH = config.DISPLAY_WIDTH
 HEIGHT = config.DISPLAY_HEIGHT
 
-spi=machine.SPI(SPI_BUS, sck=SCL, mosi=SDA, baudrate=1000000)
+spi=SPI(SPI_BUS, sck=SCL, mosi=SDA, baudrate=1000000)
 oled = ssd1306.SSD1306_SPI(WIDTH, HEIGHT, spi, DC, RES, CS)
 
 while True:
