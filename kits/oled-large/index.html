@@ -1759,9 +1759,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jut-assembly" class="md-nav__link">
+  <a href="#kit-assembly" class="md-nav__link">
     <span class="md-ellipsis">
-      Jut Assembly
+      Kit Assembly
     </span>
   </a>
   
@@ -1787,9 +1787,45 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#blink-the-builtin-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blink the Builtin LED
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hello-world" class="md-nav__link">
     <span class="md-ellipsis">
       Hello World
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-raw-localtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Raw Localtime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
     </span>
   </a>
   
@@ -1820,23 +1856,36 @@
 
 <h1 id="large-oled-kit">Large OLED Kit</h1>
 <p><img alt="Clock Digit Lab" src="oled-large-v2.png" /></p>
-<p>The Large OLED Kit is one of our most popular kits.  They use
+<p>The Large OLED Kit is one of our most versatile kits.  It uses
 a bright monochrome 128x64 OLED with either the Raspberry Pi Pico
-or the Raspberry Pi Pico W.  We also suggest using the DS3231
+or the Raspberry Pi Pico W.  We also suggest using the DS3231 real-time clock
 to keep time accurate to within 2 seconds per month.</p>
-<p>The OLEDs are mounted on a piece of acrilic (Plexiglass) with a half-size breaboard.</p>
+<p>The OLEDs are mounted on a piece of acrylic (Plexiglass) with a half-size breadboard.</p>
 <p><img alt="" src="right-side-view.jpg" /></p>
 <p>Each board has three buttons so you can adjust the time and alarm clock settings
-manually.</p>
-<h2 id="jut-assembly">Jut Assembly</h2>
-<p>If you have received a clock kit you can proceed diectly to the <a href="01-assembly/">Assembly Instructions</a>.</p>
+manually if you are not getting the time from your WiFi network.</p>
+<h2 id="kit-assembly">Kit Assembly</h2>
+<p>If you have received a clock kit you can proceed directly to the <a href="01-assembly/">Assembly Instructions</a>.</p>
 <p>Once your kit is assembled you can the start to program your clock.</p>
 <h2 id="programming">Programming</h2>
 <h3 id="step-1-setting-up-your-desktop-and-loading-micropython">Step 1: Setting up your Desktop and Loading MicroPython</h3>
-<p>We cover the desktop setup and loading MicroPyton in our <a href="../../setup/01-desktop/">Desktop Setup</a></p>
+<p>We cover the desktop setup and loading MicroPython in our <a href="../../setup/01-desktop/">Desktop Setup</a></p>
+<h3 id="blink-the-builtin-led">Blink the Builtin LED</h3>
+<p><a href="00-blink/">Go to the Blink Lab</a></p>
 <h3 id="hello-world">Hello World</h3>
-<p>Your first program is our "Hello World!" program for this kit.</p>
+<p>Your first program is our "Hello World!" program for this kit.
+This is a great way to tell if your display connections are all
+working.</p>
 <p><a href="01-hello-world/">Go to the Hello World! Program</a></p>
+<h3 id="display-config">Display Config</h3>
+<p>Most of our sample programs read the hardware settings from a configuration file called <code>config.py</code>.  This program shows you how to show the configuration parameters on the display.</p>
+<p><a href="02-display-config/">Go to the Display Config Lab</a></p>
+<h3 id="display-raw-localtime">Display Raw Localtime</h3>
+<p>Date and time information is stored in a set of 6-8 integers.  This
+first program just shows the raw integers on the display from the <code>localtime()</code> function.  Not
+very pretty, but the program is pretty short and simple.</p>
+<p><a href="03-display-localtime-raw/">Go to the Display Localtime Raw</a></p>
+<h3 id="_1"></h3>
 
 
 
