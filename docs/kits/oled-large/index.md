@@ -2,21 +2,21 @@
 
 ![Clock Digit Lab](./oled-large-v2.png)
 
-The Large OLED Kit is one of our most popular kits.  They use
+The Large OLED Kit is one of our most versatile kits.  It uses
 a bright monochrome 128x64 OLED with either the Raspberry Pi Pico
-or the Raspberry Pi Pico W.  We also suggest using the DS3231
+or the Raspberry Pi Pico W.  We also suggest using the DS3231 real-time clock
 to keep time accurate to within 2 seconds per month.
 
-The OLEDs are mounted on a piece of acrilic (Plexiglass) with a half-size breaboard.
+The OLEDs are mounted on a piece of acrylic (Plexiglass) with a half-size breadboard.
 
 ![](./right-side-view.jpg)
 
 Each board has three buttons so you can adjust the time and alarm clock settings
-manually.
+manually if you are not getting the time from your WiFi network.
 
-## Jut Assembly
+## Kit Assembly
 
-If you have received a clock kit you can proceed diectly to the [Assembly Instructions](./01-assembly.md).
+If you have received a clock kit you can proceed directly to the [Assembly Instructions](./01-assembly.md).
 
 Once your kit is assembled you can the start to program your clock.
 
@@ -24,10 +24,32 @@ Once your kit is assembled you can the start to program your clock.
 
 ### Step 1: Setting up your Desktop and Loading MicroPython
 
-We cover the desktop setup and loading MicroPyton in our [Desktop Setup](../../setup/01-desktop.md)
+We cover the desktop setup and loading MicroPython in our [Desktop Setup](../../setup/01-desktop.md)
+
+### Blink the Builtin LED
+
+[Go to the Blink Lab](./00-blink.md)
 
 ### Hello World
 
 Your first program is our "Hello World!" program for this kit.
+This is a great way to tell if your display connections are all
+working.
 
 [Go to the Hello World! Program](./01-hello-world.md)
+
+### Display Config
+
+Most of our sample programs read the hardware settings from a configuration file called ```config.py```.  This program shows you how to show the configuration parameters on the display.
+
+[Go to the Display Config Lab](./02-display-config.md)
+
+### Display Raw Localtime
+
+Date and time information is stored in a set of 6-8 integers.  This
+first program just shows the raw integers on the display from the ```localtime()``` function.  Not
+very pretty, but the program is pretty short and simple.
+
+[Go to the Display Localtime Raw](./03-display-localtime-raw.md)
+
+### 
