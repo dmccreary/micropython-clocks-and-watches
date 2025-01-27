@@ -33,18 +33,40 @@ while True:
     minute = localtime()[4]
     second = localtime()[5]
 
-    if hour > 11:
+    # display in 12 hour time paying special attention with hour == 0 and hour == 12
+    if hour == 0:
+        # Midnight edge case
+        hour = 12
+        am_pm = 'AM'
+    elif hour == 12:
+        # Noon edge case
         am_pm = 'PM'
-    else: am_pm = 'AM'
-   
+    elif hour > 12:
+        # Afternoon hours
+        hour -= 12
+        am_pm = 'PM'
+    else:
+        # Morning hours
+        am_pm = 'AM'
+    
     oled.fill(0)
     # display the date on the first line
     oled.text(str(month) + "/" + str(day) + "/" + str(year), 0, 0, 1)
     
     # display the time in hours, minute and seconds on the second line
-    oled.text(str(hour % 12) + ":" + str(minute) + ":" + str(second) + ' ' + am_pm, 0, 10, 1)
+    # note that the ":02" indicates printing in two columns with leading zeros
+    oled.text(f"{hour}:{minute:02}:{second:02} " + am_pm, 0, 10, 1)
 
     oled.show()
 ```
 
-The python modulo operator `%` is used to find the remaineder of the hour after dividing by 12.  This converts the 24-hour time to 12-hour time.
+## Time formatting
+
+When we print out minutes and seconds we want to make sure that we print them in two digits with a leading zero.
+
+```python
+f"{minute:02}:{second:02}"
+```
+
+
+The python modulo operator `%` is used to find the remainder of the hour after dividing by 12.  This converts the 24-hour time to 12-hour time.
