@@ -115,7 +115,15 @@ nav:
     - Stopwatch: kits/stopwatch/index.md
     - Wireless OLED: kits/oled-wireless/index.md
     - SH1106 OLED: kits/sh1106/index.md
-    - ST77XX: kits/st77XX/index.md
+    - ST7735: 
+      - Intro: kits/st7735/index.md
+      - Hello World: kits/st7735/hello-world.md
+      - Single Digit: kits/st7735/single-digit.md
+      - Four Digits: kits/st7735/drawing-four-digits.md
+      - Minimize Flicker: kits/st7735/dirty-drawing.md
+      - Scaling Fonts: kits/st7735/scaling-fonts.md
+      - Multiple Fonts: kits/st7735/multiple-fonts.md
+      - Set Buttons: kits/st7735/set-mode-buttons.md
     - ILI9341:
       - Introduction: kits/ili9341/index.md
       - Rainbow Test: kits/ili9341/01-rainbow-test.md
