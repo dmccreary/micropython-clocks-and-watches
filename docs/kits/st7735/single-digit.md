@@ -1,5 +1,7 @@
 # Draw a Single Digit on the ST7735 LCD
 
+![](./single-digit.jpg)
+
 ```python
 # Draw a single digit on the ST7735 LCD
 import machine

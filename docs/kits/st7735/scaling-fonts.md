@@ -1,5 +1,7 @@
 # Scaling Fonts
 
+![](./scaled-font.jpg)
+
 We can modify the code to use a larger font for the date. Looking at the ST7735.py code, I notice it's using a built-in font5x7 font, but there's no built-in option for larger fonts. However, we can draw larger text by scaling up each character.
 
 ```python
