@@ -3,13 +3,19 @@ Methods for displaying time in either 12-hour (AM/PM) or 24-hour (military) form
 
 **Example:** Converting 13:00 to 1:00 PM and handling the AM/PM indicator.
 
-#### 3D Printing Watch Enclosures
+#### 3D Printing Clock and Watch Enclosures
+
 A process of creating custom protective cases for watch components using additive manufacturing technology.
 
+We will not cover these topics in this course.  Our focus in this website is using clock and watch projects to teach computational thinking.
+
 #### Abstraction
+
 A technique for managing complexity by hiding unnecessary details while keeping essential features visible. 
 
 **Example:** Using a `display_time()` function that accepts hours and minutes without needing to know how individual LED segments are controlled.
+
+Abstraction is one of the four key computational thinking topics we teach in this course.
 
 #### Accelerometer
 A sensor that measures physical acceleration and orientation, useful for tilt-based display activation.
@@ -112,7 +118,37 @@ The number of bits used to represent colors in a display.
 
 **Example:** Using 16 bits per pixel to show 65,536 different colors.
 
+#### Computational Thinking
+
+A structured problem-solving approach that uses computer science principles to formulate solutions by breaking down complex tasks into logical, repeatable steps that can be understood by both humans and machines **Example:** Breaking down the task of making a peanut butter sandwich into discrete steps: "open jar", "grasp knife", "scoop peanut butter".
+
+The main concepts of computational thinking are:
+
+##### Decomposition
+
+The process of breaking a complex problem into smaller, more manageable parts **Example:** Dividing a clock program into separate functions for displaying time, handling buttons, and managing alarms.
+
+##### Pattern Recognition
+
+The ability to identify similarities, trends, and regularities in data or problems **Example:** Noticing that both analog and digital clocks need similar time calculation functions despite different display methods.
+
+##### Abstraction
+
+Focusing on essential details while filtering out irrelevant information to create a generalized solution **Example:** Creating a `display_time()` function that works with any type of display by hiding the specific implementation details.
+
+##### Algorithmic Thinking
+
+Creating a set of ordered steps that will solve a problem or achieve a goal **Example:** Developing a sequence of steps to synchronize a clock with an internet time server.
+
+These concepts work together:
+
+1.  First, decompose the problem
+2.  Look for patterns in the smaller pieces
+3.  Abstract away unnecessary details
+4.  Create step-by-step solutions with algorithms
+
 #### Concurrency
+
 The ability to handle multiple tasks or events simultaneously in a program.
 
 **Example:** Updating the display while checking for button presses.
@@ -277,7 +313,14 @@ A low-power screen technology that maintains its image without constant power.
 
 **Example:** Using partial updates to change only modified portions of the display.
 
+### Epoch
+
+A fixed point in time chosen as a reference for measuring or calculating elapsed time in a computer system or data structure.
+
+**Example:** The Unix epoch begins at midnight UTC on January 1, 1970, while the NTP epoch begins at midnight UTC on January 1, 1900.  The MicroPython epoch is often set to be January 1 2000.  On the Raspberry Pi Pico the epoch is January 1st, 2021.
+
 #### Error Handling and Recovery
+
 Techniques for detecting and recovering from timing errors, power issues, or communication failures.
 
 **Example:** Implementing watchdog timers and automatic resynchronization after power loss.#### Event Handler
