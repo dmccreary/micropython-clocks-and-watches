@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#oled-test" class="md-skip">
+        <a href="#oled-test-prompt" class="md-skip">
           Skip to content
         </a>
       
@@ -1105,17 +1105,77 @@
   
 
 
-<h1 id="oled-test">OLED TEST</h1>
+<h1 id="oled-test-prompt">OLED Test Prompt</h1>
+<p>We can use generative AI tools to build test programs.
+But in order to get working programs, we need to tell
+the generative AI about what our hardware is and
+what our configuration is.  We can leverage the
+<code>config.py</code> file to tell the generative AI tools
+about our local configuration.</p>
 <h2 id="sample-prompt">Sample Prompt</h2>
 <div class="admonition prompt">
 <p class="admonition-title">Prompt</p>
-<p>I am working on a program written in MicroPython.
-I have a 128x64 OLED using a standard ssd1306 chip on a Raspberry Pi Pico.
-I have the ssd1306.py driver loaded into the /lib directory.  The i2c.scan()
-function test result is PASS with PASS: OLED Found on dec: 60 hex: 0x3c.</p>
+<p>You are an expert at helping high-school kids learn computational thinking using MicroPython.
+I am working on writing a test program written in MicroPython.
+I have a 128x64 OLED using ssd1306 display driver chip connected to a Raspberry Pi Pico W running MicroPython version 1.24.1 using
+an SPI bus.
+I have the ssd1306.py driver loaded into the /lib directory.</p>
 <p>Please write a MicroPython program that prints "Hello World!" on the OLED display.  Use the config.py program in the project to setup
 the display.</p>
 </div>
+<p>If your AI does not have a project feature, you can include the config.py in the prompt:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># MicroPython hardware configuration file for Raspberry Pi Pico W</span>
+<span class="c1"># Using an SPI OLED Display, a DS3231 RTC with EEPROM, and three buttons</span>
+
+<span class="n">SPI_BUS</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">SPI_SCL_PIN</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Clock</span>
+<span class="n">SPI_SDA_PIN</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># labeled SDI(MOSI) on the back of the display</span>
+<span class="n">SPI_RESET_PIN</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1"># Reset</span>
+<span class="n">SPI_DC_PIN</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Data/command</span>
+<span class="n">SPI_CS_PIN</span> <span class="o">=</span> <span class="mi">6</span> <span class="c1"># Chip Select</span>
+
+<span class="c1"># I2C Bus for the DS3231 RTC</span>
+<span class="n">I2C_BUS</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">I2C_DT_PIN</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Data</span>
+<span class="n">I2C_SCK_PIN</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Clock</span>
+<span class="n">RTC_ADDRESS</span> <span class="o">=</span> <span class="mh">0x68</span>
+<span class="n">EEPROM_ADDRESS</span> <span class="o">=</span> <span class="mh">0x57</span>
+
+<span class="c1"># OLED Screen Dimensions</span>
+<span class="n">DISPLAY_WIDTH</span><span class="o">=</span><span class="mi">128</span>
+<span class="n">DISPLAY_HEIGHT</span><span class="o">=</span><span class="mi">64</span>
+
+<span class="c1"># Button Pins where the buttons are between the GPIO and GND</span>
+<span class="c1"># Make sure to configure the pull-up resistor in the code</span>
+<span class="n">BUTTON_MODE_PIN</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">BUTTON_INCREMENT_PIN</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">BUTTON_DECREMENT_PIN</span> <span class="o">=</span> <span class="mi">16</span>
+</code></pre></div></td></tr></table></div>
 
 
 
