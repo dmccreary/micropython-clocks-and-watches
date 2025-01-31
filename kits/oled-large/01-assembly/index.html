@@ -1065,6 +1065,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#final-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2158,6 +2176,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#final-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2321,6 +2357,30 @@ wire to the GND on the right.</p>
 <p>(Optional) You can use cable ties or twist ties to connect 
 the display and the RTC to the base through the holes.<br />
 If you are planning to build your own case you can skip this step.</p>
+<h2 id="final-tests">Final Tests</h2>
+<p>After you assemble your clock kit you will be abel to test the connections using MicroPython.  Here are some of the tests you will run:</p>
+<ol>
+<li>
+<p>Use the <a href="../00-blink/">blink</a> to verify that your USB connection is not blocked by your PC/Mac and you have downloaded the correct version of the MicroPython runtime.</p>
+</li>
+<li>
+<p>Use the <a href="../02-i2c-scanner/">i2c scanner</a> to verify that your real-time clock is connected correctly.</p>
+</li>
+<li>
+<p>Use the <a href="../01-hello-world/">hello world</a> program to test if your display is connected correctly.</p>
+</li>
+<li>
+<p>Use the <a href="../05-button-test/">button test</a> program to test to see if your buttons are connected correctly.</p>
+</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>You can use generative AI tool like ChatGPT or Anthropic Claude to help you debug the clock.  Make sure you give a complete description of your problem using the following prompt template.</p>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Please help me diagnose a problem I am having with MicroPython program running on the Raspberry Pi Pico W.  I am using a Mac to connect to the Pico with Thonny.  I am using Thonny version 4.1.6 and Mac OS 15.0.1.
+When I run <code>ls /dev/cu*</code> I can see the device listed.  When I press the Stop/Restart backend button I see the MicroPython version X on the console.</p>
+<p>However, when I run X I get the following error.</p>
+</div>
 
 
 

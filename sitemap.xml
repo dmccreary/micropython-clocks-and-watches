@@ -205,6 +205,14 @@
          <lastmod>2025-01-31</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/clocks-and-watches/kits/oled-large/02-i2c-scanner/</loc>
+         <lastmod>2025-01-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/clocks-and-watches/kits/oled-large/02-set-rtc-from-localtime/</loc>
+         <lastmod>2025-01-31</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/clocks-and-watches/kits/oled-large/03-display-localtime-raw/</loc>
          <lastmod>2025-01-31</lastmod>
     </url>
