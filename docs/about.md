@@ -81,6 +81,24 @@ Today the Raspberry Pi has enough RAM to run a full Python interpreter and 264K 
 
 In short, this power translates into fun projects that are easy to write.  Combining these powerful microcontrollers with AI assistants means even novice programmers can quickly achieve great things!  Building DIY projects has never been so fun!
 
+## Great Way to Teach Prompt Engineering
+
+This course has hundreds of sample [prompts](./prompts/index.md) you can use with generative AI tools to create custom code or to
+generate your own intelligent textbook.  You are strongly encouraged to load
+your config.py file into the projects area of these tool or
+include the config.py file as part of your prompt.
+
+We hope that you use this course as a proactive way
+to teach prompt engineering to your students.
+
+Make sure you use the search tool in the page header with the word "prompt" to help you get the best prompt for your task.
+
+For example:
+
+!!! prompt
+    I have a csv file of birthdays for my family and friends.
+    Please add birthday reminders to the clock display.
+
 ## In Conclusion
 
 A library of MicroPython Clocks and Watches isn't just a collection of projects; it’s a treasure trove of experiences, learnings, and memories. By introducing children to the magic of timekeeping in the digital age, we are equipping them with skills for the future, fostering a love for coding, and most importantly, reminding them that learning can be both fun and profoundly meaningful. The timeless allure of time, coupled with the dynamic world of coding, creates a perfect blend to mold the innovators and thinkers of tomorrow.

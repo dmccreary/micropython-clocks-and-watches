@@ -117,9 +117,29 @@ Yes, we'll cover power management including:
 - Power-efficient programming
 - Battery life optimization
 
+#### How long will the CR2032 coin cell battery last?
+
+The typical operational duration in real-time clock circuits ranges from 2 to 10 years, depending on temperature conditions and current draw. 
+
+The DS3231 RTC module used in our kits draw 3μA at 
+room temperature typically operates for 8 years on a single CR2032 battery.
+The key factors affecting battery life are:
+
+- Operating temperature (lower temps extend life)
+- Current draw of the RTC (varies by model)
+- Battery capacity (typical CR2032 = 220mAh)
+- Additional features active (temperature sensing, alarms, etc.)
+
+#### If the clock is plugged into the wall will the backup CR2032 battery be drained?
+
+No. When external power is connected, the DS3231 RTC board automatically switches to the main power supply and isolates the backup battery circuit, preventing battery drain. The CR2032 is **only** used when main power is disconnected.
+
+This power switching is handled by internal circuitry using diodes that prevent current from flowing to/from the backup battery during normal operation.
+
 ## Future Applications
 
 #### Can I use these skills for other projects?
+
 Absolutely! The skills you'll learn apply to many other electronics and programming projects:
 
 - Other types of electronic devices
@@ -128,6 +148,7 @@ Absolutely! The skills you'll learn apply to many other electronics and programm
 - IoT (Internet of Things) devices
 
 #### How does this course prepare me for further study?
+
 This course builds valuable skills for:
 
 - Computer science courses
@@ -139,6 +160,7 @@ This course builds valuable skills for:
 ## Tools and Resources
 
 #### What online resources can we use?
+
 We'll use various resources including:
 
 - MicroPython documentation
@@ -148,14 +170,18 @@ We'll use various resources including:
 - Programming reference guides
 
 #### Will we use version control like Git?
-While not required, we'll introduce basic version control concepts and how they can help manage your code as projects become more complex.
+
+While not required, we'll introduce basic version control concepts and how they can help manage your code as projects become more complex.  Many of
+the clock kits will have all the sample code preloaded into the Raspberry Pi Pico file system.
 
 ## Collaboration and Community
 
 #### Can we work in teams?
+
 Yes! Many activities will involve pair programming or team collaboration. The final project can be individual or team-based, depending on complexity and scope.
 
 #### How can we share our projects with others?
+
 We'll discuss ways to:
 
 - Document your work
@@ -167,15 +193,20 @@ We'll discuss ways to:
 ## Getting Help
 
 #### What if I get stuck on a problem?
+
 Multiple support options are available:
 
+- Generative AI tools like ChatGPT and Anthropic Claude
 - In-class help from instructors
 - Peer support
 - Office hours
 - Online resources
 - Lab assistance sessions
 
+Note that you can load sample programs and yur config.py file into the generative AI projects area and get high quality results that use your local configuration.
+
 #### Can I get extra help outside of class?
+
 Yes, instructors will have office hours and may offer additional 
 lab time for students who want extra practice or help.
 

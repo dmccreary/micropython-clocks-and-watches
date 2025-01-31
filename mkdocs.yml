@@ -105,9 +105,11 @@ nav:
       - Blink: kits/oled-large/00-blink.md
       - Hello World: kits/oled-large/01-hello-world.md
       - Display Config: kits/oled-large/02-display-config.md
+      - I2C Scanner: kits/oled-large/02-i2c-scanner.md
+      - Set RTC From Localtime: kits/oled-large/02-set-rtc-from-localtime.md
+      - Button Test: kits/oled-large/05-button-test.md
       - Display Local Time Raw: kits/oled-large/03-display-localtime-raw.md
       - Display Local Time Formatted: kits/oled-large/04-display-localtime-formatted.md
-
       - Display Clock Hands:  kits/oled-large/10-clock-hands.md
       - 7-Segment: kits/oled-large/10-draw-seven-segments.md
       - Segment Thickness: kits/oled-large/11-draw-thickness.md
