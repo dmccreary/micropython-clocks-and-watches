@@ -2,10 +2,10 @@
 
 ![Clock Digit Lab](./oled-large-v2.png)
 
-The Large OLED Kit is one of our most versatile kits.  It uses
-a bright monochrome 128x64 OLED with either the Raspberry Pi Pico
-or the Raspberry Pi Pico W.  We also suggest using the DS3231 real-time clock
-to keep time accurate to within 2 seconds per month.
+The Large OLED Kit is one of our most versatile kits.
+
+It uses a bright monochrome 128x64 SSD1306 OLED with the Raspberry Pi Pico W and a
+DS3231 real-time clock to keep time accurate to within 2 seconds per month.
 
 The OLEDs are mounted on a piece of acrylic (Plexiglass) with a half-size breadboard.
 
@@ -13,6 +13,13 @@ The OLEDs are mounted on a piece of acrylic (Plexiglass) with a half-size breadb
 
 Each board has three buttons so you can adjust the time and alarm clock settings
 manually if you are not getting the time from your WiFi network.
+
+## Component List
+
+- Raspberry Pi W
+- 128x64 SSD1306 OLED display on SPI bus
+- DS3231 real-time clock on I2C bus
+- 3 momentary push buttons
 
 ## Kit Assembly
 
@@ -34,7 +41,8 @@ We cover the desktop setup and loading MicroPython in our [Desktop Setup](../../
 
 Your first program is our "Hello World!" program for this kit.
 This is a great way to tell if your display connections are all
-working.
+working.  We have one version that prints to the Thonny console
+and one version that prints to the OLED display.
 
 [Go to the Hello World! Program](./01-hello-world.md)
 
@@ -64,5 +72,10 @@ Pico using Thonny.
 [Set the RTC from Localtime](./02-set-rtc-from-localtime.md)
 
 After you run this program your clock will be accurate to within
-two seconds per month.  The lithium battery will remember the time even
-when there is a power outage.
+two seconds per month.  The backup lithium battery will remember the time even
+when the clock is not plugged in or there is a power outage.  The battery will last
+about 8 years.
+
+### Display Single Large Digit
+
+[](.)

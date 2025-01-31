@@ -1,10 +1,11 @@
+# these are the defualt connections
+
 SPI_SCL_PIN = 2 # SPI CLock
 SPI_SDA_PIN = 3 # SPI Data
-
 SPI_RESET_PIN = 4 # Reset
-# note these got reversed on the cable
-SPI_DC_PIN = 6 # Data/command
-SPI_CS_PIN = 5 # Chip Select
+SPI_DC_PIN = 5 # Data/command
+SPI_CS_PIN = 6 # Chip Select
+
 SPI_BUS = 0
 DISPLAY_WIDTH = 128
 DISPLAY_HEIGHT = 64
@@ -18,6 +19,8 @@ RTC_I2C_ADDR = 0x68
 SPEAKER_PIN = 8
 
 """
+Copy this code to your program:
+
 import config
 SPI_SCL_PIN = config.SPI_SCL_PIN
 SPI_SDA_PIN = config.SPI_SDA_PIN

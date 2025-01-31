@@ -11,12 +11,12 @@ import config
 
 led = machine.Pin('LED', machine.Pin.OUT)
 
-SCL=machine.Pin(config.SPI_SCL_PIN) # SPI CLock
-SDA=machine.Pin(config.SPI_SDA_PIN) # SPI Data
+SCL=machine.Pin(config.SPI_SCL_PIN)
+SDA=machine.Pin(config.SPI_SDA_PIN)
 
-RES = machine.Pin(config.SPI_RESET_PIN) # Reset
-DC = machine.Pin(config.SPI_DC_PIN) # Data/command
-CS = machine.Pin(config.SPI_CS_PIN) # Chip Select
+RES = machine.Pin(config.SPI_RESET_PIN)
+DC = machine.Pin(config.SPI_DC_PIN)
+CS = machine.Pin(config.SPI_CS_PIN)
 
 WIDTH = config.DISPLAY_WIDTH
 HEIGHT = config.DISPLAY_HEIGHT

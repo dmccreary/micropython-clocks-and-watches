@@ -7,16 +7,16 @@ from utime import sleep, localtime
 import config
 led = machine.Pin(25, machine.Pin.OUT)
 
-SCL=Pin(config.SPI_SCL_PIN)
-SDA=Pin(config.SPI_SDA_PIN)
-DC = Pin(config.SPI_DC_PIN)
-RES = Pin(config.SPI_RES_PIN)
-CS = Pin(config.SPI_CS_PIN)
-SPI_BUS = config.SPI_BUS
+SCL=machine.Pin(config.SPI_SCL_PIN) # SPI CLock
+SDA=machine.Pin(config.SPI_SDA_PIN) # SPI Data
+
+RES = machine.Pin(config.SPI_RESET_PIN) # Reset
+DC = machine.Pin(config.SPI_DC_PIN) # Data/command
+CS = machine.Pin(config.SPI_CS_PIN) # Chip Select
+
 WIDTH = config.DISPLAY_WIDTH
 HEIGHT = config.DISPLAY_HEIGHT
-
-spi=machine.SPI(SPI_BUS, sck=SCL, mosi=SDA, baudrate=1000000)
+spi=machine.SPI(config.SPI_BUS, sck=SCL, mosi=SDA, baudrate=100000)
 oled = ssd1306.SSD1306_SPI(WIDTH, HEIGHT, spi, DC, RES, CS)
 
 segmentMapping = [
