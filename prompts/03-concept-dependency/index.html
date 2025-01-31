@@ -765,6 +765,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Concept Dependencies
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -774,6 +785,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1033,6 +1072,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1050,57 +1106,32 @@
 
 
 <h1 id="concept-dependency">Concept Dependency</h1>
-<p>``` prompt
-    I am creating a course on
-    "Building Clock and Watches with MicroPython".</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>The goal of this course is to provide high-school students a fun way to learn computational thinking.
-
-I have listed below about 150 concepts taught in this course in a CSV file.  The first column is the ConceptID and the second column is the ConceptLabel.
-
-Please create a fully connected concept dependency graph
-for the concepts in this course.
-
-In this step, for each Concept on this list below, create a new
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>I am creating a course on
+"Building Clock and Watches with MicroPython".</p>
+<p>The goal of this course is to provide high-school students a fun way to learn computational thinking.</p>
+<p>I have listed below about 150 concepts taught in this course in a CSV file.  The first column is the ConceptID and the second column is the ConceptLabel.</p>
+<p>Please create a fully connected concept dependency graph
+for the concepts in this course.</p>
+<p>In this step, for each Concept on this list below, create a new
 list of other concepts on which it depends.  If a concept
 depends on a specific concept that is not listed,
 then we will need to add it as a new concept.
-This will help us determine the teaching order of the Concepts.
-
-Return the new list as a CSV file using the following format:
-
-1. The first column in the CSV file is a numeric concept
-ID you assigned in the list above.
-2. The second column is the concept name.
-3. The third column is a pipe-delimited list of the Concept IDs that the concept depends upon.
-
-Check your results to make sure that all concepts are connected to at least one other concept.
-
-Foundation Concepts are concepts that have no dependant concepts in this set.  
-Foundation Concepts have an empty third column.
-</code></pre></div></td></tr></table></div>
+This will help us determine the teaching order of the Concepts.</p>
+<p>Return the new list as a CSV file using the following format:</p>
+<ol>
+<li>The first column in the CSV file is a numeric concept
+ID you assigned in the list above.</li>
+<li>The second column is the concept name.</li>
+<li>The third column is a pipe-delimited list of the Concept IDs that the concept depends upon.</li>
+</ol>
+<p>Check your results to make sure that all concepts are connected to at least one other concept.</p>
+<p>Foundation Concepts are concepts that have no dependant concepts in this set.<br />
+Foundation Concepts have an empty third column.</p>
+</div>
+<h2 id="result">Result</h2>
+<p><a href="../concept-dependency.csv"></a></p>
 
 
 
