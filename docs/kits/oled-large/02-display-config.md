@@ -2,6 +2,8 @@
 
 ![](./display-config.jpg)
 
+This program will display the configuration file (config.py) parameters on your display.
+
 ```python
 from machine import Pin
 import ssd1306

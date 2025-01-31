@@ -1,5 +1,17 @@
 # Hello World
 
+## Displaying "Hello World!" on your console
+
+Here is the classic "Hello World" in MicroPython
+
+```py
+print("Hello World!")
+```
+
+You can type this program into Thonny and run it to see if your USB is connected and the MicroPython runtime is loaded correctly.
+
+## Displaying Hello Word On your Display
+
 To get started, let's just draw the string "Hello world!" on the display.
 
 ![](./hello-world.jpg)

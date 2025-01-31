@@ -176,3 +176,27 @@ wire to the GND on the right.
 (Optional) You can use cable ties or twist ties to connect 
 the display and the RTC to the base through the holes.  
 If you are planning to build your own case you can skip this step.
+
+## Final Tests
+
+After you assemble your clock kit you will be abel to test the connections using MicroPython.  Here are some of the tests you will run:
+
+1. Use the [blink](./00-blink.md) to verify that your USB connection is not blocked by your PC/Mac and you have downloaded the correct version of the MicroPython runtime.
+
+2. Use the [i2c scanner](./02-i2c-scanner.md) to verify that your real-time clock is connected correctly.
+
+3. Use the [hello world](./01-hello-world.md) program to test if your display is connected correctly.
+
+4. Use the [button test](./05-button-test.md) program to test to see if your buttons are connected correctly.
+
+## Troubleshooting
+
+You can use generative AI tool like ChatGPT or Anthropic Claude to help you debug the clock.  Make sure you give a complete description of your problem using the following prompt template.
+
+!!! prompt
+    Please help me diagnose a problem I am having with MicroPython program running on the Raspberry Pi Pico W.  I am using a Mac to connect to the Pico with Thonny.  I am using Thonny version 4.1.6 and Mac OS 15.0.1.
+    When I run ```ls /dev/cu*``` I can see the device listed.  When I press the Stop/Restart backend button I see the MicroPython version X on the console.
+    
+    However, when I run X I get the following error.
+
+
