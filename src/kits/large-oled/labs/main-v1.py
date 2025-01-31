@@ -23,8 +23,8 @@ RTC_TYPE = config.RTC_TYPE
 RTC_I2C_ADDR = config.RTC_I2C_ADDR
 
 # I2C setup
-i2c = I2C(I2C_BUS, scl=i2c_scl, sda=i2c_sda, freq=3000000)
-rtc = DS3231(addr=RTC_I2C_ADDR, i2c=i2c)
+i2c = I2C(config.I2C_BUS, sda=Pin(config.I2C_SDA_PIN), scl=Pin(config.I2C_SCL_PIN))
+rtc = DS3231(i2c)
 
 segmentMapping = [
     #a, b, c, d, e, f, g
@@ -78,6 +78,7 @@ def month_to_str(month_num):
     return months[month_num]
 
 def drawDigit(digit, x, y, width, height, thickness, color):
+
     if digit < 0:
         return
     segmentOn = segmentMapping[digit]
@@ -119,8 +120,10 @@ def update_screen(year, month, day, hour, minute, second, weekday):
 
     oled.fill(0)
     
+    print(f"Debug - Digits: hour={hour}, minute={minute}")
     #date_str = f"{day_to_str(weekday)} {month_to_str(month-1)} {day} {year}"
     #oled.text(date_str, 0, 0, 1)
+
 
     # Convert 24-hour to 12-hour format
     display_hour = hour if hour <= 12 else hour - 12
@@ -131,6 +134,9 @@ def update_screen(year, month, day, hour, minute, second, weekday):
     hour_right = display_hour % 10
     minute_ten = minute // 10
     minute_right = minute % 10
+
+
+    print(f"Debug - Digits: hour_ten={hour_ten}, hour_right={hour_right}, minute_ten={minute_ten}, minute_right={minute_right}")
 
     drawDigit(hour_ten, left_margin, y_offset, digit_width, digit_height, digit_thickness, 1)
     drawDigit(hour_right, left_margin + digit_spacing-2, y_offset, digit_width, digit_height, digit_thickness, 1)
@@ -151,17 +157,19 @@ def update_screen(year, month, day, hour, minute, second, weekday):
 counter = 0
 while True:
     now = rtc.datetime()
+    # year, month, day, weekday, hour, minute, second, subseconds = datetime_tuple
+
     year = now[0]
     month = now[1]
     day = now[2]
-    hour = now[3]
-    minute = now[4]
-    second = now[5]
-    weekday = now[6]
+    weekday = now[3]
+    hour = now[4]
+    minute = now[5]
+    second = now[6]
+    
+    print("{:04d}-{:02d}-{:02d} {:d}:{:02d}:{:02d} weekday:{}".format(
+      year, month, day, hour, minute, second, weekday))
     update_screen(year, month, day, hour, minute, second, weekday)
-    print("{:04d}-{:02d}-{:02d}T{:02d}:{:02d}:{:02d} weekday:{}".format(
-      rtc.year, rtc.month, rtc.day,
-      rtc.hour, rtc.minute, rtc.second, rtc.weekday))
     sleep(1)
     counter += 1
     if counter > 9:
