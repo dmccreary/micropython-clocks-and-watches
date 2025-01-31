@@ -8,6 +8,7 @@
         "elif",
         "gmtime",
         "Hinch",
+        "isconnected",
         "LILYGO",
         "localtime",
         "microcontroller",
@@ -19,7 +20,9 @@
         "Piezo",
         "piezos",
         "Pinout",
+        "settime",
         "solderless",
-        "Tannenbaum"
+        "Tannenbaum",
+        "WLAN"
     ]
 }
