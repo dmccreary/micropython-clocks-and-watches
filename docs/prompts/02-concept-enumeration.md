@@ -1,5 +1,17 @@
 # Concept Enumeration
 
+!!! prompt
+    You are an expert at generating concept lists for online training courses.
+    Please generate a list of the 200 core concepts that need to be covered in this course and the order in which they should be taught.
+
+    Return numbered list of these core concepts using a single line per concept. For each concept, just return a short concept name and use acronyms or abbreviations when appropriate. They will be used as labels in a graph network. Make sure that the concepts are distinct not duplicated in the list.
+
+    Use title case for the concept names.
+
+    Start with the most basic foundational concepts and then proceed to the most complex concepts.
+    
+## Response
+
 1. MicroPython
 2. Raspberry Pi Pico W
 3. Breadboard

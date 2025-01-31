@@ -1,24 +1,24 @@
 # Concept Taxonomy
 
 !!! prompt
-Given the concepts below, our next step is to create a 10-element taxonomy
-of these concepts for the book "Building Clocks and Watches with MicroPython".
+    Given the concepts below, our next step is to create a 10-element taxonomy
+    of these concepts for the book "Building Clocks and Watches with MicroPython".
 
-Your task is to organize these concepts into a taxonomy by grouping similar Concepts into one of ten categories. Each category should include concepts
-that share similar characteristics, functions, or applications.
+    Your task is to organize these concepts into a taxonomy by grouping similar Concepts into one of ten categories. Each category should include concepts
+    that share similar characteristics, functions, or applications.
 
-Please suggest 10 categories for the taxonomy.  Attempt to
-create categories that evenly distribute the concepts so that
-each category has a similar number of concepts in it.
+    Please suggest 10 categories for the taxonomy.  Attempt to
+    create categories that evenly distribute the concepts so that
+    each category has a similar number of concepts in it.
 
-Ensure that the categories cover
-a range of concept types, including abstract ideas, practical
-applications, common misunderstandings, and real-world examples.
-Avoid redundancy and ensure that each category is distinct.
+    Ensure that the categories cover
+    a range of concept types, including abstract ideas, practical
+    applications, common misunderstandings, and real-world examples.
+    Avoid redundancy and ensure that each category is distinct.
 
-You can use "Foundational Concepts" as your first category.
-You can use "Terms and Definitions" as a second category.
-You can use "Example Projects" as a 10th category.
+    You can use "Foundational Concepts" as your first category.
+    You can use "Terms and Definitions" as a second category.
+    You can use "Example Projects" as a 10th category.
 
 ## ChatGPT o1 Response
 
@@ -209,3 +209,5 @@ In a real curriculum, certain topics (e.g., "External RTC Modules" vs. "Setting 
 This taxonomy is a **starting point**. You may decide to rename categories (e.g., split "Audio & Power Management" into two) or move individual concepts around to best match your teaching flow.
 
 By defining these ten thematic groupings, you'll have a clear roadmap for both the **sequence of lessons** and the **range of coverage** in "Building Clocks and Watches with MicroPython."
+
+[Clock and Watches](./clocks-and-watches.csv)
