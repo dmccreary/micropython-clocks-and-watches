@@ -1098,6 +1098,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-long-will-the-cr2032-coin-cell-battery-last" class="md-nav__link">
+    <span class="md-ellipsis">
+      How long will the CR2032 coin cell battery last?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-the-clock-is-plugged-into-the-wall-will-the-backup-cr2032-battery-be-drained" class="md-nav__link">
+    <span class="md-ellipsis">
+      If the clock is plugged into the wall will the backup CR2032 battery be drained?
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1732,6 +1750,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-long-will-the-cr2032-coin-cell-battery-last" class="md-nav__link">
+    <span class="md-ellipsis">
+      How long will the CR2032 coin cell battery last?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-the-clock-is-plugged-into-the-wall-will-the-backup-cr2032-battery-be-drained" class="md-nav__link">
+    <span class="md-ellipsis">
+      If the clock is plugged into the wall will the backup CR2032 battery be drained?
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2300,6 +2336,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-long-will-the-cr2032-coin-cell-battery-last" class="md-nav__link">
+    <span class="md-ellipsis">
+      How long will the CR2032 coin cell battery last?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-the-clock-is-plugged-into-the-wall-will-the-backup-cr2032-battery-be-drained" class="md-nav__link">
+    <span class="md-ellipsis">
+      If the clock is plugged into the wall will the backup CR2032 battery be drained?
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2612,6 +2666,20 @@
 <li>Power-efficient programming</li>
 <li>Battery life optimization</li>
 </ul>
+<h4 id="how-long-will-the-cr2032-coin-cell-battery-last">How long will the CR2032 coin cell battery last?</h4>
+<p>The typical operational duration in real-time clock circuits ranges from 2 to 10 years, depending on temperature conditions and current draw. </p>
+<p>The DS3231 RTC module used in our kits draw 3μA at 
+room temperature typically operates for 8 years on a single CR2032 battery.
+The key factors affecting battery life are:</p>
+<ul>
+<li>Operating temperature (lower temps extend life)</li>
+<li>Current draw of the RTC (varies by model)</li>
+<li>Battery capacity (typical CR2032 = 220mAh)</li>
+<li>Additional features active (temperature sensing, alarms, etc.)</li>
+</ul>
+<h4 id="if-the-clock-is-plugged-into-the-wall-will-the-backup-cr2032-battery-be-drained">If the clock is plugged into the wall will the backup CR2032 battery be drained?</h4>
+<p>No. When external power is connected, the DS3231 RTC board automatically switches to the main power supply and isolates the backup battery circuit, preventing battery drain. The CR2032 is <strong>only</strong> used when main power is disconnected.</p>
+<p>This power switching is handled by internal circuitry using diodes that prevent current from flowing to/from the backup battery during normal operation.</p>
 <h2 id="future-applications">Future Applications</h2>
 <h4 id="can-i-use-these-skills-for-other-projects">Can I use these skills for other projects?</h4>
 <p>Absolutely! The skills you'll learn apply to many other electronics and programming projects:</p>
@@ -2641,7 +2709,8 @@
 <li>Programming reference guides</li>
 </ul>
 <h4 id="will-we-use-version-control-like-git">Will we use version control like Git?</h4>
-<p>While not required, we'll introduce basic version control concepts and how they can help manage your code as projects become more complex.</p>
+<p>While not required, we'll introduce basic version control concepts and how they can help manage your code as projects become more complex.  Many of
+the clock kits will have all the sample code preloaded into the Raspberry Pi Pico file system.</p>
 <h2 id="collaboration-and-community">Collaboration and Community</h2>
 <h4 id="can-we-work-in-teams">Can we work in teams?</h4>
 <p>Yes! Many activities will involve pair programming or team collaboration. The final project can be individual or team-based, depending on complexity and scope.</p>
@@ -2658,12 +2727,14 @@
 <h4 id="what-if-i-get-stuck-on-a-problem">What if I get stuck on a problem?</h4>
 <p>Multiple support options are available:</p>
 <ul>
+<li>Generative AI tools like ChatGPT and Anthropic Claude</li>
 <li>In-class help from instructors</li>
 <li>Peer support</li>
 <li>Office hours</li>
 <li>Online resources</li>
 <li>Lab assistance sessions</li>
 </ul>
+<p>Note that you can load sample programs and yur config.py file into the generative AI projects area and get high quality results that use your local configuration.</p>
 <h4 id="can-i-get-extra-help-outside-of-class">Can I get extra help outside of class?</h4>
 <p>Yes, instructors will have office hours and may offer additional 
 lab time for students who want extra practice or help.</p>

@@ -823,6 +823,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -938,6 +944,69 @@
   
   <span class="md-ellipsis">
     Display Config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-i2c-scanner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I2C Scanner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-set-rtc-from-localtime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set RTC From Localtime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05-button-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Button Test
   </span>
   
 
@@ -1883,9 +1952,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#set-the-rtc-from-localtime" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      Set the RTC from Localtime
     </span>
   </a>
   
@@ -1942,10 +2011,20 @@ working.</p>
 <p><a href="02-display-config/">Go to the Display Config Lab</a></p>
 <h3 id="display-raw-localtime">Display Raw Localtime</h3>
 <p>Date and time information is stored in a set of 6-8 integers.  This
-first program just shows the raw integers on the display from the <code>localtime()</code> function.  Not
+first program just shows the raw integers on the display from the
+ <code>localtime()</code> function.  Not
 very pretty, but the program is pretty short and simple.</p>
 <p><a href="03-display-localtime-raw/">Go to the Display Localtime Raw</a></p>
-<h3 id="_1"></h3>
+<h3 id="set-the-rtc-from-localtime">Set the RTC from Localtime</h3>
+<p>Once you add your RTC to the kit you will need to
+set the time inside the RTC memory.  The best way
+to do this is to just grab the time from the MicroPython localtime()
+which is set from your local computer when you connect your
+Pico using Thonny.</p>
+<p><a href="02-set-rtc-from-localtime/">Set the RTC from Localtime</a></p>
+<p>After you run this program your clock will be accurate to within
+two seconds per month.  The lithium battery will remember the time even
+when there is a power outage.</p>
 
 
 
