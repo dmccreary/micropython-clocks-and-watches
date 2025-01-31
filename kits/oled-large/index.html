@@ -1888,6 +1888,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#component-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kit-assembly" class="md-nav__link">
     <span class="md-ellipsis">
       Kit Assembly
@@ -1960,6 +1969,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#display-single-large-digit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Single Large Digit
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1985,14 +2003,20 @@
 
 <h1 id="large-oled-kit">Large OLED Kit</h1>
 <p><img alt="Clock Digit Lab" src="oled-large-v2.png" /></p>
-<p>The Large OLED Kit is one of our most versatile kits.  It uses
-a bright monochrome 128x64 OLED with either the Raspberry Pi Pico
-or the Raspberry Pi Pico W.  We also suggest using the DS3231 real-time clock
-to keep time accurate to within 2 seconds per month.</p>
+<p>The Large OLED Kit is one of our most versatile kits.</p>
+<p>It uses a bright monochrome 128x64 SSD1306 OLED with the Raspberry Pi Pico W and a
+DS3231 real-time clock to keep time accurate to within 2 seconds per month.</p>
 <p>The OLEDs are mounted on a piece of acrylic (Plexiglass) with a half-size breadboard.</p>
 <p><img alt="" src="right-side-view.jpg" /></p>
 <p>Each board has three buttons so you can adjust the time and alarm clock settings
 manually if you are not getting the time from your WiFi network.</p>
+<h2 id="component-list">Component List</h2>
+<ul>
+<li>Raspberry Pi W</li>
+<li>128x64 SSD1306 OLED display on SPI bus</li>
+<li>DS3231 real-time clock on I2C bus</li>
+<li>3 momentary push buttons</li>
+</ul>
 <h2 id="kit-assembly">Kit Assembly</h2>
 <p>If you have received a clock kit you can proceed directly to the <a href="01-assembly/">Assembly Instructions</a>.</p>
 <p>Once your kit is assembled you can the start to program your clock.</p>
@@ -2004,7 +2028,8 @@ manually if you are not getting the time from your WiFi network.</p>
 <h3 id="hello-world">Hello World</h3>
 <p>Your first program is our "Hello World!" program for this kit.
 This is a great way to tell if your display connections are all
-working.</p>
+working.  We have one version that prints to the Thonny console
+and one version that prints to the OLED display.</p>
 <p><a href="01-hello-world/">Go to the Hello World! Program</a></p>
 <h3 id="display-config">Display Config</h3>
 <p>Most of our sample programs read the hardware settings from a configuration file called <code>config.py</code>.  This program shows you how to show the configuration parameters on the display.</p>
@@ -2023,8 +2048,11 @@ which is set from your local computer when you connect your
 Pico using Thonny.</p>
 <p><a href="02-set-rtc-from-localtime/">Set the RTC from Localtime</a></p>
 <p>After you run this program your clock will be accurate to within
-two seconds per month.  The lithium battery will remember the time even
-when there is a power outage.</p>
+two seconds per month.  The backup lithium battery will remember the time even
+when the clock is not plugged in or there is a power outage.  The battery will last
+about 8 years.</p>
+<h3 id="display-single-large-digit">Display Single Large Digit</h3>
+<p><a href="."></a></p>
 
 
 
