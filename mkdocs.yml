@@ -47,7 +47,9 @@ nav:
       - RTC Explained: lessons/rtc/13-rtc-explained.md
       - RTC Breadboard Testing: lessons/rtc/50-ds1307-breadboard.md
     - ILI9341 Display: lessons/30-ili9341.md
-    - Adding Sound: lessons/60-sound/index.md
+    - Adding Sound: 
+      - Intro: lessons/60-sound/index.md
+      - Play Tune: lessons/60-sound/play-tune.md
     - Digital to Analog Converters:
       - Introduction: lessons/digital-to-analog-converters/index.md
       - Assembly: lessons/digital-to-analog-converters/assembly.md
@@ -56,6 +58,9 @@ nav:
     - Machine Info: lessons/40-machine-info.md
     - Shift Registers: lessons/55-shift-registers/index.md
     - Powering Your Clock and Watch: lessons/70-power/index.md
+    - Network Time Protocol: 
+      - Intro: lessons/ntp/index.md
+      - NTP Function: lessons/ntp/sample-ntp-function.md
   - Kits:
     - Introduction Kits: kits/index.md
     - Gallery: kits/gallery.md
@@ -113,6 +118,10 @@ nav:
       - Display Clock Hands:  kits/oled-large/10-clock-hands.md
       - 7-Segment: kits/oled-large/10-draw-seven-segments.md
       - Segment Thickness: kits/oled-large/11-draw-thickness.md
+      - Real Time Clock: kits/oled-large/05-rtc.md
+      - Display Single Digit: kits/oled-large/06-display-single-digit.md
+      - Set RTC With Buttons: kits/oled-large/07-set-rtc-time-with-buttons.md
+      - Three Button Set: kits/oled-large/13-three-button-set.md
       - Digital Clock: kits/oled-large/15-digital-clock.md
     - Stopwatch: kits/stopwatch/index.md
     - Wireless OLED: kits/oled-wireless/index.md
@@ -155,7 +164,9 @@ nav:
       - Intro: kits/e-paper/index.md
     - Waveshare E-Paper:
       - Intro: kits/waveshare-e-paper/index.md
-
+    - Alarm Clock:
+      - Intro: kits/alarm-clock/index.md
+      - Alarm Icon: kits/alarm-clock/display-alarm-icon.md
   - MicroSims:
     - List of MicroSims: sims/index.md
     - Binary Number: sims/binary-number/index.md
