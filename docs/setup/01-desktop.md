@@ -24,6 +24,8 @@ After you first plug in a Raspberry Pi Pico, you will need to install the correc
 
 Since version 4.0.0 Thonny can detect the microcontroller you are using and download the firmware.
 
+![](../img/thonny-install-micropython-runtime.png)
+
 ### Manually Downloading the Firmware
 
 There are occasions when the automatic firmware download in Thonny may not work.  In this case, you will need to manually download the firmware from the MicroPython website.
