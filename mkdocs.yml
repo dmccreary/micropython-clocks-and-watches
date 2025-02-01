@@ -17,6 +17,7 @@ nav:
     - LED Art Clocks: setup/04-led-clocks.md
     - Pico Wireless: setup/06-pico-w-setup.md
     - Sound and Speakers: setup/07-sound.md
+    - Button Test: setup/05-button-print-test.md
     - AI in the Classroom: setup/05-ai-in-the-classroom.md
   - Lessons:
     - Introduction: lessons/index.md

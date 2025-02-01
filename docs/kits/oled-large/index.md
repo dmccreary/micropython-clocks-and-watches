@@ -78,4 +78,4 @@ about 8 years.
 
 ### Display Single Large Digit
 
-[](.)
+[Display Single Digit](./06-display-single-digit.md)

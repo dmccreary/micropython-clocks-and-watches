@@ -92,5 +92,5 @@ they have the first 20 rows yellow and the remaining 44 rows blue.
 
 ## E-Paper Clocks
 
-[Waveshare e-Paper](./e-ink/index.md)
+[Waveshare e-Paper](./e-paper/index.md)
 
