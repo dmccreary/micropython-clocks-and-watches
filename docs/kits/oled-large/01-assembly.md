@@ -1,10 +1,10 @@
 # Large OLED Assembly
 
-![](./large-oled-clock.jpg)
+![](./oled-large-v2.png)
 
 Here are your assembly instructions for the Large OLED clock kit.
 This kit comes with a Raspberry Pi W, a nice large 2.24" OLED display and a DS3132 real-time clock.  You can also optionally mount a speaker for an alarm clock.
-Time can be set using three buttons (set, increment (+) and decrement (-))
+Time can be set using three buttons (mode-set, increment (+) and decrement (-))
 
 ## Kit Parts List
 

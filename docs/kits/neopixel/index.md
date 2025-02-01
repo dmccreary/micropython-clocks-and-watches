@@ -1,7 +1,5 @@
 # NeoPixel LED Strip Clock Kits
 
-![](./)
-
 In this section we will present three clocks that use a string of low-cost RGB LEDs commonly
 called NeoPixels.  The name of this standard is technically called the WS2812B
 addressable LED standards.  NeoPixels are frequently used in art-clock projects
