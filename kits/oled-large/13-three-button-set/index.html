@@ -2208,16 +2208,47 @@ another Boolean variable called <code>pending_update</code>.  When
 any of the hour, minute or AM/PM is changed, the <code>pending_update</code> is set
 to <code>True</code>.  Calling <code>update_rtc()</code> if pending_update is <code>False</code> does
 not change the RTC.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">update_rtc</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Update RTC via slow I2C calls with current time state&quot;&quot;&quot;</span>
+<p>Note that the format of the data coming OUT of the RTC is different
+than the format of the data we use to set the RTC.  To set
+the clock correctly we need to rearrange the tuple to match the expected format:</p>
+<ul>
+<li><strong>From:</strong> (year, month, day, weekday, hour, minutes, seconds, subseconds)</li>
+<li><strong>To:</strong>   (year, month, day, hour, minutes, seconds, weekday)</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">update_rtc</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Update RTC with current time state&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">current_time</span><span class="p">,</span> <span class="n">pending_update</span>
     <span class="k">if</span> <span class="n">pending_update</span><span class="p">:</span>
-        <span class="n">rtc</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">current_time</span><span class="p">))</span>
+        <span class="c1"># Rearrange the tuple to match the expected format:</span>
+        <span class="c1"># From: (year, month, day, weekday, hour, minutes, seconds, subseconds)</span>
+        <span class="c1"># To:   (year, month, day, hour, minutes, seconds, weekday)</span>
+        <span class="n">rtc_tuple</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>  <span class="c1"># year</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>  <span class="c1"># month</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>  <span class="c1"># day</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>  <span class="c1"># hour</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span>  <span class="c1"># minutes</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span>  <span class="c1"># seconds</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>   <span class="c1"># weekday</span>
+        <span class="p">)</span>
+        <span class="n">rtc</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">rtc_tuple</span><span class="p">)</span>
         <span class="n">pending_update</span> <span class="o">=</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="mode-button-pressed-irq">Mode Button Pressed IRQ</h2>
@@ -2539,7 +2570,20 @@ During normal running <code>flash_state = False</code></p>
 <span class="normal">259</span>
 <span class="normal">260</span>
 <span class="normal">261</span>
-<span class="normal">262</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">I2C</span><span class="p">,</span> <span class="n">SPI</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">I2C</span><span class="p">,</span> <span class="n">SPI</span>
 <span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span><span class="p">,</span> <span class="n">ticks_ms</span><span class="p">,</span> <span class="n">ticks_diff</span>
 <span class="kn">from</span> <span class="nn">ds3231</span> <span class="kn">import</span> <span class="n">DS3231</span>
 <span class="kn">import</span> <span class="nn">ssd1306</span>
@@ -2591,11 +2635,24 @@ During normal running <code>flash_state = False</code></p>
     <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>  <span class="c1"># 8</span>
     <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>   <span class="c1"># 9</span>
 <span class="p">]</span>
+
 <span class="k">def</span> <span class="nf">update_rtc</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Update RTC with current time state&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">current_time</span><span class="p">,</span> <span class="n">pending_update</span>
     <span class="k">if</span> <span class="n">pending_update</span><span class="p">:</span>
-        <span class="n">rtc</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">current_time</span><span class="p">))</span>
+        <span class="c1"># Rearrange the tuple to match the expected format:</span>
+        <span class="c1"># From: (year, month, day, weekday, hour, minutes, seconds, subseconds)</span>
+        <span class="c1"># To:   (year, month, day, hour, minutes, seconds, weekday)</span>
+        <span class="n">rtc_tuple</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>  <span class="c1"># year</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>  <span class="c1"># month</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>  <span class="c1"># day</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>  <span class="c1"># hour</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span>  <span class="c1"># minutes</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span>  <span class="c1"># seconds</span>
+            <span class="n">current_time</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>   <span class="c1"># weekday</span>
+        <span class="p">)</span>
+        <span class="n">rtc</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">rtc_tuple</span><span class="p">)</span>
         <span class="n">pending_update</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="k">def</span> <span class="nf">refresh_time</span><span class="p">():</span>
