@@ -1115,8 +1115,70 @@ display being connected.  In the next lab we will also modify the
 lab to display the button state on the display.</p>
 <h2 id="using-interrupt-request-functions">Using Interrupt Request Functions</h2>
 <p>To print what button is being pressed, we will write three small python functions.
-We then will then have these functions run when the corresponding button is presssed by running the <code>irq</code> function.</p>
+We then will then have these functions run when the corresponding button is pressed by running the <code>irq</code> function.</p>
 <h2 id="sample-code">Sample Code</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
+
+<span class="c1"># Sample Raspberry Pi Pico MicroPython three button press example</span>
+
+<span class="c1"># Button Pin GPIO Configuration</span>
+<span class="n">BUTTON_1_PIN</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="n">BUTTON_2_PIN</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">BUTTON_3_PIN</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="c1"># Create 3 button objects as inputs with pullup resistors</span>
+<span class="n">button_1_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="n">BUTTON_1_PIN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+<span class="n">button_2_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="n">BUTTON_2_PIN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+<span class="n">button_3_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="n">BUTTON_3_PIN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+
+<span class="c1"># These functions gets called every time a button is pressed.</span>
+<span class="k">def</span> <span class="nf">button_1_pressed</span><span class="p">(</span><span class="n">pin</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Button 1 pressed&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">button_2_pressed</span><span class="p">(</span><span class="n">pin</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Button 2 pressed&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">button_3_pressed</span><span class="p">(</span><span class="n">pin</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Button 3 pressed&#39;</span><span class="p">)</span>
+
+<span class="c1"># now we register the button handler functions using the irq setter method for each pin</span>
+<span class="n">button_1_pin</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="n">Pin</span><span class="o">.</span><span class="n">IRQ_FALLING</span><span class="p">,</span> <span class="n">handler</span> <span class="o">=</span> <span class="n">button_1_pressed</span><span class="p">)</span>
+<span class="n">button_2_pin</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="n">Pin</span><span class="o">.</span><span class="n">IRQ_FALLING</span><span class="p">,</span> <span class="n">handler</span> <span class="o">=</span> <span class="n">button_2_pressed</span><span class="p">)</span>
+<span class="n">button_3_pin</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="n">Pin</span><span class="o">.</span><span class="n">IRQ_FALLING</span><span class="p">,</span> <span class="n">handler</span> <span class="o">=</span> <span class="n">button_3_pressed</span><span class="p">)</span>
+
+<span class="c1"># we don&#39;t do anything in the main loop but sleep</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 
 
