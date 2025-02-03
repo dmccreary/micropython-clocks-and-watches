@@ -822,9 +822,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#two-types" class="md-nav__link">
+  <a href="#photos-of-different-rtc-boards" class="md-nav__link">
     <span class="md-ellipsis">
-      Two Types
+      Photos of Different RTC Boards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Photos of Different RTC Boards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ds1307" class="md-nav__link">
+    <span class="md-ellipsis">
+      DS1307
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds3231" class="md-nav__link">
+    <span class="md-ellipsis">
+      DS3231
     </span>
   </a>
   
@@ -909,11 +933,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../50-ds1307-breadboard/" class="md-nav__link">
+      <a href="../ds3231/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    RTC Breadboard Testing
+    The DS3232 RTC
   </span>
   
 
@@ -1538,9 +1562,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#two-types" class="md-nav__link">
+  <a href="#photos-of-different-rtc-boards" class="md-nav__link">
     <span class="md-ellipsis">
-      Two Types
+      Photos of Different RTC Boards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Photos of Different RTC Boards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ds1307" class="md-nav__link">
+    <span class="md-ellipsis">
+      DS1307
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds3231" class="md-nav__link">
+    <span class="md-ellipsis">
+      DS3231
     </span>
   </a>
   
@@ -1607,22 +1655,33 @@
 
 
 <h1 id="testing-the-rtc-type">Testing the RTC Type</h1>
-<h2 id="two-types">Two Types</h2>
+<p>When you order a RTC board, you need to make sure
+you are getting the correct version.  Sometimes
+the label on the chip will be visible.  However,
+they are sometimes hard to read.  In that case
+we can use software to test the features of the two chips.</p>
+<ul>
+<li><strong>DS1307</strong> older with no temperature compensation</li>
+<li><strong>DS3231</strong> newer with temperature compensation</li>
+</ul>
+<h2 id="photos-of-different-rtc-boards">Photos of Different RTC Boards</h2>
+<h3 id="ds1307">DS1307</h3>
+<p><img alt="" src="../../../img/rtc-ds1307.jpg" /></p>
+<h2 id="ds3231">DS3231</h2>
+<p><img alt="" src="../../../img/rtc-ds3231-front-back.jpg" /></p>
 <h2 id="tests">Tests</h2>
 <h3 id="tests-specific-register-patterns-that-are-unique-to-the-ds3231">Tests specific register patterns that are unique to the DS3231:</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>-   Control register bit patterns
--   Status register bit patterns
--   Temperature register behavior
-</code></pre></div></td></tr></table></div>
+<ul>
+<li>Control register bit patterns</li>
+<li>Status register bit patterns</li>
+<li>Temperature register behavior</li>
+</ul>
 <h3 id="performs-consistency-checks">Performs consistency checks:</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>-   Verifies temperature readings are in valid range (-40°C to +85°C)
--   Checks if temperature readings make sense
--   Verifies register bit patterns match datasheet specifications
-</code></pre></div></td></tr></table></div>
+<ul>
+<li>Verifies temperature readings are in valid range (-40°C to +85°C)</li>
+<li>Checks if temperature readings make sense</li>
+<li>Verifies register bit patterns match datasheet specifications</li>
+</ul>
 <h3 id="better-ds1307-detection">Better DS1307 detection:</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>-   Checks the DS1307&#39;s control register pattern

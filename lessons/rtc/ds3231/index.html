@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://dmccreary.github.io/clocks-and-watches/lessons/rtc/ds3231/">
       
       
+        <link rel="prev" href="../13-rtc-explained/">
+      
+      
+        <link rel="next" href="../../30-ili9341/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -22,7 +26,7 @@
     
     
       
-        <title>DS3231 Real-time Clock - Clocks and Watches with AI</title>
+        <title>The DS3232 RTC - Clocks and Watches with AI</title>
       
     
     
@@ -69,7 +73,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="DS3231 Real-time Clock - Clocks and Watches with AI" >
+        <meta  property="og:title"  content="The DS3232 RTC - Clocks and Watches with AI" >
       
         <meta  property="og:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
@@ -85,7 +89,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="DS3231 Real-time Clock - Clocks and Watches with AI" >
+        <meta  name="twitter:title"  content="The DS3232 RTC - Clocks and Watches with AI" >
       
         <meta  name="twitter:description"  content="Designing and Building and Clock and Watches with MicroPython and AI.  This projects uses low-cost parts, MicroPython and AI to teach computational thinking." >
       
@@ -145,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DS3231 Real-time Clock
+              The DS3232 RTC
             
           </span>
         </div>
@@ -379,6 +383,8 @@
       
   
   
+    
+  
   
   
     
@@ -417,6 +423,528 @@
         
           
         
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-timekeeping-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timekeeping Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-i2c-bus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The I2C Bus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-spi-bus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The SPI Bus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../screen-drawing/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Screen Drawing
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-hardware-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware Config Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-get-local-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get Local Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-buttons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-setting-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manually Setting Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Real Time Clocks
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            Real Time Clocks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-real-time-clocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Real Time Clocks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-the-rtc-type/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing The RTC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-rtc-explained/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RTC Explained
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    The DS3232 RTC
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    The DS3232 RTC
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-technical-and-financial-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Technical and Financial Differences:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Cost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#micropython-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroPython Drivers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../30-ili9341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ILI9341 Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
       
         
           
@@ -437,11 +965,11 @@
         
   
   
-    <a href="../../" class="md-nav__link">
+    <a href="../../60-sound/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    Lessons
+    Adding Sound
   </span>
   
 
@@ -451,6 +979,177 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../digital-to-analog-converters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital to Analog Converters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../40-machine-info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../55-shift-registers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shift Registers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../70-power/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Powering Your Clock and Watch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../ntp/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Network Time Protocol
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -824,6 +1523,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#key-technical-and-financial-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Technical and Financial Differences:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Cost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#micropython-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroPython Drivers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -851,6 +1577,34 @@
 
 
 <h1 id="ds3231-real-time-clock">DS3231 Real-time Clock</h1>
+<p><img alt="" src="../../../img/rtc-ds3231-front-back.jpg" /></p>
+<p>The DS3231 is a temperature-compensated real-time clock Released by Maxim Integrated around 2009-2010. With integrated crystal and I2C interface that maintains highly accurate timekeeping under varying conditions.</p>
+<p>The DS3231 represented a significant advancement in accuracy and temperature compensation over the earlier DS1307. The improved technology helped make the DS3231 the preferred choice for precision timekeeping applications, despite its higher cost. The DS3231m typically maintains an accuracy of ±2 seconds each month (not day) across an incredible range of -40°F to 185°F (-40°C to +85°C). The DS3231 also has an on-board register you can access to get the current temperature of the device.</p>
+<h2 id="key-technical-and-financial-differences">Key Technical and Financial Differences:</h2>
+<p><strong>Accuracy</strong>
+- DS1307: ±2 seconds/day
+- DS3231: ±2 seconds/month due to temperature compensation</p>
+<p><strong>Temperature Operation:</strong></p>
+<ul>
+<li>DS1307: 32°F to 158°F (0°C to +70°C)</li>
+<li>DS3231: -40°F to 185°F (-40°C to +85°C) with compensation</li>
+</ul>
+<p><strong>Clock Output:</strong></p>
+<ul>
+<li>DS1307: Programmable square wave (1Hz, 4kHz, 8kHz, 32kHz)</li>
+<li>DS3231: 32kHz output plus programmable square wave</li>
+</ul>
+<p><strong>Typical retail prices as of 2025:</strong></p>
+<ul>
+<li>DS1307: $1-2 USD</li>
+<li>DS3231: $3-5 USD</li>
+</ul>
+<h2 id="low-cost">Low Cost</h2>
+<p>eBay Listing:</p>
+<p><img alt="" src="../../../img/rtc-ds3231-ebay.png" /></p>
+<p>Just 73 cent on AliExpress:</p>
+<p><img alt="" src="../../../img/rtc-ds3231-aliexpress.png" /></p>
+<h2 id="micropython-drivers">MicroPython Drivers</h2>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://github.com/pangopi/micropython-DS3231-AT24C32/tree/main">Pangopi Driver</a></li>
@@ -890,6 +1644,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../13-rtc-explained/" class="md-footer__link md-footer__link--prev" aria-label="Previous: RTC Explained">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                RTC Explained
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../30-ili9341/" class="md-footer__link md-footer__link--next" aria-label="Next: ILI9341 Display">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                ILI9341 Display
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
