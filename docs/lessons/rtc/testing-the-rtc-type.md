@@ -1,19 +1,37 @@
 # Testing the RTC Type
 
-## Two Types
+When you order a RTC board, you need to make sure
+you are getting the correct version.  Sometimes
+the label on the chip will be visible.  However,
+they are sometimes hard to read.  In that case
+we can use software to test the features of the two chips.
+
+- **DS1307** older with no temperature compensation
+- **DS3231** newer with temperature compensation
+
+## Photos of Different RTC Boards
+
+### DS1307
+
+![](../../img/rtc-ds1307.jpg)
+
+## DS3231
+
+![](../../img/rtc-ds3231-front-back.jpg)
 
 ## Tests
 
 ### Tests specific register patterns that are unique to the DS3231:
 
-    -   Control register bit patterns
-    -   Status register bit patterns
-    -   Temperature register behavior
+-   Control register bit patterns
+-   Status register bit patterns
+-   Temperature register behavior
 
 ### Performs consistency checks:
-    -   Verifies temperature readings are in valid range (-40°C to +85°C)
-    -   Checks if temperature readings make sense
-    -   Verifies register bit patterns match datasheet specifications
+
+-   Verifies temperature readings are in valid range (-40°C to +85°C)
+-   Checks if temperature readings make sense
+-   Verifies register bit patterns match datasheet specifications
 
 ### Better DS1307 detection:
     -   Checks the DS1307's control register pattern

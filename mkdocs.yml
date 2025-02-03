@@ -46,7 +46,7 @@ nav:
       - About Real Time Clocks: lessons/rtc/13-real-time-clocks.md
       - Testing The RTC: lessons/rtc/testing-the-rtc-type.md
       - RTC Explained: lessons/rtc/13-rtc-explained.md
-      - RTC Breadboard Testing: lessons/rtc/50-ds1307-breadboard.md
+      - The DS3232 RTC: lessons/rtc/ds3231.md
     - ILI9341 Display: lessons/30-ili9341.md
     - Adding Sound: 
       - Intro: lessons/60-sound/index.md
