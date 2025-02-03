@@ -53,7 +53,7 @@ Some important points about these connections:
 3.  Multiple I2C devices can share the same SDA and SCL lines
 4.  Power must match the display's voltage requirements (check datasheet)
 
-## Sample I2C Initialization Code
+## Sample I2C Display Initialization Code
 ```python
 from machine import Pin, I2C
 from ssd1306 import SSD1306_I2C
@@ -108,19 +108,107 @@ A common issue to watch for is making sure your I2C connections have appropriate
 
 ## Testing Your Connections
 
-The I2C Scanner
+### The I2C Scanner
+
+```python
+from machine import I2C, Pin
+import time
+
+# I2C setup
+i2c = I2C(0, sda=Pin(0), scl=Pin(1))
+
+# Run the scanner
+devices_found = i2c.scan()
+for device in devices_found:
+    print(device, hex(device))
+```
+
+This code is useful for testing connections on your clock projects.
+
+Imagine you've just connected a new display or real-time clock chip to your Raspberry Pi Pico W, and you want to make sure it's properly connected before you start writing more complex code. This is where this I2C scanner comes in handy - it's like a metal detector that beeps when it finds something, but for electronic components!
+
+Let's break it down step by step:
+
+### Imports
+
+First, we import the tools we need:
+```python
+from machine import I2C, Pin
+import time
+```
+- `I2C` is for communicating with components using just two wires
+- `Pin` lets us control the physical pins on the Pico W
+- `time` gives us timing functions (though we don't use it in this example)
+
+### Connection Setup
+
+Next, we set up I2C communication:
+
+```python
+i2c = I2C(0, sda=Pin(0), scl=Pin(1))
+```
+- `I2C(0)` means we're using the first I2C channel
+- `sda=Pin(0)` connects the data line to pin GP0
+- `scl=Pin(1)` connects the clock line to pin GP1
+
+### Run the Scan Function
+
+Finally, we scan for devices and print what we find:
+
+```python
+devices_found = i2c.scan()
+for device in devices_found:
+    print(device, hex(device))
+```
+
+- `i2c.scan()` looks for any I2C devices connected to those pins
+- For each device found, it prints both the decimal number and hexadecimal address
+  - For example, if you see `104 0x68`, that's the same number in two formats
+  - `0x68` (hex 68) is the address for a DS3231 real-time clock
+  - `0x3C` (hex 3C) is common for OLED displays
+
+This code is super helpful because:
+1. It confirms your wiring is correct - if you see a device, your connections work!
+2. It tells you the address of your device, which you need for the rest of your code
+3. It helps troubleshoot - if you don't see your device, you know to check your wiring
+
+Think of it like checking if your game controller is properly connected to your computer - this code does the same thing for I2C devices connected to your Pico W.
 
 ## Common I2C Addresses for Clock and Watches
 
-### Real Time Clocks
+I'll create a comprehensive list of common I2C addresses you might encounter when building clocks and watches with the Raspberry Pi Pico W.
 
-We use two types of Real-Time clocks
+#### Real-Time Clock (RTC) Modules
 
-### Real Time Clock EEPROM
+-   `0x68`: DS3231 Temperature-compensated RTC
+-   `0x68`: DS1307 Basic RTC
+-   `0x6F`: PCF8563 RTC
 
-### Displays
+#### OLED & LCD Displays
 
-Our I2C OLED displays are often found at
+-   `0x3C`: SSD1306 OLED display (most common setting)
+-   `0x3D`: SSD1306 OLED display (alternate address)
+-   `0x27`: LCD displays with PCF8574 I2C adapter
+-   `0x3F`: LCD displays with PCF8574A I2C adapter
 
-## Connector Standards
+#### Environmental Sensors (for clock/weather stations)
+
+-   `0x76`: BME280 Temperature/Humidity/Pressure (primary address)
+-   `0x77`: BME280 Temperature/Humidity/Pressure (alternate address)
+-   `0x40`: HDC1080 Temperature/Humidity
+-   `0x44`: SHT31 Temperature/Humidity (primary address)
+-   `0x45`: SHT31 Temperature/Humidity (alternate address)
+
+#### User Input Expanders
+
+-   `0x20` - `0x27`: MCP23017 16-bit I/O expander (configurable)
+-   `0x38` - `0x3F`: PCF8574 8-bit I/O expander (configurable)
+
+### Pro Tips:
+
+1.  If you see address conflicts (two devices wanting to use `0x68` for example), many devices have an address select pin or jumper to change their address.
+2.  Some devices like the SSD1306 OLED have a built-in address selection based on whether you connect their SA0 pin to ground or VCC.
+3.  Always run an I2C scanner before starting a new project to confirm your device addresses match what you expect.
+
+**Remember:** These addresses are shown in hexadecimal format (hence the `0x` prefix). When you see these in scan results, they'll often show both decimal and hex formats (like `104 0x68` for a DS3231).
 

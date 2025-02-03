@@ -193,7 +193,7 @@ high-fidelity audio output.
 
 For example we have a lab that generates a sine wave to create audible tones through a speaker.
 
-Specifically our class uses the [PCM5102A DAC](#pcm5102a-dac) Module to generate [Sound](../docs/lessons/60-sound/index.md).
+Specifically our class uses the [PCM5102A DAC](#pcm5102a-dac) Module to generate [Sound](./lessons/60-sound/index.md).
 
 #### Date and Calendar Display
 

@@ -1,6 +1,6 @@
 # Real Time Clocks
 
-The DS3231 is a highly accurate real-time clock (RTC) integrated circuit that maintains precise time using an internal temperature-compensated crystal oscillator (TCXO).
+The DS3231 is a highly accurate real-time clock (RTC) integrated circuit that maintains precise time using an internal temperature-compensated crystal oscillator (TCXO).  The letters "DS" initially were for Dallas Semiconductor,  the name of the company that originally created the chip.
 
 Key features:
 
@@ -22,6 +22,10 @@ The device stores time data in BCD format across multiple registers:
 
 **Example:** Reading hour register 0x02 returns value 0x15 in BCD, representing 15:00 (3:00 PM).
 
+## Driver
+
+We will be using the 
+
 #### How Long Will The Battery Last
 
 The typical operational duration of the backup coin-cell battery in real-time clock circuits ranges from 2 to 10 years, depending on temperature conditions and current draw. 
@@ -34,3 +38,7 @@ The key factors affecting battery life are:
 - Current draw of the RTC (varies by model)
 - Battery capacity (typical CR2032 = 220mAh)
 - Additional features active (temperature sensing, alarms, etc.)
+
+## References
+
+[DS3231 Data Sheet on the Analog Devices Website](https://www.analog.com/media/en/technical-documentation/data-sheets/ds3231.pdf) - note that Analog Devices acquired Dallas Semiconductor.
