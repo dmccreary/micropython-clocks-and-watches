@@ -1447,9 +1447,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Driver
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Driver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#how-long-will-the-battery-last" class="md-nav__link">
     <span class="md-ellipsis">
       How Long Will The Battery Last
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -1474,7 +1498,7 @@
 
 
 <h1 id="real-time-clocks">Real Time Clocks</h1>
-<p>The DS3231 is a highly accurate real-time clock (RTC) integrated circuit that maintains precise time using an internal temperature-compensated crystal oscillator (TCXO).</p>
+<p>The DS3231 is a highly accurate real-time clock (RTC) integrated circuit that maintains precise time using an internal temperature-compensated crystal oscillator (TCXO).  The letters "DS" initially were for Dallas Semiconductor,  the name of the company that originally created the chip.</p>
 <p>Key features:</p>
 <ul>
 <li>Accuracy within ±2ppm (about 1 minute/year) across -40°C to +85°C</li>
@@ -1492,6 +1516,8 @@
 0x05: Month
 0x06: Year</p>
 <p><strong>Example:</strong> Reading hour register 0x02 returns value 0x15 in BCD, representing 15:00 (3:00 PM).</p>
+<h2 id="driver">Driver</h2>
+<p>We will be using the </p>
 <h4 id="how-long-will-the-battery-last">How Long Will The Battery Last</h4>
 <p>The typical operational duration of the backup coin-cell battery in real-time clock circuits ranges from 2 to 10 years, depending on temperature conditions and current draw. </p>
 <p>The DS3231 RTC module used in our kits draw 3μA at 
@@ -1503,6 +1529,8 @@ The key factors affecting battery life are:</p>
 <li>Battery capacity (typical CR2032 = 220mAh)</li>
 <li>Additional features active (temperature sensing, alarms, etc.)</li>
 </ul>
+<h2 id="references">References</h2>
+<p><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/ds3231.pdf">DS3231 Data Sheet on the Analog Devices Website</a> - note that Analog Devices acquired Dallas Semiconductor.</p>
 
 
 
