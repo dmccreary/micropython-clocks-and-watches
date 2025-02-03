@@ -124,6 +124,7 @@ nav:
       - Set RTC With Buttons: kits/oled-large/07-set-rtc-time-with-buttons.md
       - Three Button Set: kits/oled-large/13-three-button-set.md
       - Digital Clock: kits/oled-large/15-digital-clock.md
+      - Adding Temperature: kits/oled-large/16-adding-temperature.md
     - Stopwatch: kits/stopwatch/index.md
     - Wireless OLED: kits/oled-wireless/index.md
     - SH1106 OLED: kits/sh1106/index.md
