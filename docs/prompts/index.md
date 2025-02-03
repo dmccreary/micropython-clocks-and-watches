@@ -18,6 +18,6 @@ of the prompt.  You can use this button to copy the prompt text directly into yo
 * [Concept Taxonomy](04-concept-taxonomy.md)
 * [Taxonomy Assignments](05-taxonomy-assignment.md)
 * [Banner Image](./06-banner-image.md)
-* [FAR](.07-faq.md)
+* [FAQ](.07-faq.md)
 * [Glossary](./08-glossary.md)
 * [OLED Test](./09-oled-test.md)
