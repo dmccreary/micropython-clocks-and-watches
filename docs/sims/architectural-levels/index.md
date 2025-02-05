@@ -1,6 +1,8 @@
 ## Architectural  Levels Zoom
 
-[React Main](./main.html)
+[P5.js Version](./main.html)
+
+[React Main](./react.html)
 
 !!! prompt
     Create a MicroSim that shows different levels of Zoom. The highest level shows a single component and as you increase the Zoom level it shows more components.
