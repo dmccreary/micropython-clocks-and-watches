@@ -182,6 +182,7 @@ nav:
     - Clock Face Themes: sims/themes/index.md
     - Battery Drain: sims/battery-drain/index.md
     - Shift Register: sims/shift-register/index.md
+    - Architectural Levels: - sims/architecural-levels/index.md
   - Prompts:
     - Introduction: prompts/index.md
     - Course Description: prompts/01-course-description.md
