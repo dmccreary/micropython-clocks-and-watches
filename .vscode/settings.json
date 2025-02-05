@@ -1,8 +1,10 @@
 {
     "cSpell.words": [
+        "Backlighting",
         "Baudrate",
         "baudrates",
         "bground",
+        "Blitting",
         "bytearray",
         "EEPROM",
         "elif",
@@ -24,7 +26,7 @@
         "solderless",
         "Tannenbaum",
         "Thoney",
-        "Tannenbaum",
-        "WLAN"
+        "WLAN",
+        "writeln"
     ]
 }
