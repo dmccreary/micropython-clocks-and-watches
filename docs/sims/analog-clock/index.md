@@ -121,3 +121,7 @@ function switchMode() {
 }
 
 ```
+
+## Version 2
+
+[Version 2 - Blue clock with tick marks](./v2.html)
