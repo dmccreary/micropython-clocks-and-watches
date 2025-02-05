@@ -197,6 +197,6 @@ You can use generative AI tool like ChatGPT or Anthropic Claude to help you debu
     Please help me diagnose a problem I am having with MicroPython program running on the Raspberry Pi Pico W.  I am using a Mac to connect to the Pico with Thonny.  I am using Thonny version 4.1.6 and Mac OS 15.0.1.
     When I run ```ls /dev/cu*``` I can see the device listed.  When I press the Stop/Restart backend button I see the MicroPython version X on the console.
     
-    However, when I run X I get the following error.
+    However, when I run X I get the following error: ...
 
 
