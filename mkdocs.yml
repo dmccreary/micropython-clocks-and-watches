@@ -62,6 +62,11 @@ nav:
     - Network Time Protocol: 
       - Intro: lessons/ntp/index.md
       - NTP Function: lessons/ntp/sample-ntp-function.md
+    - Multiple Fonts: 
+      - Introduction: lessons/50-multiple-fonts/index.md
+      - Font to Python: lessons/50-multiple-fonts/font-to-py.md
+      - Code Walk Through: lessons/50-multiple-fonts/code-walk-through.md
+      - Helvetica Example: lessons/50-multiple-fonts/helvetica-example.md
   - Kits:
     - Introduction Kits: kits/index.md
     - Gallery: kits/gallery.md
