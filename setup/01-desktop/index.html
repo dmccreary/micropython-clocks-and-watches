@@ -578,6 +578,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#large-neopixel-clocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large NeoPixel Clocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#debugging-the-usb-port" class="md-nav__link">
     <span class="md-ellipsis">
       Debugging the USB Port
@@ -1378,6 +1387,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#large-neopixel-clocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large NeoPixel Clocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#debugging-the-usb-port" class="md-nav__link">
     <span class="md-ellipsis">
       Debugging the USB Port
@@ -1478,7 +1496,7 @@
 <p>When debugging your Thonny installation, it is important to understand the steps that happen when you plug your Raspberry Pi Pico into the computer.</p>
 <p><strong>Step 1: Plugging the USB Device</strong> The Pico appears as a USB device on your computer when you plug it in.  The operating system should send a request to the USB device asking it for its ID.</p>
 <p><strong>Step 2: Probing for the USB ID</strong> The Pico will respond with a device ID number.  This number reflects two items: the company that made the device (Vendor ID) and the device product type (Product ID).  If you are using a power-only USB cable this number will <strong>never</strong> get to the operating system.  This means that the data wires are not present in your USB cable or one of the wires is broken or not connecting.</p>
-<p><strong>Step 3: Looking Up the USB Driver</strong> The operating system will take this USB ID and then look-up the right software and then run that software.  In UNIX and Mac systems this will amount to making the USB device appear in the <code>/dev/cu*</code> area.  On Windows it will be a COM port.</p>
+<p><strong>Step 3: Looking Up the USB Driver</strong> The operating system will take this USB ID and then look-up the right software and then run that software.  In UNIX and Mac systems this will amount to making the USB device appear in the <code>/dev/cu*</code> area.  On Windows it will be a <code>COM</code> port.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>/dev/cu.usb*
@@ -1490,26 +1508,25 @@ crw-rw-rw-<span class="w">  </span><span class="m">1</span><span class="w"> </sp
 <p>If you know your cable works fine by testing it on other devices then you may have to reboot your computer.</p>
 <h3 id="setting-usb-permissions-on-macos">Setting USB Permissions on MacOS</h3>
 <p><img alt="" src="../macos-usb-permissions.png" /></p>
-<p>In many classrooms with old Macs, the new security settings
+<p>In many classrooms with Macs, the security settings
 for USB connections can get in the way of a good experience for
 our students.  Since these Macs don't leave our classrooms, 
-we have decided to permanently allow USB access for your Raspberry Pi Pico on MacOS Sonoma.
-Here are the steps we use.</p>
+we have decided to permanently allow USB access for your Raspberry Pi Pico on MacOS Sequoia.</p>
+<p>Here are the steps we use.</p>
 <ol>
 <li>On the Mac, go to System Settings &gt; Privacy &amp; Security</li>
 <li>Scroll to Security</li>
 <li>Find "Allow accessories to connect" and select "always"</li>
 </ol>
 <h3 id="debugging-your-usb-connection">Debugging your USB Connection</h3>
-<p>Our students have reported many frustrating experiences getting their Raspberry Pi Pico to connect to their MacOS system.
-Most of these problems can be quickly solved by checking the security settings on your MacOS.</p>
+<p>Our students have reported many frustrating experiences getting their Raspberry Pi Pico to connect to their MacOS system.  Most of these problems can be quickly solved by checking the security settings on your MacOS.</p>
 <p>After you plug in the USB it should be listed in the <code>/dev/cu*</code> area:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/dev/cu*
 </code></pre></div></td></tr></table></div>
 <p>A typical response includes this device:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/dev/cu.usbmodem1101
 </code></pre></div></td></tr></table></div>
-<p>If the usbmodem11001 or similar is not listed then THonny will not connect.
+<p>If the <code>usbmodem1101</code> or similar is not listed then Thonny will not connect.
 This is the time to check your cables and connectors.  Older USB cables frequently have broken wires.</p>
 <h3 id="getting-usb-diagnostic-information-on-the-macos">Getting USB Diagnostic Information on the MacOS</h3>
 <p>You can also get information about how much current will be provided to the USB
@@ -1540,36 +1557,27 @@ using the following shell commnad:</p>
 </code></pre></div></td></tr></table></div>
 <h4 id="using-the-macos-io-registry-command">Using the MacOS I/O Registry Command</h4>
 <p>The MacOS shell command <code>ioreg</code> can also be useful for monitoring USB device status.
-Here is a command that lists the information of all USB devices.  The I/O Registry is a hierarchical database of all the devices and drivers on your Mac. The <code>ioreg</code> shell command is powerful utility to examine system hardware and device information.</p>
+Here is a command that lists the information of all USB devices.<br />
+The I/O Registry is a hierarchical database of all the devices and drivers on your Mac. 
+The <code>ioreg</code> shell command is powerful utility to examine system hardware and device information.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ioreg<span class="w"> </span>-p<span class="w"> </span>IOUSB<span class="w"> </span>-w0<span class="w"> </span>-l
 </code></pre></div></td></tr></table></div>
-<p>Here are the parameters:
--   <strong><code>ioreg</code></strong>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-   The command-line tool used to display the I/O Registry, a hierarchical database of all the devices and drivers on your Mac. It&#39;s a powerful utility to examine system hardware and device information.
-</code></pre></div></td></tr></table></div>
+<p>Here are the parameters:</p>
 <ul>
-<li>
-<p><strong><code>-p IOUSB</code></strong>:</p>
+<li><strong><code>-p IOUSB</code></strong>:</li>
+</ul>
+<p>Specifies the <strong>plane</strong> (category of devices) to focus on. In this case, the <code>IOUSB</code> plane, which contains information about all USB devices connected to your system. Other planes include <code>IODeviceTree</code>, <code>IOService</code>, etc.</p>
 <ul>
-<li>Specifies the <strong>plane</strong> (category of devices) to focus on. In this case, the <code>IOUSB</code> plane, which contains information about all USB devices connected to your system. Other planes include <code>IODeviceTree</code>, <code>IOService</code>, etc.</li>
-<li>
-<p><strong><code>-w0</code></strong>:</p>
-</li>
-<li>
-<p>Sets the line wrapping for output.</p>
-</li>
-<li><strong><code>0</code></strong> disables wrapping entirely, which means the output will display long lines without being truncated or split. This is useful for keeping all the device details on a single line, making it easier to parse or search.</li>
-<li>
-<p><strong><code>-l</code></strong>:</p>
-</li>
-<li>
-<p>Displays the output in <strong>long format</strong>.</p>
-</li>
-<li>This includes all properties associated with each object in the I/O Registry. Without <code>-l</code>, the command provides a more concise list with only basic information.</li>
+<li><strong><code>-w0</code></strong>:</li>
 </ul>
-</li>
+<p>Sets the line wrapping for output. <strong><code>0</code></strong> disables wrapping entirely, which means the output will display long lines without being truncated or split.
+This is useful for keeping all the device details on a single line, making it easier to parse or search.</p>
+<ul>
+<li><strong><code>-l</code></strong>:</li>
 </ul>
-<p>+-o Board in FS mode@01100000  <class IOUSBHostDevice, id 0x10008dc65, registered, matched, active, busy 0 (266 ms), retain 27>
+<p>Displays the output in <strong>long format</strong>.<br />
+This includes all properties associated with each object in the I/O Registry. Without <code>-l</code>, the command provides a more concise list with only basic information.</p>
+<p>+-o Board in FS mode@01100000  <class IOUSBHostDevice, id 0x10008dc65, registered, matched, active, busy 0 (266 ms), retain 27></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1635,13 +1643,13 @@ Here is a command that lists the information of all USB devices.  The I/O Regist
 <span class="w">  </span><span class="s2">&quot;kUSBAddress&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">1</span>
 <span class="w">  </span><span class="s2">&quot;kUSBVendorString&quot;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;MicroPython&quot;</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 <h3 id="automatic-power-draw-shutoff">Automatic Power Draw Shutoff</h3>
 <p>If your USB port is drawing too much power, then many computers will disable the port.  This can happen if you are trying to display too many LEDs or a motor.  You will see a message such as "USB Port Disabled". </p>
 <p>Your computer manufacturer will tell you what the maximum current each USB port allows.  This is typically about 1 amp, but it varies based on your computer and what other devices are connected to your computer.</p>
-<p>The best way to debug this is to purchase a low-cost USB current monitor and monitor how much current your project is using.  If you are using an LED-strip
-then make sure you test the current with all the pixels fully on (255,255,255).</p>
+<p>The best way to debug this is to purchase a low-cost USB current monitor and monitor how much current your project is using.</p>
 <p><a href="https://www.ebay.com/sch/i.html?_from=R40&amp;_nkw=USB+current+monitor&amp;_sacat=0&amp;_sop=15">USB Current Monitor Search on eBay</a></p>
+<h3 id="large-neopixel-clocks">Large NeoPixel Clocks</h3>
 <p>In general, each NeoPixel at full brightness will draw up to 20 milliamps and the Pico will also draw about 20  milliamps.</p>
 <p>For projects that require more than about 500 milliamps, it is strongly recommended that you use an externally powered USB hub.</p>
 <h3 id="debugging-the-usb-port">Debugging the USB Port</h3>
@@ -1711,13 +1719,14 @@ code on the Moving Rainbow site by running the following command:</p>
 mkdir<span class="w"> </span>~/projects
 <span class="nb">cd</span><span class="w"> </span>projects
 <span class="c1"># make a copy of the repo on your local hard drive</span>
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/dmccreary/micropython-clocks-and-watches
-<span class="nb">cd</span><span class="w"> </span>micropython-clocks-and-watches
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/dmccreary/clocks-and-watches
+<span class="nb">cd</span><span class="w"> </span>clocks-and-watches
 <span class="c1"># open the files in your file manager</span>
 open<span class="w"> </span>.
 </code></pre></div></td></tr></table></div>
-<p>You can now go directly to the source for the Raspberry Pi P OLED lab:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>src/pico-oled
+<p>The <code>open</code> is specific to the Mac.</p>
+<p>You can now go directly to the source for your kit such as:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>src/kits/large-oled
 </code></pre></div></td></tr></table></div>
 <p>Once you have done this step you can make the top Files region of Thonny point
 to the source area and then click the upper right corner that has the "Upload to /"
