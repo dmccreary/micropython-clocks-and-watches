@@ -70,7 +70,7 @@ When debugging your Thonny installation, it is important to understand the steps
 
 **Step 2: Probing for the USB ID** The Pico will respond with a device ID number.  This number reflects two items: the company that made the device (Vendor ID) and the device product type (Product ID).  If you are using a power-only USB cable this number will **never** get to the operating system.  This means that the data wires are not present in your USB cable or one of the wires is broken or not connecting.
 
-**Step 3: Looking Up the USB Driver** The operating system will take this USB ID and then look-up the right software and then run that software.  In UNIX and Mac systems this will amount to making the USB device appear in the ```/dev/cu*``` area.  On Windows it will be a COM port.
+**Step 3: Looking Up the USB Driver** The operating system will take this USB ID and then look-up the right software and then run that software.  In UNIX and Mac systems this will amount to making the USB device appear in the ```/dev/cu*``` area.  On Windows it will be a ```COM``` port.
 
 ```sh
 ls -l /dev/cu.usb*
@@ -85,12 +85,14 @@ If this device does not immediately appear, then you should double-check your ca
 If you know your cable works fine by testing it on other devices then you may have to reboot your computer.
 
 ### Setting USB Permissions on MacOS
+
 ![](./macos-usb-permissions.png)
 
-In many classrooms with old Macs, the new security settings
+In many classrooms with Macs, the security settings
 for USB connections can get in the way of a good experience for
 our students.  Since these Macs don't leave our classrooms, 
-we have decided to permanently allow USB access for your Raspberry Pi Pico on MacOS Sonoma.
+we have decided to permanently allow USB access for your Raspberry Pi Pico on MacOS Sequoia.
+
 Here are the steps we use.
 
 1.  On the Mac, go to System Settings > Privacy & Security
@@ -100,8 +102,7 @@ Here are the steps we use.
 
 ### Debugging your USB Connection
 
-Our students have reported many frustrating experiences getting their Raspberry Pi Pico to connect to their MacOS system.
-Most of these problems can be quickly solved by checking the security settings on your MacOS.
+Our students have reported many frustrating experiences getting their Raspberry Pi Pico to connect to their MacOS system.  Most of these problems can be quickly solved by checking the security settings on your MacOS.
 
 After you plug in the USB it should be listed in the `/dev/cu*` area:
 
@@ -115,7 +116,7 @@ A typical response includes this device:
 /dev/cu.usbmodem1101
 ```
 
-If the usbmodem11001 or similar is not listed then THonny will not connect.
+If the ```usbmodem1101``` or similar is not listed then Thonny will not connect.
 This is the time to check your cables and connectors.  Older USB cables frequently have broken wires.
 
 ### Getting USB Diagnostic Information on the MacOS
@@ -147,29 +148,32 @@ This command prints the 6 lines before and five lines after the string "MicroPyt
 #### Using the MacOS I/O Registry Command
 
 The MacOS shell command ```ioreg``` can also be useful for monitoring USB device status.
-Here is a command that lists the information of all USB devices.  The I/O Registry is a hierarchical database of all the devices and drivers on your Mac. The ```ioreg``` shell command is powerful utility to examine system hardware and device information.
+Here is a command that lists the information of all USB devices.  
+The I/O Registry is a hierarchical database of all the devices and drivers on your Mac. 
+The ```ioreg``` shell command is powerful utility to examine system hardware and device information.
 
 ```sh
 ioreg -p IOUSB -w0 -l
 ```
 
 Here are the parameters:
--   **`ioreg`**:
 
-    -   The command-line tool used to display the I/O Registry, a hierarchical database of all the devices and drivers on your Mac. It's a powerful utility to examine system hardware and device information.
--   **`-p IOUSB`**:
+- **`-p IOUSB`**:
 
-    -   Specifies the **plane** (category of devices) to focus on. In this case, the `IOUSB` plane, which contains information about all USB devices connected to your system. Other planes include `IODeviceTree`, `IOService`, etc.
--   **`-w0`**:
+Specifies the **plane** (category of devices) to focus on. In this case, the `IOUSB` plane, which contains information about all USB devices connected to your system. Other planes include `IODeviceTree`, `IOService`, etc.
 
-    -   Sets the line wrapping for output.
-    -   **`0`** disables wrapping entirely, which means the output will display long lines without being truncated or split. This is useful for keeping all the device details on a single line, making it easier to parse or search.
--   **`-l`**:
+- **`-w0`**:
 
-    -   Displays the output in **long format**.
-    -   This includes all properties associated with each object in the I/O Registry. Without `-l`, the command provides a more concise list with only basic information.
+Sets the line wrapping for output. **`0`** disables wrapping entirely, which means the output will display long lines without being truncated or split.
+This is useful for keeping all the device details on a single line, making it easier to parse or search.
+
+- **`-l`**:
+
+Displays the output in **long format**.  
+This includes all properties associated with each object in the I/O Registry. Without `-l`, the command provides a more concise list with only basic information.
 
 +-o Board in FS mode@01100000  <class IOUSBHostDevice, id 0x10008dc65, registered, matched, active, busy 0 (266 ms), retain 27>
+
 ```json
 {
   "sessionID" = 37899561861259
@@ -205,17 +209,17 @@ Here are the parameters:
   "kUSBVendorString" = "MicroPython"
 }
 ```
-
 ### Automatic Power Draw Shutoff
 
 If your USB port is drawing too much power, then many computers will disable the port.  This can happen if you are trying to display too many LEDs or a motor.  You will see a message such as "USB Port Disabled". 
 
 Your computer manufacturer will tell you what the maximum current each USB port allows.  This is typically about 1 amp, but it varies based on your computer and what other devices are connected to your computer.
 
-The best way to debug this is to purchase a low-cost USB current monitor and monitor how much current your project is using.  If you are using an LED-strip
-then make sure you test the current with all the pixels fully on (255,255,255).
+The best way to debug this is to purchase a low-cost USB current monitor and monitor how much current your project is using.
 
 [USB Current Monitor Search on eBay](https://www.ebay.com/sch/i.html?_from=R40&_nkw=USB+current+monitor&_sacat=0&_sop=15)
+
+### Large NeoPixel Clocks
 
 In general, each NeoPixel at full brightness will draw up to 20 milliamps and the Pico will also draw about 20  milliamps.
 
@@ -226,7 +230,6 @@ For projects that require more than about 500 milliamps, it is strongly recommen
 #### Mac System Profiler
 
 On MacOS we can use the ```system_profiler``` command:
-
 
 ```sh
 system_profiler SPUSBDataType
@@ -269,16 +272,18 @@ code on the Moving Rainbow site by running the following command:
 mkdir ~/projects
 cd projects
 # make a copy of the repo on your local hard drive
-git clone https://github.com/dmccreary/micropython-clocks-and-watches
-cd micropython-clocks-and-watches
+git clone https://github.com/dmccreary/clocks-and-watches
+cd clocks-and-watches
 # open the files in your file manager
 open .
 ```
 
-You can now go directly to the source for the Raspberry Pi P OLED lab:
+The ```open``` is specific to the Mac.
+
+You can now go directly to the source for your kit such as:
 
 ```sh
-cd src/pico-oled
+cd src/kits/large-oled
 ```
 
 Once you have done this step you can make the top Files region of Thonny point
